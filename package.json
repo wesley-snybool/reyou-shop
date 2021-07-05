@@ -1,6 +1,6 @@
 {
-  "name": "chawkbazar",
-  "version": "1.0.4",
+  "name": "reyoushop",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "clean": "rimraf \"{.next,dist,build,out,node_modules}\"",
