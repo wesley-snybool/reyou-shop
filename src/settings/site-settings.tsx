@@ -15,7 +15,7 @@ export const siteSettings = {
 		address: "",
 	},
 	logo: {
-		url: "/assets/images/logo.jpeg",
+		url: "/assets/images/logo.png",
 		alt: "Reyou Shop",
 		href: "/",
 		width: 95,
@@ -54,6 +54,12 @@ export const siteSettings = {
 						id: 5,
 						path: "/classic",
 						label: "menu-classic",
+					},
+
+					{
+						id: 6,
+						path: "/home",
+						label: "menu-home",
 					},
 				],
 			},
