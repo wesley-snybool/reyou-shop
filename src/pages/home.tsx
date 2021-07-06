@@ -30,6 +30,11 @@ import CategoryBlock from "@containers/category-block";
 import ProductsFeatured from "@containers/products-featured";
 import BannerGridBlock from "@containers/banner-grid-block";
 import CategoryGridBlock from "@containers/category-grid-block";
+import BannerBlock from "@containers/banner-block";
+import BrandGridBlock from "@containers/brand-grid-block";
+import BannerWithProducts from "@containers/banner-with-products";
+import Instagram from "@components/common/instagram";
+
 
 export default function Home() {
 	//const { openModal, setModalView } = useUI();
@@ -45,14 +50,26 @@ export default function Home() {
 		<>
         <HeroBlock />
         <Container>
-				<CategoryBlock sectionHeading="text-shop-by-category" />
-				<ProductsFeatured sectionHeading="text-featured-products" />
-			</Container>
-			<Container>
-			<BannerCarouselBlock />
-			<CategoryGridBlock sectionHeading="text-featured-categories" />
-			</Container>
-       
+		<CategoryBlock sectionHeading="text-shop-by-category" />
+		{/* <ProductsFeatured sectionHeading="text-featured-products" /> */}
+		</Container>
+		<Container>
+		<BannerCarouselBlock />
+		<CategoryGridBlock sectionHeading="text-featured-categories" />
+		<BestSellerProductFeed />
+		<BrandGridBlock sectionHeading="text-top-brands" />
+		<BannerWithProducts
+					sectionHeading="text-on-selling-products"
+					categorySlug="/search"
+				/>
+		<DownloadApps />
+		<Divider className="mb-0" />
+		
+		<Subscription className="bg-opacity-0 px-5 sm:px-16 xl:px-0 py-12 md:py-14 xl:py-16" />
+		</Container>
+		
+				
+		
        
         </>
 	);
