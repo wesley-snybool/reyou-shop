@@ -63,11 +63,11 @@ export default function Home() {
 					categorySlug="/search"
 				/>
 		<DownloadApps />
-		<Divider className="mb-0" />
-		
-		<Subscription className="bg-opacity-0 px-5 sm:px-16 xl:px-0 py-12 md:py-14 xl:py-16" />
 		</Container>
-		
+		<Container>
+		<Subscription className="bg-opacity-0 px-5 sm:px-16 xl:px-0 py-12 md:py-14 xl:py-16" />
+				
+		</Container>
 				
 		
        
