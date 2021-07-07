@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "name": "Bags",
+    "name": "Bolsas",
     "products": [
       {
         "id": 1,
@@ -34,7 +34,7 @@
   },
   {
     "id": 2,
-    "name": "Shoes",
+    "name": "Calçados",
     "products": [
       {
         "id": 1,
@@ -67,7 +67,7 @@
   },
   {
     "id": 3,
-    "name": "Wallets",
+    "name": "Carteiras",
     "products": [
       {
         "id": 1,
@@ -100,7 +100,7 @@
   },
   {
     "id": 4,
-    "name": "Jewellers",
+    "name": "Jóias",
     "products": [
       {
         "id": 1,
@@ -133,7 +133,7 @@
   },
   {
     "id": 5,
-    "name": "Watches",
+    "name": "Relógios",
     "products": [
       {
         "id": 1,
@@ -166,7 +166,7 @@
   },
   {
     "id": 6,
-    "name": "Sun Glasses",
+    "name": "Óculos de Sol",
     "products": [
       {
         "id": 1,

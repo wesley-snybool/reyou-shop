@@ -26,11 +26,17 @@ import "@styles/custom-plugins.css";
 import "@styles/tailwind.css";
 import { getDirection } from "@utils/get-direction";
 
+import { ConfigProvider } from "antd";
+import ptBR from "antd/lib/locale/pt_BR";
+//require("antd/dist/antd.less");
+import "antd/dist/antd.css";
+
 function handleExitComplete() {
 	if (typeof window !== "undefined") {
 		window.scrollTo({ top: 0 });
 	}
 }
+
 
 const Noop: React.FC = ({ children }) => <>{children}</>;
 
@@ -47,6 +53,7 @@ const CustomApp = ({ Component, pageProps }: AppProps) => {
 	const Layout = (Component as any).Layout || Noop;
 
 	return (
+		<ConfigProvider locale={ptBR}>
 		<AnimatePresence exitBeforeEnter onExitComplete={handleExitComplete}>
 			<QueryClientProvider client={queryClientRef.current}>
 				<Hydrate state={pageProps.dehydratedState}>
@@ -63,6 +70,7 @@ const CustomApp = ({ Component, pageProps }: AppProps) => {
 				{/* <ReactQueryDevtools /> */}
 			</QueryClientProvider>
 		</AnimatePresence>
+		</ConfigProvider>
 	);
 };
 

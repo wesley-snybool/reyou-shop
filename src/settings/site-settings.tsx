@@ -6,7 +6,7 @@ import { DEFlag } from "@components/icons/DEFlag";
 import { ESFlag } from "@components/icons/ESFlag";
 import { PTFlag } from "@components/icons/PTFlag";
 export const siteSettings = {
-	name: "ChawkBazar",
+	name: "Re.You Shop",
 	description:
 		"Fastest E-commerce template built with React, NextJS, TypeScript, React-Query and Tailwind CSS.",
 	author: {
@@ -16,8 +16,8 @@ export const siteSettings = {
 	},
 	logo: {
 		url: "/assets/images/logo.png",
-		alt: "Reyou Shop",
-		href: "/",
+		alt: "Re.you Shop",
+		href: "/home",
 		width: 95,
 		height: 30,
 	},
@@ -27,9 +27,9 @@ export const siteSettings = {
 		menu: [
 			{
 				id: 1,
-				path: "/",
-				label: "menu-demos",
-				subMenu: [
+				path: "/home",
+				label: "menu-home",
+				/*Menu: [
 					{
 						id: 1,
 						path: "/",
@@ -62,7 +62,8 @@ export const siteSettings = {
 						label: "menu-home",
 					},
 				],
-			},
+			},*/
+		},
 			{
 				id: 2,
 				path: "/search?q=men-wear",

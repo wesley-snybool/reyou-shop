@@ -11,7 +11,7 @@
     "esModuleInterop": true,
     "alwaysStrict": true,
     "noFallthroughCasesInSwitch": true,
-    "noUnusedLocals": true,
+    "noUnusedLocals": false,
     "noUnusedParameters": true,
     "module": "esnext",
     "moduleResolution": "node",
