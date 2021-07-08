@@ -28,7 +28,7 @@ export const siteSettings = {
 			{
 				id: 1,
 				path: "/home",
-				label: "menu-home",
+				label: "menu-home"},
 				/*Menu: [
 					{
 						id: 1,
@@ -62,7 +62,7 @@ export const siteSettings = {
 						label: "menu-home",
 					},
 				],
-			},*/
+			},
 		},
 			{
 				id: 2,
@@ -867,7 +867,7 @@ export const siteSettings = {
 						],
 					},
 				],
-			},
+			},*/
 			{
 				id: 5,
 				path: "/search",
@@ -957,7 +957,7 @@ export const siteSettings = {
 			{
 				id: 1,
 				path: "/",
-				label: "menu-demos",
+				label: "Home",
 				subMenu: [
 					{
 						id: 1,
