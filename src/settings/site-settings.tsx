@@ -957,8 +957,8 @@ export const siteSettings = {
 			{
 				id: 1,
 				path: "/",
-				label: "Home",
-				subMenu: [
+				label: "Home"},
+				/*subMenu: [
 					{
 						id: 1,
 						path: "/",
@@ -1476,7 +1476,7 @@ export const siteSettings = {
 						label: "menu-handbags-wallets",
 					},
 				],
-			},
+			},*/
 			{
 				id: 5,
 				path: "/search",
