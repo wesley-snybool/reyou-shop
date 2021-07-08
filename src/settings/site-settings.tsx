@@ -6,18 +6,18 @@ import { DEFlag } from "@components/icons/DEFlag";
 import { ESFlag } from "@components/icons/ESFlag";
 import { PTFlag } from "@components/icons/PTFlag";
 export const siteSettings = {
-	name: "ChawkBazar",
+	name: "Re.You Shop",
 	description:
 		"Fastest E-commerce template built with React, NextJS, TypeScript, React-Query and Tailwind CSS.",
 	author: {
-		name: "RedQ, Inc.",
-		websiteUrl: "https://redq.io",
+		name: "Re.You",
+		websiteUrl: "",
 		address: "",
 	},
 	logo: {
-		url: "/assets/images/logo.svg",
-		alt: "ChawkBazar",
-		href: "/",
+		url: "/assets/images/logo.png",
+		alt: "Re.you Shop",
+		href: "/home",
 		width: 95,
 		height: 30,
 	},
@@ -27,9 +27,9 @@ export const siteSettings = {
 		menu: [
 			{
 				id: 1,
-				path: "/",
-				label: "menu-demos",
-				subMenu: [
+				path: "/home",
+				label: "menu-home",
+				/*Menu: [
 					{
 						id: 1,
 						path: "/",
@@ -55,8 +55,15 @@ export const siteSettings = {
 						path: "/classic",
 						label: "menu-classic",
 					},
+
+					{
+						id: 6,
+						path: "/home",
+						label: "menu-home",
+					},
 				],
-			},
+			},*/
+		},
 			{
 				id: 2,
 				path: "/search?q=men-wear",

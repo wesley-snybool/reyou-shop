@@ -12,12 +12,17 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { ROUTES } from "@utils/routes";
 import { useTranslation } from "next-i18next";
 import { GetStaticProps } from "next";
+import { homeThreeMasonryBanner as masonryBanner } from "@framework/static/banner";
+import { homeThreeBanner as banner } from "@framework/static/banner";
+import BannerBlock from "@containers/banner-block";
+
 
 export default function Shop() {
 	const { t } = useTranslation("common");
 
 	return (
 		<>
+			<BannerBlock data={masonryBanner} />			
 			<ShopDiscount />
 			<Container>
 				<div className={`flex pt-8 pb-16 lg:pb-20`}>

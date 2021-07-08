@@ -2,7 +2,7 @@
   "data": [
     {
       "id": 1,
-      "name": "Woman",
+      "name": "Mulheres",
       "slug": "woman",
       "productCount": 20,
       "image": {
@@ -13,7 +13,7 @@
     },
     {
       "id": 2,
-      "name": "Man",
+      "name": "Homens",
       "slug": "man",
       "productCount": 20,
       "image": {
@@ -24,7 +24,7 @@
     },
     {
       "id": 3,
-      "name": "Watch",
+      "name": "Relógios",
       "slug": "watch",
       "productCount": 20,
       "image": {
@@ -35,7 +35,7 @@
     },
     {
       "id": 4,
-      "name": "Kids",
+      "name": "Infantil",
       "slug": "kids",
       "productCount": 20,
       "image": {
@@ -46,7 +46,7 @@
     },
     {
       "id": 5,
-      "name": "Sports",
+      "name": "Esportes",
       "slug": "sports",
       "productCount": 20,
       "image": {
@@ -57,7 +57,7 @@
     },
     {
       "id": 6,
-      "name": "Sunglass",
+      "name": "Óculos de Sol",
       "slug": "sunglass",
       "productCount": 20,
       "image": {
@@ -68,7 +68,7 @@
     },
     {
       "id": 7,
-      "name": "Bags",
+      "name": "Bolsas",
       "slug": "bags",
       "productCount": 20,
       "image": {
@@ -79,7 +79,7 @@
     },
     {
       "id": 8,
-      "name": "Sneakers",
+      "name": "Tênis",
       "slug": "sneakers",
       "productCount": 20,
       "image": {
