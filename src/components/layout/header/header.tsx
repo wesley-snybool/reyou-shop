@@ -64,9 +64,6 @@ const Header: React.FC = () => {
 						className="hidden lg:flex md:ms-6 xl:ms-10"
 					/>
 
-					<div className="flex-shrink-0 ms-auto lg:me-5 xl:me-8 2xl:me-10">
-						<LanguageSwitcher />
-					</div>
 					<div className="hidden md:flex justify-end items-center space-s-6 lg:space-s-5 xl:space-s-8 2xl:space-s-10 ms-auto flex-shrink-0">
 						<button
 							className="flex items-center justify-center flex-shrink-0 h-auto relative focus:outline-none transform"

@@ -5,6 +5,7 @@ import { USFlag } from "@components/icons/USFlag";
 import { DEFlag } from "@components/icons/DEFlag";
 import { ESFlag } from "@components/icons/ESFlag";
 import { PTFlag } from "@components/icons/PTFlag";
+import { BRFlag } from "@components/icons/BRFlag";
 export const siteSettings = {
 	name: "Re.You Shop",
 	description:

@@ -1,8 +1,8 @@
 [
   {
     "id": 1,
-    "name": "Nike Bag",
-    "description": "Rolex’s powerhouse calibre 3235 Perpetual movement. An upgrade from the calibre 3135 movement",
+    "name": "Bolsa da Nike",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed massa ut urna mattis mollis.",
     "slug": "nike-bag",
     "image": {
       "id": 1,
