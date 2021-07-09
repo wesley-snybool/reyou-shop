@@ -7,32 +7,32 @@
   },
   "total": 132,
   "shipping_fee": 17,
-  "payment_gateway": "cash on delivery",
+  "payment_gateway": "Pagamento na entrega",
   "products": [
     {
       "id": 1,
-      "name": "Nike Black - Black, S",
+      "name": "Nike Black - Preto, P",
       "quantity": 10,
       "price": 5
     },
     {
       "id": 1,
-      "name": "Hermes  Carlton London - Red, XL",
+      "name": "Camiseta Carlton London - Vermelho, GG",
       "quantity": 10,
       "price": 15
     },
     {
       "id": 1,
-      "name": "Gucci Carlton UK, Green, M",
+      "name": "Camisa Gucci, Verde, M",
       "quantity": 5,
       "price": 25
     },
     {
       "id": 1,
-      "name": "Regular Fit Flannel Shirt, Blue, X",
+      "name": "Camisa de Flanela, Azul, M",
       "quantity": 10,
       "price": 35
     }
   ],
-  "note": "new order"
+  "note": "Novo Pedido"
 }

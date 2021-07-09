@@ -14,10 +14,10 @@
     "variations": [
       {
         "id": 1,
-        "value": "S",
+        "value": "P",
         "attribute": {
           "id": 1,
-          "name": "Size",
+          "name": "Tamanho",
           "slug": "size"
         }
       },
@@ -26,65 +26,65 @@
         "value": "M",
         "attribute": {
           "id": 1,
-          "name": "Size",
+          "name": "Tamanho",
           "slug": "size"
         }
       },
       {
         "id": 3,
-        "value": "L",
+        "value": "G",
         "attribute": {
           "id": 1,
-          "name": "Size",
+          "name": "Tamanho",
           "slug": "size"
         }
       },
       {
         "id": 4,
-        "value": "XL",
+        "value": "GG",
         "attribute": {
           "id": 1,
-          "name": "Size",
+          "name": "Tamanho",
           "slug": "size"
         }
       },
       {
         "id": 5,
-        "value": "Orange",
+        "value": "Laranja",
         "meta": "#e86c25",
         "attribute": {
           "id": 1,
-          "name": "Color",
+          "name": "Cor",
           "slug": "color"
         }
       },
       {
         "id": 6,
-        "value": "Pink",
+        "value": "Rosa",
         "meta": "#ffa5b4",
         "attribute": {
           "id": 1,
-          "name": "Color",
+          "name": "Cor",
           "slug": "color"
         }
       },
       {
         "id": 7,
-        "value": "Purple",
+        "value": "Roxo",
         "meta": "#8224e3",
         "attribute": {
           "id": 1,
-          "name": "Color",
+          "name": "Cor",
           "slug": "color"
         }
       },
       {
         "id": 8,
-        "value": "Red",
+        "value": "Vermelho",
         "meta": "#dd3333",
         "attribute": {
           "id": 1,
-          "name": "Color",
+          "name": "Cor",
           "slug": "color"
         }
       }
@@ -92,8 +92,8 @@
   },
   {
     "id": 2,
-    "name": "Adidas Woolen Cap",
-    "description": "Casual wear (casual attire or clothing) may be a Western code that’s relaxed, occasional, spontaneous and fitted to everyday use. Casual wear became popular within the Western world following the counterculture of the 1960s.",
+    "name": "Boné de Lã Ecológica",
+    "description": "Acessório ecológico casual.",
     "slug": "adidas-woolen-cap",
     "image": {
       "id": 1,
@@ -105,10 +105,10 @@
     "variations": [
       {
         "id": 1,
-        "value": "S",
+        "value": "P",
         "attribute": {
           "id": 1,
-          "name": "Size",
+          "name": "Tamanho",
           "slug": "size"
         }
       },
@@ -117,13 +117,13 @@
         "value": "M",
         "attribute": {
           "id": 1,
-          "name": "Size",
+          "name": "Tamanho",
           "slug": "size"
         }
       },
       {
         "id": 3,
-        "value": "L",
+        "value": "G",
         "attribute": {
           "id": 1,
           "name": "Size",
@@ -132,50 +132,50 @@
       },
       {
         "id": 4,
-        "value": "XL",
+        "value": "GG",
         "attribute": {
           "id": 1,
-          "name": "Size",
+          "name": "Tamanho",
           "slug": "size"
         }
       },
       {
         "id": 5,
-        "value": "Orange",
+        "value": "Laranja",
         "meta": "#e86c25",
         "attribute": {
           "id": 1,
-          "name": "Color",
+          "name": "Cor",
           "slug": "color"
         }
       },
       {
         "id": 6,
-        "value": "Pink",
+        "value": "Rosa",
         "meta": "#ffa5b4",
         "attribute": {
           "id": 1,
-          "name": "Color",
+          "name": "Cor",
           "slug": "color"
         }
       },
       {
         "id": 7,
-        "value": "Purple",
+        "value": "Roxo",
         "meta": "#8224e3",
         "attribute": {
           "id": 1,
-          "name": "Color",
+          "name": "Cor",
           "slug": "color"
         }
       },
       {
         "id": 8,
-        "value": "Red",
+        "value": "Vermelho",
         "meta": "#dd3333",
         "attribute": {
           "id": 1,
-          "name": "Color",
+          "name": "Cor",
           "slug": "color"
         }
       }

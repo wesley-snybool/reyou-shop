@@ -1,8 +1,8 @@
 [
   {
     "id": 1,
-    "name": "Armani Veni Vidi Vici",
-    "description": "Fendi began life in 1925 as a fur and leather speciality store in Rome.",
+    "name": "Camiseta Armani",
+    "description": "Camiseta da nova linha sustentável da Armani",
     "slug": "armani-veni-vidi-vici",
     "image": {
       "id": 1,
@@ -26,10 +26,10 @@
     "variations": [
       {
         "id": 1,
-        "value": "S",
+        "value": "P",
         "attribute": {
           "id": 1,
-          "name": "Size",
+          "name": "Tamanho",
           "slug": "size"
         }
       },
@@ -38,65 +38,65 @@
         "value": "M",
         "attribute": {
           "id": 1,
-          "name": "Size",
+          "name": "Tamanho",
           "slug": "size"
         }
       },
       {
         "id": 3,
-        "value": "L",
+        "value": "G",
         "attribute": {
           "id": 1,
-          "name": "Size",
+          "name": "Tamanho",
           "slug": "size"
         }
       },
       {
         "id": 4,
-        "value": "XL",
+        "value": "GG",
         "attribute": {
           "id": 1,
-          "name": "Size",
+          "name": "Tamanho",
           "slug": "size"
         }
       },
       {
         "id": 5,
-        "value": "Orange",
+        "value": "Laranja",
         "meta": "#e86c25",
         "attribute": {
           "id": 1,
-          "name": "Color",
+          "name": "Cor",
           "slug": "color"
         }
       },
       {
         "id": 6,
-        "value": "Pink",
+        "value": "Rosa",
         "meta": "#ffa5b4",
         "attribute": {
           "id": 1,
-          "name": "Color",
+          "name": "Cor",
           "slug": "color"
         }
       },
       {
         "id": 7,
-        "value": "Purple",
+        "value": "Roxo",
         "meta": "#8224e3",
         "attribute": {
           "id": 1,
-          "name": "Color",
+          "name": "Cor",
           "slug": "color"
         }
       },
       {
         "id": 8,
-        "value": "Red",
+        "value": "Vermelho",
         "meta": "#dd3333",
         "attribute": {
           "id": 1,
-          "name": "Color",
+          "name": "Cor",
           "slug": "color"
         }
       }
@@ -104,8 +104,8 @@
   },
   {
     "id": 2,
-    "name": "Adidas Shoes Black",
-    "description": "Men Black top shoes gown",
+    "name": "Tênis Adidas",
+    "description": "Tênis Adidas Masculino",
     "slug": "adidas-shoes-black",
     "image": {
       "id": 1,
@@ -129,10 +129,10 @@
     "variations": [
       {
         "id": 1,
-        "value": "S",
+        "value": "P",
         "attribute": {
           "id": 1,
-          "name": "Size",
+          "name": "Tamanho",
           "slug": "size"
         }
       },
@@ -141,13 +141,13 @@
         "value": "M",
         "attribute": {
           "id": 1,
-          "name": "Size",
+          "name": "Tamanho",
           "slug": "size"
         }
       },
       {
         "id": 3,
-        "value": "L",
+        "value": "G",
         "attribute": {
           "id": 1,
           "name": "Size",
@@ -156,50 +156,50 @@
       },
       {
         "id": 4,
-        "value": "XL",
+        "value": "GG",
         "attribute": {
           "id": 1,
-          "name": "Size",
+          "name": "Tamanho",
           "slug": "size"
         }
       },
       {
         "id": 5,
-        "value": "Orange",
+        "value": "Laranja",
         "meta": "#e86c25",
         "attribute": {
           "id": 1,
-          "name": "Color",
+          "name": "Cor",
           "slug": "color"
         }
       },
       {
         "id": 6,
-        "value": "Pink",
+        "value": "Rosa",
         "meta": "#ffa5b4",
         "attribute": {
           "id": 1,
-          "name": "Color",
+          "name": "Cor",
           "slug": "color"
         }
       },
       {
         "id": 7,
-        "value": "Purple",
+        "value": "Roxo",
         "meta": "#8224e3",
         "attribute": {
           "id": 1,
-          "name": "Color",
+          "name": "Cor",
           "slug": "color"
         }
       },
       {
         "id": 8,
-        "value": "Red",
+        "value": "Vermelho",
         "meta": "#dd3333",
         "attribute": {
           "id": 1,
-          "name": "Color",
+          "name": "Cor",
           "slug": "color"
         }
       }
@@ -207,8 +207,8 @@
   },
   {
     "id": 3,
-    "name": "Gucci Carlton UK",
-    "description": "Knitted midi A-line dress, has a scoop neck, sleeveless, straight hem",
+    "name": "Camisa Gucci",
+    "description": "Camisa corte A, com decote V, com mangas, bainha reta",
     "slug": "gucci-carlton-uk",
     "image": {
       "id": 1,
@@ -232,10 +232,10 @@
     "variations": [
       {
         "id": 1,
-        "value": "S",
+        "value": "P",
         "attribute": {
           "id": 1,
-          "name": "Size",
+          "name": "Tamanho",
           "slug": "size"
         }
       },
@@ -244,65 +244,65 @@
         "value": "M",
         "attribute": {
           "id": 1,
-          "name": "Size",
+          "name": "Tamanho",
           "slug": "size"
         }
       },
       {
         "id": 3,
-        "value": "L",
+        "value": "G",
         "attribute": {
           "id": 1,
-          "name": "Size",
+          "name": "Tamanho",
           "slug": "size"
         }
       },
       {
         "id": 4,
-        "value": "XL",
+        "value": "GG",
         "attribute": {
           "id": 1,
-          "name": "Size",
+          "name": "Tamanho",
           "slug": "size"
         }
       },
       {
         "id": 5,
-        "value": "Orange",
+        "value": "Laranja",
         "meta": "#e86c25",
         "attribute": {
           "id": 1,
-          "name": "Color",
+          "name": "Cor",
           "slug": "color"
         }
       },
       {
         "id": 6,
-        "value": "Pink",
+        "value": "Rosa",
         "meta": "#ffa5b4",
         "attribute": {
           "id": 1,
-          "name": "Color",
+          "name": "Cor",
           "slug": "color"
         }
       },
       {
         "id": 7,
-        "value": "Purple",
+        "value": "Roxo",
         "meta": "#8224e3",
         "attribute": {
           "id": 1,
-          "name": "Color",
+          "name": "Cor",
           "slug": "color"
         }
       },
       {
         "id": 8,
-        "value": "Red",
+        "value": "Vermelho",
         "meta": "#dd3333",
         "attribute": {
           "id": 1,
-          "name": "Color",
+          "name": "Cor",
           "slug": "color"
         }
       }
@@ -310,8 +310,8 @@
   },
   {
     "id": 4,
-    "name": "Scuba Stand Collar Topper Jacket",
-    "description": "Zara provides only the highest-quality selection of dresses, womens suits, and suited separates.",
+    "name": "Jaqueta Scuba",
+    "description": "Jaqueta com corte reto. ",
     "slug": "scuba-stand-collar-topper-jacket",
     "image": {
       "id": 1,
@@ -335,10 +335,10 @@
     "variations": [
       {
         "id": 1,
-        "value": "S",
+        "value": "P",
         "attribute": {
           "id": 1,
-          "name": "Size",
+          "name": "Tamanho",
           "slug": "size"
         }
       },
@@ -347,65 +347,65 @@
         "value": "M",
         "attribute": {
           "id": 1,
-          "name": "Size",
+          "name": "Tamanho",
           "slug": "size"
         }
       },
       {
         "id": 3,
-        "value": "L",
+        "value": "G",
         "attribute": {
           "id": 1,
-          "name": "Size",
+          "name": "Tamanho",
           "slug": "size"
         }
       },
       {
         "id": 4,
-        "value": "XL",
+        "value": "GG",
         "attribute": {
           "id": 1,
-          "name": "Size",
+          "name": "Tamanho",
           "slug": "size"
         }
       },
       {
         "id": 5,
-        "value": "Orange",
+        "value": "Laranja",
         "meta": "#e86c25",
         "attribute": {
           "id": 1,
-          "name": "Color",
+          "name": "Cor",
           "slug": "color"
         }
       },
       {
         "id": 6,
-        "value": "Pink",
+        "value": "Rosa",
         "meta": "#ffa5b4",
         "attribute": {
           "id": 1,
-          "name": "Color",
+          "name": "Cor",
           "slug": "color"
         }
       },
       {
         "id": 7,
-        "value": "Purple",
+        "value": "Roxo",
         "meta": "#8224e3",
         "attribute": {
           "id": 1,
-          "name": "Color",
+          "name": "Cor",
           "slug": "color"
         }
       },
       {
         "id": 8,
-        "value": "Red",
+        "value": "Vermelho",
         "meta": "#dd3333",
         "attribute": {
           "id": 1,
-          "name": "Color",
+          "name": "Cor",
           "slug": "color"
         }
       }
@@ -413,8 +413,8 @@
   },
   {
     "id": 5,
-    "name": "Regular Fit Crew-neck T-shirt",
-    "description": "Self-striped knitted midi A-line dress, has a scoop neck, T-shirt, straight hem",
+    "name": "Camiseta Fit Gola Redonda",
+    "description": "Camiseta Fit com corte reto e gola redonda",
     "slug": "regular-fit-crew-neck-t-shirt",
     "image": {
       "id": 1,
@@ -438,10 +438,10 @@
     "variations": [
       {
         "id": 1,
-        "value": "S",
+        "value": "P",
         "attribute": {
           "id": 1,
-          "name": "Size",
+          "name": "Tamanho",
           "slug": "size"
         }
       },
@@ -450,65 +450,65 @@
         "value": "M",
         "attribute": {
           "id": 1,
-          "name": "Size",
+          "name": "Tamanho",
           "slug": "size"
         }
       },
       {
         "id": 3,
-        "value": "L",
+        "value": "G",
         "attribute": {
           "id": 1,
-          "name": "Size",
+          "name": "Tamanho",
           "slug": "size"
         }
       },
       {
         "id": 4,
-        "value": "XL",
+        "value": "GG",
         "attribute": {
           "id": 1,
-          "name": "Size",
+          "name": "Tamanho",
           "slug": "size"
         }
       },
       {
         "id": 5,
-        "value": "Orange",
+        "value": "Laranja",
         "meta": "#e86c25",
         "attribute": {
           "id": 1,
-          "name": "Color",
+          "name": "Cor",
           "slug": "color"
         }
       },
       {
         "id": 6,
-        "value": "Pink",
+        "value": "Rosa",
         "meta": "#ffa5b4",
         "attribute": {
           "id": 1,
-          "name": "Color",
+          "name": "Cor",
           "slug": "color"
         }
       },
       {
         "id": 7,
-        "value": "Purple",
+        "value": "Roxo",
         "meta": "#8224e3",
         "attribute": {
           "id": 1,
-          "name": "Color",
+          "name": "Cor",
           "slug": "color"
         }
       },
       {
         "id": 8,
-        "value": "Red",
+        "value": "Vermelho",
         "meta": "#dd3333",
         "attribute": {
           "id": 1,
-          "name": "Color",
+          "name": "Cor",
           "slug": "color"
         }
       }
@@ -516,8 +516,8 @@
   },
   {
     "id": 6,
-    "name": "Hermes  Carlton London",
-    "description": "Off-White self-striped knitted midi A-line dress, has a scoop neck, sleeveless, straight hem",
+    "name": "Camisa Hermes",
+    "description": "Camisa listrada com botões",
     "slug": "hermes-carlton-london",
     "image": {
       "id": 1,
@@ -541,10 +541,10 @@
     "variations": [
       {
         "id": 1,
-        "value": "S",
+        "value": "P",
         "attribute": {
           "id": 1,
-          "name": "Size",
+          "name": "Tamanho",
           "slug": "size"
         }
       },
@@ -553,65 +553,65 @@
         "value": "M",
         "attribute": {
           "id": 1,
-          "name": "Size",
+          "name": "Tamanho",
           "slug": "size"
         }
       },
       {
         "id": 3,
-        "value": "L",
+        "value": "G",
         "attribute": {
           "id": 1,
-          "name": "Size",
+          "name": "Tamanho",
           "slug": "size"
         }
       },
       {
         "id": 4,
-        "value": "XL",
+        "value": "GG",
         "attribute": {
           "id": 1,
-          "name": "Size",
+          "name": "Tamanho",
           "slug": "size"
         }
       },
       {
         "id": 5,
-        "value": "Orange",
+        "value": "Laranja",
         "meta": "#e86c25",
         "attribute": {
           "id": 1,
-          "name": "Color",
+          "name": "Cor",
           "slug": "color"
         }
       },
       {
         "id": 6,
-        "value": "Pink",
+        "value": "Rosa",
         "meta": "#ffa5b4",
         "attribute": {
           "id": 1,
-          "name": "Color",
+          "name": "Cor",
           "slug": "color"
         }
       },
       {
         "id": 7,
-        "value": "Purple",
+        "value": "Roxo",
         "meta": "#8224e3",
         "attribute": {
           "id": 1,
-          "name": "Color",
+          "name": "Cor",
           "slug": "color"
         }
       },
       {
         "id": 8,
-        "value": "Red",
+        "value": "Vermelho",
         "meta": "#dd3333",
         "attribute": {
           "id": 1,
-          "name": "Color",
+          "name": "Cor",
           "slug": "color"
         }
       }
@@ -619,8 +619,8 @@
   },
   {
     "id": 7,
-    "name": "Wayfarer Sunglasses",
-    "description": "Our optical engineers developed these sunglasses for hiking. Ideal for occasional use in the mountains.",
+    "name": "Óculos de Sol Wayfarer",
+    "description": "Nossos engenheiros ópticos desenvolveram esses óculos de sol para caminhadas. Ideal para uso ocasional nas montanhas.",
     "slug": "wayfarer-sunglasses",
     "image": {
       "id": 1,
@@ -644,10 +644,10 @@
     "variations": [
       {
         "id": 1,
-        "value": "S",
+        "value": "P",
         "attribute": {
           "id": 1,
-          "name": "Size",
+          "name": "Tamanho",
           "slug": "size"
         }
       },
@@ -656,61 +656,61 @@
         "value": "M",
         "attribute": {
           "id": 1,
-          "name": "Size",
+          "name": "Tamanho",
           "slug": "size"
         }
       },
       {
         "id": 3,
-        "value": "L",
+        "value": "G",
         "attribute": {
           "id": 1,
-          "name": "Size",
+          "name": "Tamanho",
           "slug": "size"
         }
       },
       {
         "id": 4,
-        "value": "XL",
+        "value": "GG",
         "attribute": {
           "id": 1,
-          "name": "Size",
+          "name": "Tamanho",
           "slug": "size"
         }
       },
       {
         "id": 5,
-        "value": "Orange",
+        "value": "Laranja",
         "meta": "#e86c25",
         "attribute": {
           "id": 1,
-          "name": "Color",
+          "name": "Cor",
           "slug": "color"
         }
       },
       {
         "id": 6,
-        "value": "Pink",
+        "value": "Rosa",
         "meta": "#ffa5b4",
         "attribute": {
           "id": 1,
-          "name": "Color",
+          "name": "Cor",
           "slug": "color"
         }
       },
       {
         "id": 7,
-        "value": "Purple",
+        "value": "Roxo",
         "meta": "#8224e3",
         "attribute": {
           "id": 1,
-          "name": "Color",
+          "name": "Cor",
           "slug": "color"
         }
       },
       {
         "id": 8,
-        "value": "Red",
+        "value": "Vermelho",
         "meta": "#dd3333",
         "attribute": {
           "id": 1,
@@ -722,8 +722,8 @@
   },
   {
     "id": 8,
-    "name": "Armani Wide-Leg Trousers",
-    "description": "Monochrome elegance. Made with a relaxed wide-leg, these trousers are made from a sustainable soft organic cotton with a mechanical stretch making the garment easily recycled.",
+    "name": "Calças Armani Wide-Leg",
+    "description": "Elegância monocromática. Confeccionada com um conceito descontraído, essas calças são feitas de um algodão orgânico macio e sustentável com um elástico mecânico que torna a peça facilmente reciclável.",
     "slug": "armani-wide-leg-trousers",
     "image": {
       "id": 1,
@@ -747,10 +747,10 @@
     "variations": [
       {
         "id": 1,
-        "value": "S",
+        "value": "P",
         "attribute": {
           "id": 1,
-          "name": "Size",
+          "name": "Tamanho",
           "slug": "size"
         }
       },
@@ -759,65 +759,65 @@
         "value": "M",
         "attribute": {
           "id": 1,
-          "name": "Size",
+          "name": "Tamanho",
           "slug": "size"
         }
       },
       {
         "id": 3,
-        "value": "L",
+        "value": "G",
         "attribute": {
           "id": 1,
-          "name": "Size",
+          "name": "Tamanho",
           "slug": "size"
         }
       },
       {
         "id": 4,
-        "value": "XL",
+        "value": "GG",
         "attribute": {
           "id": 1,
-          "name": "Size",
+          "name": "Tamanho",
           "slug": "size"
         }
       },
       {
         "id": 5,
-        "value": "Orange",
+        "value": "Laranja",
         "meta": "#e86c25",
         "attribute": {
           "id": 1,
-          "name": "Color",
+          "name": "Cor",
           "slug": "color"
         }
       },
       {
         "id": 6,
-        "value": "Pink",
+        "value": "Rosa",
         "meta": "#ffa5b4",
         "attribute": {
           "id": 1,
-          "name": "Color",
+          "name": "Cor",
           "slug": "color"
         }
       },
       {
         "id": 7,
-        "value": "Purple",
+        "value": "Roxo",
         "meta": "#8224e3",
         "attribute": {
           "id": 1,
-          "name": "Color",
+          "name": "Cor",
           "slug": "color"
         }
       },
       {
         "id": 8,
-        "value": "Red",
+        "value": "Vermelho",
         "meta": "#dd3333",
         "attribute": {
           "id": 1,
-          "name": "Color",
+          "name": "Cor",
           "slug": "color"
         }
       }
@@ -825,8 +825,8 @@
   },
   {
     "id": 9,
-    "name": "REDQ Steel Watch",
-    "description": "The Black Bay celebrates 60 years of diving watches with extraordinary heritage. The iconic model inherits the general lines.",
+    "name": "Relógio de Aço Inoxidável",
+    "description": "Relógo masculino elegate de aço.",
     "slug": "redq-steel-watch",
     "image": {
       "id": 1,
@@ -850,10 +850,10 @@
     "variations": [
       {
         "id": 1,
-        "value": "S",
+        "value": "P",
         "attribute": {
           "id": 1,
-          "name": "Size",
+          "name": "Tamanho",
           "slug": "size"
         }
       },
@@ -862,65 +862,65 @@
         "value": "M",
         "attribute": {
           "id": 1,
-          "name": "Size",
+          "name": "Tamanho",
           "slug": "size"
         }
       },
       {
         "id": 3,
-        "value": "L",
+        "value": "G",
         "attribute": {
           "id": 1,
-          "name": "Size",
+          "name": "Tamanho",
           "slug": "size"
         }
       },
       {
         "id": 4,
-        "value": "XL",
+        "value": "GG",
         "attribute": {
           "id": 1,
-          "name": "Size",
+          "name": "Tamanho",
           "slug": "size"
         }
       },
       {
         "id": 5,
-        "value": "Orange",
+        "value": "Laranja",
         "meta": "#e86c25",
         "attribute": {
           "id": 1,
-          "name": "Color",
+          "name": "Cor",
           "slug": "color"
         }
       },
       {
         "id": 6,
-        "value": "Pink",
+        "value": "Rosa",
         "meta": "#ffa5b4",
         "attribute": {
           "id": 1,
-          "name": "Color",
+          "name": "Cor",
           "slug": "color"
         }
       },
       {
         "id": 7,
-        "value": "Purple",
+        "value": "Roxo",
         "meta": "#8224e3",
         "attribute": {
           "id": 1,
-          "name": "Color",
+          "name": "Cor",
           "slug": "color"
         }
       },
       {
         "id": 8,
-        "value": "Red",
+        "value": "Vermelho",
         "meta": "#dd3333",
         "attribute": {
           "id": 1,
-          "name": "Color",
+          "name": "Cor",
           "slug": "color"
         }
       }

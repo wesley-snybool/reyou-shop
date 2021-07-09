@@ -1,12 +1,12 @@
 [
   {
     "id": 1,
-    "name": "Size",
+    "name": "Tamanho",
     "slug": "size",
     "values": [
       {
         "id": 1,
-        "value": "S"
+        "value": "P"
       },
       {
         "id": 2,
@@ -14,17 +14,17 @@
       },
       {
         "id": 3,
-        "value": "L"
+        "value": "G"
       },
       {
         "id": 4,
-        "value": "XL"
+        "value": "GG"
       }
     ]
   },
   {
     "id": 2,
-    "name": "Color",
+    "name": "Cor",
     "slug": "color",
     "values": [
       {
