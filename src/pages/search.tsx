@@ -15,13 +15,14 @@ import { GetStaticProps } from "next";
 import { homeThreeMasonryBanner as masonryBanner } from "@framework/static/banner";
 import { homeThreeBanner as banner } from "@framework/static/banner";
 import BannerBlock from "@containers/banner-block";
-
+import Search from "@components/common/search";
 
 export default function Shop() {
 	const { t } = useTranslation("common");
 
 	return (
 		<>
+			<Search />
 			<BannerBlock data={masonryBanner} />			
 			<ShopDiscount />
 			<Container>
