@@ -1,4 +1,4 @@
-export const BRFlag = ({  }) => {
+export const BRFlag = ({ }) => {
 	return (
         <svg xmlns="http://www.w3.org/2000/svg" id="flag-icon-css-br" viewBox="0 0 640 480">
         <g stroke-width="1pt">

@@ -22,7 +22,7 @@ export const siteSettings = {
 		width: 95,
 		height: 30,
 	},
-	defaultLanguage: "en",
+	defaultLanguage: "es",
 	currencyCode: "USD",
 	site_header: {
 		menu: [

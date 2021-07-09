@@ -30,7 +30,7 @@ const SearchBox = React.forwardRef<HTMLInputElement, SearchProps>(
 						id="search"
 						className="text-heading outline-none w-full h-12 lg:h-14 placeholder-gray-400 text-sm lg:text-base"
 						placeholder={t("placeholder-search")}
-						aria-label="Search"
+						aria-label="Busca"
 						autoComplete="off"
 						ref={ref}
 						{...rest}
