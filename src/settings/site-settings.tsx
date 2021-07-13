@@ -918,7 +918,7 @@ export const siteSettings = {
 					},
 					{
 						id: 4,
-						path: "/terms",
+						path: "/privacy",
 						label: "menu-terms-condition",
 					},
 					{
@@ -926,11 +926,11 @@ export const siteSettings = {
 						path: "/contact-us",
 						label: "menu-contact-us",
 					},
-					{
+					/*{
 						id: 6,
 						path: "/checkout",
 						label: "menu-checkout",
-					},
+					},*/
 					{
 						id: 7,
 						path: "/collections/mens-collection",
@@ -941,11 +941,11 @@ export const siteSettings = {
 						path: "/category/man",
 						label: "menu-category",
 					},
-					{
+					/*{
 						id: 9,
 						path: "/order",
 						label: "menu-order",
-					},
+					},*/
 					{
 						id: 10,
 						path: "/404",
@@ -1525,21 +1525,21 @@ export const siteSettings = {
 						path: "/privacy",
 						label: "menu-privacy-policy",
 					},
-					{
+					/*{
 						id: 4,
 						path: "/terms",
 						label: "menu-terms-condition",
-					},
+					},*/
 					{
 						id: 5,
 						path: "/contact-us",
 						label: "menu-contact-us",
 					},
-					{
+					/*{
 						id: 6,
 						path: "/checkout",
 						label: "menu-checkout",
-					},
+					},*/
 					{
 						id: 7,
 						path: "/collections/mens-collection",
@@ -1550,11 +1550,11 @@ export const siteSettings = {
 						path: "/category/man",
 						label: "menu-category",
 					},
-					{
+					/*{
 						id: 9,
 						path: "/order",
 						label: "menu-order",
-					},
+					},*/
 					{
 						id: 10,
 						path: "/404",
