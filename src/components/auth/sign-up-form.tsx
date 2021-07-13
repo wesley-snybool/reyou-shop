@@ -37,9 +37,9 @@ const SignUpForm: React.FC = () => {
 		<div className="py-5 px-5 sm:px-8 bg-white mx-auto rounded-lg w-full sm:w-96 md:w-450px border border-gray-300">
 			<div className="text-center mb-6 pt-2.5">
 				<div onClick={closeModal}>
-					<h2 style={{fontSize: 24,}}><strong>Re.YOU Shop</strong></h2>
+					<h2 style={{fontSize: 24,}}><strong></strong></h2>
 					<br></br>
-					<h2 style={{fontSize: 24,}}><strong>Registrar</strong></h2>
+					<h2 style={{fontSize: 24,}}><strong>Registro</strong></h2>
 				</div>
 				<p className="text-sm md:text-base text-body mt-2 mb-8 sm:mb-10">
 					{t("common:registration-helper")}{" "}

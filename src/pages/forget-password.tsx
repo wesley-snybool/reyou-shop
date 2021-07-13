@@ -5,11 +5,12 @@ import PageHeader from "@components/ui/page-header";
 import Subscription from "@components/common/subscription";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { GetStaticProps } from "next";
+import { FaCentercode } from "react-icons/fa";
 
 export default function ForgetPasswordPage() {
 	return (
 		<>
-			<PageHeader pageHeader="Forget Password" />
+			<p style={{fontSize: 18, paddingTop: 50, textAlign: "center"}}><strong>Esqueceu sua senha?</strong></p>
 			<Container>
 				<div className="py-16 lg:py-20">
 					<ForgetPasswordForm />
