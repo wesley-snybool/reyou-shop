@@ -47,6 +47,9 @@ const LoginForm: React.FC = () => {
 			<div className="text-center mb-6 pt-2.5">
 				<div onClick={closeModal}>
 				<h2 style={{fontSize: 24,}}><strong>Re.YOU Shop</strong></h2>
+				<br></br>
+				<h2 style={{fontSize: 24,}}><strong>Entrar</strong></h2>
+				
 				</div>
 				<p className="text-sm md:text-base text-body mt-2 mb-8 sm:mb-10">
 					{t("common:login-helper")}
