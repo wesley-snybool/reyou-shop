@@ -936,11 +936,11 @@ export const siteSettings = {
 						path: "/collections/mens-collection",
 						label: "menu-collection",
 					},
-					{
+					/*{
 						id: 8,
 						path: "/category/man",
 						label: "menu-category",
-					},
+					},*/
 					/*{
 						id: 9,
 						path: "/order",

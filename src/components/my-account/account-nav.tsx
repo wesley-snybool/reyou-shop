@@ -17,11 +17,7 @@ const accountMenu = [
 		name: "text-dashboard",
 		icon: <IoHomeOutline className="w-5 h-5" />,
 	},
-	{
-		slug: ROUTES.ORDERS,
-		name: "text-orders",
-		icon: <IoCartOutline className="w-5 h-5" />,
-	},
+	
 	{
 		slug: ROUTES.ACCOUNT_DETAILS,
 		name: "text-account-details",
