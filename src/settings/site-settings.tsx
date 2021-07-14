@@ -23,7 +23,7 @@ export const siteSettings = {
 		height: 30,
 	},
 	defaultLanguage: "es",
-	currencyCode: "USD",
+	currencyCode: "R$",
 	site_header: {
 		menu: [
 			{

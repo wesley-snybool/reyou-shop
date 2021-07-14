@@ -59,7 +59,7 @@ const OrdersTable: React.FC = () => {
 									Finalizada
 								</td>
 								<td className="text-start lg:text-center px-4 py-5 text-heading">
-									$16,950.00 por 93 itens
+									R$16,950.00 por 93 itens
 								</td>
 								<td className="text-end px-4 py-5 text-heading">
 									<Link
@@ -123,7 +123,7 @@ const OrdersTable: React.FC = () => {
 							</li>
 							<li className="flex items-center justify-between">
 								{t("text-total")}
-								<span className="font-normal">$16,950.00 por 93 itens</span>
+								<span className="font-normal">R$16,950.00 por 93 itens</span>
 							</li>
 							<li className="flex items-center justify-between">
 								{t("text-actions")}
@@ -159,7 +159,7 @@ const OrdersTable: React.FC = () => {
 							</li>
 							<li className="flex items-center justify-between">
 								{t("text-total")}
-								<span className="font-normal">$16,950.00 por 93 itens</span>
+								<span className="font-normal">R$16,950.00 por 93 itens</span>
 							</li>
 							<li className="flex items-center justify-between">
 								{t("text-actions")}

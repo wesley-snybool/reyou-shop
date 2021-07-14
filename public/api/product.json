@@ -59,11 +59,11 @@
   "variations": [
     {
       "id": 1,
-      "value": "S",
+      "value": "P",
       "attribute": {
         "id": 1,
-        "name": "Size",
-        "slug": "size"
+        "name": "Tamanho",
+        "slug": "tamanho"
       }
     },
     {
@@ -71,17 +71,17 @@
       "value": "M",
       "attribute": {
         "id": 1,
-        "name": "Size",
-        "slug": "size"
+        "name": "Tamanho",
+        "slug": "tamanho"
       }
     },
     {
       "id": 3,
-      "value": "L",
+      "value": "G",
       "attribute": {
         "id": 1,
-        "name": "Size",
-        "slug": "size"
+        "name": "Tamanho",
+        "slug": "tamanho"
       }
     },
     {
@@ -89,8 +89,8 @@
       "value": "XL",
       "attribute": {
         "id": 1,
-        "name": "Size",
-        "slug": "size"
+        "name": "Tamanho",
+        "slug": "tamanho"
       }
     },
     {
@@ -99,8 +99,8 @@
       "meta": "#e86c25",
       "attribute": {
         "id": 1,
-        "name": "Color",
-        "slug": "color"
+        "name": "Cor",
+        "slug": "cor"
       }
     },
     {
@@ -109,8 +109,8 @@
       "meta": "#ffa5b4",
       "attribute": {
         "id": 1,
-        "name": "Color",
-        "slug": "color"
+        "name": "Cor",
+        "slug": "cor"
       }
     },
     {
@@ -119,8 +119,8 @@
       "meta": "#8224e3",
       "attribute": {
         "id": 1,
-        "name": "Color",
-        "slug": "color"
+        "name": "Cor",
+        "slug": "cor"
       }
     },
     {
@@ -129,8 +129,8 @@
       "meta": "#dd3333",
       "attribute": {
         "id": 1,
-        "name": "Color",
-        "slug": "color"
+        "name": "Cor",
+        "slug": "cor"
       }
     }
   ],

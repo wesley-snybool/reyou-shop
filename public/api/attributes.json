@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name": "Tamanho",
-    "slug": "size",
+    "slug": "tamanho",
     "values": [
       {
         "id": 1,
@@ -25,7 +25,7 @@
   {
     "id": 2,
     "name": "Cor",
-    "slug": "color",
+    "slug": "cor",
     "values": [
       {
         "id": 5,

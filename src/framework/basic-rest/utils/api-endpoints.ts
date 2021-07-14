@@ -4,6 +4,7 @@ export const API_ENDPOINTS = {
   LOGOUT: "/logout",
   FORGET_PASSWORD: "/forget-password",
   CATEGORIES: "/categories.json",
+  PRINCIPLES: "/principles.json",
   FEATURED_CATEGORIES: "/featured_categories.json",
   COLLECTIONS: "/collections.json",
   BRANDS: "/brands.json",

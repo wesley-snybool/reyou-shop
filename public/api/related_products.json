@@ -30,7 +30,7 @@
         "attribute": {
           "id": 1,
           "name": "Size",
-          "slug": "size"
+          "slug": "tamanho"
         }
       },
       {
@@ -39,7 +39,7 @@
         "attribute": {
           "id": 1,
           "name": "Size",
-          "slug": "size"
+          "slug": "tamanho"
         }
       },
       {
@@ -48,7 +48,7 @@
         "attribute": {
           "id": 1,
           "name": "Size",
-          "slug": "size"
+          "slug": "tamanho"
         }
       },
       {
@@ -57,7 +57,7 @@
         "attribute": {
           "id": 1,
           "name": "Size",
-          "slug": "size"
+          "slug": "tamanho"
         }
       },
       {
@@ -67,7 +67,7 @@
         "attribute": {
           "id": 1,
           "name": "Color",
-          "slug": "color"
+          "slug": "cor"
         }
       },
       {
@@ -77,7 +77,7 @@
         "attribute": {
           "id": 1,
           "name": "Color",
-          "slug": "color"
+          "slug": "cor"
         }
       },
       {
@@ -87,7 +87,7 @@
         "attribute": {
           "id": 1,
           "name": "Color",
-          "slug": "color"
+          "slug": "cor"
         }
       },
       {
@@ -97,7 +97,7 @@
         "attribute": {
           "id": 1,
           "name": "Color",
-          "slug": "color"
+          "slug": "cor"
         }
       }
     ]
@@ -143,7 +143,7 @@
         "attribute": {
           "id": 1,
           "name": "Size",
-          "slug": "size"
+          "slug": "tamanho"
         }
       },
       {
@@ -152,7 +152,7 @@
         "attribute": {
           "id": 1,
           "name": "Size",
-          "slug": "size"
+          "slug": "tamanho"
         }
       },
       {
@@ -161,7 +161,7 @@
         "attribute": {
           "id": 1,
           "name": "Size",
-          "slug": "size"
+          "slug": "tamanho"
         }
       },
       {
@@ -170,7 +170,7 @@
         "attribute": {
           "id": 1,
           "name": "Size",
-          "slug": "size"
+          "slug": "tamanho"
         }
       },
       {
@@ -180,7 +180,7 @@
         "attribute": {
           "id": 1,
           "name": "Color",
-          "slug": "color"
+          "slug": "cor"
         }
       },
       {
@@ -190,7 +190,7 @@
         "attribute": {
           "id": 1,
           "name": "Color",
-          "slug": "color"
+          "slug": "cor"
         }
       },
       {
@@ -200,7 +200,7 @@
         "attribute": {
           "id": 1,
           "name": "Color",
-          "slug": "color"
+          "slug": "cor"
         }
       },
       {
@@ -210,7 +210,7 @@
         "attribute": {
           "id": 1,
           "name": "Color",
-          "slug": "color"
+          "slug": "cor"
         }
       }
     ]
@@ -246,7 +246,7 @@
         "attribute": {
           "id": 1,
           "name": "Size",
-          "slug": "size"
+          "slug": "tamanho"
         }
       },
       {
@@ -255,7 +255,7 @@
         "attribute": {
           "id": 1,
           "name": "Size",
-          "slug": "size"
+          "slug": "tamanho"
         }
       },
       {
@@ -264,7 +264,7 @@
         "attribute": {
           "id": 1,
           "name": "Size",
-          "slug": "size"
+          "slug": "tamanho"
         }
       },
       {
@@ -273,7 +273,7 @@
         "attribute": {
           "id": 1,
           "name": "Size",
-          "slug": "size"
+          "slug": "tamanho"
         }
       },
       {
@@ -283,7 +283,7 @@
         "attribute": {
           "id": 1,
           "name": "Color",
-          "slug": "color"
+          "slug": "cor"
         }
       },
       {
@@ -293,7 +293,7 @@
         "attribute": {
           "id": 1,
           "name": "Color",
-          "slug": "color"
+          "slug": "cor"
         }
       },
       {
@@ -303,7 +303,7 @@
         "attribute": {
           "id": 1,
           "name": "Color",
-          "slug": "color"
+          "slug": "cor"
         }
       },
       {
@@ -313,7 +313,7 @@
         "attribute": {
           "id": 1,
           "name": "Color",
-          "slug": "color"
+          "slug": "cor"
         }
       }
     ]
@@ -359,7 +359,7 @@
         "attribute": {
           "id": 1,
           "name": "Size",
-          "slug": "size"
+          "slug": "tamanho"
         }
       },
       {
@@ -368,7 +368,7 @@
         "attribute": {
           "id": 1,
           "name": "Size",
-          "slug": "size"
+          "slug": "tamanho"
         }
       },
       {
@@ -377,7 +377,7 @@
         "attribute": {
           "id": 1,
           "name": "Size",
-          "slug": "size"
+          "slug": "tamanho"
         }
       },
       {
@@ -386,7 +386,7 @@
         "attribute": {
           "id": 1,
           "name": "Size",
-          "slug": "size"
+          "slug": "tamanho"
         }
       },
       {
@@ -396,7 +396,7 @@
         "attribute": {
           "id": 1,
           "name": "Color",
-          "slug": "color"
+          "slug": "cor"
         }
       },
       {
@@ -406,7 +406,7 @@
         "attribute": {
           "id": 1,
           "name": "Color",
-          "slug": "color"
+          "slug": "cor"
         }
       },
       {
@@ -416,7 +416,7 @@
         "attribute": {
           "id": 1,
           "name": "Color",
-          "slug": "color"
+          "slug": "cor"
         }
       },
       {
@@ -426,7 +426,7 @@
         "attribute": {
           "id": 1,
           "name": "Color",
-          "slug": "color"
+          "slug": "cor"
         }
       }
     ]
@@ -472,7 +472,7 @@
         "attribute": {
           "id": 1,
           "name": "Size",
-          "slug": "size"
+          "slug": "tamanho"
         }
       },
       {
@@ -481,7 +481,7 @@
         "attribute": {
           "id": 1,
           "name": "Size",
-          "slug": "size"
+          "slug": "tamanho"
         }
       },
       {
@@ -490,7 +490,7 @@
         "attribute": {
           "id": 1,
           "name": "Size",
-          "slug": "size"
+          "slug": "tamanho"
         }
       },
       {
@@ -499,7 +499,7 @@
         "attribute": {
           "id": 1,
           "name": "Size",
-          "slug": "size"
+          "slug": "tamanho"
         }
       },
       {
@@ -509,7 +509,7 @@
         "attribute": {
           "id": 1,
           "name": "Color",
-          "slug": "color"
+          "slug": "cor"
         }
       },
       {
@@ -519,7 +519,7 @@
         "attribute": {
           "id": 1,
           "name": "Color",
-          "slug": "color"
+          "slug": "cor"
         }
       },
       {
@@ -529,7 +529,7 @@
         "attribute": {
           "id": 1,
           "name": "Color",
-          "slug": "color"
+          "slug": "cor"
         }
       },
       {
@@ -539,7 +539,7 @@
         "attribute": {
           "id": 1,
           "name": "Color",
-          "slug": "color"
+          "slug": "cor"
         }
       }
     ]

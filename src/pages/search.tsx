@@ -22,7 +22,7 @@ export default function Shop() {
 
 	return (
 		<>
-			<Search />
+			
 			<BannerBlock data={masonryBanner} />			
 			<ShopDiscount />
 			<Container>

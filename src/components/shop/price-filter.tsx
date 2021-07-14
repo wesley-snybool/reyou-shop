@@ -5,42 +5,42 @@ import { useTranslation } from "next-i18next";
 const priceFilterItems = [
 	{
 		id: "1",
-		name: "Abaixo de $50",
+		name: "Abaixo de R$50",
 		slug: "0-50",
 	},
 	{
 		id: "2",
-		name: "$50 a $100",
+		name: "R$50 a R$100",
 		slug: "50-100",
 	},
 	{
 		id: "3",
-		name: "$100 a 150",
+		name: "R$100 a 150",
 		slug: "100-150",
 	},
 	{
 		id: "4",
-		name: "$150 a $200",
+		name: "R$150 a R$200",
 		slug: "150-200",
 	},
 	{
 		id: "5",
-		name: "$200 a $300",
+		name: "R$200 a R$300",
 		slug: "200-300",
 	},
 	{
 		id: "6",
-		name: "$300 a $500",
+		name: "R$300 a R$500",
 		slug: "300-500",
 	},
 	{
 		id: "7",
-		name: "$500 a $1000",
+		name: "R$500 a R$1000",
 		slug: "500-1000",
 	},
 	{
 		id: "8",
-		name: "Acima de $1000",
+		name: "Acima de R$1000",
 		slug: "1000-",
 	},
 ];

@@ -19,11 +19,11 @@ const CartItem: React.FC<CartItemProps> = ({ item }) => {
 	const { addItemToCart, removeItemFromCart, clearItemFromCart } = useCart();
 	const { price } = usePrice({
 		amount: item.price,
-		currencyCode: "USD",
+		currencyCode: "BRL",
 	});
 	const { price: totalPrice } = usePrice({
 		amount: item.itemTotal,
-		currencyCode: "USD",
+		currencyCode: "BRL",
 	});
 
 	return (
