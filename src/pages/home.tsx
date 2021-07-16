@@ -37,6 +37,7 @@ export default function Home() {
     return (
 		<>
         <HeroBlock />
+		
         <Container>
 		<CategoryBlock sectionHeading="text-shop-by-category" />
 		{/* <ProductsFeatured sectionHeading="text-featured-products" /> */}

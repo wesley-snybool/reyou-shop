@@ -30,6 +30,7 @@ const SignUpForm: React.FC = () => {
 			name,
 			email,
 			password,
+			
 		});
 		console.log(name, email, password, "sign form values");
 	}
