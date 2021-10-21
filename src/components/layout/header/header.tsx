@@ -9,6 +9,7 @@ import { addActiveScroll } from "@utils/add-active-scroll";
 import dynamic from "next/dynamic";
 import { useTranslation } from "next-i18next";
 import LanguageSwitcher from "@components/ui/language-switcher";
+
 const AuthMenu = dynamic(() => import("./auth-menu"), { ssr: false });
 const CartButton = dynamic(() => import("@components/cart/cart-button"), {
 	ssr: false,
@@ -37,13 +38,13 @@ const Header: React.FC = () => {
 		setDrawerView("MOBILE_MENU");
 		return openSidebar();
 	}
-
 	return (
 		<header
 			id="siteHeader"
 			ref={siteHeaderRef}
 			className="w-full h-16 sm:h-20 lg:h-24 relative z-20"
 		>
+
 			<div className="innerSticky text-gray-700 body-font fixed bg-white w-full h-16 sm:h-20 lg:h-24 z-20 ps-4 md:ps-0 lg:ps-6 pe-4 lg:pe-6 transition duration-200 ease-in-out">
 				<div className="flex items-center justify-center mx-auto max-w-[1920px] h-full w-full">
 					<button
@@ -64,9 +65,6 @@ const Header: React.FC = () => {
 						className="hidden lg:flex md:ms-6 xl:ms-10"
 					/>
 
-					<div className="flex-shrink-0 ms-auto lg:me-5 xl:me-8 2xl:me-10">
-						<LanguageSwitcher />
-					</div>
 					<div className="hidden md:flex justify-end items-center space-s-6 lg:space-s-5 xl:space-s-8 2xl:space-s-10 ms-auto flex-shrink-0">
 						<button
 							className="flex items-center justify-center flex-shrink-0 h-auto relative focus:outline-none transform"
@@ -75,7 +73,7 @@ const Header: React.FC = () => {
 						>
 							<SearchIcon />
 						</button>
-						<div className="-mt-0.5 flex-shrink-0">
+						<div className="signin">
 							<AuthMenu
 								isAuthorized={isAuthorized}
 								href={ROUTES.ACCOUNT}
@@ -90,7 +88,7 @@ const Header: React.FC = () => {
 								{t("text-account")}
 							</AuthMenu>
 						</div>
-						<CartButton />
+						
 					</div>
 				</div>
 			</div>

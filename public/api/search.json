@@ -1,8 +1,8 @@
 [
   {
     "id": 1,
-    "name": "Armani Veni Vidi Vici",
-    "description": "Fendi began life in 1925 as a fur and leather speciality store in Rome.",
+    "name": "Camiseta Armani de Alças",
+    "description": "Visual sexy e elegante",
     "slug": "armani-veni-vidi-vici",
     "image": {
       "id": 1,
@@ -36,11 +36,11 @@
     "variations": [
       {
         "id": 1,
-        "value": "S",
+        "value": "P",
         "attribute": {
           "id": 1,
-          "name": "Size",
-          "slug": "size"
+          "name": "Tamanho",
+          "slug": "tamanho"
         }
       },
       {
@@ -48,74 +48,74 @@
         "value": "M",
         "attribute": {
           "id": 1,
-          "name": "Size",
-          "slug": "size"
+          "name": "Tamanho",
+          "slug": "tamanho"
         }
       },
       {
         "id": 3,
-        "value": "L",
+        "value": "G",
         "attribute": {
           "id": 1,
-          "name": "Size",
-          "slug": "size"
+          "name": "Tamanho",
+          "slug": "tamanho"
         }
       },
       {
         "id": 4,
-        "value": "XL",
+        "value": "GG",
         "attribute": {
           "id": 1,
-          "name": "Size",
-          "slug": "size"
+          "name": "Tamanho",
+          "slug": "tamanho"
         }
       },
       {
         "id": 5,
-        "value": "Orange",
+        "value": "Laranja",
         "meta": "#e86c25",
         "attribute": {
           "id": 1,
-          "name": "Color",
-          "slug": "color"
+          "name": "Cor",
+          "slug": "cor"
         }
       },
       {
         "id": 6,
-        "value": "Pink",
+        "value": "Rosa",
         "meta": "#ffa5b4",
         "attribute": {
           "id": 1,
-          "name": "Color",
-          "slug": "color"
+          "name": "Cor",
+          "slug": "cor"
         }
       },
       {
         "id": 7,
-        "value": "Purple",
+        "value": "Roxo",
         "meta": "#8224e3",
         "attribute": {
           "id": 1,
-          "name": "Color",
-          "slug": "color"
+          "name": "Cor",
+          "slug": "cor"
         }
       },
       {
         "id": 8,
-        "value": "Red",
+        "value": "Vermelho",
         "meta": "#dd3333",
         "attribute": {
           "id": 1,
-          "name": "Color",
-          "slug": "color"
+          "name": "Cor",
+          "slug": "cor"
         }
       }
     ]
   },
   {
     "id": 2,
-    "name": "H&M Global Desi",
-    "description": "Blue solid woven regular top, curved hem with tassell detailing has shoulder straps, and sleeveless",
+    "name": "Vestido Clássico",
+    "description": "Vestido Clássico que remonta aos anos 20",
     "slug": "hm-global-desi",
     "image": {
       "id": 1,
@@ -149,11 +149,11 @@
     "variations": [
       {
         "id": 1,
-        "value": "S",
+        "value": "P",
         "attribute": {
           "id": 1,
-          "name": "Size",
-          "slug": "size"
+          "name": "Tamanho",
+          "slug": "tamanho"
         }
       },
       {
@@ -161,74 +161,74 @@
         "value": "M",
         "attribute": {
           "id": 1,
-          "name": "Size",
-          "slug": "size"
+          "name": "Tamanho",
+          "slug": "tamanho"
         }
       },
       {
         "id": 3,
-        "value": "L",
+        "value": "G",
         "attribute": {
           "id": 1,
-          "name": "Size",
-          "slug": "size"
+          "name": "Tamanho",
+          "slug": "tamanho"
         }
       },
       {
         "id": 4,
-        "value": "XL",
+        "value": "GG",
         "attribute": {
           "id": 1,
-          "name": "Size",
-          "slug": "size"
+          "name": "Tamanho",
+          "slug": "tamanho"
         }
       },
       {
         "id": 5,
-        "value": "Orange",
+        "value": "Laranja",
         "meta": "#e86c25",
         "attribute": {
           "id": 1,
-          "name": "Color",
-          "slug": "color"
+          "name": "Cor",
+          "slug": "cor"
         }
       },
       {
         "id": 6,
-        "value": "Pink",
+        "value": "Rosa",
         "meta": "#ffa5b4",
         "attribute": {
           "id": 1,
-          "name": "Color",
-          "slug": "color"
+          "name": "Cor",
+          "slug": "cor"
         }
       },
       {
         "id": 7,
-        "value": "Purple",
+        "value": "Roxo",
         "meta": "#8224e3",
         "attribute": {
           "id": 1,
-          "name": "Color",
-          "slug": "color"
+          "name": "Cor",
+          "slug": "cor"
         }
       },
       {
         "id": 8,
-        "value": "Red",
+        "value": "Vermelho",
         "meta": "#dd3333",
         "attribute": {
           "id": 1,
-          "name": "Color",
-          "slug": "color"
+          "name": "Cor",
+          "slug": "cor"
         }
       }
     ]
   },
   {
     "id": 3,
-    "name": "Zara Solly White Shirt",
-    "description": "For a chic and smart look, don this white shirt from Solly by Allen Solly. Crafted from a cotton-nylon blend with a hint of stretch, this design features a dotted pattern. Wear this 3/4th sleeves shirt with trousers and wedges to a client meeting.",
+    "name": "Camisa Branca Zara Solly",
+    "description": "Para um look chique e inteligente, vista esta camisa branca da Solly by Allen Solly. Feito de uma mistura de algodão-náilon com um toque de elasticidade, esta peça apresenta um padrão pontilhado. Vista esta camisa de mangas 3/4 com calças e calças para uma reunião com o cliente.",
     "slug": "zara-solly-white-shirt",
     "image": {
       "id": 1,
@@ -262,11 +262,11 @@
     "variations": [
       {
         "id": 1,
-        "value": "S",
+        "value": "P",
         "attribute": {
           "id": 1,
-          "name": "Size",
-          "slug": "size"
+          "name": "Tamanho",
+          "slug": "tamanho"
         }
       },
       {
@@ -274,74 +274,74 @@
         "value": "M",
         "attribute": {
           "id": 1,
-          "name": "Size",
-          "slug": "size"
+          "name": "Tamanho",
+          "slug": "tamanho"
         }
       },
       {
         "id": 3,
-        "value": "L",
+        "value": "G",
         "attribute": {
           "id": 1,
-          "name": "Size",
-          "slug": "size"
+          "name": "Tamanho",
+          "slug": "tamanho"
         }
       },
       {
         "id": 4,
-        "value": "XL",
+        "value": "GG",
         "attribute": {
           "id": 1,
-          "name": "Size",
-          "slug": "size"
+          "name": "Tamanho",
+          "slug": "tamanho"
         }
       },
       {
         "id": 5,
-        "value": "Orange",
+        "value": "Laranja",
         "meta": "#e86c25",
         "attribute": {
           "id": 1,
-          "name": "Color",
-          "slug": "color"
+          "name": "Cor",
+          "slug": "cor"
         }
       },
       {
         "id": 6,
-        "value": "Pink",
+        "value": "Rosa",
         "meta": "#ffa5b4",
         "attribute": {
           "id": 1,
-          "name": "Color",
-          "slug": "color"
+          "name": "Cor",
+          "slug": "cor"
         }
       },
       {
         "id": 7,
-        "value": "Purple",
+        "value": "Roxo",
         "meta": "#8224e3",
         "attribute": {
           "id": 1,
-          "name": "Color",
-          "slug": "color"
+          "name": "Cor",
+          "slug": "cor"
         }
       },
       {
         "id": 8,
-        "value": "Red",
+        "value": "Vermelho",
         "meta": "#dd3333",
         "attribute": {
           "id": 1,
-          "name": "Color",
-          "slug": "color"
+          "name": "Cor",
+          "slug": "cor"
         }
       }
     ]
   },
   {
     "id": 4,
-    "name": "Hermes  Carlton London",
-    "description": "Off-White self-striped knitted midi A-line dress, has a scoop neck, sleeveless, straight hem",
+    "name": "Camisa Branca Reta",
+    "description": "Camisa de malha midi com listras brancas e listradas, decote redondo, sem mangas, bainha reta",
     "slug": "hermes-carlton-london",
     "image": {
       "id": 1,
@@ -375,11 +375,11 @@
     "variations": [
       {
         "id": 1,
-        "value": "S",
+        "value": "P",
         "attribute": {
           "id": 1,
-          "name": "Size",
-          "slug": "size"
+          "name": "Tamanho",
+          "slug": "tamanho"
         }
       },
       {
@@ -387,74 +387,74 @@
         "value": "M",
         "attribute": {
           "id": 1,
-          "name": "Size",
-          "slug": "size"
+          "name": "Tamanho",
+          "slug": "tamanho"
         }
       },
       {
         "id": 3,
-        "value": "L",
+        "value": "G",
         "attribute": {
           "id": 1,
-          "name": "Size",
-          "slug": "size"
+          "name": "Tamanho",
+          "slug": "tamanho"
         }
       },
       {
         "id": 4,
-        "value": "XL",
+        "value": "GG",
         "attribute": {
           "id": 1,
-          "name": "Size",
-          "slug": "size"
+          "name": "Tamanho",
+          "slug": "tamanho"
         }
       },
       {
         "id": 5,
-        "value": "Orange",
+        "value": "Laranja",
         "meta": "#e86c25",
         "attribute": {
           "id": 1,
-          "name": "Color",
-          "slug": "color"
+          "name": "Cor",
+          "slug": "cor"
         }
       },
       {
         "id": 6,
-        "value": "Pink",
+        "value": "Rosa",
         "meta": "#ffa5b4",
         "attribute": {
           "id": 1,
-          "name": "Color",
-          "slug": "color"
+          "name": "Cor",
+          "slug": "cor"
         }
       },
       {
         "id": 7,
-        "value": "Purple",
+        "value": "Roxo",
         "meta": "#8224e3",
         "attribute": {
           "id": 1,
-          "name": "Color",
-          "slug": "color"
+          "name": "Cor",
+          "slug": "cor"
         }
       },
       {
         "id": 8,
-        "value": "Red",
+        "value": "Vermelho",
         "meta": "#dd3333",
         "attribute": {
           "id": 1,
-          "name": "Color",
-          "slug": "color"
+          "name": "Cor",
+          "slug": "cor"
         }
       }
     ]
   },
   {
     "id": 5,
-    "name": "Scuba Stand Collar Topper Jacket",
-    "description": "Zara provides only the highest-quality selection of dresses, womens suits, and suited separates.",
+    "name": "Jaqueta Scuba",
+    "description": "A Zara oferece apenas a seleção de vestidos, ternos femininos e vestidos separados da mais alta qualidade.",
     "slug": "scuba-stand-collar-topper-jacket",
     "image": {
       "id": 1,
@@ -488,11 +488,11 @@
     "variations": [
       {
         "id": 1,
-        "value": "S",
+        "value": "P",
         "attribute": {
           "id": 1,
-          "name": "Size",
-          "slug": "size"
+          "name": "Tamanho",
+          "slug": "tamanho"
         }
       },
       {
@@ -500,74 +500,74 @@
         "value": "M",
         "attribute": {
           "id": 1,
-          "name": "Size",
-          "slug": "size"
+          "name": "Tamanho",
+          "slug": "tamanho"
         }
       },
       {
         "id": 3,
-        "value": "L",
+        "value": "G",
         "attribute": {
           "id": 1,
-          "name": "Size",
-          "slug": "size"
+          "name": "Tamanho",
+          "slug": "tamanho"
         }
       },
       {
         "id": 4,
-        "value": "XL",
+        "value": "GG",
         "attribute": {
           "id": 1,
-          "name": "Size",
-          "slug": "size"
+          "name": "Tamanho",
+          "slug": "tamanho"
         }
       },
       {
         "id": 5,
-        "value": "Orange",
+        "value": "Laranja",
         "meta": "#e86c25",
         "attribute": {
           "id": 1,
-          "name": "Color",
-          "slug": "color"
+          "name": "Cor",
+          "slug": "cor"
         }
       },
       {
         "id": 6,
-        "value": "Pink",
+        "value": "Rosa",
         "meta": "#ffa5b4",
         "attribute": {
           "id": 1,
-          "name": "Color",
-          "slug": "color"
+          "name": "Cor",
+          "slug": "cor"
         }
       },
       {
         "id": 7,
-        "value": "Purple",
+        "value": "Roxo",
         "meta": "#8224e3",
         "attribute": {
           "id": 1,
-          "name": "Color",
-          "slug": "color"
+          "name": "Cor",
+          "slug": "cor"
         }
       },
       {
         "id": 8,
-        "value": "Red",
+        "value": "Vermelho",
         "meta": "#dd3333",
         "attribute": {
           "id": 1,
-          "name": "Color",
-          "slug": "color"
+          "name": "Cor",
+          "slug": "cor"
         }
       }
     ]
   },
   {
     "id": 6,
-    "name": "Armani Wide-Leg Trousers",
-    "description": "Monochrome elegance. Made with a relaxed wide-leg, these trousers are made from a sustainable soft organic cotton with a mechanical stretch making the garment easily recycled.",
+    "name": "Calças Pernas Largas Armani",
+    "description": "Elegância monocromática. Confeccionadas com uma perna larga e relaxada, essas calças são feitas de um algodão orgânico macio e sustentável com um elástico mecânico que torna a peça facilmente reciclável.",
     "slug": "armani-wide-leg-trousers",
     "image": {
       "id": 1,
@@ -601,11 +601,11 @@
     "variations": [
       {
         "id": 1,
-        "value": "S",
+        "value": "P",
         "attribute": {
           "id": 1,
-          "name": "Size",
-          "slug": "size"
+          "name": "Tamanho",
+          "slug": "tamanho"
         }
       },
       {
@@ -613,74 +613,74 @@
         "value": "M",
         "attribute": {
           "id": 1,
-          "name": "Size",
-          "slug": "size"
+          "name": "Tamanho",
+          "slug": "tamanho"
         }
       },
       {
         "id": 3,
-        "value": "L",
+        "value": "G",
         "attribute": {
           "id": 1,
-          "name": "Size",
-          "slug": "size"
+          "name": "Tamanho",
+          "slug": "tamanho"
         }
       },
       {
         "id": 4,
-        "value": "XL",
+        "value": "GG",
         "attribute": {
           "id": 1,
-          "name": "Size",
-          "slug": "size"
+          "name": "Tamanho",
+          "slug": "tamanho"
         }
       },
       {
         "id": 5,
-        "value": "Orange",
+        "value": "Laranja",
         "meta": "#e86c25",
         "attribute": {
           "id": 1,
-          "name": "Color",
-          "slug": "color"
+          "name": "Cor",
+          "slug": "cor"
         }
       },
       {
         "id": 6,
-        "value": "Pink",
+        "value": "Rosa",
         "meta": "#ffa5b4",
         "attribute": {
           "id": 1,
-          "name": "Color",
-          "slug": "color"
+          "name": "Cor",
+          "slug": "cor"
         }
       },
       {
         "id": 7,
-        "value": "Purple",
+        "value": "Roxo",
         "meta": "#8224e3",
         "attribute": {
           "id": 1,
-          "name": "Color",
-          "slug": "color"
+          "name": "Cor",
+          "slug": "cor"
         }
       },
       {
         "id": 8,
-        "value": "Red",
+        "value": "Vermelho",
         "meta": "#dd3333",
         "attribute": {
           "id": 1,
-          "name": "Color",
-          "slug": "color"
+          "name": "Cor",
+          "slug": "cor"
         }
       }
     ]
   },
   {
     "id": 7,
-    "name": "Short Sleeve Shirts For Men",
-    "description": "From casual days out to parties, dinners and other events that call for a dressier look, a short sleeve shirt is a versatile piece that works for all kinds of occasions.",
+    "name": "Camiseta de Manga Curta para Homens",
+    "description": "De saídas casuais a festas, jantares e outros eventos que pedem um look mais chique, a camisa de manga curta é uma peça versátil que funciona para todos os tipos de ocasiões.",
     "slug": "short-sleeve-shirts-for-men",
     "image": {
       "id": 1,
@@ -714,11 +714,11 @@
     "variations": [
       {
         "id": 1,
-        "value": "S",
+        "value": "P",
         "attribute": {
           "id": 1,
-          "name": "Size",
-          "slug": "size"
+          "name": "Tamanho",
+          "slug": "tamanho"
         }
       },
       {
@@ -726,74 +726,74 @@
         "value": "M",
         "attribute": {
           "id": 1,
-          "name": "Size",
-          "slug": "size"
+          "name": "Tamanho",
+          "slug": "tamanho"
         }
       },
       {
         "id": 3,
-        "value": "L",
+        "value": "G",
         "attribute": {
           "id": 1,
-          "name": "Size",
-          "slug": "size"
+          "name": "Tamanho",
+          "slug": "tamanho"
         }
       },
       {
         "id": 4,
-        "value": "XL",
+        "value": "GG",
         "attribute": {
           "id": 1,
-          "name": "Size",
-          "slug": "size"
+          "name": "Tamanho",
+          "slug": "tamanho"
         }
       },
       {
         "id": 5,
-        "value": "Orange",
+        "value": "Laranja",
         "meta": "#e86c25",
         "attribute": {
           "id": 1,
-          "name": "Color",
-          "slug": "color"
+          "name": "Cor",
+          "slug": "cor"
         }
       },
       {
         "id": 6,
-        "value": "Pink",
+        "value": "Rosa",
         "meta": "#ffa5b4",
         "attribute": {
           "id": 1,
-          "name": "Color",
-          "slug": "color"
+          "name": "Cor",
+          "slug": "cor"
         }
       },
       {
         "id": 7,
-        "value": "Purple",
+        "value": "Roxo",
         "meta": "#8224e3",
         "attribute": {
           "id": 1,
-          "name": "Color",
-          "slug": "color"
+          "name": "Cor",
+          "slug": "cor"
         }
       },
       {
         "id": 8,
-        "value": "Red",
+        "value": "Vermelho",
         "meta": "#dd3333",
         "attribute": {
           "id": 1,
-          "name": "Color",
-          "slug": "color"
+          "name": "Cor",
+          "slug": "cor"
         }
       }
     ]
   },
   {
     "id": 8,
-    "name": "Blazer And A Neck Scarf",
-    "description": "blue short sleeve basic midi dress featuring a crew neckline in a jersey fabric.",
+    "name": "Blazer e lenço de pescoço",
+    "description": "Blazer básico com lenço.",
     "slug": "blazer-and-a-neck-scarf",
     "image": {
       "id": 1,
@@ -827,11 +827,11 @@
     "variations": [
       {
         "id": 1,
-        "value": "S",
+        "value": "P",
         "attribute": {
           "id": 1,
-          "name": "Size",
-          "slug": "size"
+          "name": "Tamanho",
+          "slug": "tamanho"
         }
       },
       {
@@ -839,74 +839,74 @@
         "value": "M",
         "attribute": {
           "id": 1,
-          "name": "Size",
-          "slug": "size"
+          "name": "Tamanho",
+          "slug": "tamanho"
         }
       },
       {
         "id": 3,
-        "value": "L",
+        "value": "G",
         "attribute": {
           "id": 1,
-          "name": "Size",
-          "slug": "size"
+          "name": "Tamanho",
+          "slug": "tamanho"
         }
       },
       {
         "id": 4,
-        "value": "XL",
+        "value": "GG",
         "attribute": {
           "id": 1,
-          "name": "Size",
-          "slug": "size"
+          "name": "Tamanho",
+          "slug": "tamanho"
         }
       },
       {
         "id": 5,
-        "value": "Orange",
+        "value": "Laranja",
         "meta": "#e86c25",
         "attribute": {
           "id": 1,
-          "name": "Color",
-          "slug": "color"
+          "name": "Cor",
+          "slug": "cor"
         }
       },
       {
         "id": 6,
-        "value": "Pink",
+        "value": "Rosa",
         "meta": "#ffa5b4",
         "attribute": {
           "id": 1,
-          "name": "Color",
-          "slug": "color"
+          "name": "Cor",
+          "slug": "cor"
         }
       },
       {
         "id": 7,
-        "value": "Purple",
+        "value": "Roxo",
         "meta": "#8224e3",
         "attribute": {
           "id": 1,
-          "name": "Color",
-          "slug": "color"
+          "name": "Cor",
+          "slug": "cor"
         }
       },
       {
         "id": 8,
-        "value": "Red",
+        "value": "Vermelho",
         "meta": "#dd3333",
         "attribute": {
           "id": 1,
-          "name": "Color",
-          "slug": "color"
+          "name": "Cor",
+          "slug": "cor"
         }
       }
     ]
   },
   {
     "id": 9,
-    "name": "Zara Shoes Green",
-    "description": "Footwear refers to garments worn on the feet, which originally serves to purpose of protection against adversities of the environment, usually regarding ground textures and temperature.",
+    "name": "Calçado Zara ",
+    "description": "Calçado refere-se a vestimentas usadas nos pés, que originalmente tem a finalidade de proteção contra as adversidades do meio ambiente, geralmente em relação às texturas do solo e à temperatura.",
     "slug": "zara-shoes-green",
     "image": {
       "id": 1,
@@ -940,11 +940,11 @@
     "variations": [
       {
         "id": 1,
-        "value": "S",
+        "value": "P",
         "attribute": {
           "id": 1,
-          "name": "Size",
-          "slug": "size"
+          "name": "Tamanho",
+          "slug": "tamanho"
         }
       },
       {
@@ -952,74 +952,74 @@
         "value": "M",
         "attribute": {
           "id": 1,
-          "name": "Size",
-          "slug": "size"
+          "name": "Tamanho",
+          "slug": "tamanho"
         }
       },
       {
         "id": 3,
-        "value": "L",
+        "value": "G",
         "attribute": {
           "id": 1,
-          "name": "Size",
-          "slug": "size"
+          "name": "Tamanho",
+          "slug": "tamanho"
         }
       },
       {
         "id": 4,
-        "value": "XL",
+        "value": "GG",
         "attribute": {
           "id": 1,
-          "name": "Size",
-          "slug": "size"
+          "name": "Tamanho",
+          "slug": "tamanho"
         }
       },
       {
         "id": 5,
-        "value": "Orange",
+        "value": "Laranja",
         "meta": "#e86c25",
         "attribute": {
           "id": 1,
-          "name": "Color",
-          "slug": "color"
+          "name": "Cor",
+          "slug": "cor"
         }
       },
       {
         "id": 6,
-        "value": "Pink",
+        "value": "Rosa",
         "meta": "#ffa5b4",
         "attribute": {
           "id": 1,
-          "name": "Color",
-          "slug": "color"
+          "name": "Cor",
+          "slug": "cor"
         }
       },
       {
         "id": 7,
-        "value": "Purple",
+        "value": "Roxo",
         "meta": "#8224e3",
         "attribute": {
           "id": 1,
-          "name": "Color",
-          "slug": "color"
+          "name": "Cor",
+          "slug": "cor"
         }
       },
       {
         "id": 8,
-        "value": "Red",
+        "value": "Vermelho",
         "meta": "#dd3333",
         "attribute": {
           "id": 1,
-          "name": "Color",
-          "slug": "color"
+          "name": "Cor",
+          "slug": "cor"
         }
       }
     ]
   },
   {
     "id": 10,
-    "name": "Maniac Red Boys",
-    "description": "Sporty essentials, these Under Armour athletic shorts are smooth and lightweight in moisture-wicking material.",
+    "name": "Camisa Maniac para Meninos",
+    "description": "Essenciais para o esporte, esses shorts esportivos Under Armour são suaves e leves em um material que absorve a umidade.",
     "slug": "hermes-carlton-london",
     "image": {
       "id": 1,
@@ -1043,11 +1043,11 @@
     "variations": [
       {
         "id": 1,
-        "value": "S",
+        "value": "P",
         "attribute": {
           "id": 1,
-          "name": "Size",
-          "slug": "size"
+          "name": "Tamanho",
+          "slug": "tamanho"
         }
       },
       {
@@ -1055,26 +1055,26 @@
         "value": "M",
         "attribute": {
           "id": 1,
-          "name": "Size",
-          "slug": "size"
+          "name": "Tamanho",
+          "slug": "tamanho"
         }
       },
       {
         "id": 3,
-        "value": "L",
+        "value": "G",
         "attribute": {
           "id": 1,
-          "name": "Size",
-          "slug": "size"
+          "name": "Tamanho",
+          "slug": "tamanho"
         }
       },
       {
         "id": 4,
-        "value": "XL",
+        "value": "GG",
         "attribute": {
           "id": 1,
-          "name": "Size",
-          "slug": "size"
+          "name": "Tamanho",
+          "slug": "tamanho"
         }
       },
       {
@@ -1084,7 +1084,7 @@
         "attribute": {
           "id": 1,
           "name": "Color",
-          "slug": "color"
+          "slug": "cor"
         }
       },
       {
@@ -1094,7 +1094,7 @@
         "attribute": {
           "id": 1,
           "name": "Color",
-          "slug": "color"
+          "slug": "cor"
         }
       },
       {
@@ -1104,7 +1104,7 @@
         "attribute": {
           "id": 1,
           "name": "Color",
-          "slug": "color"
+          "slug": "cor"
         }
       },
       {
@@ -1114,7 +1114,7 @@
         "attribute": {
           "id": 1,
           "name": "Color",
-          "slug": "color"
+          "slug": "cor"
         }
       }
     ]
@@ -1160,7 +1160,7 @@
         "attribute": {
           "id": 1,
           "name": "Size",
-          "slug": "size"
+          "slug": "tamanho"
         }
       },
       {
@@ -1169,7 +1169,7 @@
         "attribute": {
           "id": 1,
           "name": "Size",
-          "slug": "size"
+          "slug": "tamanho"
         }
       },
       {
@@ -1178,7 +1178,7 @@
         "attribute": {
           "id": 1,
           "name": "Size",
-          "slug": "size"
+          "slug": "tamanho"
         }
       },
       {
@@ -1187,7 +1187,7 @@
         "attribute": {
           "id": 1,
           "name": "Size",
-          "slug": "size"
+          "slug": "tamanho"
         }
       },
       {
@@ -1197,7 +1197,7 @@
         "attribute": {
           "id": 1,
           "name": "Color",
-          "slug": "color"
+          "slug": "cor"
         }
       },
       {
@@ -1207,7 +1207,7 @@
         "attribute": {
           "id": 1,
           "name": "Color",
-          "slug": "color"
+          "slug": "cor"
         }
       },
       {
@@ -1217,7 +1217,7 @@
         "attribute": {
           "id": 1,
           "name": "Color",
-          "slug": "color"
+          "slug": "cor"
         }
       },
       {
@@ -1227,7 +1227,7 @@
         "attribute": {
           "id": 1,
           "name": "Color",
-          "slug": "color"
+          "slug": "cor"
         }
       }
     ]
@@ -1273,7 +1273,7 @@
         "attribute": {
           "id": 1,
           "name": "Size",
-          "slug": "size"
+          "slug": "tamanho"
         }
       },
       {
@@ -1282,7 +1282,7 @@
         "attribute": {
           "id": 1,
           "name": "Size",
-          "slug": "size"
+          "slug": "tamanho"
         }
       },
       {
@@ -1291,7 +1291,7 @@
         "attribute": {
           "id": 1,
           "name": "Size",
-          "slug": "size"
+          "slug": "tamanho"
         }
       },
       {
@@ -1300,7 +1300,7 @@
         "attribute": {
           "id": 1,
           "name": "Size",
-          "slug": "size"
+          "slug": "tamanho"
         }
       },
       {
@@ -1310,7 +1310,7 @@
         "attribute": {
           "id": 1,
           "name": "Color",
-          "slug": "color"
+          "slug": "cor"
         }
       },
       {
@@ -1320,7 +1320,7 @@
         "attribute": {
           "id": 1,
           "name": "Color",
-          "slug": "color"
+          "slug": "cor"
         }
       },
       {
@@ -1330,7 +1330,7 @@
         "attribute": {
           "id": 1,
           "name": "Color",
-          "slug": "color"
+          "slug": "cor"
         }
       },
       {
@@ -1340,7 +1340,7 @@
         "attribute": {
           "id": 1,
           "name": "Color",
-          "slug": "color"
+          "slug": "cor"
         }
       }
     ]
@@ -1386,7 +1386,7 @@
         "attribute": {
           "id": 1,
           "name": "Size",
-          "slug": "size"
+          "slug": "tamanho"
         }
       },
       {
@@ -1395,7 +1395,7 @@
         "attribute": {
           "id": 1,
           "name": "Size",
-          "slug": "size"
+          "slug": "tamanho"
         }
       },
       {
@@ -1404,7 +1404,7 @@
         "attribute": {
           "id": 1,
           "name": "Size",
-          "slug": "size"
+          "slug": "tamanho"
         }
       },
       {
@@ -1413,7 +1413,7 @@
         "attribute": {
           "id": 1,
           "name": "Size",
-          "slug": "size"
+          "slug": "tamanho"
         }
       },
       {
@@ -1423,7 +1423,7 @@
         "attribute": {
           "id": 1,
           "name": "Color",
-          "slug": "color"
+          "slug": "cor"
         }
       },
       {
@@ -1433,7 +1433,7 @@
         "attribute": {
           "id": 1,
           "name": "Color",
-          "slug": "color"
+          "slug": "cor"
         }
       },
       {
@@ -1443,7 +1443,7 @@
         "attribute": {
           "id": 1,
           "name": "Color",
-          "slug": "color"
+          "slug": "cor"
         }
       },
       {
@@ -1453,7 +1453,7 @@
         "attribute": {
           "id": 1,
           "name": "Color",
-          "slug": "color"
+          "slug": "cor"
         }
       }
     ]
@@ -1499,7 +1499,7 @@
         "attribute": {
           "id": 1,
           "name": "Size",
-          "slug": "size"
+          "slug": "tamanho"
         }
       },
       {
@@ -1508,7 +1508,7 @@
         "attribute": {
           "id": 1,
           "name": "Size",
-          "slug": "size"
+          "slug": "tamanho"
         }
       },
       {
@@ -1517,7 +1517,7 @@
         "attribute": {
           "id": 1,
           "name": "Size",
-          "slug": "size"
+          "slug": "tamanho"
         }
       },
       {
@@ -1526,7 +1526,7 @@
         "attribute": {
           "id": 1,
           "name": "Size",
-          "slug": "size"
+          "slug": "tamanho"
         }
       },
       {
@@ -1536,7 +1536,7 @@
         "attribute": {
           "id": 1,
           "name": "Color",
-          "slug": "color"
+          "slug": "cor"
         }
       },
       {
@@ -1546,7 +1546,7 @@
         "attribute": {
           "id": 1,
           "name": "Color",
-          "slug": "color"
+          "slug": "cor"
         }
       },
       {
@@ -1556,7 +1556,7 @@
         "attribute": {
           "id": 1,
           "name": "Color",
-          "slug": "color"
+          "slug": "cor"
         }
       },
       {
@@ -1566,7 +1566,7 @@
         "attribute": {
           "id": 1,
           "name": "Color",
-          "slug": "color"
+          "slug": "cor"
         }
       }
     ]
@@ -1612,7 +1612,7 @@
         "attribute": {
           "id": 1,
           "name": "Size",
-          "slug": "size"
+          "slug": "tamanho"
         }
       },
       {
@@ -1621,7 +1621,7 @@
         "attribute": {
           "id": 1,
           "name": "Size",
-          "slug": "size"
+          "slug": "tamanho"
         }
       },
       {
@@ -1630,7 +1630,7 @@
         "attribute": {
           "id": 1,
           "name": "Size",
-          "slug": "size"
+          "slug": "tamanho"
         }
       },
       {
@@ -1639,7 +1639,7 @@
         "attribute": {
           "id": 1,
           "name": "Size",
-          "slug": "size"
+          "slug": "tamanho"
         }
       },
       {
@@ -1649,7 +1649,7 @@
         "attribute": {
           "id": 1,
           "name": "Color",
-          "slug": "color"
+          "slug": "cor"
         }
       },
       {
@@ -1659,7 +1659,7 @@
         "attribute": {
           "id": 1,
           "name": "Color",
-          "slug": "color"
+          "slug": "cor"
         }
       },
       {
@@ -1669,7 +1669,7 @@
         "attribute": {
           "id": 1,
           "name": "Color",
-          "slug": "color"
+          "slug": "cor"
         }
       },
       {
@@ -1679,7 +1679,7 @@
         "attribute": {
           "id": 1,
           "name": "Color",
-          "slug": "color"
+          "slug": "cor"
         }
       }
     ]
@@ -1725,7 +1725,7 @@
         "attribute": {
           "id": 1,
           "name": "Size",
-          "slug": "size"
+          "slug": "tamanho"
         }
       },
       {
@@ -1734,7 +1734,7 @@
         "attribute": {
           "id": 1,
           "name": "Size",
-          "slug": "size"
+          "slug": "tamanho"
         }
       },
       {
@@ -1743,7 +1743,7 @@
         "attribute": {
           "id": 1,
           "name": "Size",
-          "slug": "size"
+          "slug": "tamanho"
         }
       },
       {
@@ -1752,7 +1752,7 @@
         "attribute": {
           "id": 1,
           "name": "Size",
-          "slug": "size"
+          "slug": "tamanho"
         }
       },
       {
@@ -1762,7 +1762,7 @@
         "attribute": {
           "id": 1,
           "name": "Color",
-          "slug": "color"
+          "slug": "cor"
         }
       },
       {
@@ -1772,7 +1772,7 @@
         "attribute": {
           "id": 1,
           "name": "Color",
-          "slug": "color"
+          "slug": "cor"
         }
       },
       {
@@ -1782,7 +1782,7 @@
         "attribute": {
           "id": 1,
           "name": "Color",
-          "slug": "color"
+          "slug": "cor"
         }
       },
       {
@@ -1792,7 +1792,7 @@
         "attribute": {
           "id": 1,
           "name": "Color",
-          "slug": "color"
+          "slug": "cor"
         }
       }
     ]
@@ -1838,7 +1838,7 @@
         "attribute": {
           "id": 1,
           "name": "Size",
-          "slug": "size"
+          "slug": "tamanho"
         }
       },
       {
@@ -1847,7 +1847,7 @@
         "attribute": {
           "id": 1,
           "name": "Size",
-          "slug": "size"
+          "slug": "tamanho"
         }
       },
       {
@@ -1856,7 +1856,7 @@
         "attribute": {
           "id": 1,
           "name": "Size",
-          "slug": "size"
+          "slug": "tamanho"
         }
       },
       {
@@ -1865,7 +1865,7 @@
         "attribute": {
           "id": 1,
           "name": "Size",
-          "slug": "size"
+          "slug": "tamanho"
         }
       },
       {
@@ -1875,7 +1875,7 @@
         "attribute": {
           "id": 1,
           "name": "Color",
-          "slug": "color"
+          "slug": "cor"
         }
       },
       {
@@ -1885,7 +1885,7 @@
         "attribute": {
           "id": 1,
           "name": "Color",
-          "slug": "color"
+          "slug": "cor"
         }
       },
       {
@@ -1895,7 +1895,7 @@
         "attribute": {
           "id": 1,
           "name": "Color",
-          "slug": "color"
+          "slug": "cor"
         }
       },
       {
@@ -1905,7 +1905,7 @@
         "attribute": {
           "id": 1,
           "name": "Color",
-          "slug": "color"
+          "slug": "cor"
         }
       }
     ]
@@ -1941,7 +1941,7 @@
         "attribute": {
           "id": 1,
           "name": "Size",
-          "slug": "size"
+          "slug": "tamanho"
         }
       },
       {
@@ -1950,7 +1950,7 @@
         "attribute": {
           "id": 1,
           "name": "Size",
-          "slug": "size"
+          "slug": "tamanho"
         }
       },
       {
@@ -1959,7 +1959,7 @@
         "attribute": {
           "id": 1,
           "name": "Size",
-          "slug": "size"
+          "slug": "tamanho"
         }
       },
       {
@@ -1968,7 +1968,7 @@
         "attribute": {
           "id": 1,
           "name": "Size",
-          "slug": "size"
+          "slug": "tamanho"
         }
       },
       {
@@ -1978,7 +1978,7 @@
         "attribute": {
           "id": 1,
           "name": "Color",
-          "slug": "color"
+          "slug": "cor"
         }
       },
       {
@@ -1988,7 +1988,7 @@
         "attribute": {
           "id": 1,
           "name": "Color",
-          "slug": "color"
+          "slug": "cor"
         }
       },
       {
@@ -1998,7 +1998,7 @@
         "attribute": {
           "id": 1,
           "name": "Color",
-          "slug": "color"
+          "slug": "cor"
         }
       },
       {
@@ -2008,7 +2008,7 @@
         "attribute": {
           "id": 1,
           "name": "Color",
-          "slug": "color"
+          "slug": "cor"
         }
       }
     ]
@@ -2054,7 +2054,7 @@
         "attribute": {
           "id": 1,
           "name": "Size",
-          "slug": "size"
+          "slug": "tamanho"
         }
       },
       {
@@ -2063,7 +2063,7 @@
         "attribute": {
           "id": 1,
           "name": "Size",
-          "slug": "size"
+          "slug": "tamanho"
         }
       },
       {
@@ -2072,7 +2072,7 @@
         "attribute": {
           "id": 1,
           "name": "Size",
-          "slug": "size"
+          "slug": "tamanho"
         }
       },
       {
@@ -2081,7 +2081,7 @@
         "attribute": {
           "id": 1,
           "name": "Size",
-          "slug": "size"
+          "slug": "tamanho"
         }
       },
       {
@@ -2091,7 +2091,7 @@
         "attribute": {
           "id": 1,
           "name": "Color",
-          "slug": "color"
+          "slug": "cor"
         }
       },
       {
@@ -2101,7 +2101,7 @@
         "attribute": {
           "id": 1,
           "name": "Color",
-          "slug": "color"
+          "slug": "cor"
         }
       },
       {
@@ -2111,7 +2111,7 @@
         "attribute": {
           "id": 1,
           "name": "Color",
-          "slug": "color"
+          "slug": "cor"
         }
       },
       {
@@ -2121,7 +2121,7 @@
         "attribute": {
           "id": 1,
           "name": "Color",
-          "slug": "color"
+          "slug": "cor"
         }
       }
     ]
@@ -2157,7 +2157,7 @@
         "attribute": {
           "id": 1,
           "name": "Size",
-          "slug": "size"
+          "slug": "tamanho"
         }
       },
       {
@@ -2166,7 +2166,7 @@
         "attribute": {
           "id": 1,
           "name": "Size",
-          "slug": "size"
+          "slug": "tamanho"
         }
       },
       {
@@ -2175,7 +2175,7 @@
         "attribute": {
           "id": 1,
           "name": "Size",
-          "slug": "size"
+          "slug": "tamanho"
         }
       },
       {
@@ -2184,7 +2184,7 @@
         "attribute": {
           "id": 1,
           "name": "Size",
-          "slug": "size"
+          "slug": "tamanho"
         }
       },
       {
@@ -2194,7 +2194,7 @@
         "attribute": {
           "id": 1,
           "name": "Color",
-          "slug": "color"
+          "slug": "cor"
         }
       },
       {
@@ -2204,7 +2204,7 @@
         "attribute": {
           "id": 1,
           "name": "Color",
-          "slug": "color"
+          "slug": "cor"
         }
       },
       {
@@ -2214,7 +2214,7 @@
         "attribute": {
           "id": 1,
           "name": "Color",
-          "slug": "color"
+          "slug": "cor"
         }
       },
       {
@@ -2224,7 +2224,7 @@
         "attribute": {
           "id": 1,
           "name": "Color",
-          "slug": "color"
+          "slug": "cor"
         }
       }
     ]

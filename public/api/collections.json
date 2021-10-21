@@ -2,52 +2,52 @@
   "data": [
     {
       "id": 1,
-      "name": "Winter Collection",
+      "name": "Coleção de Inverno",
       "slug": "winter-collection"
     },
     {
       "id": 2,
-      "name": "Summer Collection",
+      "name": "Coleção de Verão",
       "slug": "summer-collection"
     },
     {
       "id": 3,
-      "name": "Wedding Collection",
+      "name": "Casamento",
       "slug": "wedding-collection"
     },
     {
       "id": 4,
-      "name": "Trekking Collection",
+      "name": "Coleção Trekking",
       "slug": "trekking-collection"
     },
     {
       "id": 5,
-      "name": "Gift Collection",
+      "name": "Presentes",
       "slug": "gift-collection"
     },
     {
       "id": 6,
-      "name": "Mens Collection",
+      "name": "Masculino",
       "slug": "mens-collection"
     },
     {
       "id": 7,
-      "name": "Womens Collection",
+      "name": "Feminino",
       "slug": "womens-collection"
     },
     {
       "id": 8,
-      "name": "Kids Collection",
+      "name": "Infantil",
       "slug": "kids-collection"
     },
     {
       "id": 9,
-      "name": "Party Collection",
+      "name": "Roupas de Festa",
       "slug": "party-collection"
     },
     {
       "id": 10,
-      "name": "Backpack Collection",
+      "name": "Mochilas",
       "slug": "backpack-collection"
     }
   ]

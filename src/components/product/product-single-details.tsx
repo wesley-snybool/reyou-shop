@@ -39,7 +39,7 @@ const ProductSingleDetails: React.FC = () => {
 		data && {
 			amount: data.sale_price ? data.sale_price : data.price,
 			baseAmount: data.price,
-			currencyCode: "USD",
+			currencyCode: "BRL",
 		}
 	);
 	if (isLoading) return <p>Loading...</p>;
@@ -62,7 +62,7 @@ const ProductSingleDetails: React.FC = () => {
 
 		const item = generateCartItem(data!, attributes);
 		addItemToCart(item, quantity);
-		toast("Added to the bag", {
+		toast("Adicionado ao Carrinho", {
 			type: "dark",
 			progressClassName: "fancy-progress-bar",
 			position: width > 768 ? "bottom-right" : "top-right",

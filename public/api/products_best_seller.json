@@ -1,8 +1,8 @@
 [
   {
     "id": 1,
-    "name": "Nike Black",
-    "description": "Casual wear (casual attire or clothing) may be a Western code that’s relaxed, occasional, spontaneous and fitted to everyday use. Casual wear became popular within the Western world",
+    "name": "Jaqueta Nike",
+    "description": "Roupa casual pode ser um código ocidental que é relaxado, ocasional, espontâneo e adequado para o uso diário. Roupas casuais se tornaram populares no mundo ocidental",
     "slug": "nike-black",
     "image": {
       "id": 1,
@@ -36,11 +36,11 @@
     "variations": [
       {
         "id": 1,
-        "value": "S",
+        "value": "P",
         "attribute": {
           "id": 1,
-          "name": "Size",
-          "slug": "size"
+          "name": "Tamanho",
+          "slug": "tamanho"
         }
       },
       {
@@ -48,74 +48,74 @@
         "value": "M",
         "attribute": {
           "id": 1,
-          "name": "Size",
-          "slug": "size"
+          "name": "Tamaho",
+          "slug": "tamanho"
         }
       },
       {
         "id": 3,
-        "value": "L",
+        "value": "G",
         "attribute": {
           "id": 1,
-          "name": "Size",
-          "slug": "size"
+          "name": "Tamanho",
+          "slug": "tamanho"
         }
       },
       {
         "id": 4,
-        "value": "XL",
+        "value": "GG",
         "attribute": {
           "id": 1,
-          "name": "Size",
-          "slug": "size"
+          "name": "Tamanho",
+          "slug": "tamanho"
         }
       },
       {
         "id": 5,
-        "value": "Orange",
+        "value": "Laranja",
         "meta": "#e86c25",
         "attribute": {
           "id": 1,
-          "name": "Color",
-          "slug": "color"
+          "name": "Cor",
+          "slug": "cor"
         }
       },
       {
         "id": 6,
-        "value": "Pink",
+        "value": "Rosa",
         "meta": "#ffa5b4",
         "attribute": {
           "id": 1,
-          "name": "Color",
-          "slug": "color"
+          "name": "Cor",
+          "slug": "cor"
         }
       },
       {
         "id": 7,
-        "value": "Purple",
+        "value": "Roxo",
         "meta": "#8224e3",
         "attribute": {
           "id": 1,
-          "name": "Color",
-          "slug": "color"
+          "name": "Cor",
+          "slug": "cor"
         }
       },
       {
         "id": 8,
-        "value": "Red",
+        "value": "Vermelho",
         "meta": "#dd3333",
         "attribute": {
           "id": 1,
-          "name": "Color",
-          "slug": "color"
+          "name": "Cor",
+          "slug": "cor"
         }
       }
     ]
   },
   {
     "id": 2,
-    "name": "Hermes  Carlton London",
-    "description": "Off-White self-striped knitted midi A-line dress, has a scoop neck, sleeveless, straight hem",
+    "name": "Camiseta Hermes Carlton London",
+    "description": "Vestido de malha com listras brancas, decote redondo, sem mangas, bainha reta",
     "slug": "hermes-carlton-london",
     "image": {
       "id": 1,
@@ -149,11 +149,11 @@
     "variations": [
       {
         "id": 1,
-        "value": "S",
+        "value": "P",
         "attribute": {
           "id": 1,
-          "name": "Size",
-          "slug": "size"
+          "name": "Tamanho",
+          "slug": "tamanho"
         }
       },
       {
@@ -161,74 +161,74 @@
         "value": "M",
         "attribute": {
           "id": 1,
-          "name": "Size",
-          "slug": "size"
+          "name": "Tamanho",
+          "slug": "tamanho"
         }
       },
       {
         "id": 3,
-        "value": "L",
+        "value": "G",
         "attribute": {
           "id": 1,
-          "name": "Size",
-          "slug": "size"
+          "name": "Tamanho",
+          "slug": "tamanho"
         }
       },
       {
         "id": 4,
-        "value": "XL",
+        "value": "GG",
         "attribute": {
           "id": 1,
-          "name": "Size",
-          "slug": "size"
+          "name": "Tamanho",
+          "slug": "tamanho"
         }
       },
       {
         "id": 5,
-        "value": "Orange",
+        "value": "Laranja",
         "meta": "#e86c25",
         "attribute": {
           "id": 1,
-          "name": "Color",
-          "slug": "color"
+          "name": "Cor",
+          "slug": "cor"
         }
       },
       {
         "id": 6,
-        "value": "Pink",
+        "value": "Rosa",
         "meta": "#ffa5b4",
         "attribute": {
           "id": 1,
-          "name": "Color",
-          "slug": "color"
+          "name": "Cor",
+          "slug": "cor"
         }
       },
       {
         "id": 7,
-        "value": "Purple",
+        "value": "Roxo",
         "meta": "#8224e3",
         "attribute": {
           "id": 1,
-          "name": "Color",
-          "slug": "color"
+          "name": "Cor",
+          "slug": "cor"
         }
       },
       {
         "id": 8,
-        "value": "Red",
+        "value": "Vermelho",
         "meta": "#dd3333",
         "attribute": {
           "id": 1,
-          "name": "Color",
-          "slug": "color"
+          "name": "Cor",
+          "slug": "cor"
         }
       }
     ]
   },
   {
     "id": 3,
-    "name": "Gucci Carlton UK",
-    "description": "Knitted midi A-line dress, has a scoop neck, sleeveless, straight hem",
+    "name": "Camisa Gucci",
+    "description": "Camisa de malha midi corte A, com decote redondo, sem mangas, bainha reta",
     "slug": "gucci-carlton-uk",
     "image": {
       "id": 1,
@@ -262,11 +262,11 @@
     "variations": [
       {
         "id": 1,
-        "value": "S",
+        "value": "P",
         "attribute": {
           "id": 1,
-          "name": "Size",
-          "slug": "size"
+          "name": "Tamanho",
+          "slug": "tamanho"
         }
       },
       {
@@ -274,74 +274,74 @@
         "value": "M",
         "attribute": {
           "id": 1,
-          "name": "Size",
-          "slug": "size"
+          "name": "Tamanho",
+          "slug": "tamanho"
         }
       },
       {
         "id": 3,
-        "value": "L",
+        "value": "G",
         "attribute": {
           "id": 1,
-          "name": "Size",
-          "slug": "size"
+          "name": "Tamanho",
+          "slug": "tamanho"
         }
       },
       {
         "id": 4,
-        "value": "XL",
+        "value": "GG",
         "attribute": {
           "id": 1,
-          "name": "Size",
-          "slug": "size"
+          "name": "Tamanho",
+          "slug": "tamanho"
         }
       },
       {
         "id": 5,
-        "value": "Orange",
+        "value": "Laranja",
         "meta": "#e86c25",
         "attribute": {
           "id": 1,
-          "name": "Color",
-          "slug": "color"
+          "name": "Cor",
+          "slug": "cor"
         }
       },
       {
         "id": 6,
-        "value": "Pink",
+        "value": "Rosa",
         "meta": "#ffa5b4",
         "attribute": {
           "id": 1,
-          "name": "Color",
-          "slug": "color"
+          "name": "Cor",
+          "slug": "cor"
         }
       },
       {
         "id": 7,
-        "value": "Purple",
+        "value": "Roxo",
         "meta": "#8224e3",
         "attribute": {
           "id": 1,
-          "name": "Color",
-          "slug": "color"
+          "name": "Cor",
+          "slug": "cor"
         }
       },
       {
         "id": 8,
-        "value": "Red",
+        "value": "Vermelho",
         "meta": "#dd3333",
         "attribute": {
           "id": 1,
-          "name": "Color",
-          "slug": "color"
+          "name": "Cor",
+          "slug": "cor"
         }
       }
     ]
   },
   {
     "id": 4,
-    "name": "Regular Fit Flannel Shirt",
-    "description": "The garments labelled as Committed are products that have been produced using sustainable fibers or processes, reducing their environmental impact. Mango's goal is to support the implementation of practices more committed to the environment.",
+    "name": "Camisa de flanela Versace",
+    "description": "As peças rotuladas como Comprometidas são produtos que foram produzidos com fibras ou processos sustentáveis, reduzindo seu impacto ambiental. O objetivo da Mango é apoiar a implantação de práticas mais comprometidas com o meio ambiente.",
     "slug": "regular-fit-flannel-shirt",
     "image": {
       "id": 1,
@@ -375,11 +375,11 @@
     "variations": [
       {
         "id": 1,
-        "value": "S",
+        "value": "P",
         "attribute": {
           "id": 1,
-          "name": "Size",
-          "slug": "size"
+          "name": "Tamanho",
+          "slug": "tamanho"
         }
       },
       {
@@ -387,74 +387,74 @@
         "value": "M",
         "attribute": {
           "id": 1,
-          "name": "Size",
-          "slug": "size"
+          "name": "Tamanho",
+          "slug": "tamanho"
         }
       },
       {
         "id": 3,
-        "value": "L",
+        "value": "G",
         "attribute": {
           "id": 1,
-          "name": "Size",
-          "slug": "size"
+          "name": "Tamanho",
+          "slug": "tamanho"
         }
       },
       {
         "id": 4,
-        "value": "XL",
+        "value": "GG",
         "attribute": {
           "id": 1,
-          "name": "Size",
-          "slug": "size"
+          "name": "Tamanho",
+          "slug": "tamanho"
         }
       },
       {
         "id": 5,
-        "value": "Orange",
+        "value": "Laranja",
         "meta": "#e86c25",
         "attribute": {
           "id": 1,
-          "name": "Color",
-          "slug": "color"
+          "name": "Cor",
+          "slug": "cor"
         }
       },
       {
         "id": 6,
-        "value": "Pink",
+        "value": "Rosa",
         "meta": "#ffa5b4",
         "attribute": {
           "id": 1,
-          "name": "Color",
-          "slug": "color"
+          "name": "Cor",
+          "slug": "cor"
         }
       },
       {
         "id": 7,
-        "value": "Purple",
+        "value": "Roxo",
         "meta": "#8224e3",
         "attribute": {
           "id": 1,
-          "name": "Color",
-          "slug": "color"
+          "name": "Cor",
+          "slug": "cor"
         }
       },
       {
         "id": 8,
-        "value": "Red",
+        "value": "Vermelho",
         "meta": "#dd3333",
         "attribute": {
           "id": 1,
-          "name": "Color",
-          "slug": "color"
+          "name": "Cor",
+          "slug": "cor"
         }
       }
     ]
   },
   {
     "id": 5,
-    "name": "12 Eco-Friendly Clothing Brands That",
-    "description": "12 Eco-Friendly Clothing Brands That, has a scoop neck, sleeveless, straight hem",
+    "name": "Macacão Eco",
+    "description": "De uma marca de roupas ecológicas, tem gola redonda, sem mangas, bainha reta",
     "slug": "eco-friendly-clothing-brands-that",
     "image": {
       "id": 1,
@@ -488,11 +488,11 @@
     "variations": [
       {
         "id": 1,
-        "value": "S",
+        "value": "P",
         "attribute": {
           "id": 1,
-          "name": "Size",
-          "slug": "size"
+          "name": "Tamanho",
+          "slug": "tamanho"
         }
       },
       {
@@ -500,74 +500,74 @@
         "value": "M",
         "attribute": {
           "id": 1,
-          "name": "Size",
-          "slug": "size"
+          "name": "Tamanho",
+          "slug": "tamanho"
         }
       },
       {
         "id": 3,
-        "value": "L",
+        "value": "G",
         "attribute": {
           "id": 1,
-          "name": "Size",
-          "slug": "size"
+          "name": "Tamanho",
+          "slug": "tamanho"
         }
       },
       {
         "id": 4,
-        "value": "XL",
+        "value": "GG",
         "attribute": {
           "id": 1,
-          "name": "Size",
-          "slug": "size"
+          "name": "Tamanho",
+          "slug": "tamanho"
         }
       },
       {
         "id": 5,
-        "value": "Orange",
+        "value": "Laranja",
         "meta": "#e86c25",
         "attribute": {
           "id": 1,
-          "name": "Color",
-          "slug": "color"
+          "name": "Cor",
+          "slug": "cor"
         }
       },
       {
         "id": 6,
-        "value": "Pink",
+        "value": "Rosa",
         "meta": "#ffa5b4",
         "attribute": {
           "id": 1,
-          "name": "Color",
-          "slug": "color"
+          "name": "Cor",
+          "slug": "cor"
         }
       },
       {
         "id": 7,
-        "value": "Purple",
+        "value": "Roxo",
         "meta": "#8224e3",
         "attribute": {
           "id": 1,
-          "name": "Color",
-          "slug": "color"
+          "name": "Cor",
+          "slug": "cor"
         }
       },
       {
         "id": 8,
-        "value": "Red",
+        "value": "Vermelho",
         "meta": "#dd3333",
         "attribute": {
           "id": 1,
-          "name": "Color",
-          "slug": "color"
+          "name": "Cor",
+          "slug": "cor"
         }
       }
     ]
   },
   {
     "id": 6,
-    "name": "Oversized W Sweater",
-    "description": "Constructed in cotton sweat fabric, this lovely piece, lacus eu mattis auctor, dolor lectus venenatis nulla, at tristique eros sem vel ante. Sed leo enim, iaculis ornare tristique non, vulputate sit amet ante.",
+    "name": "Suéter Branco Largo",
+    "description": "Linda peça em algodão purp",
     "slug": "oversized-w-sweater",
     "image": {
       "id": 1,
@@ -601,11 +601,11 @@
     "variations": [
       {
         "id": 1,
-        "value": "S",
+        "value": "P",
         "attribute": {
           "id": 1,
-          "name": "Size",
-          "slug": "size"
+          "name": "Tamanho",
+          "slug": "tamanho"
         }
       },
       {
@@ -613,74 +613,74 @@
         "value": "M",
         "attribute": {
           "id": 1,
-          "name": "Size",
-          "slug": "size"
+          "name": "Tamanho",
+          "slug": "tamanho"
         }
       },
       {
         "id": 3,
-        "value": "L",
+        "value": "G",
         "attribute": {
           "id": 1,
-          "name": "Size",
-          "slug": "size"
+          "name": "Tamanho",
+          "slug": "tamanho"
         }
       },
       {
         "id": 4,
-        "value": "XL",
+        "value": "GG",
         "attribute": {
           "id": 1,
-          "name": "Size",
-          "slug": "size"
+          "name": "Tamanho",
+          "slug": "tamanho"
         }
       },
       {
         "id": 5,
-        "value": "Orange",
+        "value": "Laranja",
         "meta": "#e86c25",
         "attribute": {
           "id": 1,
-          "name": "Color",
-          "slug": "color"
+          "name": "Cor",
+          "slug": "cor"
         }
       },
       {
         "id": 6,
-        "value": "Pink",
+        "value": "Rosa",
         "meta": "#ffa5b4",
         "attribute": {
           "id": 1,
-          "name": "Color",
-          "slug": "color"
+          "name": "Cor",
+          "slug": "cor"
         }
       },
       {
         "id": 7,
-        "value": "Purple",
+        "value": "Roxo",
         "meta": "#8224e3",
         "attribute": {
           "id": 1,
-          "name": "Color",
-          "slug": "color"
+          "name": "Cor",
+          "slug": "cor"
         }
       },
       {
         "id": 8,
-        "value": "Red",
+        "value": "Vermelho",
         "meta": "#dd3333",
         "attribute": {
           "id": 1,
           "name": "Color",
-          "slug": "color"
+          "slug": "cor"
         }
       }
     ]
   },
   {
     "id": 7,
-    "name": "Regular Fit Crew-neck T-shirt",
-    "description": "Self-striped knitted midi A-line dress, has a scoop neck, T-shirt, straight hem",
+    "name": "Camiseta regular de gola redonda",
+    "description": "Vestido de malha midi com listras auto-listradas, decote redondo, camiseta, bainha reta",
     "slug": "regular-fit-crew-neck-t-shirt",
     "image": {
       "id": 1,
@@ -714,11 +714,11 @@
     "variations": [
       {
         "id": 1,
-        "value": "S",
+        "value": "P",
         "attribute": {
           "id": 1,
-          "name": "Size",
-          "slug": "size"
+          "name": "Tamanho",
+          "slug": "tamanho"
         }
       },
       {
@@ -726,74 +726,74 @@
         "value": "M",
         "attribute": {
           "id": 1,
-          "name": "Size",
-          "slug": "size"
+          "name": "Tamanho",
+          "slug": "tamanho"
         }
       },
       {
         "id": 3,
-        "value": "L",
+        "value": "G",
         "attribute": {
           "id": 1,
-          "name": "Size",
-          "slug": "size"
+          "name": "Tamanho",
+          "slug": "tamanho"
         }
       },
       {
         "id": 4,
-        "value": "XL",
+        "value": "GG",
         "attribute": {
           "id": 1,
-          "name": "Size",
-          "slug": "size"
+          "name": "Tamanho",
+          "slug": "tamanho"
         }
       },
       {
         "id": 5,
-        "value": "Orange",
+        "value": "Laranja",
         "meta": "#e86c25",
         "attribute": {
           "id": 1,
-          "name": "Color",
-          "slug": "color"
+          "name": "Cor",
+          "slug": "cor"
         }
       },
       {
         "id": 6,
-        "value": "Pink",
+        "value": "Rosa",
         "meta": "#ffa5b4",
         "attribute": {
           "id": 1,
-          "name": "Color",
-          "slug": "color"
+          "name": "Cor",
+          "slug": "cor"
         }
       },
       {
         "id": 7,
-        "value": "Purple",
+        "value": "Roxo",
         "meta": "#8224e3",
         "attribute": {
           "id": 1,
-          "name": "Color",
-          "slug": "color"
+          "name": "Cor",
+          "slug": "cor"
         }
       },
       {
         "id": 8,
-        "value": "Red",
+        "value": "Vermlho",
         "meta": "#dd3333",
         "attribute": {
           "id": 1,
-          "name": "Color",
-          "slug": "color"
+          "name": "Cor",
+          "slug": "cor"
         }
       }
     ]
   },
   {
     "id": 8,
-    "name": "Zara Shoes Green",
-    "description": "Footwear refers to garments worn on the feet, which originally serves to purpose of protection against adversities of the environment, usually regarding ground textures and temperature.",
+    "name": "Tênis Ecológico Zara",
+    "description": "Calçado refere-se a vestimentas usadas nos pés, que originalmente tem a finalidade de proteção contra as adversidades do meio ambiente, geralmente relacionadas às texturas do solo e à temperatura.",
     "slug": "zara-shoes-green",
     "image": {
       "id": 1,
@@ -817,11 +817,11 @@
     "variations": [
       {
         "id": 1,
-        "value": "S",
+        "value": "P",
         "attribute": {
           "id": 1,
-          "name": "Size",
-          "slug": "size"
+          "name": "Tamanho",
+          "slug": "tamanho"
         }
       },
       {
@@ -829,284 +829,72 @@
         "value": "M",
         "attribute": {
           "id": 1,
-          "name": "Size",
-          "slug": "size"
+          "name": "Tamanho",
+          "slug": "tamanho"
         }
       },
       {
         "id": 3,
-        "value": "L",
+        "value": "G",
         "attribute": {
           "id": 1,
-          "name": "Size",
-          "slug": "size"
+          "name": "Tamanho",
+          "slug": "tamanho"
         }
       },
       {
         "id": 4,
-        "value": "XL",
+        "value": "GG",
         "attribute": {
           "id": 1,
-          "name": "Size",
-          "slug": "size"
+          "name": "Tamanho",
+          "slug": "tamanho"
         }
       },
       {
         "id": 5,
-        "value": "Orange",
+        "value": "Laranja",
         "meta": "#e86c25",
         "attribute": {
           "id": 1,
-          "name": "Color",
-          "slug": "color"
+          "name": "Cor",
+          "slug": "cor"
         }
       },
       {
         "id": 6,
-        "value": "Pink",
+        "value": "Rosa",
         "meta": "#ffa5b4",
         "attribute": {
           "id": 1,
-          "name": "Color",
-          "slug": "color"
+          "name": "Cor",
+          "slug": "cor"
         }
       },
       {
         "id": 7,
-        "value": "Purple",
+        "value": "P",
         "meta": "#8224e3",
         "attribute": {
           "id": 1,
-          "name": "Color",
-          "slug": "color"
+          "name": "Cor",
+          "slug": "cor"
         }
       },
       {
         "id": 8,
-        "value": "Red",
+        "value": "Vermelho",
         "meta": "#dd3333",
         "attribute": {
           "id": 1,
-          "name": "Color",
-          "slug": "color"
-        }
-      }
-    ]
-  },
-  {
-    "id": 9,
-    "name": "Women Fitted Neck T-Shirt",
-    "description": "All about the crisp cut and exceptional quality of the cotton, the Women Fitted V Neck Rib L/S T-Shirt won’t be one you’ll be tossing away ever.",
-    "slug": "women-fitted-neck-t-shirt",
-    "image": {
-      "id": 1,
-      "thumbnail": "/assets/images/products/p-9.png",
-      "original": "/assets/images/products/p-9-m.png"
-    },
-    "gallery": [
-      {
-        "id": 1,
-        "thumbnail": "/assets/images/products/p-9-1.png",
-        "original": "/assets/images/products/p-9-1.png"
-      },
-      {
-        "id": 2,
-        "thumbnail": "/assets/images/products/p-9-2.png",
-        "original": "/assets/images/products/p-9-2.png"
-      },
-      {
-        "id": 3,
-        "thumbnail": "/assets/images/products/p-9-3.png",
-        "original": "/assets/images/products/p-9-3.png"
-      },
-      {
-        "id": 4,
-        "thumbnail": "/assets/images/products/p-9-4.png",
-        "original": "/assets/images/products/p-9-4.png"
-      }
-    ],
-    "price": 30.00,
-    "sale_price": 28.00,
-    "variations": [
-      {
-        "id": 1,
-        "value": "S",
-        "attribute": {
-          "id": 1,
-          "name": "Size",
-          "slug": "size"
-        }
-      },
-      {
-        "id": 2,
-        "value": "M",
-        "attribute": {
-          "id": 1,
-          "name": "Size",
-          "slug": "size"
-        }
-      },
-      {
-        "id": 3,
-        "value": "L",
-        "attribute": {
-          "id": 1,
-          "name": "Size",
-          "slug": "size"
-        }
-      },
-      {
-        "id": 4,
-        "value": "XL",
-        "attribute": {
-          "id": 1,
-          "name": "Size",
-          "slug": "size"
-        }
-      },
-      {
-        "id": 5,
-        "value": "Orange",
-        "meta": "#e86c25",
-        "attribute": {
-          "id": 1,
-          "name": "Color",
-          "slug": "color"
-        }
-      },
-      {
-        "id": 6,
-        "value": "Pink",
-        "meta": "#ffa5b4",
-        "attribute": {
-          "id": 1,
-          "name": "Color",
-          "slug": "color"
-        }
-      },
-      {
-        "id": 7,
-        "value": "Purple",
-        "meta": "#8224e3",
-        "attribute": {
-          "id": 1,
-          "name": "Color",
-          "slug": "color"
-        }
-      },
-      {
-        "id": 8,
-        "value": "Red",
-        "meta": "#dd3333",
-        "attribute": {
-          "id": 1,
-          "name": "Color",
-          "slug": "color"
-        }
-      }
-    ]
-  },
-  {
-    "id": 10,
-    "name": "NIKE Shoes",
-    "description": "NIKE 2020 Black White is a clean and monochromatic colourway of the label’s latest high-technology silhouette. The model first launched late last year and is currently Jordan Brand’s flagship performance pair.",
-    "slug": "nike-shoes",
-    "image": {
-      "id": 1,
-      "thumbnail": "/assets/images/products/p-10.png",
-      "original": "/assets/images/products/p-10-m.png"
-    },
-    "gallery": [
-      {
-        "id": 1,
-        "thumbnail": "/assets/images/products/p-10-1.png",
-        "original": "/assets/images/products/p-10-1.png"
-      },
-      {
-        "id": 2,
-        "thumbnail": "/assets/images/products/p-10-2.png",
-        "original": "/assets/images/products/p-10-2.png"
-      }
-    ],
-    "price": "",
-    "sale_price": 39.99,
-    "variations": [
-      {
-        "id": 1,
-        "value": "S",
-        "attribute": {
-          "id": 1,
-          "name": "Size",
-          "slug": "size"
-        }
-      },
-      {
-        "id": 2,
-        "value": "M",
-        "attribute": {
-          "id": 1,
-          "name": "Size",
-          "slug": "size"
-        }
-      },
-      {
-        "id": 3,
-        "value": "L",
-        "attribute": {
-          "id": 1,
-          "name": "Size",
-          "slug": "size"
-        }
-      },
-      {
-        "id": 4,
-        "value": "XL",
-        "attribute": {
-          "id": 1,
-          "name": "Size",
-          "slug": "size"
-        }
-      },
-      {
-        "id": 5,
-        "value": "Orange",
-        "meta": "#e86c25",
-        "attribute": {
-          "id": 1,
-          "name": "Color",
-          "slug": "color"
-        }
-      },
-      {
-        "id": 6,
-        "value": "Pink",
-        "meta": "#ffa5b4",
-        "attribute": {
-          "id": 1,
-          "name": "Color",
-          "slug": "color"
-        }
-      },
-      {
-        "id": 7,
-        "value": "Purple",
-        "meta": "#8224e3",
-        "attribute": {
-          "id": 1,
-          "name": "Color",
-          "slug": "color"
-        }
-      },
-      {
-        "id": 8,
-        "value": "Red",
-        "meta": "#dd3333",
-        "attribute": {
-          "id": 1,
-          "name": "Color",
-          "slug": "color"
+          "name": "Cor",
+          "slug": "cor"
         }
       }
     ]
   }
-]
+  
+ 
+    ]
+  
+

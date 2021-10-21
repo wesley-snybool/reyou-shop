@@ -1,3 +1,4 @@
+import { Conceitos } from '@framework/types';
 export const ROUTES = {
   HOME: "/",
   PRODUCT: `/products`,
@@ -17,5 +18,6 @@ export const ROUTES = {
   SEARCH: "/search",
   COLLECTIONS: "/collections",
   CATEGORY: "/category",
+  Conceitos_em_alta: "/conceitosemalta",
   ORDER: "/order",
 };

@@ -3,7 +3,7 @@
       {
         "id": 1,
         "name": "Ética Animal",
-        "slug": "woman",
+        "slug": "etica-animal",
         "productCount": 20,
         "image": {
           "id": 1,
@@ -14,7 +14,7 @@
       {
         "id": 2,
         "name": "Impacto Social",
-        "slug": "man",
+        "slug": "impacto-social",
         "productCount": 20,
         "image": {
           "id": 1,
@@ -25,7 +25,7 @@
       {
         "id": 3,
         "name": "Impacto Ecológico",
-        "slug": "watch",
+        "slug": "impacto-ecologico",
         "productCount": 20,
         "image": {
           "id": 1,
@@ -36,7 +36,7 @@
       {
         "id": 4,
         "name": "Vegano",
-        "slug": "kids",
+        "slug": "vegano",
         "productCount": 20,
         "image": {
           "id": 1,
@@ -47,45 +47,12 @@
       {
         "id": 5,
         "name": "Sustentabilidade",
-        "slug": "sports",
+        "slug": "sustentabilidade",
         "productCount": 20,
         "image": {
           "id": 1,
           "thumbnail": "/assets/images/category/sports.jpg",
           "original": "/assets/images/category/sports.jpg"
-        }
-      },
-      {
-        "id": 6,
-        "name": "Óculos de Sol",
-        "slug": "sunglass",
-        "productCount": 20,
-        "image": {
-          "id": 1,
-          "thumbnail": "/assets/images/category/sunglass.jpg",
-          "original": "/assets/images/category/sunglass.jpg"
-        }
-      },
-      {
-        "id": 7,
-        "name": "Bolsas",
-        "slug": "bags",
-        "productCount": 20,
-        "image": {
-          "id": 1,
-          "thumbnail": "/assets/images/category/bags.jpg",
-          "original": "/assets/images/category/bags.jpg"
-        }
-      },
-      {
-        "id": 8,
-        "name": "Tênis",
-        "slug": "sneakers",
-        "productCount": 20,
-        "image": {
-          "id": 1,
-          "thumbnail": "/assets/images/category/sneakers.jpg",
-          "original": "/assets/images/category/sneakers.jpg"
         }
       }
     ]

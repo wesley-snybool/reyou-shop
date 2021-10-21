@@ -1,6 +1,6 @@
 export const homeOneBanner = {
   id: 1,
-  title: "Holiday Offers",
+  title: "Promocões do Feriado",
   slug: "holiday-offers",
   image: {
     mobile: {
@@ -19,7 +19,7 @@ export const homeOneBanner = {
 export const homeOneHeroBanner = [
 	{
 		id: 1,
-		title: "winter collection",
+		title: "Coleção de Inverno",
 		slug: "winter-collection",
 		image: {
 			mobile: {
@@ -36,7 +36,7 @@ export const homeOneHeroBanner = [
 	},
 	{
 		id: 2,
-		title: "gift collection",
+		title: "Presentes",
 		slug: "gift-collection",
 		image: {
 			mobile: {
@@ -53,7 +53,7 @@ export const homeOneHeroBanner = [
 	},
 	{
 		id: 3,
-		title: "party collection",
+		title: "Roupas de Festa",
 		slug: "party-collection",
 		image: {
 			mobile: {
@@ -73,7 +73,7 @@ export const homeOneHeroBanner = [
 export const homeTwoHeroBanner = [
   {
     id: 1,
-    title: "winter collection",
+    title: "Coleção de Inverno",
 		slug: "winter-collection",
     image: {
       mobile: {
@@ -90,7 +90,7 @@ export const homeTwoHeroBanner = [
   },
   {
     id: 2,
-    title: "gift collection",
+    title: "Presentes",
 		slug: "gift-collection",
     image: {
       mobile: {
@@ -107,7 +107,7 @@ export const homeTwoHeroBanner = [
   },
   {
     id: 3,
-    title: "party collection",
+    title: "Roupas de Festa",
 		slug: "party-collection",
     image: {
       mobile: {
@@ -127,7 +127,7 @@ export const homeTwoHeroBanner = [
 export const homeThreeBanner = [
   {
     id: 1,
-    title: "Winter Collection of Kid Items",
+    title: "Coleção de Inverno - Infantil",
     slug: "winter-collection",
     image: {
       mobile: {
@@ -144,7 +144,7 @@ export const homeThreeBanner = [
   },
   {
     id: 2,
-    title: "Offer Off Everything",
+    title: "Ofertas Especiais",
     slug: "offer-everything",
     image: {
       mobile: {
@@ -163,7 +163,7 @@ export const homeThreeBanner = [
 export const homeThreeMasonryBanner = [
   {
     id: 1,
-    title: "Men's Collection",
+    title: "Coleção Masculina",
     slug: "mens-collection",
     image: {
       mobile: {
@@ -181,7 +181,7 @@ export const homeThreeMasonryBanner = [
   },
   {
     id: 2,
-    title: "New Sports",
+    title: "Esportivas",
     slug: "new-sports",
     image: {
       mobile: {
@@ -199,7 +199,7 @@ export const homeThreeMasonryBanner = [
   },
   {
     id: 3,
-    title: "Dress Women",
+    title: "Vestidos",
     slug: "dress-women",
     image: {
       mobile: {
@@ -217,7 +217,7 @@ export const homeThreeMasonryBanner = [
   },
   {
     id: 4,
-    title: "Exclusive Sunglasses",
+    title: "Exclusivo Óculos Escuros",
     slug: "exclusive-sunglasses",
     image: {
       mobile: {
@@ -235,7 +235,7 @@ export const homeThreeMasonryBanner = [
   },
   {
     id: 5,
-    title: "Product Coupons",
+    title: "Cupons",
     slug: "product-coupons",
     image: {
       mobile: {
@@ -253,7 +253,7 @@ export const homeThreeMasonryBanner = [
   },
   {
     id: 6,
-    title: "New Backpack",
+    title: "Novas Mochilas",
     slug: "new-backpack",
     image: {
       mobile: {
@@ -274,7 +274,7 @@ export const homeThreeMasonryBanner = [
 export const bannerGrid = [
 	{
 		id: 1,
-		title: "Women T-Shirts Collection",
+		title: "Coleção de Camisetas Femininas",
 		slug: "t-shirts-collection",
 		image: {
 			mobile: {
@@ -292,7 +292,7 @@ export const bannerGrid = [
 	},
 	{
 		id: 2,
-		title: "Women Jins Collection",
+		title: "Coleção de Jeans Femininos",
 		slug: "jins-collection",
 		image: {
 			mobile: {
@@ -310,7 +310,7 @@ export const bannerGrid = [
 	},
 	{
 		id: 3,
-		title: "New Backpack",
+		title: "Novas Mochilas",
 		slug: "new-backpack",
 		image: {
 			mobile: {
@@ -331,7 +331,7 @@ export const bannerGrid = [
 export const promotionBanner = [
 	{
 		id: 1,
-		title: "Travel Baggage",
+		title: "Bolsas de Viagem",
 		slug: "travel-baggage",
 		image: {
 			mobile: {
@@ -349,7 +349,7 @@ export const promotionBanner = [
 	},
 	{
 		id: 2,
-		title: "Women's Collection",
+		title: "Coleção Feminina",
 		slug: "women's-collection",
 		image: {
 			mobile: {
@@ -367,7 +367,7 @@ export const promotionBanner = [
 	},
 	{
 		id: 3,
-		title: "Winter Collection",
+		title: "Coleção de Inverno",
 		slug: "winter-collection",
 		image: {
 			mobile: {
@@ -388,7 +388,7 @@ export const promotionBanner = [
 export const promotionBannerTwo = [
 	{
 		id: 1,
-		title: "Men's Collection",
+		title: "Coleção Masculina",
 		slug: "men's-collection",
 		image: {
 			mobile: {
@@ -405,7 +405,7 @@ export const promotionBannerTwo = [
 	},
 	{
 		id: 2,
-		title: "Women's Collection",
+		title: "Coleção Feminina",
 		slug: "women's-collection",
 		image: {
 			mobile: {
@@ -422,7 +422,7 @@ export const promotionBannerTwo = [
 	},
 	{
 		id: 3,
-		title: "Kid's Collection",
+		title: "Coleção Infantil",
 		slug: "kid's-collection",
 		image: {
 			mobile: {
@@ -442,7 +442,7 @@ export const promotionBannerTwo = [
 export const bannerDataOne = [
   {
     id: 1,
-    title: "Men's Collection",
+    title: "Coleção Masculina",
     slug: "men's-collection",
     image: {
       mobile: {
@@ -460,7 +460,7 @@ export const bannerDataOne = [
   },
   {
     id: 2,
-    title: "New Sports",
+    title: "Esportivas",
     slug: "new-sports",
     image: {
       mobile: {
@@ -478,7 +478,7 @@ export const bannerDataOne = [
   },
   {
     id: 3,
-    title: "Dress Women",
+    title: "Vestidos",
     slug: "dress-women",
     image: {
       mobile: {
@@ -499,7 +499,7 @@ export const bannerDataOne = [
 export const bannerDataTwo = [
   {
     id: 1,
-    title: "Exclusive Sunglasses",
+    title: "Exclusivo Óculos de Sol",
     slug: "exclusive-sunglasses",
     image: {
       mobile: {
@@ -517,7 +517,7 @@ export const bannerDataTwo = [
   },
   {
     id: 2,
-    title: "Product Coupons",
+    title: "Cupons",
     slug: "product-coupons",
     image: {
       mobile: {
@@ -535,7 +535,7 @@ export const bannerDataTwo = [
   },
   {
     id: 3,
-    title: "New Backpack",
+    title: "Novas Mochilas",
     slug: "new-backpack",
     image: {
       mobile: {
@@ -556,7 +556,7 @@ export const bannerDataTwo = [
 export const homeThreeProductsBanner = [
   {
     id: 1,
-    title: "Sale Offer",
+    title: "Oferta",
     slug: "sale-offer",
     image: {
       mobile: {
@@ -573,7 +573,7 @@ export const homeThreeProductsBanner = [
   },
   {
     id: 2,
-    title: "New Sports",
+    title: "Esportivas",
     slug: "new-sports",
     image: {
       mobile: {
@@ -593,7 +593,7 @@ export const homeThreeProductsBanner = [
 export const homeFourBanner = [
   {
     id: 1,
-    title: "New Backpack",
+    title: "Novas Mochilas",
     slug: "new-backpack",
     image: {
       mobile: {
@@ -610,7 +610,7 @@ export const homeFourBanner = [
   },
   {
     id: 2,
-    title: "Men's Collection",
+    title: "Coleção Masculina",
     slug: "men's-collection",
     image: {
       mobile: {
@@ -627,7 +627,7 @@ export const homeFourBanner = [
   },
   {
     id: 3,
-    title: "Offer Off Everything",
+    title: "Ofertas Especiais",
     slug: "offer-everything",
     image: {
       mobile: {
@@ -647,7 +647,7 @@ export const homeFourBanner = [
 export const homeFourGridBanners = [
   {
     id: 1,
-    title: "On Selected Items",
+    title: "Itens Selecionados",
     slug: "selected-items",
     image: {
       mobile: {
@@ -665,7 +665,7 @@ export const homeFourGridBanners = [
   },
   {
     id: 2,
-    title: "Casual Top",
+    title: "Top Casual",
     slug: "casual-top",
     image: {
       mobile: {
@@ -683,7 +683,7 @@ export const homeFourGridBanners = [
   },
   {
     id: 3,
-    title: "Branded Top",
+    title: "Top de Marca",
     slug: "branded-top",
     image: {
       mobile: {
@@ -703,7 +703,7 @@ export const homeFourGridBanners = [
 
 export const homeFiveBanner = {
   id: 1,
-  title: "Winter Collection of Kid Items",
+  title: "Coleção de Inverno - Infantil",
   slug: "winter-collection",
   image: {
     mobile: {

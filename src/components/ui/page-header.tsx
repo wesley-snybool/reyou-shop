@@ -1,4 +1,7 @@
 import { useTranslation } from "next-i18next";
+<style>
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
+</style>
 
 interface HeaderProps {
 	pageSubHeader?: string;
@@ -11,22 +14,22 @@ const PageHeader: React.FC<HeaderProps> = ({
 }) => {
 	const { t } = useTranslation("common");
 	return (
-		<div
+		/*<div
 			className="flex justify-center p-6 md:p-10 2xl:p-8 relative bg-no-repeat bg-center bg-cover"
 			style={{
 				backgroundImage: "url(/assets/images/page-header.jpg)",
 			}}
 		>
 			<div className="absolute top-0 start-0 bg-black w-full h-full opacity-50 transition-opacity duration-500 group-hover:opacity-80" />
-			<div className="w-full flex items-center justify-center relative z-10 py-10 md:py-14 lg:py-20 xl:py-24 2xl:py-32">
-				<h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-white text-center">
-					<span className="font-satisfy block font-normal mb-3">
+			<div className="w-full flex items-center justify-center relative z-10 py-10 md:py-14 lg:py-20 xl:py-24 2xl:py-32">*/
+				<h2 className="text-sm md:text-2xl md:text-2xl font-bold text-black text-center">
+					{/* <span className="font-garamond block font-normal mb-3">
 						{t(`${pageSubHeader}`)}
-					</span>
+					</span> */}
 					{t(`${pageHeader}`)}
 				</h2>
-			</div>
-		</div>
+			/*</div>
+		</div>*/
 	);
 };
 

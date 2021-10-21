@@ -35,7 +35,7 @@ export const ProductAttributes: React.FC<Props> = ({
 						)}
 						onClick={() => onClick({ [title]: value })}
 					>
-						{title === "color" ? (
+						{title === "cor" ? (
 							<span
 								className="h-full w-full rounded block"
 								style={{ backgroundColor: meta }}

@@ -5,6 +5,7 @@ import { USFlag } from "@components/icons/USFlag";
 import { DEFlag } from "@components/icons/DEFlag";
 import { ESFlag } from "@components/icons/ESFlag";
 import { PTFlag } from "@components/icons/PTFlag";
+import { BRFlag } from "@components/icons/BRFlag";
 export const siteSettings = {
 	name: "Re.You Shop",
 	description:
@@ -15,20 +16,20 @@ export const siteSettings = {
 		address: "",
 	},
 	logo: {
-		url: "/assets/images/logo.png",
+		url: "/assets/images/Assinatura_Reyou.png",
 		alt: "Re.you Shop",
 		href: "/home",
-		width: 95,
-		height: 30,
+		width: 120,
+		height: 120,
 	},
-	defaultLanguage: "en",
-	currencyCode: "USD",
+	defaultLanguage: "es",
+	currencyCode: "R$",
 	site_header: {
 		menu: [
 			{
 				id: 1,
 				path: "/home",
-				label: "menu-home",
+				label: "Sobre Nós"},
 				/*Menu: [
 					{
 						id: 1,
@@ -62,13 +63,13 @@ export const siteSettings = {
 						label: "menu-home",
 					},
 				],
-			},*/
-		},
+			},
+		},*/
 			{
 				id: 2,
-				path: "/search?q=men-wear",
-				label: "menu-men-wear",
-				columns: [
+				path: "/#",
+				label: "Vitrine",
+				/*columns: [
 					{
 						id: 1,
 						columnItems: [
@@ -330,12 +331,12 @@ export const siteSettings = {
 							},
 						],
 					},
-				],
+				],*/
 			},
 			{
 				id: 3,
 				path: "/search?q=women-wear",
-				label: "menu-women-wear",
+				label: "Marcas",
 				columns: [
 					{
 						id: 1,
@@ -603,8 +604,8 @@ export const siteSettings = {
 			{
 				id: 4,
 				path: "/search?q=casual-wear",
-				label: "menu-casual-wear",
-				columns: [
+				label: "Entendendo os Valores",
+				/*columns: [
 					{
 						id: 1,
 						columnItems: [
@@ -866,14 +867,14 @@ export const siteSettings = {
 							},
 						],
 					},
-				],
+				],*/
 			},
 			{
 				id: 5,
 				path: "/search",
-				label: "menu-search",
+				label: "blog",
 			},
-			{
+			/*{
 				id: 6,
 				path: "/",
 				label: "menu-pages",
@@ -917,7 +918,7 @@ export const siteSettings = {
 					},
 					{
 						id: 4,
-						path: "/terms",
+						path: "/privacy",
 						label: "menu-terms-condition",
 					},
 					{
@@ -925,40 +926,40 @@ export const siteSettings = {
 						path: "/contact-us",
 						label: "menu-contact-us",
 					},
-					{
+					/*{
 						id: 6,
 						path: "/checkout",
 						label: "menu-checkout",
-					},
-					{
+					},*/
+					/*{
 						id: 7,
 						path: "/collections/mens-collection",
 						label: "menu-collection",
 					},
-					{
+					/*{
 						id: 8,
 						path: "/category/man",
 						label: "menu-category",
-					},
-					{
+					},*/
+					/*{
 						id: 9,
 						path: "/order",
 						label: "menu-order",
-					},
-					{
+					},*/
+					/*{
 						id: 10,
 						path: "/404",
 						label: "menu-404",
 					},
 				],
-			},
+			},*/
 		],
 		mobileMenu: [
 			{
 				id: 1,
 				path: "/",
-				label: "menu-demos",
-				subMenu: [
+				label: "Home"},
+				/*subMenu: [
 					{
 						id: 1,
 						path: "/",
@@ -1476,7 +1477,7 @@ export const siteSettings = {
 						label: "menu-handbags-wallets",
 					},
 				],
-			},
+			},*/
 			{
 				id: 5,
 				path: "/search",
@@ -1524,21 +1525,21 @@ export const siteSettings = {
 						path: "/privacy",
 						label: "menu-privacy-policy",
 					},
-					{
+					/*{
 						id: 4,
 						path: "/terms",
 						label: "menu-terms-condition",
-					},
+					},*/
 					{
 						id: 5,
 						path: "/contact-us",
 						label: "menu-contact-us",
 					},
-					{
+					/*{
 						id: 6,
 						path: "/checkout",
 						label: "menu-checkout",
-					},
+					},*/
 					{
 						id: 7,
 						path: "/collections/mens-collection",
@@ -1549,11 +1550,11 @@ export const siteSettings = {
 						path: "/category/man",
 						label: "menu-category",
 					},
-					{
+					/*{
 						id: 9,
 						path: "/order",
 						label: "menu-order",
-					},
+					},*/
 					{
 						id: 10,
 						path: "/404",

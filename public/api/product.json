@@ -59,11 +59,11 @@
   "variations": [
     {
       "id": 1,
-      "value": "S",
+      "value": "P",
       "attribute": {
         "id": 1,
-        "name": "Size",
-        "slug": "size"
+        "name": "Tamanho",
+        "slug": "tamanho"
       }
     },
     {
@@ -71,17 +71,17 @@
       "value": "M",
       "attribute": {
         "id": 1,
-        "name": "Size",
-        "slug": "size"
+        "name": "Tamanho",
+        "slug": "tamanho"
       }
     },
     {
       "id": 3,
-      "value": "L",
+      "value": "G",
       "attribute": {
         "id": 1,
-        "name": "Size",
-        "slug": "size"
+        "name": "Tamanho",
+        "slug": "tamanho"
       }
     },
     {
@@ -89,8 +89,8 @@
       "value": "XL",
       "attribute": {
         "id": 1,
-        "name": "Size",
-        "slug": "size"
+        "name": "Tamanho",
+        "slug": "tamanho"
       }
     },
     {
@@ -99,8 +99,8 @@
       "meta": "#e86c25",
       "attribute": {
         "id": 1,
-        "name": "Color",
-        "slug": "color"
+        "name": "Cor",
+        "slug": "cor"
       }
     },
     {
@@ -109,8 +109,8 @@
       "meta": "#ffa5b4",
       "attribute": {
         "id": 1,
-        "name": "Color",
-        "slug": "color"
+        "name": "Cor",
+        "slug": "cor"
       }
     },
     {
@@ -119,8 +119,8 @@
       "meta": "#8224e3",
       "attribute": {
         "id": 1,
-        "name": "Color",
-        "slug": "color"
+        "name": "Cor",
+        "slug": "cor"
       }
     },
     {
@@ -129,26 +129,26 @@
       "meta": "#dd3333",
       "attribute": {
         "id": 1,
-        "name": "Color",
-        "slug": "color"
+        "name": "Cor",
+        "slug": "cor"
       }
     }
   ],
   "meta": [
     {
       "id": 1,
-      "title": "Product Details",
-      "content": "Our Customer Experience Team is available 7 days a week and we offer 2 ways to get in contact.Email and Chat . We try to reply quickly, so you need not to wait too long for a response!."
+      "title": "Detalhes do Produto",
+      "content": "Nossa Equipe de Experiência do Cliente está disponível 7 dias por semana e oferecemos 2 formas de contato. E-mail e Chat. Tentamos responder rapidamente, então você não precisa esperar muito por uma resposta!"
     },
     {
       "id": 2,
-      "title": "Additional Information",
-      "content": "Please read the documentation carefully . We also have some online video tutorials regarding this issue . If the problem remains, Please Open a ticket in the support forum"
+      "title": "Informação adicional",
+      "content": "Por favor, leia a documentação com atenção. Também temos alguns tutoriais em vídeo online sobre esse assunto. Se o problema persistir, abra um tíquete no fórum de suporte"
     },
     {
       "id": 3,
-      "title": "Customer Reviews",
-      "content": "At first, Please check your internet connection . We also have some online video tutorials regarding this issue . If the problem remains, Please Open a ticket in the support forum."
+      "title": "Avaliações de Clientes",
+      "content": "Primeiro, verifique sua conexão com a Internet. Também temos alguns tutoriais em vídeo online sobre esse assunto. Se o problema persistir, abra um tíquete no fórum de suporte."
     }
   ]
 }

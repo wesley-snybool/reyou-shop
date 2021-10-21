@@ -43,7 +43,7 @@ const breakpoints = {
 
 const breakpointsCircle = {
 	"1720": {
-		slidesPerView: 8,
+		slidesPerView: 10,
 		spaceBetween: 48,
 	},
 	"1400": {
@@ -69,8 +69,7 @@ const breakpointsCircle = {
 };
 
 const CategoryBlock: React.FC<CategoriesProps> = ({
-	className = "mb-10 md:mb-11 lg:mb-12 xl:mb-14 lg:pb-1 xl:pb-0",
-	sectionHeading,
+	
 	type = "circle",
 }) => {
 	const { data, isLoading, error } = useCategoriesQuery({
@@ -78,8 +77,8 @@ const CategoryBlock: React.FC<CategoriesProps> = ({
 	});
 
 	return (
-		<div className={className}>
-			<SectionHeader sectionHeading={sectionHeading} />
+           <div className="slds">
+			<strong>Conceitos em alta</strong>
 			{error ? (
 				<Alert message={error?.message} />
 			) : (

@@ -9,7 +9,7 @@ import { GetStaticProps } from "next";
 export default function SignInPage() {
 	return (
 		<>
-			<PageHeader pageHeader="Entrar" />
+			
 			<Container>
 				<div className="py-16 lg:py-20">
 					<LoginForm />

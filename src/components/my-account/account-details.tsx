@@ -98,6 +98,32 @@ const AccountDetails: React.FC = () => {
 							errorKey={errors.email?.message}
 						/>
 					</div>
+					<div className="flex flex-col sm:flex-row sm:space-s-3 space-y-4 sm:space-y-0">
+						<Input
+							type="estado"
+							labelKey="forms:Estado"
+							{...register("phoneNumber", {
+								required: "forms:phone-required",
+							})}
+							variant="solid"
+							className="w-full sm:w-1/2"
+							errorKey={errors.phoneNumber?.message}
+						/>
+						<Input
+							type="Cidade"
+							labelKey="forms:Cidade"
+							{...register("email", {
+								required: "forms:email-required",
+								pattern: {
+									value: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+									message: "forms:email-error",
+								},
+							})}
+							variant="solid"
+							className="w-full sm:w-1/2"
+							errorKey={errors.email?.message}
+						/>
+					</div>
 					<div className="relative flex flex-col">
 						<span className="mt-2 text-sm text-heading font-semibold block pb-1">
 							{t("common:text-gender")}
@@ -112,6 +138,11 @@ const AccountDetails: React.FC = () => {
 								labelKey="forms:label-female"
 								{...register("gender")}
 								value="female"
+							/>
+							<RadioBox
+								labelKey="forms:Não Binário"
+								{...register("gender")}
+								value="não-binário"
 							/>
 						</div>
 					</div>

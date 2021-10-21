@@ -1,16 +1,15 @@
-import { useCategoriesQuery } from "@framework/category/get-all-categories";
+import { usePrinciplesQuery } from "@framework/principles/get-all-principles";
 import { CheckBox } from "@components/ui/checkbox";
 import { useRouter } from "next/router";
 import React from "react";
 import { useTranslation } from "next-i18next";
 
 
-
-export const CategoryFilter = () => {
+export const PrinciplesFilter = () => {
 	const { t } = useTranslation("common");
 	const router = useRouter();
 	const { pathname, query } = router;
-	const { data, isLoading } = useCategoriesQuery({
+	const { data, isLoading } = usePrinciplesQuery({
 		limit: 10,
 	});
 	const selectedCategories = query?.category
@@ -50,7 +49,7 @@ export const CategoryFilter = () => {
 	return (
 		<div className="block border-b border-gray-300 pb-7 mb-7">
 			<h3 className="text-heading text-sm md:text-base font-semibold mb-7">
-				{t("text-category")}
+				{t("text-principles")}
 			</h3>
 			<div className="mt-2 flex flex-col space-y-4">
 				{items?.map((item: any) => (
