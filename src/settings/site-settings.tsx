@@ -16,11 +16,11 @@ export const siteSettings = {
 		address: "",
 	},
 	logo: {
-		url: "/assets/images/logo.png",
+		url: "/assets/images/Assinatura_Reyou.png",
 		alt: "Re.you Shop",
 		href: "/home",
-		width: 95,
-		height: 30,
+		width: 120,
+		height: 120,
 	},
 	defaultLanguage: "es",
 	currencyCode: "R$",
@@ -29,7 +29,7 @@ export const siteSettings = {
 			{
 				id: 1,
 				path: "/home",
-				label: "menu-home"},
+				label: "Sobre Nós"},
 				/*Menu: [
 					{
 						id: 1,
@@ -64,12 +64,12 @@ export const siteSettings = {
 					},
 				],
 			},
-		},
+		},*/
 			{
 				id: 2,
-				path: "/search?q=men-wear",
-				label: "menu-men-wear",
-				columns: [
+				path: "/#",
+				label: "Vitrine",
+				/*columns: [
 					{
 						id: 1,
 						columnItems: [
@@ -331,12 +331,12 @@ export const siteSettings = {
 							},
 						],
 					},
-				],
+				],*/
 			},
 			{
 				id: 3,
 				path: "/search?q=women-wear",
-				label: "menu-women-wear",
+				label: "Marcas",
 				columns: [
 					{
 						id: 1,
@@ -604,8 +604,8 @@ export const siteSettings = {
 			{
 				id: 4,
 				path: "/search?q=casual-wear",
-				label: "menu-casual-wear",
-				columns: [
+				label: "Entendendo os Valores",
+				/*columns: [
 					{
 						id: 1,
 						columnItems: [
@@ -867,14 +867,14 @@ export const siteSettings = {
 							},
 						],
 					},
-				],
-			},*/
+				],*/
+			},
 			{
 				id: 5,
 				path: "/search",
-				label: "menu-search",
+				label: "blog",
 			},
-			{
+			/*{
 				id: 6,
 				path: "/",
 				label: "menu-pages",
@@ -931,7 +931,7 @@ export const siteSettings = {
 						path: "/checkout",
 						label: "menu-checkout",
 					},*/
-					{
+					/*{
 						id: 7,
 						path: "/collections/mens-collection",
 						label: "menu-collection",
@@ -946,13 +946,13 @@ export const siteSettings = {
 						path: "/order",
 						label: "menu-order",
 					},*/
-					{
+					/*{
 						id: 10,
 						path: "/404",
 						label: "menu-404",
 					},
 				],
-			},
+			},*/
 		],
 		mobileMenu: [
 			{

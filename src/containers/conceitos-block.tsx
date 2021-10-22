@@ -3,7 +3,7 @@ import SectionHeader from "@components/common/section-header";
 import Carousel from "@components/ui/carousel/carousel";
 import CardLoader from "@components/ui/loaders/card-loader";
 import CardRoundedLoader from "@components/ui/loaders/card-rounded-loader";
-import { useCategoriesQuery } from "@framework/category/get-all-categories";
+import { useCategoriesQuery } from "@framework/conceitosemalta/get-all-conceitos";
 import { ROUTES } from "@utils/routes";
 import Alert from "@components/ui/alert";
 import { SwiperSlide } from "swiper/react";
@@ -68,7 +68,7 @@ const breakpointsCircle = {
 	},
 };
 
-const CategoryBlock: React.FC<CategoriesProps> = ({
+const Conceitos: React.FC<CategoriesProps> = ({
 	
 	type = "circle",
 }) => {
@@ -101,11 +101,11 @@ const CategoryBlock: React.FC<CategoriesProps> = ({
 									</SwiperSlide>
 								);
 						  })
-						: data?.categories?.data?.map((category) => (
-								<SwiperSlide key={`category--key-${category.id}`}>
+						: data?.categories?.data?.map((conceitos) => (
+								<SwiperSlide key={`category--key-${conceitos.id}`}>
 									<Card
-										item={category}
-										href={`${ROUTES.CATEGORY}/${category.slug}`}
+										item={conceitos}
+										href={`${ROUTES.Conceitos_em_alta}/${conceitos}`}
 										variant={type}
 										effectActive={true}
 										size={type === "rounded" ? "medium" : "small"}
@@ -118,4 +118,4 @@ const CategoryBlock: React.FC<CategoriesProps> = ({
 	);
 };
 
-export default CategoryBlock;
+export default Conceitos;

@@ -21,6 +21,9 @@ import CategoryGridBlock from "@containers/category-grid-block";
 import BrandGridBlock from "@containers/brand-grid-block";
 import BannerWithProducts from "@containers/banner-with-products";
 import Instagram from "@components/common/instagram";
+import Conceitos from "@containers/conceitos-block";
+
+import FlipCard from "../components/common/flip-card/FlipCard";
 
 
 export default function Home() {
@@ -39,13 +42,19 @@ export default function Home() {
         <HeroBlock />
 		
         <Container>
-		<CategoryBlock sectionHeading="text-shop-by-category" />
+			<div className='flipinf'>
+			<strong> Que tal associar valores às suas compras?</strong>
+			<h2>Comece selecionando quais causas que te movem</h2>
+			</div>
+			<FlipCard/>
+		<Conceitos sectionHeading="text-shop-by-category" />
 		{/* <ProductsFeatured sectionHeading="text-featured-products" /> */}
 		</Container>
 		<Container>
 		<BannerCarouselBlock />
+	
 		<BestSellerProductFeed />
-		<CategoryGridBlock sectionHeading="text-featured-categories" />
+	    
 		<BrandGridBlock sectionHeading="text-top-brands" />
 		<BannerWithProducts
 					sectionHeading="text-on-selling-products"

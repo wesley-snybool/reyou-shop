@@ -20,11 +20,15 @@ import { homeThreeMasonryBanner as masonryBanner } from "@framework/static/banne
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { ROUTES } from "@utils/routes";
 import { GetStaticProps } from "next";
+import HeroBlock from "@containers/hero-block";
+import FlipCard from '../components/common/flip-card/FlipCard';
 
 export default function Home() {
 	return (
 		<>
+		   <HeroBlock/>
 			<BannerBlock data={masonryBanner} />
+			<FlipCard/>
 			<Container>
 				<ProductsFlashSaleBlock date={"2023-03-01T01:02:03"} />
 			</Container>

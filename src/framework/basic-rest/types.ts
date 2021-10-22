@@ -6,7 +6,11 @@ export type CollectionsQueryOptionsType = {
   status?: string;
   limit?: number;
 };
-
+export type ConceitosQueryOptionsType={
+  name?: string;
+   thumbnail?: string;
+   limit?: number;
+}
 export type CategoriesQueryOptionsType = {
   text?: string;
   category?: string;
@@ -36,6 +40,13 @@ export type Attachment = {
   thumbnail: string;
   original: string;
 };
+export type Conceitos={
+  id: string | number;
+  name: string,
+  thumbnail: string;
+
+  
+}
 export type Category = {
   id: number | string;
   name: string;

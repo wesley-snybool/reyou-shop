@@ -9,6 +9,7 @@ export const API_ENDPOINTS = {
   COLLECTIONS: "/collections.json",
   BRANDS: "/brands.json",
   PRODUCTS: "/products.json",
+  Conceitosemalta:"/conceitosemalta.json",
   FEATURED_PRODUCTS: "/featured_products.json",
   TOP_SELLER_PRODUCTS: "/products_top_seller.json",
   ON_SELLING_PRODUCTS: "/products_on_selling.json",
