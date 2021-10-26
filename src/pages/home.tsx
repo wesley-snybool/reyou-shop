@@ -29,47 +29,47 @@ import FlipCard from "../components/common/flip-card/FlipCard";
 export default function Home() {
 	//const { openModal, setModalView } = useUI();
 	useEffect(() => {
-/* 		setModalView("NEWSLETTER_VIEW");
-		setTimeout(() => {
-			openModal();
-		}, 2000); */
+		/* 		setModalView("NEWSLETTER_VIEW");
+				setTimeout(() => {
+					openModal();
+				}, 2000); */
 	}, []);
-	
 
 
-    return (
+
+	return (
 		<>
-        <HeroBlock />
-		
-        <Container>
-			<div className='flipinf'>
-			<strong> Que tal associar valores às suas compras?</strong>
-			<h2>Comece selecionando quais causas que te movem</h2>
-			</div>
-			<FlipCard/>
-		<Conceitos sectionHeading="text-shop-by-category" />
-		{/* <ProductsFeatured sectionHeading="text-featured-products" /> */}
-		</Container>
-		<Container>
-		<BannerCarouselBlock />
-	
-		<BestSellerProductFeed />
-	    
-		<BrandGridBlock sectionHeading="text-top-brands" />
-		<BannerWithProducts
+			<HeroBlock />
+
+			<Container>
+				<div className='flipinf flex flex-col items-center justify-center'>
+					<strong> Que tal associar valores às suas compras?</strong>
+					<h2>Comece selecionando quais causas que te movem</h2>
+				</div>
+				<FlipCard />
+				<Conceitos sectionHeading="text-shop-by-category"/>
+				{/* <ProductsFeatured sectionHeading="text-featured-products" /> */}
+			</Container>
+			<Container>
+				<BannerCarouselBlock />
+
+				<BestSellerProductFeed />
+
+				<BrandGridBlock sectionHeading="text-top-brands" />
+				<BannerWithProducts
 					sectionHeading="text-on-selling-products"
 					categorySlug="/search"
 				/>
-		<DownloadApps />
-		</Container>
-		<Container>
-		<Subscription className="bg-opacity-0 px-5 sm:px-16 xl:px-0 py-12 md:py-14 xl:py-16" />
-		<Instagram />		
-		</Container>
-				
-		
-       
-        </>
+				<DownloadApps />
+			</Container>
+			<Container>
+				<Subscription className="bg-opacity-0 px-5 sm:px-16 xl:px-0 py-12 md:py-14 xl:py-16" />
+				<Instagram />
+			</Container>
+
+
+
+		</>
 	);
 }
 
