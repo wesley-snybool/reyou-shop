@@ -142,22 +142,9 @@
 	}
 
 	/* Hero Banner */
-	@media (min-width: 1500px) {
+	@media (min-width: 500px) {
 		.heroBannerOne > div {
-			margin-left: -500px;
-			margin-right: -500px;
-		}
-	}
-	@media (min-width: 1780px) {
-		.heroBannerOne > div {
-			margin-left: -750px;
-			margin-right: -750px;
-		}
-	}
-	@media (min-width: 1850px) {
-		.heroBannerOne > div {
-			margin-left: -850px;
-			margin-right: -850px;
+			width: 100%;
 		}
 	}
 
@@ -377,20 +364,16 @@
 	background-color: #0000;
 
 }
-.flipinf{
-	position: relative;
-	right:-300px;
+.flipinf {
+	margin: 0 auto;
 }
 .flipinf strong{
 	font-size: 30px;
 	color: #000;
 	font-weight: 300;
-	
 }
 .flipinf h2{
-	font-size:16px;
-	position:relative;
-	right:-100px
+
 }
 
 .impactosocial{
@@ -414,14 +397,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 10px;
-  
+    font-size: 10px;  
     border-radius: 10px;
     position: absolute;
 }
 
-.front{
-    
+.front{    
     z-index: 2;
     backface-visibility: hidden;
 }
@@ -434,6 +415,7 @@
 
 .container:hover .card{
     transform: rotateY(180deg);
+	background-color: red;
 }
 
 .container{
