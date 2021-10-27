@@ -26,6 +26,13 @@ import Conceitos from "@containers/conceitos-block";
 import FlipCard from "../components/common/flip-card/FlipCard";
 
 
+import impactosocial from '../../public/assets/images/flip-card/impactosocial.jpeg';
+/* import consumomoderno from '../../../../public/assets/images/flip-card/consumomoderno.jpeg';
+import eticaanimal from '../../../../public/assets/images/flip-card/eticaanimal.jpeg';
+import impactoambiental from '../../../../public/assets/images/flip-card/impactoambiental.jpeg';
+import inovacaoetecnologia from '../../../../public/assets/images/flip-card/inovacaotecnologica.jpeg'; */
+
+
 export default function Home() {
 	//const { openModal, setModalView } = useUI();
 	useEffect(() => {
@@ -41,18 +48,25 @@ export default function Home() {
 		<>
 			<HeroBlock />
 
-			<Container>
+			<Container className="px-1 md:px-0  w-full">
 				<div className='flipinf flex flex-col items-center justify-center'>
 					<strong> Que tal associar valores às suas compras?</strong>
 					<h2>Comece selecionando quais causas que te movem</h2>
 				</div>
-				<FlipCard />
+				<div className="container-main-flip-card ">
+					<div className="itemFirstLineOne"><FlipCard imageOne='socialImpact'/></div>
+					<div className="itemFirstLineTwo"><FlipCard heightImage={465} imageOne='impactambiental'/></div>
+				</div>
+				<div className="container-main-flip-card-inter-Grid">
+						<div className="itemLastLineOne"><FlipCard heightImage={865} imageOne='socialImpact'/></div>
+						<div className="itemLastLineTwo"><FlipCard heightImage={865} imageOne='socialImpact'/></div>
+						<div className="itemLastLineThre"><FlipCard heightImage={435} imageOne='socialImpact'/></div>
+					</div>
 				<Conceitos sectionHeading="text-shop-by-category"/>
 				{/* <ProductsFeatured sectionHeading="text-featured-products" /> */}
 			</Container>
 			<Container>
 				<BannerCarouselBlock />
-
 				<BestSellerProductFeed />
 
 				<BrandGridBlock sectionHeading="text-top-brands" />
