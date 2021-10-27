@@ -28,6 +28,6 @@
       "@utils/*": ["src/utils/*"]
     }
   },
-  "include": ["next-env.d.ts", "src/**/*.ts", "src/**/*.tsx", "src/pages/home.js"],
+  "include": ["next-env.d.ts", "src/**/*.ts", "src/**/*.tsx", "src/pages/home.js", "src/components/common/flip-card/FlipCard.js"],
   "exclude": ["node_modules"]
 }
