@@ -38,7 +38,7 @@ function FlipCard(props) {
   };
 
   return (
-    <div className="">
+    <div onMouseEnter={handleClick} className="">
       <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
         <div
           onMouseEnter={handleClick}
@@ -57,7 +57,7 @@ function FlipCard(props) {
         </div>
 
         <div
-          onMouseOut={handleClick}
+          className='relative'
           style={{
             width: '100%',
             height: '250px',
@@ -70,7 +70,42 @@ function FlipCard(props) {
         >
           <div className='component-back-flip-cards h-full'>
             <Image height={heightImage ? heightImage : 400} width={widthImage ? widthImage : 1200} src={imageOne} />
-
+          </div>
+          <div className="cardFlipBack p-2 flex">
+            <div className=" w-1/2 text-xs flex flex-col">
+              <label className="inline-flex items-center mt-3">
+                    <input type="checkbox" className=" form-checkbox h-5 w-5 text-orange-600" /><span className="ml-2 text-gray-700">LIVRE DE TÓXICOS</span>
+                </label>
+                <label className="inline-flex items-center mt-3">
+                    <input type="checkbox" className="form-checkbox h-5 w-5 text-orange-600" /><span className="ml-2 text-gray-700">SALVAR OS OCEANOS</span>
+                </label>
+                <label className="inline-flex items-center mt-3">
+                    <input type="checkbox" className="form-checkbox h-5 w-5 text-orange-600" /><span className="ml-2 text-gray-700">APOIO A TRANSIÇÃO CLIMÁTICA</span>
+                </label>
+                <label className="inline-flex items-center mt-3">
+                    <input type="checkbox" className="form-checkbox h-5 w-5 text-orange-600" /><span className="ml-2 text-gray-700">RECICLADO</span>
+                </label>
+                <label className="inline-flex items-center mt-3">
+                    <input type="checkbox" className="form-checkbox h-5 w-5 text-orange-600" /><span className="ml-2 text-gray-700">PRESERVAÇÃO DAS FLORESTAS</span>
+                </label>
+              </div>
+              <div className=" w-1/2 text-xs text-xs flex flex-col">
+              <label className="inline-flex items-center mt-3">
+                    <input type="checkbox" className="form-checkbox h-5 w-5 text-orange-600" /><span className="ml-2 text-gray-700">LIVRE DE TÓXICOS</span>
+                </label>
+                <label className="inline-flex items-center mt-3">
+                    <input type="checkbox" className="form-checkbox h-5 w-5 text-orange-600" /><span className="ml-2 text-gray-700">SALVAR OS OCEANOS</span>
+                </label>
+                <label className="inline-flex items-center mt-3">
+                    <input type="checkbox" className="form-checkbox h-5 w-5 text-orange-600" /><span className="ml-2 text-gray-700">APOIO A TRANSIÇÃO CLIMÁTICA</span>
+                </label>
+                <label className="inline-flex items-center mt-3">
+                    <input type="checkbox" className="form-checkbox h-5 w-5 text-orange-600" /><span className="ml-2 text-gray-700">RECICLADO</span>
+                </label>
+                <label className="inline-flex items-center mt-3">
+                    <input type="checkbox" className="form-checkbox h-5 w-5 text-orange-600" /><span className="ml-2 text-gray-700">PRESERVAÇÃO DAS FLORESTAS</span>
+                </label>
+              </div>
           </div>
         </div>
       </ReactCardFlip>
