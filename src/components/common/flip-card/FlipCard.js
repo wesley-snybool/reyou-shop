@@ -91,19 +91,19 @@ function FlipCard(props) {
               </div>
               <div className=" w-1/2 text-xs text-xs flex flex-col">
               <label className="inline-flex items-center mt-3">
-                    <input type="checkbox" className="form-checkbox h-5 w-5 text-orange-600" /><span className="ml-2 text-gray-700">LIVRE DE TÓXICOS</span>
+                    <input type="checkbox" className="form-checkbox h-5 w-5 text-orange-600" /><span className="ml-2 text-gray-700">EMISSÕES BAIXAS</span>
                 </label>
                 <label className="inline-flex items-center mt-3">
-                    <input type="checkbox" className="form-checkbox h-5 w-5 text-orange-600" /><span className="ml-2 text-gray-700">SALVAR OS OCEANOS</span>
+                    <input type="checkbox" className="form-checkbox h-5 w-5 text-orange-600" /><span className="ml-2 text-gray-700">EMBALAGEM ECOLÓGICA</span>
                 </label>
                 <label className="inline-flex items-center mt-3">
-                    <input type="checkbox" className="form-checkbox h-5 w-5 text-orange-600" /><span className="ml-2 text-gray-700">APOIO A TRANSIÇÃO CLIMÁTICA</span>
+                    <input type="checkbox" className="form-checkbox h-5 w-5 text-orange-600" /><span className="ml-2 text-gray-700">UPCYCLED</span>
                 </label>
                 <label className="inline-flex items-center mt-3">
-                    <input type="checkbox" className="form-checkbox h-5 w-5 text-orange-600" /><span className="ml-2 text-gray-700">RECICLADO</span>
+                    <input type="checkbox" className="form-checkbox h-5 w-5 text-orange-600" /><span className="ml-2 text-gray-700">ECONOMIA DE ÁGUA</span>
                 </label>
                 <label className="inline-flex items-center mt-3">
-                    <input type="checkbox" className="form-checkbox h-5 w-5 text-orange-600" /><span className="ml-2 text-gray-700">PRESERVAÇÃO DAS FLORESTAS</span>
+                    <input type="checkbox" className="form-checkbox h-5 w-5 text-orange-600" /><span className="ml-2 text-gray-700">NEUTRO EM CARBONO</span>
                 </label>
               </div>
           </div>
