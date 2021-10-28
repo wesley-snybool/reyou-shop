@@ -1,34 +1,37 @@
 import Image from 'next/image';
 import React, { useState } from 'react';
+import ReactCardFlip from 'react-card-flip';
 
 import impactosocial from '../../../../public/assets/images/flip-card/impactosocial.jpeg';
 import consumomoderno from '../../../../public/assets/images/flip-card/consumomoderno.jpeg';
 import eticaanimal from '../../../../public/assets/images/flip-card/eticaanimal.jpeg';
 import impactoambiental from '../../../../public/assets/images/flip-card/impactoambiental.jpeg';
 import inovacaoetecnologia from '../../../../public/assets/images/flip-card/inovacaotecnologica.jpeg';
-import ReactCardFlip from 'react-card-flip';
+import { homeThreeMasonryBanner as img_flipscards } from "@framework/static/banner";
 
 function FlipCard(props) {
 
-  const { ImageOne, widthImage, heightImage } = props;
+  const { src, widthImage, heightImage, imageTwo, imageOne } = props;
 
-  const dataImages = [{
-    'socialImpact': impactosocial,
-    'modernConsum': consumomoderno,
-  }]
+  debugger
 
-  console.log(dataImages['socialImpact'])
+  const dataImages = [
+    { nome: 'impactosocial' },
+    { nome: 'impactoambiental' }
+  ]
 
-  const handleSelectImage = () => {
-   dataImages.map((image, index) => {
-      if(image[index] === ImageOne) {
-        return dataImages[image]
-      }
-   })
-  } 
+/*   dataImages.map((item) => {
+    console.log(img_flipscards)
+  }) */
 
   const [isFlipped, setIsFlipped] = useState(false);
-  console.log(`${dataImages}`);
+  const { image } = img_flipscards;
+
+/*   console.log(img_flipscards[0].image.desktop.url, 'URL da imagem passada diretamente via objeto')
+  console.log(imageTwo, 'URL da imagem passada diretamente via props') */
+
+
+
 
   const handleClick = () => {
     setIsFlipped(!isFlipped);
@@ -49,7 +52,8 @@ function FlipCard(props) {
             minWidth: '250px',
           }}
         >
-          <div className='h-full'><Image height={heightImage ? heightImage : 400} width={widthImage ? widthImage : 1200} src={impactosocial} /></div>
+        <div className='h-full'>
+          <Image height={heightImage ? heightImage : 400} width={widthImage ? widthImage : 1200} src={imageOne} /></div>
         </div>
 
         <div
@@ -65,7 +69,7 @@ function FlipCard(props) {
           }}
         >
           <div className='component-back-flip-cards h-full'>
-            <Image height={heightImage ? heightImage : 400} width={widthImage ? widthImage : 1200} src={impactosocial} />
+            <Image height={heightImage ? heightImage : 400} width={widthImage ? widthImage : 1200} src={imageOne} />
 
           </div>
         </div>
