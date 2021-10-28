@@ -1,5 +1,7 @@
+import React, { useState, HTMLAttributes } from 'react';
 import BannerCard from "@components/common/banner-card";
 import { ROUTES } from "@utils/routes";
+import ReactCardFlip from "react-card-flip";
 interface BannerProps {
 	data: any;
 	className?: string;
@@ -9,6 +11,12 @@ const BannerBlock: React.FC<BannerProps> = ({
 	data,
 	className = "mb-12 md:mb-14 xl:mb-16",
 }) => {
+
+	const [isFlipped, setIsFlipped] = useState(false);
+	const handleMouse = () => {
+		setIsFlipped(!isFlipped);
+	}
+
 	return (
 		<div
 			className={`${className} px-2.5 grid grid-cols-2 sm:grid-cols-9 gap-2 md:gap-2.5 max-w-[1920px] mx-auto`}

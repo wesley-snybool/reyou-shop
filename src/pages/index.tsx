@@ -28,7 +28,6 @@ export default function Home() {
 		<>
 		   <HeroBlock/>
 			<BannerBlock data={masonryBanner} />
-			<FlipCard/>
 			<Container>
 				<ProductsFlashSaleBlock date={"2023-03-01T01:02:03"} />
 			</Container>
