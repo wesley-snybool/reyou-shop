@@ -13,7 +13,6 @@ function FlipCard(props) {
 
   const { src, widthImage, heightImage, imageTwo, imageOne } = props;
 
-  debugger
 
   const dataImages = [
     { nome: 'impactosocial' },

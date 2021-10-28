@@ -77,10 +77,10 @@ const Conceitos: React.FC<CategoriesProps> = ({
 	});
 
 	return (
-           <div className="slds">
-			<strong>Conceitos em alta</strong>
+           <div className="bg-gray-400 w-full h-full">
+			<strong className=" mx-auto bg-green-100">Conceitos em altaaaaaaa</strong>
 			{error ? (
-				<Alert message={error?.message} />
+				<Alert message={`${error.message}Deu ruim mas nada de mostrar a msg de erro`} />
 			) : (
 				<Carousel
 					breakpoints={type === "rounded" ? breakpoints : breakpointsCircle}

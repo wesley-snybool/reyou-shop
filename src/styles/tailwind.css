@@ -620,16 +620,6 @@
 .personalize button:hover{
 	background-color:#111;
 }
-.slds{
-	position: relative;
-	top:40px;
-}
-.slds strong{
-	font-size: 20px;
-	color: #000;
-	position: relative;
-    right: -490px;
-}
 .bannercarousel{
 	position: relative;
 	top:50px;
