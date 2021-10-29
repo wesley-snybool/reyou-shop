@@ -63,7 +63,7 @@ export default function Home() {
 					</div>
 			</Container>
 				<div className="w-full flex justify-center p-4 mb-5">
-					<button className=" w-40 rounded-full p-2 bg-gray-300 hover:bg-coolGray-600 text-coolGray-600 shadow-header">Começar</button>
+					<button className=" button-start">Começar</button>
 				</div>
 				<Conceitos sectionHeading="text-shop-by-category"/>
 			<Container>
