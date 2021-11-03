@@ -22,11 +22,24 @@ import { ROUTES } from "@utils/routes";
 import { GetStaticProps } from "next";
 import HeroBlock from "@containers/hero-block";
 import FlipCard from '../components/common/flip-card/FlipCard';
+import { useAppSelector, useAppDispatch } from "src/redux/hooks/selectors";
+import { useDispatch } from "react-redux";
+import { getHotConceptData } from "src/redux/store/hotConceptsSlice";
+import { useEffect } from "react";
 
 export default function Home() {
-	return (
+
+	const {name} =  useAppSelector((state) => state.userTest)
+	console.log(name)
+
+
+	useEffect(() => {
+		//useAppDispatch()
+	},[])
+
+ 	return (
 		<>
-		   <HeroBlock/>
+			<HeroBlock />
 			<BannerBlock data={masonryBanner} />
 			<Container>
 				<ProductsFlashSaleBlock date={"2023-03-01T01:02:03"} />

@@ -12,6 +12,9 @@ import { ToastContainer } from "react-toastify";
 import { appWithTranslation } from "next-i18next";
 import { DefaultSeo } from "@components/common/default-seo";
 
+import { Provider } from "react-redux";
+import store from '../redux/store/store'
+
 // Load Open Sans and satisfy typeface font
 import "@fontsource/open-sans";
 import "@fontsource/open-sans/600.css";
@@ -55,23 +58,25 @@ const CustomApp = ({ Component, pageProps }: AppProps) => {
 
 	return (
 		//<ConfigProvider locale={ptBR}>
-		<AnimatePresence exitBeforeEnter onExitComplete={handleExitComplete}>
-			<QueryClientProvider client={queryClientRef.current}>
-				<Hydrate state={pageProps.dehydratedState}>
-					<ManagedUIContext>
-						<Layout pageProps={pageProps}>
-							<DefaultSeo />
-							<Component {...pageProps} key={router.route} />
-							<ToastContainer />
-						</Layout>
-						<ManagedModal />
-						<ManagedDrawer />
-					</ManagedUIContext>
-				</Hydrate>
-				{/* <ReactQueryDevtools /> */}
-			</QueryClientProvider>
-		</AnimatePresence>
-		//</ConfigProvider>
+		<Provider store={store}>
+			<AnimatePresence exitBeforeEnter onExitComplete={handleExitComplete}>
+				<QueryClientProvider client={queryClientRef.current}>
+					<Hydrate state={pageProps.dehydratedState}>
+						<ManagedUIContext>
+							<Layout pageProps={pageProps}>
+								<DefaultSeo />
+								<Component {...pageProps} key={router.route} />
+								<ToastContainer />
+							</Layout>
+							<ManagedModal />
+							<ManagedDrawer />
+						</ManagedUIContext>
+					</Hydrate>
+					{/* <ReactQueryDevtools /> */}
+				</QueryClientProvider>
+			</AnimatePresence>
+			{/* //</ConfigProvider> */}
+		</Provider>
 	);
 };
 

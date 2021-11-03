@@ -25,13 +25,24 @@ import Conceitos from "@containers/conceitos-block";
 import { homeThreeMasonryBanner as img_flipscards } from "@framework/static/banner";
 
 import FlipCard from "../components/common/flip-card/FlipCard";
-
-
 import impactosocial from '../../public/assets/images/flip-card/impactosocial.jpeg';
 import consumomoderno from '../../public/assets/images/flip-card/impactoambiental.jpeg';
 
+import { useDispatch } from "react-redux";
+import { changeUser } from "src/redux/store/userSlice";
+
 
 export default function Home() {
+
+	const dispatch = useDispatch();
+
+	const handleChangeUser = () => {
+		const data = {
+			nome: 'Wesley',
+			logado: true
+		}
+		dispatch(changeUser(data.nome))
+	}
 
 	const dataImages = [
 		{nome: 'impactosocial'},
@@ -63,7 +74,7 @@ export default function Home() {
 					</div>
 			</Container>
 				<div className="w-full flex justify-center p-4 mb-5">
-					<button className=" button-start">Começar</button>
+					<button onClick={handleChangeUser}className=" button-start">Começar</button>
 				</div>
 				<Conceitos sectionHeading="text-shop-by-category"/>
 			<Container>

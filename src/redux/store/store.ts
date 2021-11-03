@@ -1,8 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit";
+import { useDispatch } from "react-redux";
+import userReducer from './userSlice'
+import useReduceHotConcepts from './hotConceptsSlice';
 
-export const store = configureStore({
+const store =  configureStore({
   reducer: {
-    
+    userTest: userReducer,
+    HotConcept: useReduceHotConcepts,
   },
 })
 
@@ -10,3 +14,5 @@ export const store = configureStore({
 export type RootState = ReturnType<typeof store.getState>
 
 export type AppDispatch = typeof store.dispatch
+
+export default store
