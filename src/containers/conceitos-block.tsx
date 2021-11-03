@@ -78,7 +78,7 @@ const Conceitos: React.FC<CategoriesProps> = ({
 
 	return (
            <div className="bg-gray-400 w-full h-full">
-			<strong className=" mx-auto bg-green-100">Conceitos em altaaaaaaa</strong>
+			<strong className=" mx-auto bg-green-100">Conceitos em alta</strong>
 			{error ? (
 				<Alert message={`${error.message}Deu ruim mas nada de mostrar a msg de erro`} />
 			) : (
@@ -110,6 +110,7 @@ const Conceitos: React.FC<CategoriesProps> = ({
 										effectActive={true}
 										size={type === "rounded" ? "medium" : "small"}
 									/>
+									<div className='bg-red-500 w-40'>asdasd</div>
 								</SwiperSlide>
 						  ))}
 				</Carousel>
