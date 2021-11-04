@@ -25,7 +25,10 @@ import FlipCard from '../components/common/flip-card/FlipCard';
 import { useAppSelector, useAppDispatch } from "src/redux/hooks/selectors";
 import { useDispatch } from "react-redux";
 import { useEffect } from "react";
-import { getHotConcepts } from '../redux/modules/hot-concepts/getGotConceptsSlice'
+import { getHotConcepts } from '../redux/modules/hot-concepts/getHotConceptsSlice'
+import { getFlipCard } from "src/redux/modules/flip-cards/getFlipCardSlice";
+import { getPublicity } from '../redux/modules/publicity/publicitySlice'
+import { getBanner } from "src/redux/modules/banners/getBannerSlice";
 
 export default function Home() {
 
@@ -37,7 +40,10 @@ export default function Home() {
 
 
 	useEffect(() => {
-		dispatch(getHotConcepts())
+		dispatch(getHotConcepts());
+		dispatch(getFlipCard());
+		dispatch(getPublicity())
+		dispatch(getBanner())
 	},[])
 
  	return (

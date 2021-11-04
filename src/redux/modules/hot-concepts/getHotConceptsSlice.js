@@ -1,10 +1,10 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
-import {BASE_URL} from '../../services/baseUrl'
+import {BASE_URL, HOT_CONCEPTS_URL} from '../../services/baseUrl'
 
 export const getHotConcepts = createAsyncThunk(
     'concepts/getConcepts',
     async () => {
-        const response = await fetch(`${BASE_URL}/portal/home/conceitos-alta`);
+        const response = await fetch(`${BASE_URL}${HOT_CONCEPTS_URL}`);
         const formatResponse = await response.json();
         return formatResponse;
     }
