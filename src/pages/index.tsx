@@ -24,17 +24,20 @@ import HeroBlock from "@containers/hero-block";
 import FlipCard from '../components/common/flip-card/FlipCard';
 import { useAppSelector, useAppDispatch } from "src/redux/hooks/selectors";
 import { useDispatch } from "react-redux";
-import { getHotConceptData } from "src/redux/store/hotConceptsSlice";
 import { useEffect } from "react";
+import { getHotConcepts } from '../redux/modules/hot-concepts/getGotConceptsSlice'
 
 export default function Home() {
 
 	const {name} =  useAppSelector((state) => state.userTest)
+	const {data} =  useAppSelector((state) => state.getConceptsData)
+
 	console.log(name)
+	const dispatch = useAppDispatch();
 
 
 	useEffect(() => {
-		//useAppDispatch()
+		dispatch(getHotConcepts())
 	},[])
 
  	return (
