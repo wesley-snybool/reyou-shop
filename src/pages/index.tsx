@@ -29,6 +29,12 @@ import { getHotConcepts } from '../redux/modules/hot-concepts/getHotConceptsSlic
 import { getFlipCard } from "src/redux/modules/flip-cards/getFlipCardSlice";
 import { getPublicity } from '../redux/modules/publicity/publicitySlice'
 import { getBanner } from "src/redux/modules/banners/getBannerSlice";
+import { getDarlingMoments } from '../redux/modules/darlings-moment/darlingsMoments'
+import { getReyouFavorites } from '../redux/modules/reyou-favorites/reYouFavorites'
+import { getNews } from "src/redux/modules/news/news";
+import { getBlogs } from "src/redux/modules/blogs/blogs";
+import { getPress } from "src/redux/modules/press/press";
+import { getConfig } from "src/redux/modules/config-portal/config-portal";
 
 export default function Home() {
 
@@ -42,8 +48,14 @@ export default function Home() {
 	useEffect(() => {
 		dispatch(getHotConcepts());
 		dispatch(getFlipCard());
-		dispatch(getPublicity())
-		dispatch(getBanner())
+		dispatch(getPublicity());
+		dispatch(getBanner());
+		dispatch(getDarlingMoments());
+		dispatch(getReyouFavorites());
+		dispatch(getNews())
+		dispatch(getBlogs())
+		dispatch(getPress())
+		dispatch(getConfig())
 	},[])
 
  	return (

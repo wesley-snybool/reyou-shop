@@ -2,7 +2,7 @@ import { createSlice } from '@reduxjs/toolkit'
 import { RootState } from './store'
 
 export const slice = createSlice({
-    name: 'hot-concepts',
+    name: 'teste-user',
     initialState: {
         name: '',
         isLogged: false,

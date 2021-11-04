@@ -5,6 +5,12 @@ import getConceptSlice from '../modules/hot-concepts/getHotConceptsSlice'
 import flipCardSlice from '../modules/flip-cards/getFlipCardSlice'
 import getPublicitySlice from '../modules/publicity/publicitySlice'
 import bannerSlice from '../modules/banners/getBannerSlice'
+import darlingMomentsSlice from '../modules/darlings-moment/darlingsMoments'
+import reYouFavoriteSlice from '../modules/reyou-favorites/reYouFavorites'
+import newsSlice from '../modules/news/news'
+import blogSlice from '../modules/blogs/blogs'
+import pressSlice from '../modules/press/press'
+import configSlice from '../modules/config-portal/config-portal'
 
 const store =  configureStore({
   reducer: {
@@ -13,6 +19,12 @@ const store =  configureStore({
     getFlipCardsData: flipCardSlice,
     getPublicity: getPublicitySlice,
     getBanner: bannerSlice,
+    getDarlingMoments: darlingMomentsSlice,
+    getReyouFavorites: reYouFavoriteSlice,
+    getNews: newsSlice,
+    getBlogs: blogSlice,
+    getPress: pressSlice,
+    getConfig: configSlice,
   },
 })
 
