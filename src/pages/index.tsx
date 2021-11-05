@@ -76,7 +76,7 @@ export default function Home() {
 				<div className="w-full flex justify-center p-4 mb-5">
 					<button onClick={handleChangeUser}className=" button-start">Começar</button>
 				</div>
-				<Conceitos sectionHeading="text-shop-by-category"/>
+				<Conceitos /* sectionHeading="text-shop-by-category" *//>
 			<Container>
 				<BannerCarouselBlock />
 				<BestSellerProductFeed />

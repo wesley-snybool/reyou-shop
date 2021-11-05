@@ -11,9 +11,11 @@ const runtimeCaching = require("next-pwa/cache");
     runtimeCaching,
   },
   i18n,
+  images: {
+    domains: ['reyoushop.nyc3.digitaloceanspaces.com'],
+  },
 });
 
- 
 
 
 /* module.exports = withAntdLess(withPWA(

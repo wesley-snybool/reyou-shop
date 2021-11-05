@@ -609,7 +609,7 @@ export const siteSettings = {
 			{
 				id: 5,
 				path: "/", //search
-				label: "blog",
+				label: "Blog",
 			},
 			/*{
 				id: 6,

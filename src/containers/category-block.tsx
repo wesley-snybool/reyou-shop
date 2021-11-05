@@ -1,3 +1,6 @@
+import { useEffect } from "react";
+import { useDispatch } from "react-redux"
+import { useAppSelector, useAppDispatch } from "src/redux/hooks/selectors";
 import Card from "@components/common/card";
 import SectionHeader from "@components/common/section-header";
 import Carousel from "@components/ui/carousel/carousel";
@@ -7,6 +10,9 @@ import { useCategoriesQuery } from "@framework/category/get-all-categories";
 import { ROUTES } from "@utils/routes";
 import Alert from "@components/ui/alert";
 import { SwiperSlide } from "swiper/react";
+import { getHotConcepts } from "src/redux/modules/hot-concepts/getHotConceptsSlice";
+import useConcept from "src/redux/modules/hot-concepts/getHotConceptsSlice"
+//const dataConcepts = useAppSelector(state => state.data)
 
 interface CategoriesProps {
 	sectionHeading: string;
@@ -68,17 +74,15 @@ const breakpointsCircle = {
 	},
 };
 
-const CategoryBlock: React.FC<CategoriesProps> = ({
+const CategoryBlock: React.FC<CategoriesProps> = ({ type = "circle" }) => {
 	
-	type = "circle",
-}) => {
 	const { data, isLoading, error } = useCategoriesQuery({
 		limit: 10,
 	});
 
 	return (
-           <div className="slds">
-			<strong>Conceitos em alta</strong>
+		<div className="slds">
+			<strong>Conceitos em baixa</strong>
 			{error ? (
 				<Alert message={error?.message} />
 			) : (
@@ -88,30 +92,30 @@ const CategoryBlock: React.FC<CategoriesProps> = ({
 				>
 					{isLoading && !data
 						? Array.from({ length: 10 }).map((_, idx) => {
-								if (type === "rounded") {
-									return (
-										<SwiperSlide key={`card-rounded-${idx}`}>
-											<CardRoundedLoader uniqueKey={`card-rounded-${idx}`} />
-										</SwiperSlide>
-									);
-								}
+							if (type === "rounded") {
 								return (
-									<SwiperSlide key={`card-circle-${idx}`}>
-										<CardLoader uniqueKey={`card-circle-${idx}`} />
+									<SwiperSlide key={`card-rounded-${idx}`}>
+										<CardRoundedLoader uniqueKey={`card-rounded-${idx}`} />
 									</SwiperSlide>
 								);
-						  })
-						: data?.categories?.data?.map((category) => (
-								<SwiperSlide key={`category--key-${category.id}`}>
-									<Card
-										item={category}
-										href={`${ROUTES.CATEGORY}/${category.slug}`}
-										variant={type}
-										effectActive={true}
-										size={type === "rounded" ? "medium" : "small"}
-									/>
+							}
+							return (
+								<SwiperSlide key={`card-circle-${idx}`}>
+									<CardLoader uniqueKey={`card-circle-${idx}`} />
 								</SwiperSlide>
-						  ))}
+							);
+						})
+						: data?.categories?.data?.map((category) => (
+							<SwiperSlide key={`category--key-${category.id}`}>
+								<Card
+									item={category}
+									href={`${ROUTES.CATEGORY}/${category.slug}`}
+									variant={type}
+									effectActive={true}
+									size={type === "rounded" ? "medium" : "small"}
+								/>
+							</SwiperSlide>
+						))}
 				</Carousel>
 			)}
 		</div>

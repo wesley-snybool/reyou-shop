@@ -1,4 +1,5 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
+import { slice } from 'lodash';
 import {BASE_URL, HOT_CONCEPTS_URL} from '../../services/baseUrl'
 
 export const getHotConcepts = createAsyncThunk(
@@ -26,8 +27,10 @@ export const conceptSlice = createSlice({
         },
         [getHotConcepts.rejected]: (state) => {
             state.isLoading = false;
-        }
+        },
     }
 })
+
+export const useConcepts = (state) => state.data;
 
 export default conceptSlice.reducer;

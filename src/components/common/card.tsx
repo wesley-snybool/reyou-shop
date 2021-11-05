@@ -20,7 +20,7 @@ const Card: React.FC<Props> = ({
 	effectActive = false,
 	href,
 }) => {
-	const { name, image } = item ?? {};
+	const { title, thumbnail } = item ?? {};
 	const imageSize: any =
 		(size === "small" && 180) || (size === "medium" && 198);
 
@@ -38,8 +38,8 @@ const Card: React.FC<Props> = ({
 			>
 				<div className="flex">
 					<Image
-						src={image?.original ?? placeholderImage}
-						alt={name || t("text-card-thumbnail")}
+						src={thumbnail}
+						alt={title || t("text-card-thumbnail")}
 						width={imageSize}
 						height={imageSize}
 						quality={100}
@@ -61,8 +61,8 @@ const Card: React.FC<Props> = ({
 					</>
 				)}
 			</div>
-			<Text variant="heading" className="capitalize">
-				{name}
+			<Text variant="body" className="capitalize">
+				{title}
 			</Text>
 		</Link>
 	);

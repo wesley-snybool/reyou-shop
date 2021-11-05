@@ -7,12 +7,23 @@ import { useCategoriesQuery } from "@framework/conceitosemalta/get-all-conceitos
 import { ROUTES } from "@utils/routes";
 import Alert from "@components/ui/alert";
 import { SwiperSlide } from "swiper/react";
-
+import { useEffect } from "react";
+import { useAppDispatch } from "src/redux/store/store";
+import { getHotConcepts } from "src/redux/modules/hot-concepts/getHotConceptsSlice";
+import { useAppSelector } from "src/redux/hooks/selectors";
+/* 
 interface CategoriesProps {
 	sectionHeading: string;
 	className?: string;
 	type?: "rounded" | "circle";
-}
+} */
+
+/* type ConceptTypes = {
+	id: string, 
+	order: number,
+	thumbnail: string,
+	title: string,
+} */
 
 const breakpoints = {
 	"1720": {
@@ -68,25 +79,34 @@ const breakpointsCircle = {
 	},
 };
 
-const Conceitos: React.FC<CategoriesProps> = ({
-	
-	type = "circle",
-}) => {
+const Conceitos = ({type = "circle"}) => {
+
+	const dispatch = useAppDispatch();
+
+	useEffect(() => {
+		dispatch(getHotConcepts());
+	},[])
+
+	const dataConcepts = useAppSelector(state => state.getConceptsData.data);
+
+	//dataConcepts.map(item => console.log(item));
+
+
 	const { data, isLoading, error } = useCategoriesQuery({
 		limit: 10,
 	});
 
 	return (
-           <div className="bg-gray-400 w-full h-full">
-			<strong className=" mx-auto bg-green-100">Conceitos em alta</strong>
-			{error ? (
-				<Alert message={`${error.message}Deu ruim mas nada de mostrar a msg de erro`} />
+           <div className="bg-gray-300 w-full h-full flex flex-col px-8">
+			<strong className="my-4 text-lg mx-auto ">Conceitos em alta</strong>
+			{!dataConcepts ? (
+				<Alert message={`${error.message}Erro ao carregar as imagens`} />
 			) : (
 				<Carousel
 					breakpoints={type === "rounded" ? breakpoints : breakpointsCircle}
 					buttonClassName="-mt-8 md:-mt-10"
 				>
-					{isLoading && !data
+					{!dataConcepts
 						? Array.from({ length: 10 }).map((_, idx) => {
 								if (type === "rounded") {
 									return (
@@ -101,16 +121,17 @@ const Conceitos: React.FC<CategoriesProps> = ({
 									</SwiperSlide>
 								);
 						  })
-						: data?.categories?.data?.map((conceitos) => (
-								<SwiperSlide key={`category--key-${conceitos.id}`}>
+						: dataConcepts?.map((conceitos, index) => (
+								<SwiperSlide key={`category--key-${dataConcepts.id}`}>
+									{ console.log(conceitos.thumbnail, 'bla')}
 									<Card
 										item={conceitos}
-										href={`${ROUTES.Conceitos_em_alta}/${conceitos}`}
+										href={conceitos.thumbnail}
 										variant={type}
 										effectActive={true}
 										size={type === "rounded" ? "medium" : "small"}
 									/>
-									<div className='bg-red-500 w-40'>asdasd</div>
+									<div className='bg-red-500 w-40'></div>
 								</SwiperSlide>
 						  ))}
 				</Carousel>
