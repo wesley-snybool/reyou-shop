@@ -18,7 +18,7 @@ export const siteSettings = {
 	logo: {
 		url: "/assets/images/Assinatura_Reyou.png",
 		alt: "Re.you Shop",
-		href: "/home",
+		href: "/",
 		width: 120,
 		height: 120,
 	},
@@ -28,7 +28,7 @@ export const siteSettings = {
 		menu: [
 			{
 				id: 1,
-				path: "/home",
+				path: "/",
 				label: "Sobre Nós"},
 				/*Menu: [
 					{
@@ -335,12 +335,12 @@ export const siteSettings = {
 			},
 			{
 				id: 3,
-				path: "/search?q=women-wear",
+				path: "/", //search?q=women-wear
 				label: "Marcas",/* s */
 			},
 			{
 				id: 4,
-				path: "/search?q=casual-wear",
+				path: "/", //search?q=casual-wear
 				label: "Entendendo os Valores",
 				/*columns: [
 					{
@@ -608,7 +608,7 @@ export const siteSettings = {
 			},
 			{
 				id: 5,
-				path: "/search",
+				path: "/", //search
 				label: "blog",
 			},
 			/*{

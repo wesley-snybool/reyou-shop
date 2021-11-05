@@ -1,108 +1,132 @@
-import BannerCard from "@components/common/banner-card";
 import Container from "@components/ui/container";
-import BrandGridBlock from "@containers/brand-grid-block";
-import CategoryBlock from "@containers/category-block";
-import Layout from "@components/layout/layout";
-import BannerWithProducts from "@containers/banner-with-products";
-import BannerBlock from "@containers/banner-block";
-import Divider from "@components/ui/divider";
+import BannerCarouselBlock from "@containers/banner-carousel-block";
 import DownloadApps from "@components/common/download-apps";
-import Support from "@components/common/support";
-import Instagram from "@components/common/instagram";
-import ProductsFlashSaleBlock from "@containers/product-flash-sale-block";
-import ProductsFeatured from "@containers/products-featured";
-import BannerSliderBlock from "@containers/banner-slider-block";
-import ExclusiveBlock from "@containers/exclusive-block";
 import Subscription from "@components/common/subscription";
-import NewArrivalsProductFeed from "@components/product/feeds/new-arrivals-product-feed";
-import { homeThreeBanner as banner } from "@framework/static/banner";
-import { homeThreeMasonryBanner as masonryBanner } from "@framework/static/banner";
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import { ROUTES } from "@utils/routes";
-import { GetStaticProps } from "next";
 import HeroBlock from "@containers/hero-block";
-import FlipCard from '../components/common/flip-card/FlipCard';
-import { useAppSelector, useAppDispatch } from "src/redux/hooks/selectors";
-import { useDispatch } from "react-redux";
+import Layout from "@components/layout/layout";
+import BestSellerProductFeed from "@components/product/feeds/best-seller-product-feed";
+import { GetStaticProps} from "next";
+import { QueryClient } from "react-query";
+import { dehydrate } from "react-query/hydration";
+import { API_ENDPOINTS } from "@framework/utils/api-endpoints";
+import { fetchFlashSaleProducts } from "@framework/product/get-all-flash-sale-products";
+import { fetchCategories } from "@framework/category/get-all-categories";
+import { fetchBestSellerProducts } from "@framework/product/get-all-best-seller-products";
+import { fetchNewArrivalProducts } from "@framework/product/get-all-new-arrival-products";
+import { fetchBrands } from "@framework/brand/get-all-brands";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useEffect } from "react";
-import { getHotConcepts } from '../redux/modules/hot-concepts/getHotConceptsSlice'
-import { getFlipCard } from "src/redux/modules/flip-cards/getFlipCardSlice";
-import { getPublicity } from '../redux/modules/publicity/publicitySlice'
-import { getBanner } from "src/redux/modules/banners/getBannerSlice";
-import { getDarlingMoments } from '../redux/modules/darlings-moment/darlingsMoments'
-import { getReyouFavorites } from '../redux/modules/reyou-favorites/reYouFavorites'
-import { getNews } from "src/redux/modules/news/news";
-import { getBlogs } from "src/redux/modules/blogs/blogs";
-import { getPress } from "src/redux/modules/press/press";
-import { getConfig } from "src/redux/modules/config-portal/config-portal";
+import CategoryBlock from "@containers/category-block";
+import CategoryGridBlock from "@containers/category-grid-block";
+import BrandGridBlock from "@containers/brand-grid-block";
+import BannerWithProducts from "@containers/banner-with-products";
+import Instagram from "@components/common/instagram";
+import Conceitos from "@containers/conceitos-block";
+import { homeThreeMasonryBanner as img_flipscards } from "@framework/static/banner";
+
+import FlipCard from "../components/common/flip-card/FlipCard";
+import impactosocial from '../../public/assets/images/flip-card/impactosocial.jpeg';
+import consumomoderno from '../../public/assets/images/flip-card/impactoambiental.jpeg';
+
+import { useDispatch } from "react-redux";
+import { changeUser } from "src/redux/store/userSlice";
+
 
 export default function Home() {
 
-	const {name} =  useAppSelector((state) => state.userTest)
-	const {data} =  useAppSelector((state) => state.getConceptsData)
+	const dispatch = useDispatch();
 
-	console.log(name)
-	const dispatch = useAppDispatch();
+	const handleChangeUser = () => {
+		const data = {
+			nome: 'Wesley',
+			logado: true
+		}
+		dispatch(changeUser(data.nome))
+	}
+
+	const dataImages = [
+		{nome: 'impactosocial'},
+		{nome: 'impactoambiental'}
+	]
+
+	  dataImages.map((item) => {
+		  //console.log(item.nome)
+	  })
 
 
-	useEffect(() => {
-		dispatch(getHotConcepts());
-		dispatch(getFlipCard());
-		dispatch(getPublicity());
-		dispatch(getBanner());
-		dispatch(getDarlingMoments());
-		dispatch(getReyouFavorites());
-		dispatch(getNews())
-		dispatch(getBlogs())
-		dispatch(getPress())
-		dispatch(getConfig())
-	},[])
-
- 	return (
+	return (
 		<>
 			<HeroBlock />
-			<BannerBlock data={masonryBanner} />
-			<Container>
-				<ProductsFlashSaleBlock date={"2023-03-01T01:02:03"} />
+
+			<Container className="px-1 md:px-0  w-full">
+				<div className='flipinf flex flex-col items-center justify-center'>
+					<strong className="mb-8"> Que tal associar valores às suas compras?</strong>
+					<h2 className="mb-8">Comece selecionando quais causas que te movem</h2>
+				</div>
+				<div className="container-main-flip-card ">
+					<div className="itemFirstLineOne"><FlipCard imageOne={img_flipscards[0].image.desktop.url} imageTwo={img_flipscards[0].image.desktop.url} /></div>
+					<div className="itemFirstLineTwo"><FlipCard heightImage={465} imageOne={img_flipscards[2].image.desktop.url} imageTwo={img_flipscards[2].image.desktop.url} /></div>
+				</div>
+				<div className="container-main-flip-card-inter-Grid">
+						<div className="itemLastLineOne"><FlipCard heightImage={865} imageOne={img_flipscards[1].image.desktop.url} imageTwo={img_flipscards[1].image.desktop.url} /></div>
+						<div className="itemLastLineTwo"><FlipCard heightImage={865} imageOne={img_flipscards[3].image.desktop.url} imageTwo={img_flipscards[1].image.desktop.url} /></div>
+						<div className="itemLastLineThre"><FlipCard heightImage={435} imageOne={img_flipscards[5].image.desktop.url} imageTwo={img_flipscards[1].image.desktop.url} /></div>
+					</div>
 			</Container>
-			<BannerSliderBlock />
+				<div className="w-full flex justify-center p-4 mb-5">
+					<button onClick={handleChangeUser}className=" button-start">Começar</button>
+				</div>
+				<Conceitos sectionHeading="text-shop-by-category"/>
 			<Container>
-				<CategoryBlock sectionHeading="text-shop-by-category" type="rounded" />
-				<ProductsFeatured sectionHeading="text-featured-products" />
-				<BannerCard
-					key={`banner--key${banner[0].id}`}
-					banner={banner[0]}
-					href={`${ROUTES.COLLECTIONS}/${banner[0].slug}`}
-					className="mb-12 lg:mb-14 xl:mb-16 pb-0.5 lg:pb-1 xl:pb-0"
-				/>
+				<BannerCarouselBlock />
+				<BestSellerProductFeed />
+
 				<BrandGridBlock sectionHeading="text-top-brands" />
-				<BannerCard
-					key={`banner--key${banner[1].id}`}
-					banner={banner[1]}
-					href={`${ROUTES.COLLECTIONS}/${banner[1].slug}`}
-					className="mb-12 lg:mb-14 xl:mb-16 pb-0.5 lg:pb-1 xl:pb-0"
-				/>
 				<BannerWithProducts
 					sectionHeading="text-on-selling-products"
 					categorySlug="/search"
 				/>
-				<ExclusiveBlock />
-				<NewArrivalsProductFeed />
 				<DownloadApps />
-				<Support />
-				<Instagram />
-				<Subscription className="bg-opacity-0 px-5 sm:px-16 xl:px-0 py-12 md:py-14 xl:py-16" />
 			</Container>
-			<Divider className="mb-0" />
+			<Container>
+				<Subscription className="bg-opacity-0 px-5 sm:px-16 xl:px-0 py-12 md:py-14 xl:py-16" />
+				<Instagram />
+			</Container>
+
+
+
 		</>
 	);
 }
 
 Home.Layout = Layout;
-
 export const getStaticProps: GetStaticProps = async ({ locale }) => {
+	const queryClient = new QueryClient();
+
+	await queryClient.prefetchQuery(
+		[API_ENDPOINTS.FLASH_SALE_PRODUCTS, { limit: 10 }],
+		fetchFlashSaleProducts
+	);
+	await queryClient.prefetchQuery(
+		[API_ENDPOINTS.CATEGORIES, { limit: 10 }],
+		fetchCategories
+	);
+	await queryClient.prefetchQuery(
+		[API_ENDPOINTS.BEST_SELLER_PRODUCTS, { limit: 10 }],
+		fetchBestSellerProducts
+	);
+	await queryClient.prefetchQuery(
+		[API_ENDPOINTS.NEW_ARRIVAL_PRODUCTS, { limit: 10 }],
+		fetchNewArrivalProducts
+	);
+	await queryClient.prefetchQuery(
+		[API_ENDPOINTS.BRANDS, { limit: 0 }],
+		fetchBrands
+	);
+
 	return {
 		props: {
+			dehydratedState: JSON.parse(JSON.stringify(dehydrate(queryClient))),
 			...(await serverSideTranslations(locale!, [
 				"common",
 				"forms",
@@ -110,5 +134,6 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => {
 				"footer",
 			])),
 		},
+		revalidate: 60,
 	};
 };
