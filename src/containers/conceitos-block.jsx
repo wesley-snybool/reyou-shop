@@ -27,15 +27,15 @@ interface CategoriesProps {
 
 const breakpoints = {
 	"1720": {
-		slidesPerView: 8,
+		slidesPerView: 5,
 		spaceBetween: 28,
 	},
 	"1400": {
-		slidesPerView: 7,
+		slidesPerView: 5,
 		spaceBetween: 28,
 	},
 	"1025": {
-		slidesPerView: 6,
+		slidesPerView: 5,
 		spaceBetween: 28,
 	},
 	"768": {
@@ -58,7 +58,7 @@ const breakpointsCircle = {
 		spaceBetween: 48,
 	},
 	"1400": {
-		slidesPerView: 7,
+		slidesPerView: 5,
 		spaceBetween: 32,
 	},
 	"1025": {
