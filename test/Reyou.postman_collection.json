@@ -196,10 +196,31 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "Brands",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/portal/brands",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"portal",
+								"brands"
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		}
 	],
+	"auth": {
+		"type": "bearer"
+	},
 	"event": [
 		{
 			"listen": "prerequest",
