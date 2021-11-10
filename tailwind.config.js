@@ -35,9 +35,6 @@ module.exports = {
 					800: "#707070",
 				},
 			},
-			fontSize: {
-				"10px": ".625rem",
-			},
 			screens: {
 				sm: "480px",
 				lg: "1025px",

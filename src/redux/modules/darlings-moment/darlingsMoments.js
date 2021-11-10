@@ -14,20 +14,27 @@ export const darlingMomentsSlice = createSlice({
     name: 'darling-moments',
     initialState: {
         data: [],
-        isLoading: '',
+        isLoading: false,
+        error: {
+            error_status: false,
+            message: 'Erro ao carregar os dados'
+        },
     },
     extraReducers: {
         [getDarlingMoments.pending]: (state) => {
-            state.isLoading = 'LOADING';
+            state.isLoading = true;
         },
         [getDarlingMoments.fulfilled]: (state, action) => {
             state.data = action.payload;
-            state.isLoading = 'SUCCESS';
+            state.isLoading = false;
         },
         [getDarlingMoments.rejected]: (state) => {
-            state.isLoading = 'REJECTED';
+            state.error.error_status = true
         }
     }
 })
+
+export const useSelectDarling = (state) => state.data;
+
 
 export default darlingMomentsSlice.reducer;

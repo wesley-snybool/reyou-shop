@@ -14,9 +14,10 @@ interface ProductProps {
 	imgWidth?: number | string;
 	imgHeight?: number | string;
 	imgLoading?: "eager" | "lazy";
+	state?: string;
 }
 
-const ProductCard: FC<ProductProps> = ({
+const CardQueridinhos: FC<ProductProps> = ({
 	product,
 	className = "",
 	contactClassName = "",
@@ -26,6 +27,8 @@ const ProductCard: FC<ProductProps> = ({
 	imgHeight = 440,
 	imgLoading,
 }) => {
+
+	console.log('Carde queridos',product);
 	const { openModal, setModalView, setModalData } = useUI();
 	const placeholderImage = `/assets/placeholder/products/product-${variant}.svg`;
 	const { price, basePrice, discount } = usePrice({
@@ -70,7 +73,7 @@ const ProductCard: FC<ProductProps> = ({
 				)}
 			>
 				<Image
-					src={product?.thumbnail ?? placeholderImage}
+					src={product.thumbnail ?? placeholderImage}
 					width={imgWidth}
 					height={imgHeight}
 					loading={imgLoading}
@@ -109,9 +112,9 @@ const ProductCard: FC<ProductProps> = ({
 				>
 					{product?.productName}
 				</h2>
-				{product?.description && (
+				{product?.shortDescription && (
 					<p className="text-body text-xs lg:text-sm leading-normal xl:leading-relaxed max-w-[250px] truncate">
-						{product?.description}
+						{product?.shortDescription}
 					</p>
 				)}
 				<div
@@ -122,9 +125,9 @@ const ProductCard: FC<ProductProps> = ({
 					}`}
 				>
 					<span className="inline-block">{price}</span>
-					{discount && (
+					{!discount && (
 						<del className="sm:text-base font-normal text-gray-800">
-							{basePrice}
+							{product.price}
 						</del>
 					)}
 				</div>
@@ -133,4 +136,4 @@ const ProductCard: FC<ProductProps> = ({
 	);
 };
 
-export default ProductCard;
+export default CardQueridinhos;

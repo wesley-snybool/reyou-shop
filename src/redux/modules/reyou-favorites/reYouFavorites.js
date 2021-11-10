@@ -15,6 +15,10 @@ export const getReyouFavoriteSlice = createSlice({
     initialState: {
         data: [],
         isLoading: false,
+        error: {
+            error_status: false,
+            message: 'Erro ao carregar os dados'
+        },
     },
     extraReducers: {
         [getReyouFavorites.pending]: (state) => {
@@ -26,6 +30,7 @@ export const getReyouFavoriteSlice = createSlice({
         },
         [getReyouFavorites.rejected]: (state) => {
             state.isLoading = false;
+            state.error.error_status = true
         }
     }
 })

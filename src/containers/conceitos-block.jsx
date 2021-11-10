@@ -97,7 +97,7 @@ const Conceitos = ({type = "circle"}) => {
 	});
 
 	return (
-           <div className="bg-gray-300 w-full h-full flex flex-col px-8">
+           <div className="bg-gray-300 w-full h-full flex flex-col px-8 mb-20">
 			<strong className="my-4 text-lg mx-auto ">Conceitos em alta</strong>
 			{!dataConcepts ? (
 				<Alert message={`${error.message}Erro ao carregar as imagens`} />
@@ -123,7 +123,6 @@ const Conceitos = ({type = "circle"}) => {
 						  })
 						: dataConcepts?.map((conceitos, index) => (
 								<SwiperSlide key={`category--key-${dataConcepts.id}`}>
-									{ console.log(conceitos.thumbnail, 'bla')}
 									<Card
 										item={conceitos}
 										href={conceitos.thumbnail}

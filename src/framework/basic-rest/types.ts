@@ -82,7 +82,9 @@ export type Tag = {
 };
 export type Product = {
   id: number | string;
-  name: string;
+  thumbnail: string;
+  name: string | unknown;
+  productName: string;
   slug: string;
   price: number;
   quantity: number;
@@ -96,6 +98,7 @@ export type Product = {
   description?: string;
   variations?: object;
   [key: string]: unknown;
+  shortDescription: string;
 };
 export type OrderItem = {
   id: number | string;

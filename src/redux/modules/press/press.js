@@ -14,18 +14,18 @@ export const pressSlice = createSlice({
     name: 'press-slice',
     initialState: {
         data: [],
-        isLoading: '',
+        isLoading: false,
     },
     extraReducers: {
         [getPress.pending]: (state) => {
-            state.isLoading = 'LOADING';
+            state.isLoading = true;
         },
         [getPress.fulfilled]: (state, action) => {
             state.data = action.payload;
-            state.isLoading = 'SUCCESS';
+            state.isLoading = false;
         },
         [getPress.rejected]: (state) => {
-            state.isLoading = 'REJECTED';
+            state.error_status = true;
         }
     }
 })
