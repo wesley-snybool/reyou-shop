@@ -33,6 +33,7 @@ module.exports = {
 					600: "#3A3A3A",
 					700: "#292929",
 					800: "#707070",
+					900: "rgba(235, 237, 239, 0.52)",
 				},
 			},
 			screens: {
@@ -46,6 +47,7 @@ module.exports = {
 				"450px": "450px",
 				"500px": "500px",
 				"64vh": "64vh",
+				vd: "450px"
 			},
 			minHeight: {
 				"50px": "50px",
@@ -72,6 +74,7 @@ module.exports = {
 			navigation: "0 3px 6px rgba(0, 0, 0, 0.16)",
 			navigationReverse: "0 -3px 6px rgba(0, 0, 0, 0.16)",
 			header: "0 2px 3px rgba(0, 0, 0, 0.08)",
+			cardMoreContent: "0 2px 30px rgba(0, 0, 0, 0.2)",
 			subMenu: "1px 2px 3px rgba(0, 0, 0, 0.08)",
 			bottomNavigation: "0 -2px 3px rgba(0, 0, 0, 0.06)",
 			cookies: "0 -2px 3px rgba(0, 0, 0, 0.04)",

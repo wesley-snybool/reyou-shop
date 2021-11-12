@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Container from "@components/ui/container";
 import BannerCarouselBlock from "@containers/banner-carousel-block";
 import DownloadApps from "@components/common/download-apps";
@@ -38,12 +39,12 @@ export default function Home() {
 	const dispatch = useDispatch();
 
 	//Recuperando os dados da Sesão queridinhos do momentos no redux
-	const { isLoading, error } =  useAppSelector((state) => state.getDarlingMoments)
+	const { isLoading, error } = useAppSelector((state) => state.getDarlingMoments)
 	const data = useAppSelector((state) => state.getDarlingMoments.data)
 
-		//Recuperando os dados da Sesão queridinhos do momentos no redux
-		const { isLoading: isLoadDFavorites, error: errorFavorites } =  useAppSelector((state) => state.getReyouFavorites)
-		const dataFavorites = useAppSelector((state) => state.getDarlingMoments.data)
+	//Recuperando os dados da Sesão queridinhos do momentos no redux
+	const { isLoading: isLoadDFavorites, error: errorFavorites } = useAppSelector((state) => state.getReyouFavorites)
+	const dataFavorites = useAppSelector((state) => state.getReyouFavorites.data)
 
 	//Exemplo de dispatch
 	const handleChangeUser = () => {
@@ -53,12 +54,12 @@ export default function Home() {
 		}
 		dispatch(changeUser(data.nome))
 	}
-	
+
 	useEffect(() => {
 		//Fecth dos dados da Home
 		dispatch(getDarlingMoments());
 		dispatch(getReyouFavorites());
-	},[])
+	}, [])
 
 
 	return (
@@ -81,27 +82,97 @@ export default function Home() {
 				</div>
 			</Container>
 			<div className="w-full flex justify-center p-4 mb-5">
-				<button onClick={handleChangeUser} className=" button-start">Começar</button>
+				<button onClick={handleChangeUser} className="button-start">Começar</button>
 			</div>
-			<Conceitos /* sectionHeading="text-shop-by-category" */ />
 			<Container>
-				<BannerCarouselBlock />
-			<p className="text-center p-12 m-0 text-2xl  font-bold">Queridinhos do Momento</p>
-				<BestSellerProductFeed data={data} isLoading={isLoading} error={error} />
-
-			<p className='text-center p-8 font-black text-2xl'>Favoritos Rey.You</p>
-				<BestSellerProductFeed data={dataFavorites} isLoading={isLoadDFavorites} error={errorFavorites}/>
-
-				<BrandGridBlock sectionHeading="text-top-brands" />
-				<BannerWithProducts
-					sectionHeading="text-on-selling-products"
-					categorySlug="/search"
-				/>
-				<DownloadApps />
+				<Conceitos /* sectionHeading="text-shop-by-category" */ />
 			</Container>
 			<Container>
-				<Subscription className="bg-opacity-0 px-5 sm:px-16 xl:px-0 py-12 md:py-14 xl:py-16" />
-				<Instagram />
+				<BannerCarouselBlock />
+				<p className="text-center p-12 m-0 text-2xl  font-bold">Queridinhos do Momento</p>
+				<BestSellerProductFeed data={data} isLoading={isLoading} error={error} />
+
+				<p className='text-center p-8 font-black text-2xl'>Favoritos Re.You</p>
+				<BestSellerProductFeed data={dataFavorites} isLoading={isLoadDFavorites} error={errorFavorites} />
+
+				<BrandGridBlock sectionHeading="text-top-brands" />
+				{/* 				<BannerWithProducts
+					sectionHeading="text-on-selling-products"
+					categorySlug="/search"
+				/> */}
+				<div className='flex items-center flex-col justify-center container-video-inst my-20 w-full mx-auto py-4 px-20 bg-gray-500 text-center'>
+					<p className='text-xl font-bold' >QUER CONHECER A NOSSA HISTÓRIA?</p>
+					<div className='my-4 w-full h-full bg-gray-400'>
+						<iframe src='https://www.youtube.com/embed/E7wJTI-1dvQ'
+							frameBorder='0'
+							allow='autoplay; encrypted-media'
+							allowFullScreen
+							width='100%'
+							height='100%'
+							title='video'
+						/>
+					</div>
+					
+					<button className='font-bold w-40 p-4 bg-gray-300  shadow-header rounded-full focus:outline-none hover:bg-gray-400 hover:text-white transition-all '>Saiba Mais</button>
+				</div>
+				<Container className='bg-gray-500 pb-20'>
+					<div>
+						<p className='font-bold text-xl py-12 text-center'>Mais Conteúdo pra você</p>
+					</div>
+					<div className='flex gap-10'>
+						<div className='pb-4 shadow-cardMoreContent bg-gray-200 flex items-center flex-col'>
+							<Image className='my-8' src={img_flipscards[5].image.desktop.url} width={450} height={350} />
+							<span className='my-4 font-bold '>Moda e Felicidade</span>
+							<p className='m-4 text-center'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo laudantium vel distinctio culpa aspernatur quasi. Doloremque ut nobis, optio cumque illo explicabo autem culpa facilis temporibus esse minus iure eligendi!</p>
+							<button className='font-bold w-40 p-4 bg-gray-400 my-4 shadow-header rounded-full focus:outline-none hover:bg-gray-400 hover:text-white transition-all '>Leia Mais</button>	
+						</div>
+						<div className='shadow-header  bg-gray-200 flex items-center flex-col'>
+							<Image className='my-8' src={img_flipscards[5].image.desktop.url} width={450} height={350} />
+							<span className='font-bold my-4 '>Inclusão através da moda</span>
+							<p className='m-4 text-center'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo laudantium vel distinctio culpa aspernatur quasi. Doloremque ut nobis, optio cumque illo explicabo autem culpa facilis temporibus esse minus iure eligendi!</p>
+							<button className='font-bold w-40 p-4 bg-gray-400 my-4 shadow-header rounded-full focus:outline-none hover:bg-gray-400 hover:text-white transition-all '>Leia Mais</button>	
+						</div>
+						<div className='shadow-header  bg-gray-200 flex items-center flex-col'>
+							<Image className='my-8' src={img_flipscards[5].image.desktop.url} width={450} height={350} />
+							<span className=' font-bold my-4 '>O futuro de tudo</span>
+							<p className='m-4 text-center'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo laudantium vel distinctio culpa aspernatur quasi. Doloremque ut nobis, optio cumque illo explicabo autem culpa facilis temporibus esse minus iure eligendi!</p>
+							<button className='font-bold w-40 p-4 bg-gray-400 my-4  shadow-header rounded-full focus:outline-none hover:bg-gray-400 hover:text-white transition-all '>Leia Mais</button>	
+						</div>
+					</div>
+				</Container>
+
+				<Container className='bg-gray-900 shadow-cardMoreContent pb-20 my-20'>
+					<div>
+						<p className='font-bold text-xl py-12 text-center'>Re.You na IMPRENSA</p>
+					</div>
+					<div className='flex gap-10'>
+						<div className='w-2/6 p-12 shadow-cardMoreContent bg-gray-200 flex items-center justify-center flex-col'>
+							<span className='my-4 font-bold '>22/07/2021 - Nota da Re.YOU ao GreenPeace</span>
+							<p className='m-4 text-center'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo laudantium vel distinctio culpa aspernatur quasi. Doloremque ut nobis, optio cumque illo explicabo autem culpa facilis temporibus esse minus iure eligendi!</p>
+						</div>
+						<div className='w-2/6 p-12 shadow-cardMoreContent  bg-gray-200 flex justify-center items-center flex-col'>
+							<span className='font-bold my-4 '>Inclusão através da moda</span>
+							<p className='m-4 text-center'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo laudantium vel distinctio culpa aspernatur quasi. Doloremque ut nobis, optio cumque illo explicabo autem culpa facilis temporibus esse minus iure eligendi!</p>
+						</div>
+						<div className=' w-2/6 p-12 shadow-cardMoreContent  bg-gray-200 flex justify-center items-center flex-col'>
+							<span className=' font-bold my-4 '>O futuro de tudo</span>
+							<iframe src='https://www.youtube.com/embed/E7wJTI-1dvQ'
+								frameBorder='0'
+								allow='autoplay; encrypted-media'
+								allowFullScreen
+								width='100%'
+								height='100%'
+								title='video'
+						/>
+						</div>
+					</div>
+				</Container>
+
+				<DownloadApps className="mb-20"/>
+			</Container>
+			<Container>
+				{/* <Subscription className="bg-opacity-0 px-5 sm:px-16 xl:px-0 py-12 md:py-14 xl:py-16" /> */}
+				{/* <Instagram /> */}
 			</Container>
 
 

@@ -57,6 +57,10 @@
 		width: 60%;
 	}
 
+	.container-video-inst {
+		height: 750px;
+	}
+
 	.button-start {
 		width: 150px;
 		padding: 8px;
