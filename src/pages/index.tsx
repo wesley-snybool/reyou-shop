@@ -151,11 +151,11 @@ export default function Home() {
 							<p className='m-4 text-center'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo laudantium vel distinctio culpa aspernatur quasi. Doloremque ut nobis, optio cumque illo explicabo autem culpa facilis temporibus esse minus iure eligendi!</p>
 						</div>
 						<div className='w-2/6 p-12 shadow-cardMoreContent  bg-gray-200 flex justify-center items-center flex-col'>
-							<span className='font-bold my-4 '>Inclusão através da moda</span>
+							<span className='font-bold my-4 '>22/07/2021 - Globo reconhece Re.YOU como a plataforma de Moda Sustentável mais rentável do Brasil</span>
 							<p className='m-4 text-center'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo laudantium vel distinctio culpa aspernatur quasi. Doloremque ut nobis, optio cumque illo explicabo autem culpa facilis temporibus esse minus iure eligendi!</p>
 						</div>
 						<div className=' w-2/6 p-12 shadow-cardMoreContent  bg-gray-200 flex justify-center items-center flex-col'>
-							<span className=' font-bold my-4 '>O futuro de tudo</span>
+							<span className=' font-bold my-4 '>21/07/2021 - CNN entrevista equipe Re.YOU em noite descontraída</span>
 							<iframe src='https://www.youtube.com/embed/E7wJTI-1dvQ'
 								frameBorder='0'
 								allow='autoplay; encrypted-media'
