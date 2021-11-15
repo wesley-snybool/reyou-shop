@@ -28,7 +28,6 @@ const CardQueridinhos: FC<ProductProps> = ({
 	imgLoading,
 }) => {
 
-	console.log('Carde queridos',product);
 	const { openModal, setModalView, setModalData } = useUI();
 	const placeholderImage = `/assets/placeholder/products/product-${variant}.svg`;
 	const { price, basePrice, discount } = usePrice({

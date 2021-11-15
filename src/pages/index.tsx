@@ -34,6 +34,7 @@ import { changeUser } from "src/redux/store/userSlice";
 import { getDarlingMoments } from "src/redux/modules/darlings-moment/darlingsMoments";
 import { getReyouFavorites } from "src/redux/modules/reyou-favorites/reYouFavorites";
 import { getNews } from 'src/redux/modules/news/news';
+import { getConfig } from 'src/redux/modules/config-portal/config-portal';
 
 
 export default function Home() {
@@ -47,9 +48,10 @@ export default function Home() {
 	const { isLoading: isLoadDFavorites, error: errorFavorites } = useAppSelector((state) => state.getReyouFavorites)
 	const dataFavorites = useAppSelector((state) => state.getReyouFavorites.data)
 
-		//Recuperando os dados da Sessão Novidades na Re.You no redux
-		const { isLoading: isLoadDNews, error: errorNews } = useAppSelector((state) => state.getNews)
-		const dataNews = useAppSelector((state) => state.getNews.data)
+	//Recuperando os dados da Sessão Novidades na Re.You no redux
+	const { isLoading: isLoadDNews, error: errorNews } = useAppSelector((state) => state.getNews)
+	const dataNews = useAppSelector((state) => state.getNews.data)
+
 		
 
 	//Exemplo de dispatch
@@ -66,6 +68,7 @@ export default function Home() {
 		dispatch(getDarlingMoments());
 		dispatch(getReyouFavorites());
 		dispatch(getNews())
+		dispatch(getConfig())
 	}, [])
 
 
@@ -133,26 +136,26 @@ export default function Home() {
 							<Image className='my-8' src={img_flipscards[5].image.desktop.url} width={450} height={350} />
 							<span className='my-4 font-bold '>Moda e Felicidade</span>
 							<p className='m-4 text-center'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo laudantium vel distinctio culpa aspernatur quasi. Doloremque ut nobis, optio cumque illo explicabo autem culpa facilis temporibus esse minus iure eligendi!</p>
-							<button className='font-bold w-40 p-4 bg-gray-400 my-4 shadow-header rounded-full focus:outline-none hover:bg-gray-400 hover:text-white transition-all '>Leia Mais</button>	
+							<button className='font-bold w-40 p-4 bg-gray-300 my-4 shadow-header rounded-full focus:outline-none hover:bg-gray-400 hover:text-white transition-all '>Leia Mais</button>	
 						</div>
 						<div className='shadow-header  bg-gray-200 flex items-center flex-col'>
 							<Image className='my-8' src={img_flipscards[5].image.desktop.url} width={450} height={350} />
 							<span className='font-bold my-4 '>Inclusão através da moda</span>
 							<p className='m-4 text-center'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo laudantium vel distinctio culpa aspernatur quasi. Doloremque ut nobis, optio cumque illo explicabo autem culpa facilis temporibus esse minus iure eligendi!</p>
-							<button className='font-bold w-40 p-4 bg-gray-400 my-4 shadow-header rounded-full focus:outline-none hover:bg-gray-400 hover:text-white transition-all '>Leia Mais</button>	
+							<button className='font-bold w-40 p-4 bg-gray-300 my-4 shadow-header rounded-full focus:outline-none hover:bg-gray-400 hover:text-white transition-all '>Leia Mais</button>	
 						</div>
 						<div className='shadow-header  bg-gray-200 flex items-center flex-col'>
 							<Image className='my-8' src={img_flipscards[5].image.desktop.url} width={450} height={350} />
 							<span className=' font-bold my-4 '>O futuro de tudo</span>
 							<p className='m-4 text-center'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo laudantium vel distinctio culpa aspernatur quasi. Doloremque ut nobis, optio cumque illo explicabo autem culpa facilis temporibus esse minus iure eligendi!</p>
-							<button className='font-bold w-40 p-4 bg-gray-400 my-4  shadow-header rounded-full focus:outline-none hover:bg-gray-400 hover:text-white transition-all '>Leia Mais</button>	
+							<button className='font-bold w-40 p-4 bg-gray-300 my-4  shadow-header rounded-full focus:outline-none hover:bg-gray-400 hover:text-white transition-all '>Leia Mais</button>	
 						</div>
 					</div>
 				</Container>
 
 				<Container className='bg-gray-900 shadow-cardMoreContent pb-20 my-20'>
 					<div>
-						<p className='font-bold text-xl py-12 text-center'>Re.You na IMPRENSA</p>
+						<p className='font-bold text-black text-xl py-12 text-center'>Re.You na IMPRENSA</p>
 					</div>
 					<div className='flex gap-10'>
 						<div className='w-2/6 p-12 shadow-cardMoreContent bg-gray-200 flex items-center justify-center flex-col'>
@@ -177,7 +180,7 @@ export default function Home() {
 					</div>
 				</Container>
 
-				<DownloadApps className="mb-20"/>
+				<DownloadApps className="mb-10"/>
 			</Container>
 			<Container>
 				{/* <Subscription className="bg-opacity-0 px-5 sm:px-16 xl:px-0 py-12 md:py-14 xl:py-16" /> */}

@@ -76,6 +76,33 @@ export type Brand = {
   [key: string]: unknown;
   title?: string;
 };
+
+export type AtachmentReyou = {
+  desktop: {
+    url: string;
+    width: number;
+    height: number;
+  };
+  mobile: {
+    url: string;
+    width: number;
+    height: number;
+  }
+};
+
+export type BrandReyou = {
+  uid?: number | string;
+  image: AtachmentReyou;
+  background_image?: any;
+  [key: string]: unknown;
+  title?: string;
+  action: {
+    title: string;
+    url: string;
+    internal: boolean;
+};
+
+};
 export type Tag = {
   id: string | number;
   name: string;
