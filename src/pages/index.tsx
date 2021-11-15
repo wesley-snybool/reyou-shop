@@ -33,18 +33,24 @@ import { useDispatch } from "react-redux";
 import { changeUser } from "src/redux/store/userSlice";
 import { getDarlingMoments } from "src/redux/modules/darlings-moment/darlingsMoments";
 import { getReyouFavorites } from "src/redux/modules/reyou-favorites/reYouFavorites";
+import { getNews } from 'src/redux/modules/news/news';
 
 
 export default function Home() {
 	const dispatch = useDispatch();
 
-	//Recuperando os dados da Sesão queridinhos do momentos no redux
+	//Recuperando os dados da Sessão queridinhos do momentos no redux
 	const { isLoading, error } = useAppSelector((state) => state.getDarlingMoments)
 	const data = useAppSelector((state) => state.getDarlingMoments.data)
 
-	//Recuperando os dados da Sesão queridinhos do momentos no redux
+	//Recuperando os dados da Sessão queridinhos do momentos no redux
 	const { isLoading: isLoadDFavorites, error: errorFavorites } = useAppSelector((state) => state.getReyouFavorites)
 	const dataFavorites = useAppSelector((state) => state.getReyouFavorites.data)
+
+		//Recuperando os dados da Sessão Novidades na Re.You no redux
+		const { isLoading: isLoadDNews, error: errorNews } = useAppSelector((state) => state.getNews)
+		const dataNews = useAppSelector((state) => state.getNews.data)
+		
 
 	//Exemplo de dispatch
 	const handleChangeUser = () => {
@@ -59,6 +65,7 @@ export default function Home() {
 		//Fecth dos dados da Home
 		dispatch(getDarlingMoments());
 		dispatch(getReyouFavorites());
+		dispatch(getNews())
 	}, [])
 
 
@@ -82,27 +89,29 @@ export default function Home() {
 				</div>
 			</Container>
 			<div className="w-full flex justify-center p-4 mb-5">
-				<button onClick={handleChangeUser} className="button-start">Começar</button>
+				<button onClick={handleChangeUser} className="button-start font-bold text-black">Começar</button>
 			</div>
 			<Container>
 				<Conceitos /* sectionHeading="text-shop-by-category" */ />
 			</Container>
 			<Container>
 				<BannerCarouselBlock />
-				<p className="text-center p-12 m-0 text-2xl  font-bold">Queridinhos do Momento</p>
+				<p className="text-center text-black p-12 m-0 text-2xl  font-bold">QUERIDINHOS DO MOMENTO</p>
 				<BestSellerProductFeed data={data} isLoading={isLoading} error={error} />
 
-				<p className='text-center p-8 font-black text-2xl'>Favoritos Re.You</p>
+				<Container className="mb-14">
+					<p className='text-center w-full p-4 text-center text-black font-bold text-2xl'>FAVORITOS Re.You</p>
+				</Container>
 				<BestSellerProductFeed data={dataFavorites} isLoading={isLoadDFavorites} error={errorFavorites} />
 
-				<BrandGridBlock sectionHeading="text-top-brands" />
+				<BrandGridBlock sectionHeading="NOVIDADES NA Re.You"/>
 				{/* 				<BannerWithProducts
 					sectionHeading="text-on-selling-products"
 					categorySlug="/search"
 				/> */}
-				<div className='flex items-center flex-col justify-center container-video-inst my-20 w-full mx-auto py-4 px-20 bg-gray-500 text-center'>
-					<p className='text-xl font-bold' >QUER CONHECER A NOSSA HISTÓRIA?</p>
-					<div className='my-4 w-full h-full bg-gray-400'>
+				<div className='flex items-center flex-col justify-center container-video-inst my-12 w-full mx-auto py-4 px-20 bg-gray-300 text-center'>
+					<p className='text-xl font-bold text-black p-8' >QUER CONHECER A NOSSA HISTÓRIA?</p>
+					<div className='my-4 w-full h-full bg-gray-200'>
 						<iframe src='https://www.youtube.com/embed/E7wJTI-1dvQ'
 							frameBorder='0'
 							allow='autoplay; encrypted-media'
@@ -113,11 +122,11 @@ export default function Home() {
 						/>
 					</div>
 					
-					<button className='font-bold w-40 p-4 bg-gray-300  shadow-header rounded-full focus:outline-none hover:bg-gray-400 hover:text-white transition-all '>Saiba Mais</button>
+					<button className='font-bold my-4 w-40 p-4 bg-gray-300  shadow-cardMoreContent rounded-full focus:outline-none hover:bg-gray-400 hover:text-white transition-all '>Saiba Mais</button>
 				</div>
-				<Container className='bg-gray-500 pb-20'>
+				<Container className='bg-gray-900 pb-16 shadow-cardMoreContent'>
 					<div>
-						<p className='font-bold text-xl py-12 text-center'>Mais Conteúdo pra você</p>
+						<p className='font-bold text-black text-xl py-12 text-center'>MAIS CONTEÚDO PRA VOCÊ</p>
 					</div>
 					<div className='flex gap-10'>
 						<div className='pb-4 shadow-cardMoreContent bg-gray-200 flex items-center flex-col'>
@@ -202,7 +211,7 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => {
 		fetchNewArrivalProducts
 	);
 	await queryClient.prefetchQuery(
-		[API_ENDPOINTS.BRANDS, { limit: 0 }],
+		[API_ENDPOINTS.BRANDS, { limit: 6 }],
 		fetchBrands
 	);
 

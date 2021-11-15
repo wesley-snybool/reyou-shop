@@ -373,16 +373,14 @@
 .footer{
 	background-color:#000;
 	width: 100%;
-	height: 300px;
 }
 .btn{
 	background-color:#ffff;
-	width: 200px;
+	width: 250px;
 	height: 40px;
-	position: absolute;
 	margin-top:30px;
 	right: 900px;
-	font-weight: bolder;
+	font-weight: bold;
 	opacity: 1;
 	color: black;
 }

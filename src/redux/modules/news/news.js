@@ -14,18 +14,23 @@ export const newSlice = createSlice({
     name: 'news-slice',
     initialState: {
         data: [],
-        isLoading: '',
+        isLoading: false,
+        error: {
+            error_status: false,
+            message: 'Erro ao carregar os dados'
+        },
     },
     extraReducers: {
         [getNews.pending]: (state) => {
-            state.isLoading = 'LOADING';
+            state.isLoading = true;
         },
         [getNews.fulfilled]: (state, action) => {
             state.data = action.payload;
-            state.isLoading = 'SUCCESS';
+            state.isLoading = false;
         },
         [getNews.rejected]: (state) => {
-            state.isLoading = 'REJECTED';
+            state.isLoading = false;
+            state.error.error_status = true;
         }
     }
 })

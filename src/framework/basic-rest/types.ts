@@ -68,12 +68,13 @@ export type Collection = {
   productCount?: number;
 };
 export type Brand = {
-  id: number | string;
-  name: string;
-  slug: string;
+  id?: number | string;
+  name?: string;
+  slug?: string;
   image?: Attachment;
   background_image?: any;
   [key: string]: unknown;
+  title?: string;
 };
 export type Tag = {
   id: string | number;
@@ -99,6 +100,10 @@ export type Product = {
   variations?: object;
   [key: string]: unknown;
   shortDescription: string;
+  stateProduct: string;
+  brand?: Brand;
+  manufacturer: string;
+  discount: string;
 };
 export type OrderItem = {
   id: number | string;

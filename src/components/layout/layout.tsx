@@ -7,6 +7,7 @@ import CookieBar from "@components/common/cookie-bar";
 import { useAcceptCookies } from "@utils/use-accept-cookies";
 import Button from "@components/ui/button";
 import { useTranslation } from "next-i18next";
+import Container from "@components/ui/container";
 
 const Layout: React.FC = ({ children }) => {
 	const { acceptedCookies, onAcceptCookies } = useAcceptCookies();
@@ -54,7 +55,9 @@ const Layout: React.FC = ({ children }) => {
 			>
 				{children}
 			</main>
-			<Footer />
+			<Container className="bg-black w-full flex h-full align-center justify-center">
+				<Footer />
+			</Container>
 			<MobileNavigation />
 			<Search />
 			<CookieBar

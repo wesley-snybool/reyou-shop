@@ -11,14 +11,14 @@ interface Props {
 const SectionHeader: React.FC<Props> = ({
 	sectionHeading = "text-section-title",
 	categorySlug,
-	className = "pb-0.5 mb-4 md:mb-5 lg:mb-6 2xl:mb-7 3xl:mb-8",
+	className = "pb-0.5 md:mb-5 lg:mb-6 2xl:mb-7 3xl:mb-8",
 }) => {
 	const { t } = useTranslation("common");
 	return (
 		<div
-			className={`flex items-center justify-between -mt-2 lg:-mt-2.5 ${className}`}
+			className={` flex items-center justify-center -mt-2 lg:-mt-2.5 ${className}`}
 		>
-			<Text variant="mediumHeading">{t(`${sectionHeading}`)}</Text>
+			<Text className='text-center mb-4' variant="mediumHeading">{t(`${sectionHeading}`)}</Text>
 			{categorySlug && (
 				<Link
 					href={categorySlug}

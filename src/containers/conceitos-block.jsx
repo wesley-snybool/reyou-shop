@@ -97,8 +97,8 @@ const Conceitos = ({type = "circle"}) => {
 	});
 
 	return (
-           <div className="bg-gray-300 w-full h-full flex flex-col px-8 mb-20">
-			<strong className="my-4 text-lg mx-auto ">Conceitos em alta</strong>
+           <div className="bg-gray-300 w-full h-full flex flex-col px-8 mb-16">
+			<strong className="text-black my-4 text-lg mx-auto p-4">Conceitos em alta</strong>
 			{!dataConcepts ? (
 				<Alert message={`${error.message}Erro ao carregar as imagens`} />
 			) : (
