@@ -149,9 +149,9 @@ export default function Home() {
 							return (
 								<div key={index} className='pb-4 shadow-cardMoreContent bg-gray-200 flex items-center flex-col'>
 								<Image className='my-8' src={item.image} width={450} height={350} />
-								<span className='my-4 font-bold '>{item.title}</span>
-								<p className='m-4 text-center'>{item.text}</p>
-								<button className='font-bold w-40 p-4 bg-gray-300 my-4 shadow-header rounded-full focus:outline-none hover:bg-gray-400 hover:text-white transition-all '>Leia Mais</button>	
+								<span className='my-4 font-bold text-black'>{item.title}</span>
+								<p className='m-4 text-center text-black'>{item.text}</p>
+								<button className='text-black font-bold w-40 p-4 bg-gray-300 my-4 shadow-header rounded-full focus:outline-none hover:bg-gray-400 hover:text-white transition-all '>Leia Mais</button>	
 							</div>
 							)
 						})}
