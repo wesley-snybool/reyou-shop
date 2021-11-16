@@ -67,7 +67,7 @@ export const siteSettings = {
 		},*/
 			{
 				id: 2,
-				path: "/#",
+				path: "/search",
 				label: "Vitrine",
 				/*columns: [
 					{

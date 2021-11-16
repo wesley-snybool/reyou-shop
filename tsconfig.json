@@ -28,6 +28,6 @@
       "@utils/*": ["src/utils/*"]
     }
   },
-  "include": ["next-env.d.ts", "src/**/*.ts", "src/**/*.tsx", "src/pages/home.js", "src/components/common/flip-card/FlipCard.js", "src/redux/store/store.ts", "src/redux/store/userSlice.ts", "src/redux/modules/hot-concepts/getGotConceptsSlice.ts", "src/redux/modules/advertising/advertisingSlice.js", "src/containers/conceitos-block.jsx"],
+  "include": ["next-env.d.ts", "src/**/*.ts", "src/**/*.tsx", "src/pages/home.js", "src/components/common/flip-card/FlipCard.js", "src/redux/store/store.ts", "src/redux/store/userSlice.ts", "src/redux/modules/hot-concepts/getGotConceptsSlice.ts", "src/redux/modules/advertising/advertisingSlice.js", "src/containers/conceitos-block.jsx", "src/components/ui/logo.js", "src/redux/modules/config-portal/config-portal.js"],
   "exclude": ["node_modules"]
 }

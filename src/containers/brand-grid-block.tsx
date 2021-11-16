@@ -27,7 +27,6 @@ const BrandGridBlock: React.FC<BrandProps> = ({
 
 	const { isLoading, error, data } = useAppSelector((state) => state.getNews)
 	const brands = data
-	console.log(data)
 
 	return (
 		<div className={className}>

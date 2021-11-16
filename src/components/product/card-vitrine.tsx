@@ -17,7 +17,7 @@ interface ProductProps {
 	state?: string;
 }
 
-const CardQueridinhos: FC<ProductProps> = ({
+const CardVitrine: FC<ProductProps> = ({
 	product,
 	className = "",
 	contactClassName = "",
@@ -36,6 +36,9 @@ const CardQueridinhos: FC<ProductProps> = ({
 		setModalView("PRODUCT_VIEW");
 		return openModal();
 	}
+
+	console.log(product)
+
 	return (
 		<div
 			className={cn(
@@ -134,4 +137,4 @@ const CardQueridinhos: FC<ProductProps> = ({
 	);
 };
 
-export default CardQueridinhos;
+export default CardVitrine;

@@ -125,7 +125,7 @@ export default function Home() {
 						/>
 					</div>
 					
-					<button className='font-bold my-4 w-40 p-4 bg-gray-300  shadow-cardMoreContent rounded-full focus:outline-none hover:bg-gray-400 hover:text-white transition-all '>Saiba Mais</button>
+					<button className='text-black font-bold my-4 w-40 p-4 bg-gray-300  shadow-cardMoreContent rounded-full focus:outline-none hover:bg-gray-400 hover:text-white transition-all '>Saiba Mais</button>
 				</div>
 				<Container className='bg-gray-900 pb-16 shadow-cardMoreContent'>
 					<div>

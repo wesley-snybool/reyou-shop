@@ -23,7 +23,7 @@ export default function Shop() {
 	return (
 		<>
 			
-			<BannerBlock data={masonryBanner} />			
+			{/* <BannerBlock data={masonryBanner} />	 */}		
 			<ShopDiscount />
 			<Container>
 				<div className={`flex pt-8 pb-16 lg:pb-20`}>
@@ -54,7 +54,6 @@ export default function Shop() {
 						<ProductGrid />
 					</div>
 				</div>
-				<Subscription />
 			</Container>
 		</>
 	);

@@ -109,15 +109,15 @@ export type Tag = {
   slug: string;
 };
 export type Product = {
-  id: number | string;
-  thumbnail: string;
-  name: string | unknown;
-  productName: string;
-  slug: string;
-  price: number;
-  quantity: number;
+  id?: number | string;
+  thumbnail?: string;
+  name?: string | unknown;
+  productName?: string;
+  slug?: string;
+  price?: number;
+  quantity?: number;
   sale_price?: number;
-  image: Attachment;
+  image?: Attachment;
   sku?: string;
   gallery?: Attachment[];
   category?: Category;
@@ -125,12 +125,11 @@ export type Product = {
   meta?: any[];
   description?: string;
   variations?: object;
-  [key: string]: unknown;
-  shortDescription: string;
-  stateProduct: string;
+  shortDescription?: string;
+  stateProduct?: string;
   brand?: Brand;
-  manufacturer: string;
-  discount: string;
+  manufacturer?: string;
+  discount?: string;
 };
 export type OrderItem = {
   id: number | string;
