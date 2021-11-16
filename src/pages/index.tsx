@@ -35,6 +35,13 @@ import { getDarlingMoments } from "src/redux/modules/darlings-moment/darlingsMom
 import { getReyouFavorites } from "src/redux/modules/reyou-favorites/reYouFavorites";
 import { getNews } from 'src/redux/modules/news/news';
 import { getConfig } from 'src/redux/modules/config-portal/config-portal';
+import { getBlogs } from 'src/redux/modules/blogs/blogs';
+
+type BlogsType = {
+	image: string;
+	title: string;
+	text: string;
+}
 
 
 export default function Home() {
@@ -51,6 +58,11 @@ export default function Home() {
 	//Recuperando os dados da Sessão Novidades na Re.You no redux
 	const { isLoading: isLoadDNews, error: errorNews } = useAppSelector((state) => state.getNews)
 	const dataNews = useAppSelector((state) => state.getNews.data)
+
+	const dataBlogs = useAppSelector((state) => state.getBlogs.data)
+
+	console.log(dataBlogs,'blogs')
+
 
 		
 
@@ -69,6 +81,7 @@ export default function Home() {
 		dispatch(getReyouFavorites());
 		dispatch(getNews())
 		dispatch(getConfig())
+		dispatch(getBlogs())
 	}, [])
 
 
@@ -132,24 +145,16 @@ export default function Home() {
 						<p className='font-bold text-black text-xl py-12 text-center'>MAIS CONTEÚDO PRA VOCÊ</p>
 					</div>
 					<div className='flex gap-10'>
-						<div className='pb-4 shadow-cardMoreContent bg-gray-200 flex items-center flex-col'>
-							<Image className='my-8' src={img_flipscards[5].image.desktop.url} width={450} height={350} />
-							<span className='my-4 font-bold '>Moda e Felicidade</span>
-							<p className='m-4 text-center'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo laudantium vel distinctio culpa aspernatur quasi. Doloremque ut nobis, optio cumque illo explicabo autem culpa facilis temporibus esse minus iure eligendi!</p>
-							<button className='font-bold w-40 p-4 bg-gray-300 my-4 shadow-header rounded-full focus:outline-none hover:bg-gray-400 hover:text-white transition-all '>Leia Mais</button>	
-						</div>
-						<div className='shadow-header  bg-gray-200 flex items-center flex-col'>
-							<Image className='my-8' src={img_flipscards[5].image.desktop.url} width={450} height={350} />
-							<span className='font-bold my-4 '>Inclusão através da moda</span>
-							<p className='m-4 text-center'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo laudantium vel distinctio culpa aspernatur quasi. Doloremque ut nobis, optio cumque illo explicabo autem culpa facilis temporibus esse minus iure eligendi!</p>
-							<button className='font-bold w-40 p-4 bg-gray-300 my-4 shadow-header rounded-full focus:outline-none hover:bg-gray-400 hover:text-white transition-all '>Leia Mais</button>	
-						</div>
-						<div className='shadow-header  bg-gray-200 flex items-center flex-col'>
-							<Image className='my-8' src={img_flipscards[5].image.desktop.url} width={450} height={350} />
-							<span className=' font-bold my-4 '>O futuro de tudo</span>
-							<p className='m-4 text-center'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo laudantium vel distinctio culpa aspernatur quasi. Doloremque ut nobis, optio cumque illo explicabo autem culpa facilis temporibus esse minus iure eligendi!</p>
-							<button className='font-bold w-40 p-4 bg-gray-300 my-4  shadow-header rounded-full focus:outline-none hover:bg-gray-400 hover:text-white transition-all '>Leia Mais</button>	
-						</div>
+						{dataBlogs.map((item: BlogsType, index) => {
+							return (
+								<div key={index} className='pb-4 shadow-cardMoreContent bg-gray-200 flex items-center flex-col'>
+								<Image className='my-8' src={item.image} width={450} height={350} />
+								<span className='my-4 font-bold '>{item.title}</span>
+								<p className='m-4 text-center'>{item.text}</p>
+								<button className='font-bold w-40 p-4 bg-gray-300 my-4 shadow-header rounded-full focus:outline-none hover:bg-gray-400 hover:text-white transition-all '>Leia Mais</button>	
+							</div>
+							)
+						})}
 					</div>
 				</Container>
 
