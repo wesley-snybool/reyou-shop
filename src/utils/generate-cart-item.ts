@@ -1,9 +1,9 @@
 import isEmpty from "lodash/isEmpty";
 
 interface Item {
-  id: string | number;
-  name: string;
-  slug: string;
+  id?: string | number;
+  name?: string;
+  slug?: string;
   image: {
     thumbnail: string;
     [key: string]: unknown;

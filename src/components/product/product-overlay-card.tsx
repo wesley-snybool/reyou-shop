@@ -48,7 +48,7 @@ const ProductOverlayCard: React.FC<ProductProps> = ({
 			>
 				<Image
 					src={
-						product?.image?.original ??
+						product.image.thumbnail ??
 						"/assets/placeholder/products/product-featured.png"
 					}
 					width={size}

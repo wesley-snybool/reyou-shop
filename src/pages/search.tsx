@@ -16,15 +16,14 @@ import { homeThreeMasonryBanner as masonryBanner } from "@framework/static/banne
 import { homeThreeBanner as banner } from "@framework/static/banner";
 import BannerBlock from "@containers/banner-block";
 import Search from "@components/common/search";
+import Text from "@components/ui/text";
+
 
 export default function Shop() {
 	const { t } = useTranslation("common");
 
 	return (
 		<>
-			
-			{/* <BannerBlock data={masonryBanner} />	 */}		
-			<ShopDiscount />
 			<Container>
 				<div className={`flex pt-8 pb-16 lg:pb-20`}>
 					<div className="flex-shrink-0 pe-24 hidden lg:block w-96">
@@ -49,7 +48,11 @@ export default function Shop() {
 						</StickyBox>
 					</div>
 
-					<div className="w-full lg:-ms-9">
+					<div className="w-full lg:-ms-9 ">
+						<Text variant="subHeading" className="font-bold w-full justify-center items-center flex p-4 ">
+							VITRINE
+						</Text>
+
 						<SearchTopBar />
 						<ProductGrid />
 					</div>

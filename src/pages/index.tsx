@@ -59,12 +59,7 @@ export default function Home() {
 	const { isLoading: isLoadDNews, error: errorNews } = useAppSelector((state) => state.getNews)
 	const dataNews = useAppSelector((state) => state.getNews.data)
 
-	const dataBlogs = useAppSelector((state) => state.getBlogs.data)
-
-	console.log(dataBlogs,'blogs')
-
-
-		
+	const dataBlogs = useAppSelector((state) => state.getBlogs.data)		
 
 	//Exemplo de dispatch
 	const handleChangeUser = () => {

@@ -111,13 +111,17 @@ export type Tag = {
 export type Product = {
   id?: number | string;
   thumbnail?: string;
-  name?: string | unknown;
+  name?: string;
+  tags: string;
   productName?: string;
   slug?: string;
-  price?: number;
+  price: number;
   quantity?: number;
   sale_price?: number;
-  image?: Attachment;
+  image: {
+    thumbnail: string;
+    [key: string]: unknown;
+  };
   sku?: string;
   gallery?: Attachment[];
   category?: Category;
