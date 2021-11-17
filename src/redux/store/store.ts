@@ -11,6 +11,7 @@ import newsSlice from '../modules/news/news'
 import blogSlice from '../modules/blogs/blogs'
 import pressSlice from '../modules/press/press'
 import configSlice from '../modules/config-portal/config-portal'
+import showCaseProductsSlice from '../modules/show-case/showCase'
 
 const store =  configureStore({
   reducer: {
@@ -25,6 +26,7 @@ const store =  configureStore({
     getBlogs: blogSlice,
     getPress: pressSlice,
     getConfig: configSlice,
+    getShowCaseProducts: showCaseProductsSlice,
   },
 })
 

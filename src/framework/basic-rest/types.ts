@@ -131,6 +131,7 @@ export type Product = {
   variations?: object;
   shortDescription?: string;
   stateProduct?: string;
+  state: string;
   brand?: Brand;
   manufacturer?: string;
   discount?: string;

@@ -9,7 +9,7 @@ import { useTranslation } from "next-i18next";
 import { useAppSelector } from "src/redux/hooks/selectors";
 import { Product } from 'src/framework/basic-rest/types';
 import { useDispatch } from "react-redux";
-import { getReyouFavorites } from "src/redux/modules/reyou-favorites/reYouFavorites";
+import { getShowCaseProducts } from "src/redux/modules/show-case/showCase";
 interface ProductGridProps {
 	className?: string;
 }
@@ -17,7 +17,7 @@ export const ProductGrid: FC<ProductGridProps> = ({ className = "" }) => {
 	const dispatch = useDispatch();
 
 	useEffect(() => {
-		dispatch(getReyouFavorites())
+		dispatch(getShowCaseProducts())
 	},[])
 
 	const { query } = useRouter();
@@ -33,8 +33,8 @@ export const ProductGrid: FC<ProductGridProps> = ({ className = "" }) => {
 
 	const { t } = useTranslation("common");
 
-	const { isLoading: isLoadCards, error: ErrorCards } = useAppSelector((state) => state.getReyouFavorites)
-	const dataCards = useAppSelector((state) => state.getReyouFavorites.data)
+	const { isLoading: isLoadCards, error: ErrorCards } = useAppSelector((state) => state.getShowCaseProducts)
+	const dataCards = useAppSelector((state) => state.getShowCaseProducts.data)
 
 	return (
 		<>
