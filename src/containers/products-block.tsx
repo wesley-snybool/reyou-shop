@@ -13,15 +13,16 @@ interface ProductsProps {
 	categorySlug?: string;
 	className?: string;
 	products?: Product[];
-	loading: boolean;
+	loading?: boolean;
 	errorMessage?: string;
+	error?: string;
 	uniqueKey?: string;
-	error_status: boolean;
+	error_status?: boolean;
 }
 
 const ProductsBlock: React.FC<ProductsProps> = ({
-	sectionHeading,
-	categorySlug,
+/* 	sectionHeading,
+	categorySlug, */
 	className = "mb-9 md:mb-9 lg:mb-10 xl:mb-12",
 	products,
 	loading,

@@ -12,9 +12,9 @@ type ErrorTypes = {
 	error_status: boolean;
 }
 type BestSellerTypes = {
-	data: never[];
-	isLoading: boolean;
-	error: ErrorTypes;
+	data?: never[];
+	isLoading?: boolean;
+	error?: ErrorTypes;
 }
 
 export default function BestSellerProductFeed({ data, isLoading, error }: BestSellerTypes) {
@@ -23,8 +23,8 @@ export default function BestSellerProductFeed({ data, isLoading, error }: BestSe
 			sectionHeading="text-best-sellers"
 			products={data}
 			loading={isLoading}
-			errorMessage={error.message}
-			error_status={error.error_status}
+			error={error?.message}
+			error_status={error?.error_status}
 			uniqueKey="best-sellers"
 		/>
 	);

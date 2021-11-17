@@ -13,6 +13,7 @@ export default function NewArrivalsProductFeed() {
 			loading={isLoading}
 			error={error?.message}
 			uniqueKey="new-arrivals"
+			error_status={isLoading}
 		/>
 	);
 }

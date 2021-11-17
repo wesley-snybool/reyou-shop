@@ -24,10 +24,7 @@ const CategoryCard: React.FC<Props> = ({ category }) => {
 					<Link href={`${product?.slug}`} key={`image--key${product?.id}`}>
 						<a className="flex rounded-md overflow-hidden">
 							<Image
-								src={
-									product?.image?.original ??
-									"/assets/placeholder/products/product-cat.svg"
-								}
+								src={"/assets/placeholder/products/product-cat.svg"}
 								alt={name || t("text-category-thumbnail")}
 								width={165}
 								height={165}

@@ -23,7 +23,7 @@ interface BannerProps {
 }
 
 const BannerCarouselBlock: React.FC<BannerProps> = ({
-	className = "mb-12 md:mb-12 lg:mb-14 pb-0.5 xl:pb-1.5",
+	/* className = "mb-12 md:mb-12 lg:mb-14 pb-0.5 xl:pb-1.5", */
 }) => {
 	return (
 		<div className='bannercarousel'>
