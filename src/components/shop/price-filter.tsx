@@ -1,4 +1,5 @@
 import { CheckBox } from "@components/ui/checkbox";
+import SlickLider from 'src/components/ui/range-slider'
 import { useRouter } from "next/router";
 import React from "react";
 import { useTranslation } from "next-i18next";
@@ -77,12 +78,16 @@ export const PriceFilter = () => {
 	const items = priceFilterItems;
 
 	return (
-		<div className="block border-b border-gray-300 pb-7 mb-7">
-			<h3 className="text-heading text-sm md:text-base font-semibold mb-7">
-				{t("text-price")}
-			</h3>
+		<div className=" block border-b border-gray-300 pb-7 mb-7">
+			<div className=" flex justify-between">
+				<h3 className="text-heading text-sm md:text-base font-semibold mb-7">
+					{t("text-price")}
+				</h3>
+				<h2 className='font-semibold text-black' >R$</h2>
+			</div>
 			<div className="mt-2 flex flex-col space-y-4">
-				{items?.map((item: any) => (
+				<SlickLider></SlickLider>
+{/* 				{items?.map((item: any) => (
 					<CheckBox
 						key={item.id}
 						label={item.name}
@@ -91,7 +96,7 @@ export const PriceFilter = () => {
 						value={item.slug}
 						onChange={handleItemClick}
 					/>
-				))}
+				))} */}
 			</div>
 		</div>
 	);

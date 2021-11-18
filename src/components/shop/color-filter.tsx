@@ -1,7 +1,15 @@
 import { CheckBox } from "@components/ui/checkbox";
 import { useRouter } from "next/router";
-import React from "react";
+import React, { useEffect } from "react";
 import { useTranslation } from "next-i18next";
+import { useDispatch } from "react-redux";
+import { getConfig } from "src/redux/modules/config-portal/config-portal";
+import { useAppSelector } from "src/redux/hooks/selectors";
+
+type ColorsTypes = {
+	name: string;
+}
+
 const colorFilterItems = [
 	{
 		id: "1",
@@ -47,6 +55,8 @@ const colorFilterItems = [
 	},
 ];
 export const ColorFilter = () => {
+
+
 	const { t } = useTranslation("common");
 	const router = useRouter();
 	const { pathname, query } = router;
@@ -76,7 +86,19 @@ export const ColorFilter = () => {
 			{ scroll: false }
 		);
 	}
+	
 	const items = colorFilterItems;
+
+	const dispath = useDispatch()
+
+	useEffect(() => {
+		dispath(getConfig())
+	},[])
+
+/* 	const data = useAppSelector((state) => state.getConfig.data)
+	data?.map((item: any) => {
+		console.log(item)
+	}) */
 
 	return (
 		<div className="block border-b border-gray-300 pb-7">

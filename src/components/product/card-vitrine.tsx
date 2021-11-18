@@ -37,8 +37,6 @@ const CardVitrine: FC<ProductProps> = ({
 		return openModal();
 	}
 
-	console.log(product)
-
 	return (
 		<div
 			className={cn(

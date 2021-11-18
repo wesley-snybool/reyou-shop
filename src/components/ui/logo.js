@@ -22,7 +22,7 @@ const Logo = ({...props}) => {
 				width={120}
 				layout="fixed"
 				loading="eager"
-				quality={100}
+				quality={10}
 			/>
 		</Link>
 	);

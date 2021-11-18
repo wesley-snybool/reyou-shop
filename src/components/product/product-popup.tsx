@@ -42,7 +42,8 @@ export default function ProductPopup() {
 		stateProduct, 
 		relatedTags,
 		size,
-		colors
+		colors,
+		productDescription,
 	} = data;
 
 	const isSelected = !isEmpty(variations)
@@ -90,19 +91,19 @@ export default function ProductPopup() {
 		<div className="rounded-lg bg-white">
 			<div className='text-black text-5xl font-black flex items-center justify-center p-20'>{brand.title}</div>
 			<div className="flex flex-col lg:flex-row w-full md:w-[650px] lg:w-[960px] mx-auto ">
-				<div className="flex-shrink-0 flex items-center justify-center w-full lg:w-430px max-h-430px lg:max-h-full overflow-hidden bg-gray-300">
+				<div className="flex-shrink-0 flex items-start justify-center w-full lg:w-430px max-h-430px lg:max-h-full overflow-hidden bg-transparent">
 					<img
 						src={
 							thumbnail ??
 							"/assets/placeholder/products/product-thumbnail.svg"
 						}
 						alt={productName}
-						className="lg:object-cover lg:w-full lg:h-full"
+						className="lg:w-full scale-50"
 					/>
 				</div>
 
-				<div className="flex flex-col p-5 md:p-0 w-full md:px-4">
-					<div className="pb-5">
+				<div className=" flex flex-col w-full md:px-8">
+					<div className="pb-5 ">
 						<div
 							className="mb-2 md:mb-4 flex -mt-1.5 items-center justify-between w-3/4 mx-auto"
 							onClick={navigateToProductPage}
@@ -129,33 +130,40 @@ export default function ProductPopup() {
 							)}
 						</div>
 					</div>
-					<div className=' flex justify-center gap-6 p-4'>
+					<div className=' flex justify-center gap-2 p-4'>
 						{relatedTags.map((item: string) => {
 							return (
 								<div className='p-3 px-6 rounded-full border border-black text-black' key={item}>{item}</div>
 							)
 						})}
 					</div>
-					<div className='text-black px-8 mt-2'>
+					<div className='text-left gap-3 flex flex-col justify-start  text-black px-4 mt-2'>
 						<p>Última atualização de informação: 3 horas atrás</p>
 						<p>Online desde 31/08/2021 às 22:00</p>
 					</div>
-					<div className=' text-black flex justify-center items-center gap-10 mt-4'>Tamanhos Disponíveis
+					<div className=' text-black flex justify-start mx-4 gap-4 items-center  mt-4'>Tamanhos Disponíveis
 						{size.map((item: string) => {
 							return (
-								<div className='p-1 border border-black text-black' key={item}>{item}</div>
+								<div className='p-1 rounded-sm border border-black text-black' key={item}>{item}</div>
 							)
 						})}
 					</div>
-					<div className=' p-2 px-6 text-black flex wrap justify-between items-center mt-4'>Cores
+					<div className=' p-2 px-6 text-black flex wrap justify-start gap-4 items-center mt-4'>Cores
 						{colors.map((item: string) => {
 							return (
-								<div className={`bg-${item}${item === 'black' ? '' : '-500'} font-body text-xs p-4  h-6 w-6 flex items-center justify-center border border-black text-black`} key={item}></div>
+								<div className={`bg-${item}${item === 'black' ? '' : '-500'} font-body text-xs p-3 rounded-sm  h-2 w-2 flex items-center justify-center border border-black text-black`} key={item}></div>
 							)
 						})}
 					</div>
-					<button className='mt-4 bg-black text-white w-3/4 h-16'>Visitar Site</button>
-					<button className='my-4 bg-white text-black border border-black w-3/4 h-16'>Adicionar aos Favoritos</button>
+					<button className='mt-4 bg-black font-bold text-xl text-white w-3/4 h-16 rounded-md'>Visitar Site</button>
+					<button className='text-lg my-4 bg-white text-black border border-black w-3/4 h-16 rounded-md'>Adicionar aos Favoritos</button>
+					
+					<div className='border mt-5 shadow-cart text-black overflow-scroll h-1/5 p-4'>
+						<p><strong>Descrição do Produto</strong></p>
+						<p>{productDescription}</p>
+						<p><strong>Valores Sustentáveis</strong></p>
+						<p><strong>Informações de Compra</strong></p>
+					</div>
 
 				</div>
 			</div>

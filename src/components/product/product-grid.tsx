@@ -1,7 +1,7 @@
 import ProductCard from "@components/product/product-card";
 import CardVitrine from '@components/product/card-vitrine'
 import Button from "@components/ui/button";
-import { FC, useEffect } from "react";
+import { FC, useEffect, useState } from "react";
 import { useProductsQuery } from "@framework/product/get-all-products";
 import { useRouter } from "next/router";
 import ProductFeedLoader from "@components/ui/loaders/product-feed-loader";
@@ -12,6 +12,8 @@ import { useDispatch } from "react-redux";
 import { getShowCaseProducts } from "src/redux/modules/show-case/showCase";
 interface ProductGridProps {
 	className?: string;
+	hasFilter?: boolean;
+	filterTitle?: string;
 }
 export const ProductGrid: FC<ProductGridProps> = ({ className = "" }) => {
 	const dispatch = useDispatch();
@@ -35,6 +37,8 @@ export const ProductGrid: FC<ProductGridProps> = ({ className = "" }) => {
 
 	const { isLoading: isLoadCards, error: ErrorCards } = useAppSelector((state) => state.getShowCaseProducts)
 	const dataCards = useAppSelector((state) => state.getShowCaseProducts.data)
+
+	const [dataFilters, setDataFilters] = useState();
 
 	return (
 		<>

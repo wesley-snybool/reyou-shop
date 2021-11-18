@@ -7,8 +7,14 @@ import ListBox from "@components/ui/list-box";
 import { useRouter } from "next/router";
 import { useTranslation } from "next-i18next";
 import { getDirection } from "@utils/get-direction";
+import { useEffect } from "react";
 
 const SearchTopBar = () => {
+
+	useEffect(() => {
+		
+	},[])
+
 	const { openFilter, displayFilter, closeFilter } = useUI();
 	const { t } = useTranslation("common");
 	const { locale } = useRouter();

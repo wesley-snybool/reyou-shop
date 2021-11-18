@@ -54,7 +54,7 @@ export default function Shop() {
 						</Text>
 
 						<SearchTopBar />
-						<ProductGrid />
+						<ProductGrid filterTitle={'Impacto Social'} hasFilter={true}/>
 					</div>
 				</div>
 			</Container>

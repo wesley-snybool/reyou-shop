@@ -1,8 +1,8 @@
 {
-  "brands": [
+  "tipos_peças": [
     {
       "id": 1,
-      "name": "Feminino",
+      "name": "Roupas",
       "slug": "shovia",
       "image": {
         "id": 1,

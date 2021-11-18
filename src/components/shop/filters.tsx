@@ -16,7 +16,7 @@ export const ShopFilters: React.FC = () => {
 		<div className="pt-1">
 			<div className="block border-b border-gray-300 pb-7 mb-7">
 				<div className="flex items-center justify-between mb-2.5">
-					<h2 className="font-semibold text-heading text-xl md:text-2xl">
+					<h2 className="font-semibold text-heading text-md md:text-md">
 						{t("text-filters")}
 					</h2>
 					<button
@@ -47,10 +47,10 @@ export const ShopFilters: React.FC = () => {
 			</div>
 
 			<PrinciplesFilter />
+			<PriceFilter />
 			<CategoryFilter />
 			<BrandFilter />
-			<PriceFilter />
-			<ColorFilter />
+			{/* <ColorFilter /> */}
 		</div>
 	);
 };

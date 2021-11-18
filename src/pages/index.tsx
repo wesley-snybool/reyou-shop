@@ -75,7 +75,6 @@ export default function Home() {
 		dispatch(getDarlingMoments());
 		dispatch(getReyouFavorites());
 		dispatch(getNews())
-		dispatch(getConfig())
 		dispatch(getBlogs())
 	}, [])
 

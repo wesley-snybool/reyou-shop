@@ -14,7 +14,7 @@ const Layout: React.FC = ({ children }) => {
 	const { t } = useTranslation("common");
 	return (
 		<div className="flex flex-col min-h-screen">
-			<NextSeo
+{/* 			<NextSeo
 				additionalMetaTags={[
 					{
 						name: "viewport",
@@ -44,7 +44,7 @@ const Layout: React.FC = ({ children }) => {
 						},
 					],
 				}}
-			/>
+			/> */}
 			<Header />
 			<main
 				className="relative flex-grow"
