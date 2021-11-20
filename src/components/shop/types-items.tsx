@@ -1,8 +1,20 @@
 import { CheckBox } from "@components/ui/checkbox";
 import SlickLider from 'src/components/ui/range-slider'
 import { useRouter } from "next/router";
-import React from "react";
+import React, { FC, useEffect } from "react";
 import { useTranslation } from "next-i18next";
+import { useDispatch } from "react-redux";
+import { getTypesItems } from "src/redux/modules/types-items/typesItems";
+import { useAppSelector } from "src/redux/hooks/selectors";
+import { GetStaticProps, GetServerSideProps } from "next";
+
+type TypeItemsProps = {
+	typeItems?: {
+		code: string,
+		name: string,
+	}
+}
+
 const priceFilterItems = [
 	{
 		id: "1",
@@ -45,7 +57,16 @@ const priceFilterItems = [
 		slug: "1000-",
 	},
 ];
-export const PriceFilter = () => {
+export const TypeItems = () => {
+
+
+	const dispatch = useDispatch();	
+	useEffect(() => {
+
+		dispatch(getTypesItems())
+	},[])
+
+	
 	const { t } = useTranslation("common");
 	const router = useRouter();
 	const { pathname, query } = router;
@@ -56,6 +77,7 @@ export const PriceFilter = () => {
 	}, [query?.price]);
 	function handleItemClick(e: React.FormEvent<HTMLInputElement>): void {
 		const { value } = e.currentTarget;
+		console.log(value, 'Consolou Aqui')
 		let currentFormState = formState.includes(value)
 			? formState.filter((i) => i !== value)
 			: [...formState, value];
@@ -77,16 +99,27 @@ export const PriceFilter = () => {
 	}
 	const items = priceFilterItems;
 
+
+	const data = useAppSelector((state) => state.getTypeItems.data)
+
 	return (
-		<div className=" block border-b border-gray-300 pb-7 mb-7">
+		<div className="block border-b border-gray-300 pb-7 mb-7">
 			<div className=" flex justify-between">
 				<h3 className="text-heading text-sm md:text-base font-semibold mb-7">
-					{t("text-price")}
+					Tipos dos Peça
 				</h3>
-				<h2 className='font-semibold text-black' >R$</h2>
 			</div>
 			<div className="mt-2 flex flex-col space-y-4">
-				<SlickLider></SlickLider>
+				{data?.map((item: any, index) => (
+					<CheckBox
+						key={index}
+						label={item.name}
+						name={item.name.toLowerCase()}
+						checked={formState.includes(item.name)}
+						value={item.name}
+						onChange={handleItemClick}
+					/>
+				))}
 			</div>
 		</div>
 	);

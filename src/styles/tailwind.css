@@ -168,6 +168,10 @@
 	
 	}
 
+	.brands-box {
+		height: 300px;
+	}
+
 
 	/* Header Menu */
 	#siteHeader.is-scrolling .innerSticky {

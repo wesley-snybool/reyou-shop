@@ -17,10 +17,14 @@ import { homeThreeBanner as banner } from "@framework/static/banner";
 import BannerBlock from "@containers/banner-block";
 import Search from "@components/common/search";
 import Text from "@components/ui/text";
+import { useState } from "react";
 
 
 export default function Shop() {
+
 	const { t } = useTranslation("common");
+
+	const [ filter, setFilter ] = useState('')
 
 	return (
 		<>
@@ -52,7 +56,6 @@ export default function Shop() {
 						<Text variant="subHeading" className="font-bold w-full justify-center items-center flex p-4 ">
 							VITRINE
 						</Text>
-
 						<SearchTopBar />
 						<ProductGrid filterTitle={'Impacto Social'} hasFilter={true}/>
 					</div>

@@ -74,6 +74,7 @@ module.exports = {
 			navigation: "0 3px 6px rgba(0, 0, 0, 0.16)",
 			navigationReverse: "0 -3px 6px rgba(0, 0, 0, 0.16)",
 			header: "0 2px 3px rgba(0, 0, 0, 0.08)",
+			brands_search: "2px 2px 3px rgba(0, 0, 0, 0.08)",
 			cardMoreContent: "0 2px 30px rgba(0, 0, 0, 0.2)",
 			subMenu: "1px 2px 3px rgba(0, 0, 0, 0.08)",
 			bottomNavigation: "0 -2px 3px rgba(0, 0, 0, 0.06)",

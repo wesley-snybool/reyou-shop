@@ -23,6 +23,8 @@ export const CONFIG_URL = '/portal/configuracoes'
 
 export const SHOW_CASE = '/portal/vitrine'
 
+export const TYPE_ITEMS = '/portal/geral/types-items'
+
 
 
 

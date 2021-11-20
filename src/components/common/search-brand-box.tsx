@@ -12,12 +12,12 @@ type SearchProps = {
 	value: string;
 };
 
-const SearchBox = React.forwardRef<HTMLInputElement, SearchProps>(
+const SearchBrandBox = React.forwardRef<HTMLInputElement, SearchProps>(
 	({ className, onSubmit, onClear, ...rest }, ref) => {
 		const { t } = useTranslation("forms");
 		return (
 			<form
-				className="relative pe-12 md:pe-14 bg-white overflow-hidden rounded-md w-full"
+				className=" shadow-header relative pe-12 md:pe-14 bg-white overflow-hidden rounded-md w-full"
 				noValidate
 				role="search"
 				onSubmit={onSubmit}
@@ -28,18 +28,24 @@ const SearchBox = React.forwardRef<HTMLInputElement, SearchProps>(
 					</span>
 					<input
 						id="search"
-						className="text-heading outline-none w-full h-12 lg:h-14 placeholder-gray-400 text-sm lg:text-base"
-						placeholder={'Bucar Marcas'}
-						aria-label="Busca"
+						className="text-heading outline-none w-full h-10 lg:h-14 placeholder-gray-400 text-sm lg:text-base"
+						placeholder={t("placeholder-search")}
+						aria-label="Search"
 						autoComplete="off"
 						ref={ref}
 						{...rest}
 					/>
 				</label>
-			
+				<button
+					type="button"
+					className="outline-none text-2xl md:text-3xl text-gray-400 absolute top-0 end-0 w-12 md:w-14 h-full flex items-center justify-center transition duration-200 ease-in-out hover:text-heading focus:outline-none"
+					onClick={onClear}
+				>
+					<IoCloseOutline className="w-6 h-6" />
+				</button>
 			</form>
 		);
 	}
 );
 
-export default SearchBox;
+export default SearchBrandBox;

@@ -36,6 +36,7 @@ export const ProductGrid: FC<ProductGridProps> = ({ className = "" }) => {
 	const { t } = useTranslation("common");
 
 	const { isLoading: isLoadCards, error: ErrorCards } = useAppSelector((state) => state.getShowCaseProducts)
+	
 	const dataCards = useAppSelector((state) => state.getShowCaseProducts.data)
 
 	const [dataFilters, setDataFilters] = useState();

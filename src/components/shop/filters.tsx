@@ -1,14 +1,28 @@
-import { CategoryFilter } from "./category-filter";
+import { PartConditions } from "./part-conditions";
 import { PrinciplesFilter } from "./principles-filter";
-import { BrandFilter } from "./brand-filter";
+import { Category } from "./category";
+import { TypeItems } from "./types-items"
 import { FilteredItem } from "./filtered-item";
 import { ColorFilter } from "./color-filter";
 import { PriceFilter } from "./price-filter";
 import { useRouter } from "next/router";
 import isEmpty from "lodash/isEmpty";
 import { useTranslation } from "next-i18next";
+import { SearchBrands } from "./search-brands";
+import SearchBox from 'src/components/search-box2'
+import { useAppSelector } from "src/redux/hooks/selectors";
+
+type TypeBrandsProps = {
+	brands: [
+		name?: string,
+	]
+}
 
 export const ShopFilters: React.FC = () => {
+
+	const data = useAppSelector((state) => state.getShowCaseProducts.data)
+	
+
 	const router = useRouter();
 	const { pathname, query } = router;
 	const { t } = useTranslation("common");
@@ -48,8 +62,10 @@ export const ShopFilters: React.FC = () => {
 
 			<PrinciplesFilter />
 			<PriceFilter />
-			<CategoryFilter />
-			<BrandFilter />
+			<PartConditions />
+			<Category />
+			<TypeItems />
+			<SearchBrands brands={data} />
 			{/* <ColorFilter /> */}
 		</div>
 	);
