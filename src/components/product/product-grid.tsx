@@ -10,17 +10,20 @@ import { useAppSelector } from "src/redux/hooks/selectors";
 import { Product } from 'src/framework/basic-rest/types';
 import { useDispatch } from "react-redux";
 import { getShowCaseProducts } from "src/redux/modules/show-case/showCase";
+import { useAppDispatch } from "src/redux/store/store";
+
 interface ProductGridProps {
 	className?: string;
 	hasFilter?: boolean;
 	filterTitle?: string;
 }
 export const ProductGrid: FC<ProductGridProps> = ({ className = "" }) => {
-	const dispatch = useDispatch();
+	const [filter, setFilter] = useState({pc: 1, pps: 2})
+	const dispatch = useAppDispatch();
 
 	useEffect(() => {
-		dispatch(getShowCaseProducts())
-	},[])
+		dispatch(getShowCaseProducts(filter))
+	},[dispatch])
 
 	const { query } = useRouter();
 	const {
@@ -37,7 +40,7 @@ export const ProductGrid: FC<ProductGridProps> = ({ className = "" }) => {
 
 	const { isLoading: isLoadCards, error: ErrorCards } = useAppSelector((state) => state.getShowCaseProducts)
 	
-	const dataCards = useAppSelector((state) => state.getShowCaseProducts.data)
+	const dataCards = useAppSelector((state) => state?.getShowCaseProducts.data)
 
 	const [dataFilters, setDataFilters] = useState();
 
@@ -49,7 +52,7 @@ export const ProductGrid: FC<ProductGridProps> = ({ className = "" }) => {
 				{!isLoadCards && !dataCards.length ? (
 					<ProductFeedLoader limit={20} uniqueKey="search-product" />
 				) : (
-					dataCards.map((product: Product, index) => {
+					dataCards.map((product, index) => {
 						return (
 							<CardVitrine
 								key={`product--key${product.id}`}
