@@ -11,6 +11,7 @@ import { Product } from 'src/framework/basic-rest/types';
 import { useDispatch } from "react-redux";
 import { getShowCaseProducts } from "src/redux/modules/show-case/showCase";
 import { useAppDispatch } from "src/redux/store/store";
+import { addCategoryFilter } from 'src/redux/modules/filters/category-filters/categorySlice'
 
 interface ProductGridProps {
 	className?: string;
@@ -18,12 +19,24 @@ interface ProductGridProps {
 	filterTitle?: string;
 }
 export const ProductGrid: FC<ProductGridProps> = ({ className = "" }) => {
-	const [filter, setFilter] = useState({pc: 1, pps: 2})
-	const dispatch = useAppDispatch();
 
+	const dispatch = useAppDispatch();
+	const loader = useAppSelector((state) => state.filterCategory)
+	const [ state, setState ] = useState({ pc: 1, pps: loader })
+	
+	console.log(loader)
+
+	
 	useEffect(() => {
-		dispatch(getShowCaseProducts(filter))
-	},[dispatch])
+		dispatch(getShowCaseProducts(state));
+	},[dispatch, loader, state])
+
+
+	const loadMore = () => {
+		dispatch(addCategoryFilter(5));
+		setState({pc: 1, pps: loader})
+	}
+
 
 	const { query } = useRouter();
 	const {
@@ -41,8 +54,6 @@ export const ProductGrid: FC<ProductGridProps> = ({ className = "" }) => {
 	const { isLoading: isLoadCards, error: ErrorCards } = useAppSelector((state) => state.getShowCaseProducts)
 	
 	const dataCards = useAppSelector((state) => state?.getShowCaseProducts.data)
-
-	const [dataFilters, setDataFilters] = useState();
 
 	return (
 		<>
@@ -68,7 +79,7 @@ export const ProductGrid: FC<ProductGridProps> = ({ className = "" }) => {
 					<Button
 						loading={loadingMore}
 						disabled={loadingMore}
-						onClick={() => fetchNextPage()}
+						onClick={loadMore}
 						variant="slim"
 					>
 						{t("button-load-more")}

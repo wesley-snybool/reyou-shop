@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import { useRouter } from 'next/router';
 import Container from "@components/ui/container";
 import BannerCarouselBlock from "@containers/banner-carousel-block";
 import DownloadApps from "@components/common/download-apps";
@@ -16,7 +17,7 @@ import { fetchBestSellerProducts } from "@framework/product/get-all-best-seller-
 import { fetchNewArrivalProducts } from "@framework/product/get-all-new-arrival-products";
 import { fetchBrands } from "@framework/brand/get-all-brands";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import CategoryBlock from "@containers/category-block";
 import CategoryGridBlock from "@containers/category-grid-block";
 import BrandGridBlock from "@containers/brand-grid-block";
@@ -36,6 +37,7 @@ import { getReyouFavorites } from "src/redux/modules/reyou-favorites/reYouFavori
 import { getNews } from 'src/redux/modules/news/news';
 import { getConfig } from 'src/redux/modules/config-portal/config-portal';
 import { getBlogs } from 'src/redux/modules/blogs/blogs';
+import { getShowCaseProducts } from 'src/redux/modules/show-case/showCase';
 
 type BlogsType = {
 	image: string;
@@ -45,7 +47,10 @@ type BlogsType = {
 
 
 export default function Home() {
+	const location = useRouter();
 	const dispatch = useDispatch();
+	const [filter, setFilter] = useState({pc: 1, pps: 2})
+
 
 	//Recuperando os dados da Sessão queridinhos do momentos no redux
 	const { isLoading, error } = useAppSelector((state) => state.getDarlingMoments)
@@ -76,7 +81,7 @@ export default function Home() {
 		dispatch(getReyouFavorites());
 		dispatch(getNews())
 		dispatch(getBlogs())
-	}, [])
+	}, [dispatch])
 
 
 	return (
