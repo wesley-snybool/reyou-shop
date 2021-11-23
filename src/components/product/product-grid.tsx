@@ -22,19 +22,15 @@ export const ProductGrid: FC<ProductGridProps> = ({ className = "" }) => {
 
 	const dispatch = useAppDispatch();
 	const loader = useAppSelector((state) => state.filterCategory)
-	const [ state, setState ] = useState({ pc: 1, pps: loader })
-	
-	console.log(loader)
 
 	
 	useEffect(() => {
-		dispatch(getShowCaseProducts(state));
-	},[dispatch, loader, state])
+		dispatch(getShowCaseProducts({pps: loader}));
+	},[dispatch, loader,])
 
 
 	const loadMore = () => {
 		dispatch(addCategoryFilter(5));
-		setState({pc: 1, pps: loader})
 	}
 
 
@@ -60,7 +56,7 @@ export const ProductGrid: FC<ProductGridProps> = ({ className = "" }) => {
 			<div
 				className={`grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-x-3 lg:gap-x-5 xl:gap-x-7 gap-y-3 xl:gap-y-5 2xl:gap-y-8 ${className}`}
 			>
-				{!isLoadCards && !dataCards.length ? (
+				{isLoadCards && !dataCards.length ? (
 					<ProductFeedLoader limit={20} uniqueKey="search-product" />
 				) : (
 					dataCards.map((product, index) => {
