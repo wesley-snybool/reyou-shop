@@ -1,14 +1,29 @@
 import { usePrinciplesQuery } from "@framework/principles/get-all-principles";
 import { CheckBox } from "@components/ui/checkbox";
 import { useRouter } from "next/router";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useTranslation } from "next-i18next";
+import { addFilter } from "src/redux/modules/filters/filter/filter";
+import { useAppDispatch } from "src/redux/store/store";
 
 
 export const PrinciplesFilter = () => {
-	const { t } = useTranslation("common");
+	const dispatch = useAppDispatch();
 	const router = useRouter();
 	const { pathname, query } = router;
+
+	const [stateQuery, setStateQuery] = useState([''])
+	const prepare = [''];
+
+	useEffect(() => {
+		
+	},[prepare])
+
+
+
+	const { t } = useTranslation("common");
+
+
 	const { data, isLoading } = usePrinciplesQuery({
 		limit: 10,
 	});
@@ -27,25 +42,12 @@ export const PrinciplesFilter = () => {
 
 	function handleItemClick(e: React.FormEvent<HTMLInputElement>): void {
 		const { value } = e.currentTarget;
-		let currentFormState = formState.includes(value)
-			? formState.filter((i) => i !== value)
-			: [...formState, value];
-		const { category, ...restQuery } = query;
-		router.push(
-			{
-				pathname,
-				query: {
-					...restQuery,
-					...(!!currentFormState.length
-						? { category: currentFormState.join(",") }
-						: {}),
-				},
-			},
-			undefined,
-			{ scroll: false }
-		);
+		prepare.push(value)
+		console.log(prepare);
 	}
+
 	const items = data?.categories.data;
+
 	return (
 		<div className="block border-b border-gray-300 pb-7 mb-7">
 			<h3 className="text-heading text-sm md:text-base font-semibold mb-7">
@@ -57,7 +59,7 @@ export const PrinciplesFilter = () => {
 						key={item.id}
 						label={item.name}
 						name={item.name.toLowerCase()}
-						checked={formState.includes(item.slug)}
+						checked={prepare.includes(item.slug)}
 						value={item.slug}
 						onChange={handleItemClick}
 					/>

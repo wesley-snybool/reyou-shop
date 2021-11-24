@@ -58,15 +58,14 @@ export const getShowCaseProducts = createAsyncThunk(
             params: {
                 pc: filter.pc,
                 pps: filter.pps,
-/*              pps: apiParams.pps,
-                ssf: apiParams.ssf,
+                ftr_typeItem: filter.ftr_typeItem
+/*                 ssf: apiParams.ssf,
                 sso: apiParams.sso,
                 ftr_state: apiParams.ftr_state,
                 ftr_ize: ftr_ize, */
             }
         })
         const formatData = fetchDados.data
-        console.log(formatData, 'dados assync await')
         return  formatData;
     }
 );

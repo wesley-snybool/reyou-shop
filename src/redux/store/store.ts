@@ -13,7 +13,8 @@ import pressSlice from '../modules/press/press'
 import configSlice from '../modules/config-portal/config-portal'
 import showCaseProductsSlice from '../modules/show-case/showCase'
 import getTypesItemsSlice from '../modules/types-items/typesItems'
-import filterSlice from '../modules/filters/category-filters/categorySlice'
+import loadMoreSlice from '../modules/filters/load-more/loadMore'
+import filterSlice from '../modules/filters/filter/filter'
 
 const store =  configureStore({
   reducer: {
@@ -30,7 +31,8 @@ const store =  configureStore({
     getConfig: configSlice,
     getShowCaseProducts: showCaseProductsSlice,
     getTypeItems: getTypesItemsSlice,
-    filterCategory: filterSlice,
+    loadMore: loadMoreSlice,
+    filters: filterSlice,
   },
 })
 

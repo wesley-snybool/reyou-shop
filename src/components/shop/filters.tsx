@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { PartConditions } from "./part-conditions";
 import { PrinciplesFilter } from "./principles-filter";
 import { Category } from "./category";
@@ -11,6 +12,8 @@ import { useTranslation } from "next-i18next";
 import { SearchBrands } from "./search-brands";
 import SearchBox from 'src/components/search-box2'
 import { useAppSelector } from "src/redux/hooks/selectors";
+import { addFilter } from 'src/redux/modules/filters/filter/filter'
+import { useAppDispatch } from "src/redux/store/store";
 
 type TypeBrandsProps = {
 	brands: [
@@ -19,13 +22,17 @@ type TypeBrandsProps = {
 }
 
 export const ShopFilters: React.FC = () => {
+	const dispatch = useAppDispatch();
 
-	const data = useAppSelector((state) => state.getShowCaseProducts.data)
-	
+	const data = useAppSelector((state) => state.getShowCaseProducts.data)	
 
 	const router = useRouter();
+
 	const { pathname, query } = router;
+
+
 	const { t } = useTranslation("common");
+
 	return (
 		<div className="pt-1">
 			<div className="block border-b border-gray-300 pb-7 mb-7">

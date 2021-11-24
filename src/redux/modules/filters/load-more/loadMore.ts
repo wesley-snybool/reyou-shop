@@ -2,7 +2,7 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 import { filter } from 'lodash'
 import { RootState } from '../../../store/store'
 
-export const categorySlice = createSlice({
+export const loadMoreSlice = createSlice({
     name: 'add_load_more',
     initialState: 5,
     reducers: {
@@ -17,8 +17,8 @@ export const categorySlice = createSlice({
     }
 })
 
-export const { addCategoryFilter, removeCategoryFilter } = categorySlice.actions;
+export const { addCategoryFilter, removeCategoryFilter } = loadMoreSlice.actions;
 
 export const selectUser = (state: RootState) => state.userTest;
 
-export default categorySlice.reducer;
+export default loadMoreSlice.reducer;
