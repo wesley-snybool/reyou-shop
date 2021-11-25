@@ -30,7 +30,6 @@ export const ShopFilters: React.FC = () => {
 
 	const { pathname, query } = router;
 
-
 	const { t } = useTranslation("common");
 
 	return (

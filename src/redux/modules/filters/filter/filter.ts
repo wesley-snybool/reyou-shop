@@ -5,7 +5,7 @@ import { FilterTypes } from 'src/types/types'
 const defaultFilters: FilterTypes = {
     pc: 1,
     pps: 10,
-    ftr_typeItem: [],
+    ftr_universe: [],
 }
 
 export const filterSlice = createSlice({
@@ -13,11 +13,11 @@ export const filterSlice = createSlice({
     initialState: defaultFilters,
     reducers: {
         addFilter: (state: FilterTypes, { payload }: PayloadAction<string[]>) => {
-            return {...state, ftr_typeItem: payload}
+            return {...state, ftr_universe: payload}
         },
 
-        removeFilter(){
-            return defaultFilters
+        removeFilter(state){
+            return state = defaultFilters
         },
         gremoveAllfilters (state){
             return state

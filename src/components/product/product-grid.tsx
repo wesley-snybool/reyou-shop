@@ -23,11 +23,13 @@ export const ProductGrid: FC<ProductGridProps> = ({ className = "" }) => {
 	const dispatch = useAppDispatch();
 	const loader = useAppSelector((state) => state.loadMore)
 	const typeItem = useAppSelector((state) => state.filters.ftr_typeItem)
+	const ftr_universe = useAppSelector((state) => state.filters.ftr_universe)
+
 
 	
 	useEffect(() => {
-		dispatch(getShowCaseProducts({pps: loader, pc: 1 }));
-	},[dispatch, loader])
+		dispatch(getShowCaseProducts({pps: loader, pc: 1 , ftr_universe}));
+	},[dispatch, loader, ftr_universe])
 
 
 	const loadMore = () => {

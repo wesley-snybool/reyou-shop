@@ -1,4 +1,5 @@
 import axios from 'axios'
+import qs from 'qs'
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 import { BASE_URL, SHOW_CASE } from '../../services/baseUrl'
 import { data } from 'jquery';
@@ -58,11 +59,14 @@ export const getShowCaseProducts = createAsyncThunk(
             params: {
                 pc: filter.pc,
                 pps: filter.pps,
-                ftr_typeItem: filter.ftr_typeItem
-/*                 ssf: apiParams.ssf,
+                ftr_universe: filter.ftr_universe,
+/*              ssf: apiParams.ssf,
                 sso: apiParams.sso,
                 ftr_state: apiParams.ftr_state,
                 ftr_ize: ftr_ize, */
+            },
+            paramsSerializer: params => {
+                return qs.stringify(params)
             }
         })
         const formatData = fetchDados.data
