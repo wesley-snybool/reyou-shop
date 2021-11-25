@@ -76,7 +76,7 @@ export const PrinciplesFilter = () => {
 						key={item.id}
 						label={item.name}
 						name={''}
-						checked={filterUniverse === item.slug}
+						checked={stateQuery.includes(item.slug)}
 						value={item.slug}
 						onChange={handleItemClick}
 					/>
