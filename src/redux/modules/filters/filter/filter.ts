@@ -17,7 +17,7 @@ export const filterSlice = createSlice({
         },
 
         removeFilter(state){
-            return state = defaultFilters
+            return {...state, state: defaultFilters}
         },
         gremoveAllfilters (state){
             return state

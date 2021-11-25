@@ -81,7 +81,7 @@ export const getShowCaseProductsSlice = createSlice({
 
     },
     extraReducers: (builder) => {
-        builder.addCase(getShowCaseProducts.pending, (state, action) => {
+        builder.addCase(getShowCaseProducts.pending, (state) => {
             return {...state, isLoading: true,};
           }),
         builder.addCase(getShowCaseProducts.fulfilled, (state, action,) => {
@@ -92,7 +92,7 @@ export const getShowCaseProductsSlice = createSlice({
                 data: action.payload
             };
         }),
-        builder.addCase(getShowCaseProducts.rejected, (state, action) => {
+        builder.addCase(getShowCaseProducts.rejected, (state) => {
         return {...state, isLoading: false, error: { error_status: true, error_message: 'Falha ao carregar os dados'  }};
         })
     },
