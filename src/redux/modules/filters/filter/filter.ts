@@ -6,26 +6,29 @@ const defaultFilters: FilterTypes = {
     pc: 1,
     pps: 10,
     ftr_universe: [],
+    ftr_state: [],
 }
 
 export const filterSlice = createSlice({
     name: 'add_load_more',
     initialState: defaultFilters,
     reducers: {
-        addFilter: (state: FilterTypes, { payload }: PayloadAction<string[]>) => {
+        addFilterUniverse: (state: FilterTypes, { payload }: PayloadAction<string[]>) => {
             return {...state, ftr_universe: payload}
         },
-
+        addFilterStateProduct: (state: FilterTypes, { payload }: PayloadAction<string[]>) => {
+            return {...state, ftr_state: payload}
+        },
         removeFilter(state){
             return {...state, state: defaultFilters}
         },
-        gremoveAllfilters (state){
+        removeAllfilters (state){
             return state
         }
     }
 })
 
-export const { addFilter, removeFilter } = filterSlice.actions;
+export const { addFilterStateProduct, addFilterUniverse, removeFilter } = filterSlice.actions;
 
 export const selectUser = (state: RootState) => state.userTest;
 

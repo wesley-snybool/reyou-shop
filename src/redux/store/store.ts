@@ -15,6 +15,8 @@ import showCaseProductsSlice from '../modules/show-case/showCase'
 import getTypesItemsSlice from '../modules/types-items/typesItems'
 import loadMoreSlice from '../modules/filters/load-more/loadMore'
 import filterSlice from '../modules/filters/filter/filter'
+import getStateProductsSlice from '../modules/state-products/state_products'
+
 
 const store =  configureStore({
   reducer: {
@@ -33,6 +35,8 @@ const store =  configureStore({
     getTypeItems: getTypesItemsSlice,
     loadMore: loadMoreSlice,
     filters: filterSlice,
+    stateProducts: getStateProductsSlice,
+
   },
 })
 

@@ -25,7 +25,7 @@ export const SHOW_CASE = '/portal/vitrine'
 
 export const TYPE_ITEMS = '/portal/geral/types-items'
 
-
+export const STATE_PRODUCTS = '/portal/geral/states-product'
 
 
 

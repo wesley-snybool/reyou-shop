@@ -12,6 +12,7 @@ import { useDispatch } from "react-redux";
 import { getShowCaseProducts } from "src/redux/modules/show-case/showCase";
 import { useAppDispatch } from "src/redux/store/store";
 import { addCategoryFilter } from 'src/redux/modules/filters/load-more/loadMore'
+import { getStateProducts } from "src/redux/modules/state-products/state_products";
 
 interface ProductGridProps {
 	className?: string;
@@ -25,11 +26,14 @@ export const ProductGrid: FC<ProductGridProps> = ({ className = "" }) => {
 	const typeItem = useAppSelector((state) => state.filters.ftr_typeItem)
 	const ftr_universe = useAppSelector((state) => state.filters.ftr_universe)
 
+	const ftr_state_products = useAppSelector((state) => state.filters.ftr_state)
+
 
 	
 	useEffect(() => {
-		dispatch(getShowCaseProducts({pps: loader, pc: 1 , ftr_universe}));
-	},[dispatch, loader, ftr_universe])
+		dispatch(getShowCaseProducts({pps: loader, pc: 1 , ftr_universe, ftr_state_products }));
+		dispatch(getStateProducts())
+	},[dispatch, loader, ftr_universe, ftr_state_products])
 
 
 	const loadMore = () => {

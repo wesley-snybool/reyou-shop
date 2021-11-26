@@ -3,7 +3,7 @@ import { CheckBox } from "@components/ui/checkbox";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import { useTranslation } from "next-i18next";
-import { addFilter, removeFilter } from "src/redux/modules/filters/filter/filter";
+import { addFilterStateProduct ,addFilterUniverse, removeFilter } from "src/redux/modules/filters/filter/filter";
 import { useAppDispatch } from "src/redux/store/store";
 import { useAppSelector } from "src/redux/hooks/selectors";
 
@@ -16,16 +16,15 @@ export const PrinciplesFilter = () => {
 	const dispatch = useAppDispatch();
 	const router = useRouter();
 	const filterUniverse = useAppSelector((state) => state.filters.ftr_universe)
+	console.log(filterUniverse, 'FIltros Aqui');
 
 	const { pathname, query } = router;
 
 	const [stateQuery, setStateQuery] = useState<string[]>([])
 
-	let prepare: string[];
-
 	useEffect(() => {
-		dispatch(addFilter(stateQuery))
-	},[stateQuery])
+		dispatch(addFilterUniverse(stateQuery))
+	}, [stateQuery])
 
 
 
@@ -57,8 +56,6 @@ export const PrinciplesFilter = () => {
 		} else {
 			newState.push(value)
 		}
-
-		console.log(newState, 'New State');
 		setStateQuery(newState);
 	}
 

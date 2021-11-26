@@ -27,8 +27,6 @@ export const SearchBrands = ({ brands }: any) => {
 
 	const filterBrands = arrayBrands.map((item: any) => item.manufacturer)
 
-	console.log(filterBrands, 'Não Ajustado')
-
 	const verifyBrand = (filterBrands: any) => {
 		if	(filterBrands === 'Nike') {
 			return filterBrands;

@@ -3,7 +3,7 @@ export type FilterTypes = {
     pps?: number;
     ssf?: number;
     sso?: number;
-    ftr_state?: string;
+    ftr_state?: string[];
     ftr_size?: string;
     ftr_universe?: string[];
     ftr_typeItem?: string;
