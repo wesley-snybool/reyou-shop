@@ -1,10 +1,9 @@
-import Image from 'next/image'
+import { GetStaticProps } from 'next';
 import Layout from "@components/layout/layout";
 import Container from "@components/ui/container"
-import { ProductGrid } from '@components/product/product-grid';
+import CarrousselGallery from '../pagina-marca/components/carroussel-gallery'
 import Search from '../../../pages/search';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import { GetStaticProps } from 'next';
 
 const mockImgs = [
     {
@@ -28,19 +27,23 @@ export default function PageBrand() {
                                 <h3 className="text-2xl font-bold text-black" >{item.title}</h3>
                                 <h3 className="text-left text-black">{item.brandDescription}</h3>
                             </div>
-                            <div className="w-full p-6 items-center gap-10 flex justify-between mb-8">
-                                <button className=" text-white font-bold bg-black py-4 rounded-md px-12">Seguir</button>
+                            <div className=" w-full p-6 items-start gap-10 flex justify-between mb-8">
+                               <div className="flex flex-col items-center justify-center">
+                                    <button className=" text-white font-bold bg-black py-4 rounded-md px-12">Seguir</button>
+                                    <span className="mt-4">1777 Seguidores</span>
+                               </div>
                                 <div className='flex gap-14'>
                                     {item.tags.map((item, key) => (
                                         <div key={key} className="text-black border border-black rounded-full py-3 px-12">{item}</div>
-                                    ))}
+                                    ))} 
                                 </div>
                             </div>
                         </>
                     )
                 })}
             </div>
-            <Search title={'Produtos'}/>
+            <Search title={'Produtos'} />
+            <CarrousselGallery />
         </Container>
     )
 }

@@ -49,7 +49,7 @@ type BlogsType = {
 export default function Home() {
 	const location = useRouter();
 	const dispatch = useDispatch();
-	const [filter, setFilter] = useState({pc: 1, pps: 2})
+	const [filter, setFilter] = useState({ pc: 1, pps: 2 })
 
 
 	//Recuperando os dados da Sessão queridinhos do momentos no redux
@@ -64,7 +64,7 @@ export default function Home() {
 	const { isLoading: isLoadDNews, error: errorNews } = useAppSelector((state) => state.getNews)
 	const dataNews = useAppSelector((state) => state.getNews.data)
 
-	const dataBlogs = useAppSelector((state) => state.getBlogs.data)		
+	const dataBlogs = useAppSelector((state) => state.getBlogs.data)
 
 	//Exemplo de dispatch
 	const handleChangeUser = () => {
@@ -119,7 +119,7 @@ export default function Home() {
 				</Container>
 				<BestSellerProductFeed data={dataFavorites} isLoading={isLoadDFavorites} error={errorFavorites} />
 
-				<BrandGridBlock sectionHeading="NOVIDADES NA Re.You"/>
+				<BrandGridBlock sectionHeading="NOVIDADES NA Re.You" />
 				{/* 				<BannerWithProducts
 					sectionHeading="text-on-selling-products"
 					categorySlug="/search"
@@ -136,7 +136,7 @@ export default function Home() {
 							title='video'
 						/>
 					</div>
-					
+
 					<button className='text-black font-bold my-4 w-40 p-4 bg-gray-300  shadow-cardMoreContent rounded-full focus:outline-none hover:bg-gray-400 hover:text-white transition-all '>Saiba Mais</button>
 				</div>
 				<Container className='bg-gray-900 pb-16 shadow-cardMoreContent'>
@@ -147,11 +147,11 @@ export default function Home() {
 						{dataBlogs.map((item: BlogsType, index) => {
 							return (
 								<div key={index} className='pb-4 shadow-cardMoreContent bg-gray-200 flex items-center flex-col'>
-								<Image className='my-8' src={item.image} width={450} height={350} />
-								<span className='my-4 font-bold text-black'>{item.title}</span>
-								<p className='m-4 text-center text-black'>{item.text}</p>
-								<button className='text-black font-bold w-40 p-4 bg-gray-300 my-4 shadow-header rounded-full focus:outline-none hover:bg-gray-400 hover:text-white transition-all '>Leia Mais</button>	
-							</div>
+									<Image className='my-8' src={item.image} width={450} height={350} />
+									<span className='my-4 font-bold text-black'>{item.title}</span>
+									<p className='m-4 text-center text-black'>{item.text}</p>
+									<button className='text-black font-bold w-40 p-4 bg-gray-300 my-4 shadow-header rounded-full focus:outline-none hover:bg-gray-400 hover:text-white transition-all '>Leia Mais</button>
+								</div>
 							)
 						})}
 					</div>
@@ -179,12 +179,12 @@ export default function Home() {
 								width='100%'
 								height='100%'
 								title='video'
-						/>
+							/>
 						</div>
 					</div>
 				</Container>
 
-				<DownloadApps className="mb-10"/>
+				<DownloadApps className="mb-10" />
 			</Container>
 			<Container>
 				{/* <Subscription className="bg-opacity-0 px-5 sm:px-16 xl:px-0 py-12 md:py-14 xl:py-16" /> */}
