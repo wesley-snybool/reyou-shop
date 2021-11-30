@@ -7,6 +7,8 @@ const defaultFilters: FilterTypes = {
     pps: 10,
     ftr_universe: [],
     ftr_state: [],
+    ftr_category: [],
+    ftr_typeItem: [],
 }
 
 export const filterSlice = createSlice({
@@ -19,6 +21,12 @@ export const filterSlice = createSlice({
         addFilterStateProduct: (state: FilterTypes, { payload }: PayloadAction<string[]>) => {
             return {...state, ftr_state: payload}
         },
+        addFilterCategoryProduct: (state: FilterTypes, { payload }: PayloadAction<string[]>) => {
+            return {...state, ftr_category: payload}
+        },
+        addFilterTypeItem: (state: FilterTypes, { payload }: PayloadAction<string[]>) => {
+            return {...state, ftr_typeItem: payload}
+        },
         removeFilter(state){
             return {...state, state: defaultFilters}
         },
@@ -28,7 +36,13 @@ export const filterSlice = createSlice({
     }
 })
 
-export const { addFilterStateProduct, addFilterUniverse, removeFilter } = filterSlice.actions;
+export const { 
+    addFilterStateProduct, 
+    addFilterUniverse, 
+    removeFilter, 
+    addFilterCategoryProduct,
+    addFilterTypeItem,
+} = filterSlice.actions;
 
 export const selectUser = (state: RootState) => state.userTest;
 

@@ -27,5 +27,7 @@ export const TYPE_ITEMS = '/portal/geral/types-items'
 
 export const STATE_PRODUCTS = '/portal/geral/states-product'
 
+export const CATEGORY_PRODUCTS = '/portal/geral/categories'
+
 
 

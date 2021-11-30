@@ -20,11 +20,9 @@ import Text from "@components/ui/text";
 import { useState } from "react";
 
 
-export default function Shop() {
+export default function Shop({title='Vitrine'}) {
 
 	const { t } = useTranslation("common");
-
-	const [ filter, setFilter ] = useState('')
 
 	return (
 		<>
@@ -54,7 +52,7 @@ export default function Shop() {
 
 					<div className="w-full lg:-ms-9 ">
 						<Text variant="subHeading" className="font-bold w-full justify-center items-center flex p-4 ">
-							VITRINE
+							{title}
 						</Text>
 						<SearchTopBar />
 						<ProductGrid filterTitle={'Impacto Social'} hasFilter={true}/>

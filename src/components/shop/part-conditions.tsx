@@ -22,27 +22,10 @@ export const PartConditions = () => {
 	const part_condition = useAppSelector((state) => state.stateProducts.data)
 
 	const { t } = useTranslation("common");
-	const router = useRouter();
-	const { pathname, query } = router;
-	const { data, isLoading } = useCategoriesQuery({
-		limit: 10,
-	});
-	const selectedCategories = query?.category
-		? (query.category as string).split(",")
-		: [];
-	const [formState, setFormState] = React.useState<string[]>(
-		selectedCategories
-	);
-
-	React.useEffect(() => {
-		setFormState(selectedCategories);
-	}, [query?.category]);
 
 	useEffect(() => {
 		dispatch(addFilterStateProduct(stateQuery))
 	}, [stateQuery])
-
-	if (isLoading) return <p>Loading...</p>;
 
 	function handleItemClick(e: React.FormEvent<HTMLInputElement>): void {
 		const { value } = e.currentTarget;

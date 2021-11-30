@@ -12,7 +12,6 @@ import { useTranslation } from "next-i18next";
 import { SearchBrands } from "./search-brands";
 import SearchBox from 'src/components/search-box2'
 import { useAppSelector } from "src/redux/hooks/selectors";
-import { addFilter } from 'src/redux/modules/filters/filter/filter'
 import { useAppDispatch } from "src/redux/store/store";
 
 type TypeBrandsProps = {

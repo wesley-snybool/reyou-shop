@@ -335,7 +335,7 @@ export const siteSettings = {
 			},
 			{
 				id: 3,
-				path: "/", //search?q=women-wear
+				path: "/marcas", //search?q=women-wear
 				label: "Marcas",/* s */
 			},
 			{

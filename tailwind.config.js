@@ -4,6 +4,9 @@ module.exports = {
 	darkMode: false,
 	theme: {
 		extend: {
+			backgroundImage: {
+				'hero': "url('https://i.pinimg.com/originals/ed/1d/34/ed1d3463e17d2be7ecb473ee20322851.jpg')",
+			   },
 			colors: {
 				body: "#5A5A5A",
 				heading: "#212121",
@@ -35,6 +38,7 @@ module.exports = {
 					800: "#707070",
 					900: "rgba(235, 237, 239, 0.52)",
 				},
+				blue: '#6883ba'
 			},
 			screens: {
 				sm: "480px",
