@@ -43,7 +43,7 @@ const BannerGaleryCard: FC<BannerProps> = ({
 					})}
 				/>
 				<Image
-					src={banner.urlImgThre}
+					src={banner.urlImgTwo}
 					width={300}
 					height={300}
 					alt={'title'}

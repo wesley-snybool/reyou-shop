@@ -172,6 +172,12 @@
 		height: 300px;
 	}
 
+	.title-valores {
+		color: white;
+		font-weight: 700;
+		font-size: 20px;
+	}
+
 
 	/* Header Menu */
 	#siteHeader.is-scrolling .innerSticky {

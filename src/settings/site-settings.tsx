@@ -340,7 +340,7 @@ export const siteSettings = {
 			},
 			{
 				id: 4,
-				path: "/", //search?q=casual-wear
+				path: "/valores", //search?q=casual-wear
 				label: "Entendendo os Valores",
 				/*columns: [
 					{
