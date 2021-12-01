@@ -1,7 +1,5 @@
-import Link from "@components/ui/link";
 import Image from "next/image";
 import type { FC } from "react";
-import { useWindowSize } from "@utils/use-window-size";
 import cn from "classnames";
 import { LinkProps } from "next/link";
 
@@ -23,27 +21,14 @@ const BannerGaleryCard: FC<BannerProps> = ({
 	className,
 	variant = "rounded",
 	effectActive = false,
-	classNameInner,
-	href,
 }) => {
-	const { width } = useWindowSize();
 
 	//const selectedImage = getImage(width, image);
 
 	return (
 		<div className={cn("mx-auto", className)}>
 				<Image
-					src={banner.urlImgOne}
-					width={300}
-					height={300}
-					alt={'title'}
-					quality={100}
-					className={cn("bg-gray-300 md:mx-8 object-cover w-full", {
-						"rounded-md": variant === "rounded",
-					})}
-				/>
-				<Image
-					src={banner.urlImgTwo}
+					src={banner?.urlImgOne}
 					width={300}
 					height={300}
 					alt={'title'}

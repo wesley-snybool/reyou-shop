@@ -1,8 +1,6 @@
-import BannerGaleryCard from "../components/banner-gallery-card";
+import BannerGaleryCard from "../pagina-marca/banner-gallery-card";
 import Carousel from "@components/ui/carousel/carousel";
 import { SwiperSlide } from "swiper/react";
-import { ROUTES } from "@utils/routes";
-import { promotionBannerTwo as banners } from "@framework/static/banner"
 
 const datagalerySession = [
 	{
@@ -13,15 +11,15 @@ const datagalerySession = [
 ]
 const breakpoints = {
 	"1025": {
-		slidesPerView:3,
+		slidesPerView:30,
 		spaceBetween: 0,
 	},
 	"480": {
-		slidesPerView: 3,
+		slidesPerView: 30,
 		spaceBetween: 0,
 	},
 	"0": {
-		slidesPerView: 3,
+		slidesPerView: 30,
 		spaceBetween: 0,
 	},
 };
@@ -36,12 +34,12 @@ const CarrousselGallery: React.FC<BannerProps> = ({
 	return (
 		<div className='w-2/4 mx-auto'>
 			<Carousel breakpoints={breakpoints} autoplay={{ delay: 5000 }}>
-				{datagalerySession?.map((banner: any) => (
-					<SwiperSlide key={`promotion-banner-key-${banner?.id}`}>
+				{datagalerySession?.map((banner: any, index) => (
+					<SwiperSlide key={index}>
 						<BannerGaleryCard
-							className=""
+							key={index}
 							banner={banner}
-							href={`${ROUTES.COLLECTIONS}/${banner.slug}`}
+							href="/marcas"
 							effectActive={true}
 						/>
 					</SwiperSlide>

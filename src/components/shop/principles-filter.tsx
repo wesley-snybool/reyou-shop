@@ -16,7 +16,6 @@ export const PrinciplesFilter = () => {
 	const dispatch = useAppDispatch();
 	const router = useRouter();
 	const filterUniverse = useAppSelector((state) => state.filters.ftr_universe)
-	console.log(filterUniverse, 'FIltros Aqui');
 
 	const { pathname, query } = router;
 
@@ -26,10 +25,7 @@ export const PrinciplesFilter = () => {
 		dispatch(addFilterUniverse(stateQuery))
 	}, [stateQuery])
 
-
-
 	const { t } = useTranslation("common");
-
 
 	const { data, isLoading } = usePrinciplesQuery({
 		limit: 10,
@@ -58,7 +54,6 @@ export const PrinciplesFilter = () => {
 		}
 		setStateQuery(newState);
 	}
-
 
 	const items = data?.categories.data;
 
