@@ -17,29 +17,32 @@ interface BannerProps {
 } */
 
 const BannerGaleryCard: FC<BannerProps> = ({
-	banner,
+	//banner,
 	className,
-	variant = "rounded",
+	//variant = "rounded",
 	effectActive = false,
 }) => {
 
-	//const selectedImage = getImage(width, image);
-
 	return (
 		<div className={cn("mx-auto", className)}>
-				<Image
-					src={banner?.urlImgOne}
-					width={300}
-					height={300}
-					alt={'title'}
-					quality={100}
-					className={cn("bg-gray-300 md:mx-8 object-cover w-full", {
-						"rounded-md": variant === "rounded",
-					})}
-				/>
-				{effectActive && (
-					<div className="absolute top-0 -start-full h-full w-1/2 z-5 block transform -skew-x-12 bg-gradient-to-r from-transparent to-white opacity-40 group-hover:animate-shine" />
-				)}
+{/* 			{banner.map((item: any, index: any) => {
+				return (
+					<Image
+						key={`key-${index}`}
+						src={item?.url}
+						width={300}
+						height={300}
+						alt={'title'}
+						quality={100}
+						className={cn("bg-gray-300 md:mx-8 object-cover w-full", {
+							"rounded-md": variant === "rounded",
+						})}
+					/>
+				)
+			})} */}
+			{effectActive && (
+				<div className="absolute top-0 -start-full h-full w-1/2 z-5 block transform -skew-x-12 bg-gradient-to-r from-transparent to-white opacity-40 group-hover:animate-shine" />
+			)}
 		</div>
 	);
 };

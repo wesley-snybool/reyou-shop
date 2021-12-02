@@ -61,6 +61,39 @@
 		height: 750px;
 	}
 
+	.header-products-valores {
+		display: flex;
+		justify-content: center;
+		gap: 300px;
+		margin: 90px 0;
+		align-items: flex-end;
+	}
+
+
+	.header-products-valores h1 {
+		color: black;
+		font-style: normal;
+		font-weight: 500;
+		font-size: 25px;
+		line-height: 30px;
+	}
+
+	.header-products-valores button {
+		background-color: #A5A5A5;
+		color: black;
+		padding: 10px 0;
+		width: 150px;
+		border-radius: 35px;
+		font-style: normal;
+		font-weight: 600;
+		font-size: 16px;
+		line-height: 20px;
+	}
+
+	.header-products-valores button:focus {
+		outline: none;
+	}
+
 	.button-start {
 		width: 150px;
 		padding: 8px;
@@ -176,6 +209,10 @@
 		color: white;
 		font-weight: 700;
 		font-size: 20px;
+	}
+
+	.banner-valores {
+		height: 500px;
 	}
 
 

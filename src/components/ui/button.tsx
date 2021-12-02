@@ -42,7 +42,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>((props, ref) => {
 			className={rootClassName}
 			disabled={disabled}
 			{...rest}
-		>
+		>Carregar Mais
 			{children}
 			{loading && (
 				<svg

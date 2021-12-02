@@ -90,8 +90,8 @@ export const ProductGrid: FC<ProductGridProps> = ({ className = "" }) => {
 						disabled={loadingMore}
 						onClick={loadMore}
 						variant="slim"
+						className="rounded-full"
 					>
-						{t("button-load-more")}
 					</Button>
 				)}
 			</div>

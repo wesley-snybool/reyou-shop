@@ -5,7 +5,7 @@ module.exports = {
 	theme: {
 		extend: {
 			backgroundImage: {
-				'hero': "url('https://i.pinimg.com/originals/ed/1d/34/ed1d3463e17d2be7ecb473ee20322851.jpg')",
+				'hero': "url('/assets/images/valores/banner.svg')",
 			   },
 			colors: {
 				body: "#5A5A5A",

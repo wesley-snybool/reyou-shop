@@ -3,23 +3,20 @@ import Carousel from "@components/ui/carousel/carousel";
 import { SwiperSlide } from "swiper/react";
 
 const datagalerySession = [
-	{
-		urlImgOne: '/assets/images/pagina-marca/2.png',
-		urlImgTwo: '/assets/images/pagina-marca/1.png',
-		urlImgThre: '/assets/images/pagina-marca/3.png',
-	}
+	{url: '/assets/images/pagina-marca/2.png'},
+	{url: '/assets/images/pagina-marca/3.png'},
 ]
 const breakpoints = {
 	"1025": {
-		slidesPerView:30,
+		slidesPerView:3,
 		spaceBetween: 0,
 	},
 	"480": {
-		slidesPerView: 30,
+		slidesPerView: 3,
 		spaceBetween: 0,
 	},
 	"0": {
-		slidesPerView: 30,
+		slidesPerView: 3,
 		spaceBetween: 0,
 	},
 };
@@ -34,16 +31,13 @@ const CarrousselGallery: React.FC<BannerProps> = ({
 	return (
 		<div className='w-2/4 mx-auto'>
 			<Carousel breakpoints={breakpoints} autoplay={{ delay: 5000 }}>
-				{datagalerySession?.map((banner: any, index) => (
-					<SwiperSlide key={index}>
-						<BannerGaleryCard
-							key={index}
-							banner={banner}
+					<SwiperSlide >
+{/* 						<BannerGaleryCard
+							banner={datagalerySession}
 							href="/marcas"
 							effectActive={true}
-						/>
+						/> */}
 					</SwiperSlide>
-				))}
 			</Carousel>
 		</div>
 	);
