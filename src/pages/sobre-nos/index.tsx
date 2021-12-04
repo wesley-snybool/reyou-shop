@@ -64,7 +64,7 @@ export default function Sobre () {
                 <div className='cards-socias'>
                     <section >
                         <h2>Ana Paula Amorin</h2>
-                        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut blandit enim orci, et eleifend felis lobortis quis. Proin efficitur pharetra euismod. Morbi vitae nunc sit amet elit posuere iaculis. Phasellus molestie volutpat sagittis. Suspendisse molestie ipsum at ante accumsan vulputate. Cras aliquet lorem sit amet finibus laoreet. Quisque euismod tincidunt risus, sed vulputate neque. Aenean ut elit neque. Phasellus gravida libero erat, sed tincidunt mi lacinia id.  </p>
+                        <p> Lorem ipsum dolor sit amjkjnkjet, consectetur adipiscing elit. Ut blandit enim orci, et eleifend felis lobortis quis. Proin efficitur pharetra euismod. Morbi vitae nunc sit amet elit posuere iaculis. Phasellus molestie volutpat sagittis. Suspendisse molestie ipsum at ante accumsan vulputate. Cras aliquet lorem sit amet finibus laoreet. Quisque euismod tincidunt risus, sed vulputate neque. Aenean ut elit neque. Phasellus gravida libero erat, sed tincidunt mi lacinia id.  </p>
                         <div className='footer-card'>
                             <Link href='/'><Image  width="46.88" height="46.88" src='/assets/images/sobre/facebook.svg' /></Link>
                             <Link href='/'><Image  width="46.88" height="46.88" src='/assets/images/sobre/twiter.svg' /></Link>
