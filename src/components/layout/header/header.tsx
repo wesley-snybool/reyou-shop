@@ -49,7 +49,7 @@ const data = useAppSelector((state) => state.getConfig.data)
 			ref={siteHeaderRef}
 			className="bg-white w-full shadow-header h-16 sm:h-20 lg:h-24 z-20 flex align-center justify-center overflow-hidden"
 		>
-			<div className="any-qualq">Hello My Frindes</div>
+			<div className="any-qualq"></div>
 			<div className="bg-white  w-full mx-sm px-10 text-gray-700 body-font fixed  h-16 sm:h-20 lg:h-24 z-20 transition duration-200 ease-in-out">
 				<div className="flex items-center justify-center  h-full w-full">
 					<button
@@ -63,7 +63,7 @@ const data = useAppSelector((state) => state.getConfig.data)
 							<span className="bar" />
 						</span>
 					</button>
-					<div className=" h-full m-auto flex items-center justify-center">
+					<div className="p-4 flex items-center justify-center">
 						<Logo />
 					</div>
 

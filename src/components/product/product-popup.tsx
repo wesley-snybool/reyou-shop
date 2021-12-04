@@ -89,7 +89,7 @@ export default function ProductPopup() {
 
 	return (
 		<div className="rounded-lg bg-white">
-			<div className='text-black text-5xl font-black flex items-center justify-center p-20'>{brand.title}</div>
+			<div className='text-black text-3xl font-black flex items-center justify-center p-20'>{brand.title}</div>
 			<div className="flex flex-col lg:flex-row w-full md:w-[650px] lg:w-[960px] mx-auto ">
 				<div className="flex-shrink-0 flex items-start justify-center w-full lg:w-430px max-h-430px lg:max-h-full overflow-hidden bg-transparent">
 					<img
@@ -109,7 +109,7 @@ export default function ProductPopup() {
 							onClick={navigateToProductPage}
 							role="button"
 						>
-							<h2 className="text-heading text-lg md:text-xl lg:text-2xl font-semibold hover:text-black">
+							<h2 className="text-heading text-lg md:text-xl lg:text-2xl font-semibold">
 								{productName}
 							</h2>
 							<div className='mx-4  px-8 py-2 rounded-full border text-black border-black border-opacity-100'>{state ?? stateProduct }</div>
@@ -118,11 +118,11 @@ export default function ProductPopup() {
 							{shortDescription}
 						</p> */}
 
-						<div className="flex items-center mt-8  px-8">
+						<div className="flex items-center mt-8 px-2">
 							<div className="text-heading font-semibold text-base md:text-xl lg:text-2xl">
 								{price}
 							</div>
-							<div className='text-black mx-4'>Vendido por <strong>{brand.title}</strong></div>
+							<div className='text-brand-popup-product text-black'>Vendido por <strong>{brand.title}</strong></div>
 							{discount && (
 								<del className="font-segoe text-gray-400 text-base lg:text-xl ps-2.5 -mt-0.5 md:mt-0">
 									{basePrice}
@@ -133,11 +133,11 @@ export default function ProductPopup() {
 					<div className=' flex justify-center gap-2 p-4'>
 						{relatedTags.map((item: string) => {
 							return (
-								<div className='p-3 px-6 rounded-full border border-black text-black' key={item}>{item}</div>
+								<div className='p-2 px-6 rounded-full border border-black text-black' key={item}>{item}</div>
 							)
 						})}
 					</div>
-					<div className='text-left gap-3 flex flex-col justify-start  text-black px-4 mt-2'>
+					<div className='text-left  flex flex-col justify-start  text-black px-4 mt-2'>
 						<p>Última atualização de informação: 3 horas atrás</p>
 						<p>Online desde 31/08/2021 às 22:00</p>
 					</div>
@@ -148,21 +148,21 @@ export default function ProductPopup() {
 							)
 						})}
 					</div>
-					<div className=' p-2 px-6 text-black flex wrap justify-start gap-4 items-center mt-4'>Cores
+					<div className=' p-2 px-6 text-black flex wrap justify-start gap-4 items-center mt-4 mb-2'>Cores
 						{colors.map((item: string) => {
 							return (
 								<div className={`bg-${item}${item === 'black' ? '' : '-500'} font-body text-xs p-3 rounded-sm  h-2 w-2 flex items-center justify-center border border-black text-black`} key={item}></div>
 							)
 						})}
 					</div>
-					<button className='mt-4 bg-black font-bold text-xl text-white w-3/4 h-16 rounded-md'>Visitar Site</button>
-					<button className='text-lg my-4 bg-white text-black border border-black w-3/4 h-16 rounded-md'>Adicionar aos Favoritos</button>
+					<button className='my-4 py-3 bg-black font-bold text-xl text-white w-3/4 rounded-md'>Visitar Site</button>
+					<button className='text-lg my-4 bg-white text-black border border-black w-3/4 py-3 rounded-md'>Adicionar aos Favoritos</button>
 					
-					<div className='border mt-5 shadow-cart text-black overflow-scroll h-1/5 p-4'>
-						<p><strong>Descrição do Produto</strong></p>
+					<div className='border mt-5 shadow-cart text-black overflow-scroll h-1/5 p-2'>
+						<p className='text-xl'>Descrição do Produto</p>
 						<p>{productDescription}</p>
-						<p><strong>Valores Sustentáveis</strong></p>
-						<p><strong>Informações de Compra</strong></p>
+						<p className='text-lg'>Valores Sustentáveis</p>
+						<p className='text-lg'>Informações de Compra</p>
 					</div>
 
 				</div>

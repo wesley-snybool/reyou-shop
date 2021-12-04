@@ -12,39 +12,67 @@ import {
 const dataOptionsMenu = [
     {
         uuid: 12,
+        heading: 'ÉTICA ANIMAL',
+        content: [
+            {name: 'VEGANO'},
+            {name: 'CRUELTY-FREE'},
+            {name: 'LÃ RESPONSÁVEL'},
+            {name: 'ORIGEM ANIMAL RESPONSÁVEL'},
+            {name: 'BIODIVERSIDADE'},
+        ]
+    },
+
+    {
+        uuid: 12,
+        heading: 'CONSUMO MODERNO',
+        content: [
+            {name: 'SLOW FASHION'},
+            {name: 'SOB ENCOMENDA'},
+            {name: 'SECOND HAND'},
+            {name: 'ATEMPORAL'},
+            {name: 'ECONOMIA CIRCULAR'},
+            {name: 'CONCEITO MODULAR'},
+            {name: 'ALUGUEL'},
+        ]
+    },
+    {
+        uuid: 12,
         heading: 'IMPACTO AMBIENTAL',
         content: [
-            {name: 'UPCYCLED'},
-            {name: 'EMISSÕES BAIXAS'},
             {name: 'LIVRE DE TÓXICOS'},
+            {name: 'SALVAR OS OCEANOS'},
+            {name: 'EMBALAGEM ECOLÓGICA'},
+            {name: 'RECICLADO'},
+            {name: 'PRESERVAÇÃO DAS FLORESTAS'},
+            {name: 'EMISSÕES BAIXAS'},
+            {name: 'APOIO À TRANSIÇÃO CLIMÁTICA'},
+            {name: 'UPCYCLED'},
+            {name: 'NEUTRO EM CARBONO'},
         ]
     },
     {
         uuid: 12,
         heading: 'IMPACTO SOCIAL',
         content: [
-            {name: 'UPCYCLED'},
-            {name: 'EMISSÕES BAIXAS'},
-            {name: 'LIVRE DE TÓXICOS'},
-            {name: 'SALVAR OS OCEANOS'},
-            {name: 'EMBALAGEM ECOLÓGICA'},
-            {name: 'APOIO Á TRANSIÇÃO CLIMÁTICA'},
-            {name: 'LIVRE DE TÓXICOS'},
-            {name: 'PRESERVAÇÃO DAS FLORESTAS'},
+            {name: 'TRABALHO ÉTICO'},
+            {name: 'TRANSPARÊNCIA'},
+            {name: 'PRODUÇÃO LOCAL'},
+            {name: 'ARTESANATO'},
+            {name: 'APOIO ÁS COMUNIDADES'},
+            {name: 'PEQUENOS NEGÓCIOS'},
+            {name: 'EMPRESAS COM PROPRIETÁRIOS NEGROS'},
+            {name: 'TAMANHO INCLUSIVO'},
+            {name: 'EMPODERAMENTO FEMININO'},
+
+
         ]
     },
     {
         uuid: 12,
-        heading: 'CONSUMO MODERNO',
+        heading: 'INOVAÇÃO E TECNOLOGIA',
         content: [
-            {name: 'UPCYCLED'},
-            {name: 'EMISSÕES BAIXAS'},
-            {name: 'LIVRE DE TÓXICOS'},
-            {name: 'SALVAR OS OCEANOS'},
-            {name: 'EMBALAGEM ECOLÓGICA'},
-            {name: 'APOIO Á TRANSIÇÃO CLIMÁTICA'},
-            {name: 'LIVRE DE TÓXICOS'},
-            {name: 'PRESERVAÇÃO DAS FLORESTAS'},
+            {name: 'MATERIAIS DO FUTURO'},
+            {name: 'BLOCK CHAIN'},
         ]
     },
 ]
@@ -70,7 +98,7 @@ export default function Valores () {
                                 </AccordionItemHeading>
                                     {item.content.map((i, index) => (
                                         <AccordionItemPanel key={index} className='p-4 my-4 text-left text-white'>
-                                               <span className="bg-black rounded-md p-4 px-6 text-md font-bold" >{i.name}</span>
+                                               <span className="bg-black rounded-xl p-4 px-6 text-md font-bold" >{i.name}</span>
                                         </AccordionItemPanel>
                                     ))}
                                 </AccordionItem>

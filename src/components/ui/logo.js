@@ -2,8 +2,7 @@ import Image from "next/image";
 import Link from "@components/ui/link";
 import cn from "classnames";
 import { siteSettings } from "@settings/site-settings";
-import logo from '../../../public/assets/images/Assinatura_Reyou.png'
-import { useAppSelector } from "src/redux/hooks/selectors";
+import logo from '../../../public/assets/images/logo-hey-you.svg'
 
 const Logo = ({...props}) => {
 
@@ -16,13 +15,12 @@ const Logo = ({...props}) => {
 			{...props}
 		>
 			<Image
-				src={"https://reyoushop.nyc3.digitaloceanspaces.com/images/id-visual-reyou/logo-reyou.jpg"}
+				src={logo}
 				alt={"Logo Re.You"}
-				height={90}
-				width={120}
-				layout="fixed"
-				loading="eager"
-				quality={10}
+				height={38.41}
+				width={130}
+				layout='fixed'
+				quality={75}
 			/>
 		</Link>
 	);

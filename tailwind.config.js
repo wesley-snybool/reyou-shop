@@ -6,6 +6,7 @@ module.exports = {
 		extend: {
 			backgroundImage: {
 				'hero': "url('/assets/images/valores/banner.svg')",
+				'session-moda': "url('/assets/images/sobre/before-sus.svg')",
 			   },
 			colors: {
 				body: "#5A5A5A",

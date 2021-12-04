@@ -28,7 +28,7 @@ export const siteSettings = {
 		menu: [
 			{
 				id: 1,
-				path: "/",
+				path: "/sobre-nos",
 				label: "Sobre Nós"},
 				/*Menu: [
 					{
