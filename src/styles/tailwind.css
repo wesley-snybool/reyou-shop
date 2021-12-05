@@ -251,7 +251,7 @@
 	.sessao-sustentabilidade {
 		display: flex;
 		margin-top: 81px;
-		justify-content: start;
+		justify-content: flex-start;
 		align-items: center;
 		margin-top: 80px;
 
@@ -311,7 +311,7 @@
 		padding: 0 30px;
 		position: absolute;
 		margin: 0 auto;
-		bottom: 0;
+		bottom: -60px;
 		left: calc(50% - 160px);
 	}
 
@@ -349,6 +349,67 @@
 		bottom: 160px;
 	}
 
+	.partner {
+		display: flex;
+		align-items: center;
+		position: relative;
+	}
+
+	.partner {
+		display: flex;
+		align-items: center;
+	}
+
+	.partner section {
+		display: flex;
+		position: relative;
+		align-items: center;
+	}
+
+	.card-partner-container {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		margin: 50px auto;
+		gap: 58px;
+	}
+
+	.card-partner {
+		width: 388px;
+		height: 640px;
+		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+	}
+
+	.card-partner h2 {
+		text-align: center;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 30px;
+		line-height: 35px;
+		margin: 50px 0;
+		color: black;
+	}
+
+	.card-partner p {
+		padding: 0 40px;
+		color: black;
+		text-align: center;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 18px;
+		line-height: 35px;
+	}
+
+	.partner p {
+		font-style: normal;
+		font-weight: bold;
+		font-size: 30px;
+		line-height: 35px;
+		position: absolute;
+		color: black;
+		left: 60px;
+	}
+
 	.image-partner section {
 		width: 586px;
 		height: 826px;
@@ -368,6 +429,7 @@
 		color: black;
 		margin-bottom: 80px;
 	}
+
 	.image-partner p {
 		color: black;
 		font-style: normal;
