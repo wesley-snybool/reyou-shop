@@ -370,7 +370,7 @@
 		display: flex;
 		justify-content: center;
 		flex-wrap: wrap;
-		margin: 50px auto;
+		margin: 81px auto;
 		gap: 58px;
 	}
 
@@ -378,6 +378,50 @@
 		width: 388px;
 		height: 640px;
 		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+		transition: all ease 0.3s;
+	}
+
+	.form-final {
+		background-color: #FAF9F9;
+		padding: 20px;
+	}
+
+	.form-final form {
+		display: flex;
+		gap: 10px;
+		width: 80%;
+		flex-wrap: wrap;
+	}
+
+	.form-final form label {
+		font-style: normal;
+		font-weight: normal;
+		font-size: 20px;
+		line-height: 24px;
+		color: black;
+		margin: 0 20px;
+	}
+
+	.form-final form input {
+		width: 100%;
+		height: 62px;
+		padding: 0 20px;
+		box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.25);
+	}
+
+	.form-final form input:last-child {
+		height: 275px;
+	}
+	
+
+	.form-final form input:focus {
+		background-color: #FAF9F9;
+		outline: none;
+		border: none;
+	}
+
+	.card-partner:hover {
+		transform: scale(1.01);
 	}
 
 	.card-partner h2 {

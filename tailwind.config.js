@@ -4,6 +4,11 @@ module.exports = {
 	darkMode: false,
 	theme: {
 		extend: {
+			variants: {
+				extend: {
+				  animation: ['motion-safe'],
+				}
+			  },
 			backgroundImage: {
 				'hero': "url('/assets/images/valores/banner.svg')",
 				'session-moda': "url('/assets/images/sobre/before-sus.svg')",

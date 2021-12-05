@@ -133,12 +133,21 @@ export default function Sobre () {
                 </div>
                 <div className='card-partner-container'>
                     {dataPartner.map((item, key) =>(
-                        <div key={`${item.title}-${key}`} className='card-partner'>
+                        <div key={`${item.title}-${key}`} className='cursor-pointer card-partner'>
                             <Image  width="388" height="320" src={item.image} />
                             <h2>{item.title}</h2>
                             <p>{item.desc}</p>
                         </div>
                     ))}
+                </div>
+                <div className='form-final mx-8 flex flex-col items-center'>
+                    <h1 className='text-center pt-8 pb-4 text-black text-xl font-bold'>Fale Conosco</h1>
+                    <span className='text-black text-center'>Envie aqui suas sugestões e elogios</span>
+                    <form>
+                        Nome:<input/>
+                        Email:<input />
+                        Mensagem:<input type='text-area'/>
+                    </form>
                 </div>
             </Container>
         </>
