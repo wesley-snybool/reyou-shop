@@ -146,8 +146,9 @@ export default function Sobre () {
                     <form>
                         Nome:<input/>
                         Email:<input />
-                        Mensagem:<input type='text-area'/>
+                        Mensagem:<input type='text-area'/>                        
                     </form>
+                    <button className='bg-black p-4 w-40 rounded-full text-white my-10'>Enviar</button>
                 </div>
             </Container>
         </>
