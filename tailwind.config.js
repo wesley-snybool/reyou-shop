@@ -12,6 +12,7 @@ module.exports = {
 			backgroundImage: {
 				'hero': "url('/assets/images/valores/banner.svg')",
 				'session-moda': "url('/assets/images/sobre/before-sus.svg')",
+				'blog-header': "url('/assets/images/blog/header.svg')"
 			   },
 			colors: {
 				body: "#5A5A5A",

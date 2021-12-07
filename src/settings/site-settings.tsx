@@ -608,7 +608,7 @@ export const siteSettings = {
 			},
 			{
 				id: 5,
-				path: "/", //search
+				path: "/blog", //search
 				label: "Blog",
 			},
 			/*{
