@@ -99,7 +99,7 @@ const data = useAppSelector((state) => state.getConfig.data)
 								btnProps={{
 									className:
 										"text-sm xl:text-base text-heading font-semibold focus:outline-none",
-									children: t("Loguin/Cadastrar"),
+									children: t("Login/Cadastrar"),
 									onClick: handleLogin,
 								}}
 							>

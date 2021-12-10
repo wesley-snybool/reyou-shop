@@ -66,9 +66,11 @@ export default function Sobre () {
                     <div className='mt-20 flex-1 '>
                         <p className='p-8 mt-10' >Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum magni error numquam perspiciatis facere sapiente nisi. Ullam eveniet ab magni odio, fugiat dicta deleniti voluptatibus architecto quae quasi quod itaque! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni alias nostrum nihil aperiam repellat vero, ipsum blanditiis odio consectetur facere officia at laboriosam doloremque pariatur, ullam atque voluptate minus soluta. Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim reiciendis, dolorem ipsum illo atque laborum, tenetur commodi minus aut officia laudantium optio. Impedit perspiciatis dolore sint cumque, pariatur libero dicta.</p>
                         <p className='px-8' > Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed animi, maxime corrupti magnam culpa libero, a quisquam impedit ex, placeat ratione consectetur. Deleniti, esse. Consectetur itaque facilis dicta aperiam doloremque. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Commodi porro totam eum, id aut facilis eligendi sequi. Praesentium, libero? Animi veniam earum labore amet provident odio atque veritatis incidunt quisquam?</p>
-                        <div className='sessao-sustentabilidade'>
-                            <Image className='relative' width="522" height="125" src='/assets/images/sobre/arrow-right-sustentabilidade.svg' />
-                            <span>Sustentabilidade</span>
+                        <div className=''>
+                            <div className='sessao-sustentabilidade'>
+                                <Image className='relative' width="522" height="125" src='/assets/images/sobre/arrow-right-sustentabilidade.svg' />
+                                <span>Sustentabilidade</span>
+                            </div>
                         </div>
                     </div>
                     <div className='session-as-work flex flex-col justify-end items-end'>
@@ -98,7 +100,7 @@ export default function Sobre () {
                 </div>
                 <div className='arrow-socios flex justify-end'>
                     <div className='session-partner'>
-                        <span>Sócios</span>
+                        <span>Sócias</span>
                         <Image  width="342" height="125" src='/assets/images/sobre/arrow-socias.svg' />
                     </div>
                 </div>

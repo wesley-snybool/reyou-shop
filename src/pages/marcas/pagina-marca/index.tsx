@@ -42,7 +42,7 @@ export default function PageBrand() {
                     )
                 })}
             </div>
-            <Search title={'Produtos'} />
+            <Search showSearchBrand={false} title={'Produtos'} />
             <CarrousselGallery />
         </Container>
     )

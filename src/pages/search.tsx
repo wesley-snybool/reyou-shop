@@ -19,8 +19,12 @@ import Search from "@components/common/search";
 import Text from "@components/ui/text";
 import { useState } from "react";
 
+type TypeSeach = {
+	showSearchBrand?: boolean;
+	title?: string;
+}
 
-export default function Shop({title='Vitrine'}) {
+export default function Shop({title= 'Vitrine', showSearchBrand = true} ) {
 
 	const { t } = useTranslation("common");
 
@@ -46,14 +50,16 @@ export default function Shop({title='Vitrine'}) {
 									</ActiveLink>
 								</BreadcrumbItems>
 							</div>
-							<ShopFilters />
+							<ShopFilters showSearchBrand={showSearchBrand}/>
 						</StickyBox>
 					</div>
 
 					<div className="w-full lg:-ms-9 ">
-						<Text variant="subHeading" className="font-bold w-full justify-center items-center flex p-4 ">
-							{title}
-						</Text>
+						<div className="title-vitrine">
+							<p className="p-4 ">
+								{title}
+							</p>
+						</div>
 						<SearchTopBar />
 						<ProductGrid filterTitle={'Impacto Social'} hasFilter={true}/>
 					</div>

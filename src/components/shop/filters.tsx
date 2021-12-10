@@ -15,12 +15,10 @@ import { useAppSelector } from "src/redux/hooks/selectors";
 import { useAppDispatch } from "src/redux/store/store";
 
 type TypeBrandsProps = {
-	brands: [
-		name?: string,
-	]
+	showSearchBrand?: boolean;
 }
 
-export const ShopFilters: React.FC = () => {
+export const ShopFilters: React.FC<TypeBrandsProps> = ({showSearchBrand}) => {
 	const dispatch = useAppDispatch();
 
 	const data = useAppSelector((state) => state.getShowCaseProducts.data)	
@@ -70,7 +68,7 @@ export const ShopFilters: React.FC = () => {
 			<PartConditions />
 			<Category />
 			<TypeItems />
-			<SearchBrands brands={data} />
+			<SearchBrands showSearchBrand={showSearchBrand} brands={data} />
 			{/* <ColorFilter /> */}
 		</div>
 	);

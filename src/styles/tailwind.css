@@ -4,6 +4,10 @@
 
 /* Write your own custom base styles here */
 @layer base {
+
+	h1, h2, span, p, h3, {
+		color: black;
+	}
 	html {
 		-webkit-tap-highlight-color: transparent;
 	}
@@ -283,9 +287,9 @@
 	.sessao-sustentabilidade {
 		display: flex;
 		margin-top: 81px;
-		justify-content: flex-start;
 		align-items: center;
-		margin-top: 80px;
+		justify-content: center;
+		width: 522px;
 
 	}
 
@@ -296,6 +300,21 @@
 		line-height: 37px;
 		color: black;
 		position: absolute;
+	}
+
+	.title-vitrine {
+		padding: 10px;
+		position: relative;
+		justify-content: center;
+		display: flex;
+	}
+
+	.title-vitrine p {
+		color: black;
+		position: relative;
+		font-weight: bold;
+		font-size: 30px;
+		right: 100px;
 	}
 
 	.session-moda h2 {
@@ -815,38 +834,12 @@
 	align-items: center;
 	opacity: 0.5;
 }
+
 .redesocial{
 	list-style-type: none;
-	color:#ffff;
 	align-items: flex-start;
-
-
-	
 }
-.redesocial .facebook{
-	position: absolute;
-	margin-top:230px;
-	right: 577px;
-	color:#FFFF;
-	background-color: #0000;
-}
-.redesocial .instagram{
-	position: absolute;
-	margin-top:230px;
-	right: 534px;
-	color:#FFFF;
-	background-color: #0000;
-	
 
-}
-.redesocial .twitter{
-	position: absolute;
-	margin-top:230px;
-	right: 480px;
-	color:#FFFF;
-	background-color: #0000;
-
-}
 .flipinf {
 	margin: 0 auto;
 }

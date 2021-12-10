@@ -54,7 +54,7 @@ const breakpoints = {
 
 const breakpointsCircle = {
 	"1720": {
-		slidesPerView: 10,
+		slidesPerView: 5,
 		spaceBetween: 48,
 	},
 	"1400": {
@@ -62,7 +62,7 @@ const breakpointsCircle = {
 		spaceBetween: 32,
 	},
 	"1025": {
-		slidesPerView: 6,
+		slidesPerView: 5,
 		spaceBetween: 28,
 	},
 	"768": {
@@ -97,7 +97,7 @@ const Conceitos = ({type = "circle"}) => {
 	});
 
 	return (
-           <div className="bg-gray-300 w-full h-full flex flex-col px-8 mb-16">
+           <div className="bg-gray-300 w-full h-full flex flex-col px-8 pb-6 mb-16">
 			<strong className="text-black my-4 text-lg mx-auto p-4">Conceitos em alta</strong>
 			{!dataConcepts ? (
 				<Alert message={`${error.message}Erro ao carregar as imagens`} />

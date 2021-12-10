@@ -49,7 +49,7 @@ const Text: React.FC<Props> = ({
 		<Component
 			className={cn(
 				{
-					"text-body font-bold text-md sm:leading-6 leading-7": variant === "body",
+					"text-black font-bold text-md sm:leading-6 leading-7": variant === "body",
 					"text-heading text-lg md:text-xl lg:text-2xl 2xl:text-3xl xl:leading-10 font-bold":
 						variant === "mediumHeading",
 					"text-heading text-sm md:text-base xl:text-lg font-semibold":

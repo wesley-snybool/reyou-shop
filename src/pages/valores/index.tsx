@@ -12,67 +12,67 @@ import {
 const dataOptionsMenu = [
     {
         uuid: 12,
-        heading: 'ÉTICA ANIMAL',
-        content: [
-            {name: 'VEGANO'},
-            {name: 'CRUELTY-FREE'},
-            {name: 'LÃ RESPONSÁVEL'},
-            {name: 'ORIGEM ANIMAL RESPONSÁVEL'},
-            {name: 'BIODIVERSIDADE'},
-        ]
-    },
-
-    {
-        uuid: 12,
-        heading: 'CONSUMO MODERNO',
-        content: [
-            {name: 'SLOW FASHION'},
-            {name: 'SOB ENCOMENDA'},
-            {name: 'SECOND HAND'},
-            {name: 'ATEMPORAL'},
-            {name: 'ECONOMIA CIRCULAR'},
-            {name: 'CONCEITO MODULAR'},
-            {name: 'ALUGUEL'},
-        ]
-    },
-    {
-        uuid: 12,
         heading: 'IMPACTO AMBIENTAL',
         content: [
+            {name: 'UPCYCLED'},
+            {name: 'RECICLADO'},
+            {name: 'EMISSÕES BAIXAS'},
             {name: 'LIVRE DE TÓXICOS'},
             {name: 'SALVAR OS OCEANOS'},
-            {name: 'EMBALAGEM ECOLÓGICA'},
-            {name: 'RECICLADO'},
-            {name: 'PRESERVAÇÃO DAS FLORESTAS'},
-            {name: 'EMISSÕES BAIXAS'},
-            {name: 'APOIO À TRANSIÇÃO CLIMÁTICA'},
-            {name: 'UPCYCLED'},
             {name: 'NEUTRO EM CARBONO'},
+            {name: 'EMBALAGEM ECOLÓGICA'},
+            {name: 'PRESERVAÇÃO DAS FLORESTAS'},
+            {name: 'APOIO À TRANSIÇÃO CLIMÁTICA'},
         ]
     },
     {
         uuid: 12,
         heading: 'IMPACTO SOCIAL',
         content: [
+            {name: 'ARTESANATO'},
             {name: 'TRABALHO ÉTICO'},
             {name: 'TRANSPARÊNCIA'},
             {name: 'PRODUÇÃO LOCAL'},
-            {name: 'ARTESANATO'},
-            {name: 'APOIO ÁS COMUNIDADES'},
             {name: 'PEQUENOS NEGÓCIOS'},
-            {name: 'EMPRESAS COM PROPRIETÁRIOS NEGROS'},
             {name: 'TAMANHO INCLUSIVO'},
+            {name: 'APOIO ÁS COMUNIDADES'},
             {name: 'EMPODERAMENTO FEMININO'},
+            {name: 'EMPRESAS COM PROPRIETÁRIOS NEGROS'},
 
 
         ]
     },
     {
         uuid: 12,
+        heading: 'CONSUMO MODERNO',
+        content: [
+            {name: 'ALUGUEL'},
+            {name: 'ATEMPORAL'},
+            {name: 'SECOND HAND'},
+            {name: 'SLOW FASHION'},
+            {name: 'SOB ENCOMENDA'},
+            {name: 'ECONOMIA CIRCULAR'},
+            {name: 'CONCEITO MODULAR'},
+        ]
+    },
+    {
+        uuid: 12,
+        heading: 'ÉTICA ANIMAL',
+        content: [
+            {name: 'VEGANO'},
+            {name: 'CRUELTY-FREE'},
+            {name: 'LÃ RESPONSÁVEL'},
+            {name: 'BIODIVERSIDADE'},
+            {name: 'ORIGEM ANIMAL RESPONSÁVEL'},
+        ]
+    },
+
+    {
+        uuid: 12,
         heading: 'INOVAÇÃO E TECNOLOGIA',
         content: [
-            {name: 'MATERIAIS DO FUTURO'},
             {name: 'BLOCK CHAIN'},
+            {name: 'MATERIAIS DO FUTURO'},
         ]
     },
 ]
@@ -105,7 +105,7 @@ export default function Valores () {
                         ))}
                     </Accordion>
                 </div>
-                    <div className='p-12'>
+                    <div className='text-black p-12'>
                         <span className="title-recicle text-2xl text-black" >RECICLADO</span>
                         <p className='mt-8'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam accusantium aliquam, facere illum, animi quis adipisci nesciunt odit quam sit in dolorem voluptate veritatis doloribus provident laborum dolore nisi minima.</p>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta sit architecto accusamus, maiores commodi repellat laborum labore in placeat quibusdam dolore cumque? Dignissimos, accusantium. Deleniti aperiam temporibus laboriosam inventore reiciendis.</p>

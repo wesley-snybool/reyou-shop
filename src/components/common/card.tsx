@@ -61,9 +61,9 @@ const Card: React.FC<Props> = ({
 					</>
 				)}
 			</div>
-			<Text variant="body" className="capitalize">
+			<span className="text-black font-bold capitalize">
 				{title}
-			</Text>
+			</span>
 		</Link>
 	);
 };

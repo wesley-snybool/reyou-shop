@@ -65,7 +65,7 @@ export default function ListBox({ options }: { options: Option[] }) {
 								<Listbox.Option
 									key={personIdx}
 									className={({ active }) =>
-										`${active ? "text-amber-900 bg-gray-100" : "text-gray-900"}
+										`${active ? "text-black bg-gray-100" : "text-gray-900"}
                           cursor-default select-none relative py-2 ps-10 pe-4`
 									}
 									value={option}
@@ -75,13 +75,13 @@ export default function ListBox({ options }: { options: Option[] }) {
 											<span
 												className={`${
 													selected ? "font-medium" : "font-normal"
-												} block truncate`}
+												} block truncate text-black`}
 											>
 												{t(option.name)}
 											</span>
 											{selected ? (
 												<span
-													className={`${active ? "text-amber-600" : ""}
+													className={`${active ? "text-black" : ""}
                                 check-icon absolute inset-y-0 start-0 flex items-center ps-3`}
 												>
 													<HiCheck className="w-5 h-5" aria-hidden="true" />

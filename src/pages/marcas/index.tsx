@@ -70,7 +70,7 @@ export default function Brands () {
 
     return (
         <>
-            <Container className='p-4'>
+            <Container className='text-black p-4'>
                 <div className=' mx-auto p-4 mb-20 px-20'>
                     <h1 className='text-black font-bold text-xl mb-8' >Descubra a Responsabilidade das Marcas</h1>
                     <p className=''>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae quasi distinctio eos. Quae nulla error, facilis saepe, voluptas, optio voluptates a tenetur maiores eum voluptatum amet ex ut ipsam eius!  Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut deleniti, porro voluptatem perferendis dicta excepturi earum. Provident mollitia molestiae itaque quisquam quod nam officiis ex libero eum assumenda. Voluptatum, nisi!</p>
@@ -82,7 +82,7 @@ export default function Brands () {
                                 <img className=' rounded-full w-20' src={item.logoUrl} alt="" />
                                 <div className='text-black text-center'>
                                     <h3 className='font-bold'>{item.title}</h3>
-                                    <h2>Seguidores {item.followers}</h2>
+                                    <h2>{item.followers} Seguidores</h2>
                                 </div>
                                 <a href='/marcas/pagina-marca' className='bg-black text-white py-4 px-8 rounded-md' >Ver Produtos</a>
                             </div>

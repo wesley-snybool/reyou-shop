@@ -108,7 +108,7 @@ const CardQueridinhos: FC<ProductProps> = ({
 					{product?.productName}
 				</h2>
 				{product?.shortDescription && (
-					<p className="text-body text-xs lg:text-sm leading-normal xl:leading-relaxed max-w-[250px] truncate">
+					<p className="text-black text-xs lg:text-sm leading-normal xl:leading-relaxed max-w-[250px] truncate">
 						{product?.shortDescription}
 					</p>
 				)}

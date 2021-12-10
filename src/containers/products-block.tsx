@@ -41,11 +41,11 @@ const ProductsBlock: React.FC<ProductsProps> = ({
 			spaceBetween: 28,
 		},
 		"1025": {
-			slidesPerView: 6,
+			slidesPerView: 4,
 			spaceBetween: 28,
 		},
 		"768": {
-			slidesPerView: 5,
+			slidesPerView: 4,
 			spaceBetween: 20,
 		},
 		"500 ": {
