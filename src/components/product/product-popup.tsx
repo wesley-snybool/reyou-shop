@@ -131,9 +131,11 @@ export default function ProductPopup() {
 						</div>
 					</div>
 					<div className=' flex justify-center gap-2 p-4'>
-						{relatedTags.map((item: string) => {
+						{relatedTags.map((item: string, index: number) => {
 							return (
-								<div className='p-2 px-6 rounded-full border border-black text-black' key={item}>{item}</div>
+								<div key={`${index}--related-tags-favorites-home`} className='p-2 px-4 rounded-full border border-black text-center text-black'>
+									{item}
+								</div>
 							)
 						})}
 					</div>
@@ -142,16 +144,18 @@ export default function ProductPopup() {
 						<p>Online desde 31/08/2021 às 22:00</p>
 					</div>
 					<div className=' text-black flex justify-start mx-4 gap-4 items-center  mt-4'>Tamanhos Disponíveis
-						{size.map((item: string) => {
+						{size.map((item: string, index: number) => {
 							return (
-								<div className='p-1 rounded-sm border border-black text-black' key={item}>{item}</div>
+								<div className='p-1 rounded-sm border border-black text-black' key={`${index}--size-product`}>{item}</div>
 							)
 						})}
 					</div>
 					<div className=' p-2 px-6 text-black flex wrap justify-start gap-4 items-center mt-4 mb-2'>Cores
-						{colors.map((item: string) => {
+						{colors.map((item: string, index: number) => {
 							return (
-								<div className={`bg-${item}${item === 'black' ? '' : '-500'} font-body text-xs p-3 rounded-sm  h-2 w-2 flex items-center justify-center border border-black text-black`} key={item}></div>
+								<div key={`${index}--item--colors--code`} className='p-1 border border-gray-300 rounded' >
+									<div className={`bg-${item}${item === 'black' ? '' : '-500'} font-body text-xs p-3 rounded-sm  h-2 w-2 flex items-center justify-center text-black`} key={`${item}--${index}--colors--product`}></div>
+								</div>
 							)
 						})}
 					</div>
