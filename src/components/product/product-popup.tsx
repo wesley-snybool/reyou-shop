@@ -130,7 +130,7 @@ export default function ProductPopup() {
 							)}
 						</div>
 					</div>
-					<div className=' flex justify-center gap-2 p-4'>
+					<div className='flex-wrap flex justify-center gap-2 p-4'>
 						{relatedTags.map((item: string, index: number) => {
 							return (
 								<div key={`${index}--related-tags-favorites-home`} className='p-2 px-4 rounded-full border border-black text-center text-black'>
