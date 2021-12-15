@@ -13,7 +13,7 @@ export const DARLING_MOMENTS_URL = '/portal/home/queridinhos-momento'
 
 export const RE_YOU_FAVORITES_URL = '/portal/home/favoritos-reyou'
 
-export const NEWS_URL = '/portal/brands'
+export const NEWS_URL = '/portal/home/novidades'
 
 export const BLOG_URL = '/portal/home/blogs'
 

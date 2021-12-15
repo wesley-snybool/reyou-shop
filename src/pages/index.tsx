@@ -82,7 +82,7 @@ export default function Home() {
 		dispatch(getReyouFavorites());
 		dispatch(getNews())
 		dispatch(getBlogs())
-	}, [dataBrands])
+	}, [])
 
 
 	return (
