@@ -9,7 +9,7 @@ import { useEffect } from "react";
 type BrandProps = {
 	sectionHeading: string;
 	className?: string;
-	dataBrands: never[];
+	dataBrands?: never[];
 }
 
 const BrandGridBlock: React.FC<BrandProps> = ({
