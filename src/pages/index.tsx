@@ -30,7 +30,6 @@ import { homeThreeMasonryBanner as img_flipscards } from "@framework/static/bann
 import FlipCard from "../components/common/flip-card/FlipCard";
 import { useAppSelector } from "src/redux/hooks/selectors";
 import { useAppDispatch } from "src/redux/store/store";
-import { useSelectDarling } from "src/redux/modules/darlings-moment/darlingsMoments"
 import { useDispatch } from "react-redux";
 import { changeUser } from "src/redux/store/userSlice";
 import { getDarlingMoments } from "src/redux/modules/darlings-moment/darlingsMoments";
@@ -45,7 +44,6 @@ type BlogsType = {
 	title: string;
 	text: string;
 }
-
 
 export default function Home() {
 	const location = useRouter();
@@ -67,6 +65,8 @@ export default function Home() {
 
 	const dataBlogs = useAppSelector((state) => state.getBlogs.data)
 
+	const dataBrands = useAppSelector((state) => state.getNews?.data)
+
 	//Exemplo de dispatch
 	const handleChangeUser = () => {
 		const data = {
@@ -82,7 +82,7 @@ export default function Home() {
 		dispatch(getReyouFavorites());
 		dispatch(getNews())
 		dispatch(getBlogs())
-	}, [dispatch])
+	}, [dataBrands])
 
 
 	return (
@@ -108,7 +108,7 @@ export default function Home() {
 				<button onClick={handleChangeUser} className="button-start font-bold text-black">Começar</button>
 			</div>
 			<Container>
-				<Conceitos /* sectionHeading="text-shop-by-category" */ />
+				<Conceitos />
 			</Container>
 			<Container>
 				<BannerCarouselBlock />
@@ -120,11 +120,8 @@ export default function Home() {
 				</Container>
 				<BestSellerProductFeed data={dataFavorites} isLoading={isLoadDFavorites} error={errorFavorites} />
 
-				<BrandGridBlock sectionHeading="NOVIDADES NA Re.You" />
-				{/* 				<BannerWithProducts
-					sectionHeading="text-on-selling-products"
-					categorySlug="/search"
-				/> */}
+				<BrandGridBlock dataBrands={dataBrands} sectionHeading="NOVIDADES NA Re.You" />
+	
 				<div className='flex items-center flex-col justify-center container-video-inst my-12 w-full mx-auto py-4 px-20 bg-gray-300 text-center'>
 					<p className='text-xl font-bold text-black p-8' >QUER CONHECER A NOSSA HISTÓRIA?</p>
 					<div className='my-4 w-full h-full bg-gray-200'>

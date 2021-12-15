@@ -6,17 +6,13 @@ import { useTranslation } from "next-i18next";
 
 const BrandCard: React.FC<{ brand: BrandReyou }> = ({ brand }) => {
 	const { action, title, image } = brand;
+	console.log('Obtendo dados das marcas na página BRANDCard', brand)
+
 	const { t } = useTranslation("common");
 	return (
-		<Link
-			href={{
-				pathname: ROUTES.SEARCH,
-				query: { brand: action.url },
-			}}
-		>
-			<a className="bg-red-500 group flex justify-center text-center relative overflow-hidden rounded-md">
+			<div className="bg-red-500 group flex justify-center text-center relative overflow-hidden rounded-md">
 				<Image
-					src={image.desktop?.url}
+					src={image?.desktop?.url || '/'}
 					alt={title || t("text-brand-thumbnail")}
 					width={650}
 					height={650}
@@ -24,14 +20,13 @@ const BrandCard: React.FC<{ brand: BrandReyou }> = ({ brand }) => {
 				/>
 				<div className="absolute top left bg-black w-full h-full opacity-50 transition-opacity duration-500 group-hover:opacity-80" />
 				<div className="absolute top left h-full w-full flex items-center justify-center p-8">
-{/* 					<img
+					{/*	<img
 						src={image.mobile.url}
 						alt={title || t("text-brand-thumbnail")}
 						className="flex-shrink-0"
 					/> */}
 				</div>
-			</a>
-		</Link>
+			</div>
 	);
 };
 
