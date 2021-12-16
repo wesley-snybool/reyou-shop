@@ -17,7 +17,7 @@ export const darlingMomentsSlice = createSlice({
         isLoading: false,
         error: {
             error_status: false,
-            message: 'Erro ao carregar os dados'
+            error_message: 'Erro ao carregar os dados'
         },
     },
     extraReducers: {

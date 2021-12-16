@@ -8,8 +8,8 @@ import { useSelectDarling } from "src/redux/modules/darlings-moment/darlingsMome
 
 
 type ErrorTypes = {
-	message: string;
-	error_status: boolean;
+	error_status: boolean,
+	error_message: string,
 }
 type BestSellerTypes = {
 	data?: never[];
@@ -23,7 +23,7 @@ export default function BestSellerProductFeed({ data, isLoading, error }: BestSe
 			sectionHeading="text-best-sellers"
 			products={data}
 			loading={isLoading}
-			error={error?.message}
+			error={error?.error_message}
 			error_status={error?.error_status}
 			uniqueKey="best-sellers"
 		/>

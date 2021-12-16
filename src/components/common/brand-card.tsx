@@ -6,9 +6,9 @@ import { useTranslation } from "next-i18next";
 
 const BrandCard: React.FC<{ brand: BrandReyou }> = ({ brand }) => {
 	const { action, title, image } = brand;
-	console.log('Obtendo dados das marcas na página BRANDCard', brand)
 
 	const { t } = useTranslation("common");
+	
 	return (
 			<div className="bg-red-500 group flex justify-center text-center relative overflow-hidden rounded-md">
 				<Image
