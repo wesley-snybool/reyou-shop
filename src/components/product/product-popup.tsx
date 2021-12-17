@@ -6,26 +6,22 @@ import { getShowCaseProducts } from "src/redux/modules/show-case/showCase";
 import isEmpty from "lodash/isEmpty";
 import { ROUTES } from "@utils/routes";
 import { useUI } from "@contexts/ui.context";
-import Button from "@components/ui/button";
-import Counter from "@components/common/counter";
 import { useCart } from "@contexts/cart/cart.context";
-import { ProductAttributes } from "@components/product/product-attributes";
 import { generateCartItem } from "@utils/generate-cart-item";
 import usePrice from "@framework/product/use-price";
 import { getVariations } from "@framework/utils/get-variations";
-import { useTranslation } from "next-i18next";
-import BrandCard from "@components/common/brand-card";
-import BestSellerProductFeed from "./feeds/best-seller-product-feed";
+import CardQueridinhos from "./card-queridinhos";
+import { Product } from "../../framework/basic-rest/types"
 
 export default function ProductPopup() {
 	const dispatch = useAppDispatch();
 
 	const showCaseProducts = useAppSelector((state) => state.getShowCaseProducts.data)
 	const { isLoading, error } = useAppSelector((state) => state.getShowCaseProducts)
-	
+
 	useEffect(() => {
-		dispatch(getShowCaseProducts({pps: 5}))
-	},[])
+		dispatch(getShowCaseProducts({ pps: 5 }))
+	}, [])
 
 	const {
 		modalData: { data },
@@ -45,15 +41,15 @@ export default function ProductPopup() {
 	});
 	const variations = getVariations(data.variations);
 
-	const { 
-		slug, 
-		image, 
-		productName, 
-		shortDescription, 
-		thumbnail, 
-		brand, 
-		state, 
-		stateProduct, 
+	const {
+		slug,
+		image,
+		productName,
+		shortDescription,
+		thumbnail,
+		brand,
+		state,
+		stateProduct,
 		relatedTags,
 		size,
 		colors,
@@ -65,9 +61,9 @@ export default function ProductPopup() {
 
 	const isSelected = !isEmpty(variations)
 		? !isEmpty(attributes) &&
-		  Object.keys(variations).every((variation) =>
-				attributes.hasOwnProperty(variation)
-		  )
+		Object.keys(variations).every((variation) =>
+			attributes.hasOwnProperty(variation)
+		)
 		: true;
 
 	function addToCart() {
@@ -129,9 +125,9 @@ export default function ProductPopup() {
 							<h2 className="text-heading text-center text-lg md:text-xl lg:text-2xl font-semibold">
 								{productName}
 							</h2>
-							<div className='px-8 py-2 rounded-full border text-black border-black border-opacity-100'>{state ?? stateProduct }</div>
+							<div className='px-12 py-2 rounded-full border text-black border-black border-opacity-100'>{state ?? stateProduct}</div>
 						</div>
-{/* 						<p className="text-sm leading-6 md:text-body md:leading-7">
+						{/* 						<p className="text-sm leading-6 md:text-body md:leading-7">
 							{shortDescription}
 						</p> */}
 
@@ -147,10 +143,10 @@ export default function ProductPopup() {
 							)}
 						</div>
 					</div>
-					<div className='flex-wrap flex justify-between gap-2 py-4'>
+					<div className='flex-wrap flex gap-2 py-4'>
 						{relatedTags.map((item: string, index: number) => {
 							return (
-								<div key={`${index}--related-tags-favorites-home`} className='p-2 px-4 rounded-full border border-black text-center text-black'>
+								<div key={`${index}--related-tags-favorites-home`} className='p-2 px-8 rounded-full border border-black text-center text-black'>
 									{item}
 								</div>
 							)
@@ -178,10 +174,10 @@ export default function ProductPopup() {
 					</div>
 					<button className='my-2 py-3 bg-black font-bold text-xl text-white w-3/4 rounded-md'>Visitar Site</button>
 					<button className='flex items-center justify-center gap-10 text-lg my-4 bg-white text-black border border-black w-3/4 py-3 rounded-md'>
-						<Image height='25px' width='25px' src='/assets/images/products/products-pop-up/heart.svg' alt='Imagem de um coração para adicionar produto aos favoritos'/>
+						<Image height='25px' width='25px' src='/assets/images/products/products-pop-up/heart.svg' alt='Imagem de um coração para adicionar produto aos favoritos' />
 						Adicionar aos Favoritos
 					</button>
-					
+
 					<div className='border mt-5 w-3/4 shadow-cart text-black overflow-scroll h-1/5 p-2'>
 						<p className='text-md'>Descrição do Produto</p>
 						<p className='text-xs'>{productDescription}</p>
@@ -190,12 +186,27 @@ export default function ProductPopup() {
 					</div>
 				</div>
 			</div>
-			<div className='bg-blue-200 p-8'>
-				<h1 className=' text-black text-xl font-bold'><u>Produtos Similares</u></h1>
-				<div>
-					{similar?.map((item: any) => (
-						<div>{item.discount}</div>
-					))}
+			<div className=' p-8'>
+				<h1 className='mb-4 text-black text-xl font-bold'><u>Produtos Similares</u></h1>
+				<div className='flex flex-wrap  gap-5' >
+					{similar && (
+						similar?.map((item: Product) => {
+							console.log(item)
+							return (
+								<div className='flex justify-center'>
+									<CardQueridinhos
+										key={item.id}
+										product={item}
+										imgWidth={250}
+										imgHeight={240}
+										variant="grid"
+									/>
+								</div>
+							)
+						}))}
+					{isEmpty(similar) && (
+						<div>Não há produtos similares pra exibir</div>
+					)}
 				</div>
 			</div>
 		</div>
