@@ -58,7 +58,10 @@ export default function ProductPopup() {
 		size,
 		colors,
 		productDescription,
+		similar,
 	} = data;
+
+	console.log('Achei o similar', similar)
 
 	const isSelected = !isEmpty(variations)
 		? !isEmpty(attributes) &&
@@ -103,9 +106,9 @@ export default function ProductPopup() {
 
 	return (
 		<div className="rounded-lg bg-white w-full px-8">
-			<div className='text-black text-3xl font-black flex items-center justify-center p-20'>{brand.title}</div>
-			<div className="bg-lar flex flex-col lg:flex-row w-full md:w-[650px] lg:w-[960px] mx-auto ">
-				<div className="bg-red-200 p-8 flex-shrink-0 flex items-start justify-center w-full lg:w-430px max-h-430px lg:max-h-full overflow-hidden bg-transparent">
+			<div className='text-black text-3xl font-black flex items-center justify-center'>{brand.title}</div>
+			<div className=" p-8 flex gap-20 flex-col lg:flex-row w-full md:w-[650px] lg:w-[1200px] mx-auto ">
+				<div className="flex-1 flex-shrink-0 flex items-start justify-center w-full lg:w-430px max-h-430px lg:max-h-full overflow-hidden bg-transparent">
 					<img
 						src={
 							thumbnail ??
@@ -116,17 +119,17 @@ export default function ProductPopup() {
 					/>
 				</div>
 
-				<div className="bg-red-100' flex-1 flex-col px-8 justify-center items-center w-full">
+				<div className=" flex-col justify-center items-center flex-1">
 					<div className="pb-5 bg-white">
 						<div
-							className="bg-facebook flex items-center justify-between mx-auto"
+							className="flex items-center justify-between"
 							onClick={navigateToProductPage}
 							role="button"
 						>
-							<h2 className="text-heading text-lg md:text-xl lg:text-2xl font-semibold">
+							<h2 className="text-heading text-center text-lg md:text-xl lg:text-2xl font-semibold">
 								{productName}
 							</h2>
-							<div className='mx-4  px-8 py-2 rounded-full border text-black border-black border-opacity-100'>{state ?? stateProduct }</div>
+							<div className='px-8 py-2 rounded-full border text-black border-black border-opacity-100'>{state ?? stateProduct }</div>
 						</div>
 {/* 						<p className="text-sm leading-6 md:text-body md:leading-7">
 							{shortDescription}
@@ -144,7 +147,7 @@ export default function ProductPopup() {
 							)}
 						</div>
 					</div>
-					<div className='flex-wrap flex justify-center gap-2 py-4'>
+					<div className='flex-wrap flex justify-between gap-2 py-4'>
 						{relatedTags.map((item: string, index: number) => {
 							return (
 								<div key={`${index}--related-tags-favorites-home`} className='p-2 px-4 rounded-full border border-black text-center text-black'>
@@ -190,9 +193,9 @@ export default function ProductPopup() {
 			<div className='bg-blue-200 p-8'>
 				<h1 className=' text-black text-xl font-bold'><u>Produtos Similares</u></h1>
 				<div>
-{/* 					{showCaseProducts?.map((brand: any, id) => (
-						<BestSellerProductFeed key={`${id}--pop-products-home`} data={brand} isLoading={isLoading} error={error} />
-					))} */}
+					{similar?.map((item: any) => (
+						<div>{item.discount}</div>
+					))}
 				</div>
 			</div>
 		</div>
