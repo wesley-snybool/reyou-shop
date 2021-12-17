@@ -5,7 +5,7 @@ import { BASE_URL, SHOW_CASE } from '../../services/baseUrl'
 import { data } from 'jquery';
 import { Attachment, Brand, Category } from '@framework/types';
 
-type TypeProducts = {
+export type TypeProducts = {
     productname: string,
     id?: number | string;
     thumbnail?: string;
@@ -32,6 +32,27 @@ type TypeProducts = {
     brand?: Brand;
     manufacturer?: string;
     discount?: string;
+    similar: {
+        colors: [];
+        discount?: number;
+        favorite?: boolean;
+        lastUpdate?: string;
+        netPrice?: number;
+        onlineSince?: string;
+        percDiscount?: number;
+        price?: number;
+        productDescription?: string;
+        productName?: string;
+        purchaseInfo?: string;
+        relatedTags?: [];
+        shortDescription?: string;
+        similar?: []
+        size?: []
+        sustainableValues?: []
+        thumbnail?: string;
+        uid?: string;
+        urlSource?: string;
+    }
 }
 
 type TypeFecth = {

@@ -26,7 +26,7 @@ type DivElementRef = React.MutableRefObject<HTMLDivElement>;
 
 // variant based classes for modal root, container & close btn
 const rootClasses = {
-	center: "p-4 md:p-5",
+	center: "p-4 md:px-20",
 	bottom: "p-5 pb-0",
 };
 const containerClasses = {
@@ -77,32 +77,34 @@ const Modal: FC<ModalProps> = ({
 						exit="from"
 						variants={fadeInOut(0.25)}
 						className={cn(
-							"modal-root fixed bg-black bg-opacity-70 inset-0 z-50",
+							"modal-root fixed bg-black bg-opacity-70 inset-0 z-50 ",
 							useBlurBackdrop && "backdrop-filter backdrop-blur-sm",
 							rootClasses[variant],
 							rootClassName
 						)}
 					>
-						<button
-							onClick={onClose}
-							aria-label="Close panel"
-							className={cn(
-								"fixed z-10 inline-flex items-center justify-center w-7 h-7 md:w-8 md:h-8 rounded-full bg-white shadow text-gray-600 transition duration-200 focus:outline-none focus:text-gray-800 focus:shadow-md hover:text-gray-800 hover:shadow-md",
-								closeBtnClasses[variant]
-							)}
-						>
-							<IoClose className="text-xl" />
-						</button>
 						<motion.div
 							initial="from"
 							animate="to"
 							exit="from"
 							variants={zoomOutIn()}
-							className="relative h-full mx-auto w-full"
+							className="relative bg-white h-full mx-auto w-full"
 						>
+							<div className='flex justify-end py-4 px-8'>
+								<button
+									onClick={onClose}
+									aria-label="Close panel"
+									className={cn(
+										"shadow-header inline-flex items-center justify-center w-7 h-7 md:w-8 md:h-8 rounded-full bg-white shadow text-gray-600 transition duration-200 focus:outline-none focus:text-gray-800 focus:shadow-md hover:text-gray-800 hover:shadow-md",
+										closeBtnClasses[variant]
+									)}
+								>
+									<IoClose className="text-xl" />
+								</button>
+							</div>
 							<div
 								className={cn(
-									"w-full md:w-auto absolute left-1/2 transform -translate-x-1/2 shadow-xl",
+									"w-full md:w-full absolute left-1/2 transform -translate-x-1/2 shadow-xl",
 									containerClasses[variant],
 									containerClassName
 								)}

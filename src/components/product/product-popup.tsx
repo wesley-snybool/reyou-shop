@@ -102,10 +102,10 @@ export default function ProductPopup() {
 	}
 
 	return (
-		<div className="rounded-lg bg-white">
+		<div className="rounded-lg bg-white w-full px-8">
 			<div className='text-black text-3xl font-black flex items-center justify-center p-20'>{brand.title}</div>
 			<div className="bg-lar flex flex-col lg:flex-row w-full md:w-[650px] lg:w-[960px] mx-auto ">
-				<div className="bg-blue-100 flex-shrink-0 flex items-start justify-center w-full lg:w-430px max-h-430px lg:max-h-full overflow-hidden bg-transparent">
+				<div className="bg-red-200 p-8 flex-shrink-0 flex items-start justify-center w-full lg:w-430px max-h-430px lg:max-h-full overflow-hidden bg-transparent">
 					<img
 						src={
 							thumbnail ??
@@ -116,14 +116,14 @@ export default function ProductPopup() {
 					/>
 				</div>
 
-				<div className="bg-blue-200 flex flex-col items-start w-full px-8">
-					<div className="pb-5 bg-lar">
+				<div className="bg-red-100' flex-1 flex-col px-8 justify-center items-center w-full">
+					<div className="pb-5 bg-white">
 						<div
 							className="bg-facebook flex items-center justify-between mx-auto"
 							onClick={navigateToProductPage}
 							role="button"
 						>
-							<h2 className=" text-heading text-lg md:text-xl lg:text-2xl font-semibold">
+							<h2 className="text-heading text-lg md:text-xl lg:text-2xl font-semibold">
 								{productName}
 							</h2>
 							<div className='mx-4  px-8 py-2 rounded-full border text-black border-black border-opacity-100'>{state ?? stateProduct }</div>
@@ -154,10 +154,10 @@ export default function ProductPopup() {
 						})}
 					</div>
 					<div className='text-left  flex flex-col justify-start  text-black mt-2'>
-						<p>Última atualização de informação: 3 horas atrás</p>
-						<p>Online desde 31/08/2021 às 22:00</p>
+						<p className='text-sm'>Última atualização de informação: 3 horas atrás</p>
+						<p className='text-xs'>Online desde 31/08/2021 às 22:00</p>
 					</div>
-					<div className=' text-black flex justify-start gap-4 items-center  mt-4'>Tamanhos Disponíveis
+					<div className='text-sm text-black flex justify-start gap-4 items-center  mt-4'>Tamanhos Disponíveis
 						{size.map((item: string, index: number) => {
 							return (
 								<div className='p-1 rounded-sm border border-black text-black' key={`${index}--size-product`}>{item}</div>
@@ -179,7 +179,7 @@ export default function ProductPopup() {
 						Adicionar aos Favoritos
 					</button>
 					
-					<div className='border mt-5 shadow-cart text-black overflow-scroll h-1/5 p-2'>
+					<div className='border mt-5 w-3/4 shadow-cart text-black overflow-scroll h-1/5 p-2'>
 						<p className='text-md'>Descrição do Produto</p>
 						<p className='text-xs'>{productDescription}</p>
 						<p className='text-md'>Valores Sustentáveis</p>
