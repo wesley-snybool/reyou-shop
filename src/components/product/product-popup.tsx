@@ -191,7 +191,6 @@ export default function ProductPopup() {
 				<div className='flex flex-wrap  gap-5' >
 					{similar && (
 						similar?.map((item: Product) => {
-							console.log(item)
 							return (
 								<div className='flex justify-center'>
 									<CardQueridinhos

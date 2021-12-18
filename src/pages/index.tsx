@@ -38,6 +38,7 @@ import { getNews } from 'src/redux/modules/news/news';
 import { getConfig } from 'src/redux/modules/config-portal/config-portal';
 import { getBlogs } from 'src/redux/modules/blogs/blogs';
 import { getShowCaseProducts } from 'src/redux/modules/show-case/showCase';
+import { getFlipCard } from 'src/redux/modules/flip-cards/getFlipCardSlice';
 
 type BlogsType = {
 	image: string;
@@ -63,6 +64,9 @@ export default function Home() {
 	const { isLoading: isLoadDNews, error: errorNews } = useAppSelector((state) => state.getNews)
 	const dataNews = useAppSelector((state) => state.getNews.data)
 
+	//Bsucando os dados dos FlipsCards e guardando no reduxjs
+	const dataFlips = useAppSelector((state) => state.getFlipCardsData);
+	
 	const dataBlogs = useAppSelector((state) => state.getBlogs.data)
 
 	const dataBrands = useAppSelector((state) => state.getNews?.data)
@@ -82,6 +86,7 @@ export default function Home() {
 		dispatch(getReyouFavorites());
 		dispatch(getNews())
 		dispatch(getBlogs())
+		dispatch(getFlipCard())
 	}, [])
 
 
