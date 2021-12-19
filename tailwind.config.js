@@ -54,7 +54,11 @@ module.exports = {
 					200: '#f2cc8f'
 				},
 				lar: '#e07a5f',
-
+				more_content: '#EBEDEF',
+				button_read: '#c4c4c4',
+				card_read_more: '#E5E5E5',
+				more_content_opacity: 'rgba(235, 237, 239, 0.52)',
+				card_imprensa: 'rgba(196, 196, 196, 0.21)',
 			},
 			screens: {
 				sm: "480px",

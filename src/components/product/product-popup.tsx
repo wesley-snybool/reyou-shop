@@ -104,7 +104,7 @@ export default function ProductPopup() {
 		<div className="rounded-lg bg-white w-full px-8">
 			<div className='text-black text-3xl font-black flex items-center justify-center'>{brand.title}</div>
 			<div className=" p-8 flex gap-20 flex-col lg:flex-row w-full md:w-[650px] lg:w-[1200px] mx-auto ">
-				<div className=" bg-blue-200 flex-1 flex-shrink-0 flex items-start justify-center w-full lg:w-430px max-h-430px lg:max-h-full overflow-hidden bg-transparent">
+				<div className=" flex-1 flex-shrink-0 flex items-start justify-center w-full lg:w-430px max-h-430px lg:max-h-full overflow-hidden bg-transparent">
 					<img
 						src={
 							thumbnail ??

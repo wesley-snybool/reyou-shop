@@ -143,18 +143,18 @@ export default function Home() {
 						</button>
 					</Link>
 				</div>
-				<Container className='bg-gray-900 pb-16 shadow-cardMoreContent'>
+				<Container className='bg-more_content pb-16 shadow-cardMoreContent'>
 					<div>
 						<p className='font-bold text-black text-xl py-12 text-center'>MAIS CONTEÚDO PRA VOCÊ</p>
 					</div>
 					<div className='flex gap-10'>
 						{dataBlogs.map((item: BlogsType, index) => {
 							return (
-								<div key={index} className='pb-4 shadow-cardMoreContent bg-gray-200 flex items-center flex-col'>
+								<div key={index} className='bg-card_read_more pb-4 shadow-cardMoreContent card_read_more flex items-center flex-col'>
 									<Image className='my-8' src={item.image} width={450} height={350} />
-									<span className='my-4 font-bold text-black'>{item.title}</span>
+									<span className='uppercase my-4 font-bold text-black'>{item.title}</span>
 									<p className='m-4 text-center text-black'>{item.text}</p>
-									<button className='text-black font-bold w-40 p-4 bg-gray-300 my-4 shadow-header rounded-full focus:outline-none hover:bg-gray-400 hover:text-white transition-all '>Leia Mais</button>
+									<button className='text-black font-bold w-40 p-4 bg-button_read my-4 shadow-header rounded-full focus:outline-none hover:bg-gray-400 hover:text-white transition-all '>Leia Mais</button>
 								</div>
 							)
 						})}
@@ -166,15 +166,15 @@ export default function Home() {
 						<p className='font-bold text-black text-xl py-12 text-center'>Re.You na IMPRENSA</p>
 					</div>
 					<div className='flex gap-10'>
-						<div className='w-2/6 p-12 text-black shadow-cardMoreContent bg-gray-200 flex items-center justify-center flex-col'>
-							<span className='my-4  font-bold '>22/07/2021 - Nota da Re.YOU ao GreenPeace</span>
+						<div className='w-2/6 p-12 text-black bg-card_imprensa flex items-center justify-center flex-col'>
+							<span className='my-4 text-center font-bold '>22/07/2021 - Nota da Re.YOU ao GreenPeace</span>
 							<p className='m-4 text-center'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo laudantium vel distinctio culpa aspernatur quasi. Doloremque ut nobis, optio cumque illo explicabo autem culpa facilis temporibus esse minus iure eligendi!</p>
 						</div>
-						<div className='w-2/6 p-12 text-black shadow-cardMoreContent  bg-gray-200 flex justify-center items-center flex-col'>
+						<div className='w-2/6 p-12 text-center text-black  bg-card_imprensa flex justify-center items-center flex-col'>
 							<span className='font-bold my-4 '>22/07/2021 - Globo reconhece Re.YOU como a plataforma de Moda Sustentável mais rentável do Brasil</span>
 							<p className='m-4 text-center'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo laudantium vel distinctio culpa aspernatur quasi. Doloremque ut nobis, optio cumque illo explicabo autem culpa facilis temporibus esse minus iure eligendi!</p>
 						</div>
-						<div className=' w-2/6 p-12 text-black shadow-cardMoreContent  bg-gray-200 flex justify-center items-center flex-col'>
+						<div className=' w-2/6 p-12 text-black text-center bg-card_imprensa flex justify-center items-center flex-col'>
 							<span className=' font-bold my-4 '>21/07/2021 - CNN entrevista equipe Re.YOU em noite descontraída</span>
 							<iframe src='https://www.youtube.com/embed/E7wJTI-1dvQ'
 								frameBorder='0'
