@@ -127,7 +127,7 @@ const CardVitrine: FC<ProductProps> = ({
 						</del>
 					)}
 				</div>
-				<div className="text-black my-4 w-16 border rounded-full  px-16 border-black py-2 flex align-center justify-center">{product.state}</div>
+				<div className="text-black my-4 w-16 border rounded-full  px-16 border-black py-2 flex align-center justify-center">{product.stateProduct}</div>
 				<div className='mb-4 text-black' >Marca: {product.manufacturer}</div>
 				<div className=' text-black'>Vendido por {product.brand?.title}</div>
 			</div>
