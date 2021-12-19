@@ -65,7 +65,7 @@ export default function Home() {
 	const dataNews = useAppSelector((state) => state.getNews.data)
 
 	//Bsucando os dados dos FlipsCards e guardando no reduxjs
-	const dataFlips = useAppSelector((state) => state.getFlipCardsData);
+	const dataFlips = useAppSelector((state) => state.getFlipCardsData.data);
 	
 	const dataBlogs = useAppSelector((state) => state.getBlogs.data)
 
@@ -100,13 +100,11 @@ export default function Home() {
 					<h2 className="mb-8 text-black">Comece selecionando quais causas que te movem</h2>
 				</div>
 				<div className="container-main-flip-card ">
-					<div className="itemFirstLineOne"><FlipCard imageOne={img_flipscards[0].image.desktop.url} imageTwo={img_flipscards[0].image.desktop.url} /></div>
-					<div className="itemFirstLineTwo"><FlipCard heightImage={465} imageOne={img_flipscards[2].image.desktop.url} imageTwo={img_flipscards[2].image.desktop.url} /></div>
-				</div>
-				<div className="container-main-flip-card-inter-Grid">
-					<div className="itemLastLineOne"><FlipCard heightImage={865} imageOne={img_flipscards[1].image.desktop.url} imageTwo={img_flipscards[1].image.desktop.url} /></div>
-					<div className="itemLastLineTwo"><FlipCard heightImage={865} imageOne={img_flipscards[3].image.desktop.url} imageTwo={img_flipscards[1].image.desktop.url} /></div>
-					<div className="itemLastLineThre"><FlipCard heightImage={435} imageOne={img_flipscards[5].image.desktop.url} imageTwo={img_flipscards[1].image.desktop.url} /></div>
+					{dataFlips.map((item: any, index: number) => {
+						return (
+							<div><FlipCard widthImage={item.image.desktop.width} heightImage={item.image.desktop.height} titleFlip={item.title} options={item.options} key={`${index}--flips--cards`} imageOne={item.image.desktop.url} /></div>
+						)
+					})}
 				</div>
 			</Container>
 			<div className="w-full flex justify-center p-4 mb-5">

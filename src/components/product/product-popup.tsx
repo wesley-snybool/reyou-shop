@@ -104,21 +104,21 @@ export default function ProductPopup() {
 		<div className="rounded-lg bg-white w-full px-8">
 			<div className='text-black text-3xl font-black flex items-center justify-center'>{brand.title}</div>
 			<div className=" p-8 flex gap-20 flex-col lg:flex-row w-full md:w-[650px] lg:w-[1200px] mx-auto ">
-				<div className="flex-1 flex-shrink-0 flex items-start justify-center w-full lg:w-430px max-h-430px lg:max-h-full overflow-hidden bg-transparent">
+				<div className=" bg-blue-200 flex-1 flex-shrink-0 flex items-start justify-center w-full lg:w-430px max-h-430px lg:max-h-full overflow-hidden bg-transparent">
 					<img
 						src={
 							thumbnail ??
 							"/assets/placeholder/products/product-thumbnail.svg"
 						}
 						alt={productName}
-						className="lg:w-full scale-50"
+						className="lg:w-full h-full scale-50"
 					/>
 				</div>
 
 				<div className=" flex-col justify-center items-center flex-1">
-					<div className="pb-5 bg-white">
+					<div className="pb-5">
 						<div
-							className="flex items-center justify-between"
+							className="flex items-center gap-8"
 							onClick={navigateToProductPage}
 							role="button"
 						>
