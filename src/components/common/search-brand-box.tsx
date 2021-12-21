@@ -10,10 +10,11 @@ type SearchProps = {
 	onChange: (e: React.FormEvent<HTMLInputElement>) => void;
 	name: string;
 	value: string;
+	place: string;
 };
 
 const SearchBrandBox = React.forwardRef<HTMLInputElement, SearchProps>(
-	({ className, onSubmit, onClear, ...rest }, ref) => {
+	({ className, onSubmit, onClear, place, ...rest }, ref) => {
 		const { t } = useTranslation("forms");
 		return (
 			<form
@@ -29,7 +30,7 @@ const SearchBrandBox = React.forwardRef<HTMLInputElement, SearchProps>(
 					<input
 						id="search"
 						className="text-heading outline-none w-full h-10 lg:h-14 placeholder-gray-400 text-sm lg:text-base"
-						placeholder={t("placeholder-search")}
+						placeholder={place}
 						aria-label="Search"
 						autoComplete="off"
 						ref={ref}

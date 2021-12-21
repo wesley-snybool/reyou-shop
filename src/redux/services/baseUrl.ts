@@ -29,5 +29,8 @@ export const STATE_PRODUCTS = '/portal/geral/states-product'
 
 export const CATEGORY_PRODUCTS = '/portal/geral/categories'
 
+export const BRANDS = '/portal/brands'
+
+export const MATERIALS = '/portal/geral/materials'
 
 

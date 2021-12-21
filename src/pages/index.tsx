@@ -39,6 +39,7 @@ import { getConfig } from 'src/redux/modules/config-portal/config-portal';
 import { getBlogs } from 'src/redux/modules/blogs/blogs';
 import { getShowCaseProducts } from 'src/redux/modules/show-case/showCase';
 import { getFlipCard } from 'src/redux/modules/flip-cards/getFlipCardSlice';
+import { getBrands } from 'src/redux/modules/brands/brands';
 
 type BlogsType = {
 	image: string;

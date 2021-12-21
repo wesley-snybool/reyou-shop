@@ -12,6 +12,7 @@ type TypeBrandsProps = {
 	uid: string;
 	manufacturer: string;
 	title: string;
+	name?: string;
 }
 
 type TypesBrand = {
@@ -19,12 +20,12 @@ type TypesBrand = {
 	showSearchBrand?: boolean;
 }
 
-export const SearchBrands: FC<TypesBrand> = ({ brands, showSearchBrand }) => {
+export const SearchMaterials: FC<TypesBrand> = ({ brands, showSearchBrand }) => {
 	const [filterBrand, setFilterBrand] = useState<string[]>([]);
 
 	useEffect(() => {
 		dispatch(addFilterBrand(filterBrand))
-
+		
 	},[filterBrand])
 
 	const handleAddFilterBrand = (uid: string) => {
@@ -35,6 +36,7 @@ export const SearchBrands: FC<TypesBrand> = ({ brands, showSearchBrand }) => {
 	}
 
 	const [valueText, setValuetext] = useState<string>('')
+
 	const ref = useRef<HTMLInputElement>(null);
 
 
@@ -65,7 +67,7 @@ export const SearchBrands: FC<TypesBrand> = ({ brands, showSearchBrand }) => {
 	}, [query?.price]);
 	function handleItemClick(e: React.FormEvent<HTMLInputElement>): void {
 		const { value } = e.currentTarget;
-		console.log(value, 'Consolou Aqui')
+
 		let currentFormState = formState.includes(value)
 			? formState.filter((i) => i !== value)
 			: [...formState, value];
@@ -92,20 +94,20 @@ export const SearchBrands: FC<TypesBrand> = ({ brands, showSearchBrand }) => {
 	return (
 		<>
 			{showSearchBrand && (
-				<div className=" mb-20 block shadow-searchs border-b border-gray-500 pb-7 mb-7  h-4/5">
+				<div className=" block shadow-searchs border-b border-gray-500 pb-7 mb-7  h-4/5">
 					<div className=" flex justify-between">
 						<h3 className="text-heading px-4 text-sm md:text-base font-semibold mb-7">
-							Marcas
+							Materiais
 						</h3>
 					</div>
 					<div className="mt-2 flex flex-col items-center w-full">
-						<div className=' p-4'>
-							<SearchBrandBox place={'Pesquisar Marcas'} onSubmit={() => { }} name={valueText} value={valueText} onClear={() => setValuetext('')} onChange={handleChange} />
+						<div className='p-4'>
+							<SearchBrandBox place='Pesquisar Materiais' onSubmit={() => { }} name={valueText} value={valueText} onClear={() => setValuetext('')} onChange={handleChange} />
 						</div>
 						<div className="brands-box flex flex-col w-full overflow-scroll p-4">
 							{brands?.map((item: TypeBrandsProps, uid: string) => {
 								return (
-									<span onClick={() => handleAddFilterBrand(item.uid)} className="w-full hover:bg-gray-300  p-2 rounded-md text-black" key={uid}>{item.title}</span>
+									<span onClick={() => handleAddFilterBrand(item.uid)} className="w-full hover:bg-gray-300  p-2 rounded-md text-black" key={uid}>{item.name}</span>
 								)
 							})}
 						</div>

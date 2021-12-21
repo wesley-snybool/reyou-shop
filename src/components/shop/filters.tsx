@@ -13,6 +13,9 @@ import { SearchBrands } from "./search-brands";
 import SearchBox from 'src/components/search-box2'
 import { useAppSelector } from "src/redux/hooks/selectors";
 import { useAppDispatch } from "src/redux/store/store";
+import { SearchMaterials } from './search-materials'
+import { getBrands } from "src/redux/modules/brands/brands";
+import { getMaterials } from "src/redux/modules/materials/materials";
 
 type TypeBrandsProps = {
 	showSearchBrand?: boolean;
@@ -20,9 +23,17 @@ type TypeBrandsProps = {
 
 
 export const ShopFilters: React.FC<TypeBrandsProps> = ({ showSearchBrand }) => {
-	const dispatch = useAppDispatch();
 	
-	const data = useAppSelector((state) => state.getShowCaseProducts.data)
+	const dispatch = useAppDispatch();
+
+	useEffect(() => {
+		dispatch(getBrands());
+		dispatch(getMaterials());
+	},[])
+	
+	const data = useAppSelector((state) => state.brands.data)
+
+	const dataMaterials = useAppSelector((state) => state.materials.data)
 	
 	const valueSearch = useAppSelector((state) => state.filters.ftr_universe)
 	const valueSearchSplit = valueSearch?.map((item) => item.split('-'));
@@ -75,7 +86,7 @@ export const ShopFilters: React.FC<TypeBrandsProps> = ({ showSearchBrand }) => {
 			<Category />
 			<TypeItems />
 			<SearchBrands showSearchBrand={showSearchBrand} brands={data} />
-			{/* <ColorFilter /> */}
+			<SearchMaterials showSearchBrand={showSearchBrand} brands={dataMaterials}/>
 		</div>
 	);
 };

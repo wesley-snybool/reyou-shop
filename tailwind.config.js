@@ -103,6 +103,7 @@ module.exports = {
 			subMenu: "1px 2px 3px rgba(0, 0, 0, 0.08)",
 			bottomNavigation: "0 -2px 3px rgba(0, 0, 0, 0.06)",
 			cookies: "0 -2px 3px rgba(0, 0, 0, 0.04)",
+			searchs: "3px 3px 3px 3px rgba(0, 0, 0, 0.04)",
 		},
 		fontFamily: {
 			body: ["'Open Sans', sans-serif"],
