@@ -5,16 +5,17 @@ import { FaFacebookF } from "react-icons/fa";
 import { IoLogoInstagram } from "react-icons/io5";
 import { AiFillTwitterCircle } from "react-icons/ai";
 import { useAppSelector } from "src/redux/hooks/selectors";
-const { widgets, payment } = footer;
+import { useRouter } from "next/router";
 
 const Footer: React.FC = () => {
 
+  const history = useRouter();
   const { data } = useAppSelector((state) => state.getConfig)
   
   return (
     <footer className='bg-black flex w-full p-8'>
       <div className='text-gray-400 flex flex-col w-3/6 items-center justify-center'>
-        <button className='btn mb-10'>SOBRE A Re.YOU</button>
+        <button onClick={() => history.push('/sobre-nos')} className='btn mb-10'>SOBRE A Re.YOU</button>
         <div>
           <h1 className='text-gray-400' >Re.YOU EMPRESA DE TECNOLOGIA</h1>
           <h2 className='text-gray-400'>Cnpj: 123456789101112</h2>
