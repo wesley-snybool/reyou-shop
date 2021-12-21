@@ -9,6 +9,7 @@ type Option = {
 };
 
 export default function ListBox({ options }: { options: Option[] }) {
+	
 	const { t } = useTranslation("common");
 	const router = useRouter();
 	const { pathname, query } = router;
@@ -22,19 +23,7 @@ export default function ListBox({ options }: { options: Option[] }) {
 	function handleItemClick(values: Option) {
 		setSelectedItem(values);
 		const { sort_by, ...restQuery } = query;
-		router.push(
-			{
-				pathname,
-				query: {
-					...restQuery,
-					...(values.value !== options[0].value
-						? { sort_by: values.value }
-						: {}),
-				},
-			},
-			undefined,
-			{ scroll: false }
-		);
+		
 	}
 
 	return (

@@ -57,7 +57,7 @@ export const TypeItems = () => {
 						key={index}
 						label={item.name}
 						name={item.name.toLowerCase()}
-						checked={true}
+						checked={stateQuery.includes(item.code)}
 						value={item.code}
 						onChange={handleItemClick}
 					/>

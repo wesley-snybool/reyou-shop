@@ -32,6 +32,9 @@ export const filterSlice = createSlice({
         },
         removeAllfilters (state){
             return state
+        },
+        returnAllFilters (state){
+            return state;
         }
     }
 })

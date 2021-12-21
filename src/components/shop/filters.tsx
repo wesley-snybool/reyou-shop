@@ -18,10 +18,19 @@ type TypeBrandsProps = {
 	showSearchBrand?: boolean;
 }
 
-export const ShopFilters: React.FC<TypeBrandsProps> = ({showSearchBrand}) => {
-	const dispatch = useAppDispatch();
 
-	const data = useAppSelector((state) => state.getShowCaseProducts.data)	
+export const ShopFilters: React.FC<TypeBrandsProps> = ({ showSearchBrand }) => {
+	const dispatch = useAppDispatch();
+	
+	const data = useAppSelector((state) => state.getShowCaseProducts.data)
+	
+	const valueSearch = useAppSelector((state) => state.filters.ftr_universe)
+	const valueSearchSplit = valueSearch?.map((item) => item.split('-'));
+	console.log(valueSearchSplit, 'Removendo o hífen');
+	
+	useEffect(() => {
+	
+	},[valueSearch])
 
 	const router = useRouter();
 
@@ -47,19 +56,16 @@ export const ShopFilters: React.FC<TypeBrandsProps> = ({showSearchBrand}) => {
 					</button>
 				</div>
 				<div className="flex flex-wrap -m-1.5 pt-2">
-					{!isEmpty(query) &&
-						Object.values(query)
-							.join(",")
-							.split(",")
-							.map((v, idx) => (
-								<FilteredItem
-									itemKey={
-										Object.keys(query).find((k) => query[k]?.includes(v))!
-									}
-									itemValue={v}
-									key={idx}
-								/>
-							))}
+					{valueSearchSplit?.map((item: any, index: number) => {
+
+						return (
+							<FilteredItem
+								itemKey={`${item}--valueSearchkey`}
+								itemValue={`${item }`}
+								key={`${item}--valueSearchkey`}
+							/>
+						)
+					})}
 				</div>
 			</div>
 
