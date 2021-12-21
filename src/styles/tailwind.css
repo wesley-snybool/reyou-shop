@@ -124,6 +124,11 @@
 		height: 680px;
 	}
 
+	.card_morecontent {
+		width: 410.97px;
+		height: 533px;
+	}
+
 	.cardFlipBack {
 		position: absolute;
 		background-color: lightgrey;
