@@ -148,12 +148,12 @@ export default function Home() {
 					<div>
 						<p className='font-bold text-black text-xl py-12 text-center'>MAIS CONTEÚDO PRA VOCÊ</p>
 					</div>
-					<div className='flex justify-between'>
+					<div className='flex justify-between xs:flex-col'>
 						{dataBlogs.map((item: BlogsType, index) => {
 							return (
-								<div key={index} className='card_morecontent bg-card_read_more pb-4 shadow-cardMoreContent card_read_more flex items-center flex-col'>
+								<div key={index} className='sm:w-[150px] md:w-[280px] lg:w-[410px] bg-card_read_more pb-4 shadow-cardMoreContent card_read_more flex items-center flex-col'>
 									<Image className='my-8' src={item.image} width={450} height={350} />
-									<span className='uppercase my-4 font-bold text-black'>{item.title}</span>
+									<span className='uppercase text-center my-4 font-bold text-black'>{item.title}</span>
 									<p className='m-4 text-center text-black'>{item.text}</p>
 									<button className='text-black font-bold w-40 p-4 bg-button_read my-4 shadow-header rounded-full focus:outline-none hover:bg-gray-400 hover:text-white transition-all '>Leia Mais</button>
 								</div>
