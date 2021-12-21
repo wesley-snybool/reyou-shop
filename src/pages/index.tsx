@@ -148,10 +148,10 @@ export default function Home() {
 					<div>
 						<p className='font-bold text-black text-xl py-12 text-center'>MAIS CONTEÚDO PRA VOCÊ</p>
 					</div>
-					<div className='flex justify-between xs:flex-col'>
+					<div className='flex justify-between xs:flex-col lg:gap-10'>
 						{dataBlogs.map((item: BlogsType, index) => {
 							return (
-								<div key={index} className='sm:w-[150px] md:w-[280px] lg:w-[410px] bg-card_read_more pb-4 shadow-cardMoreContent card_read_more flex items-center flex-col'>
+								<div key={index} className=' sm:w-[150px] md:w-[280px] lg:w-[410px] bg-card_read_more pb-4 shadow-cardMoreContent card_read_more flex items-center flex-col'>
 									<Image className='my-8' src={item.image} width={450} height={350} />
 									<span className='uppercase text-center my-4 font-bold text-black'>{item.title}</span>
 									<p className='m-4 text-center text-black'>{item.text}</p>
