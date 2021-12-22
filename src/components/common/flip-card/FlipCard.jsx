@@ -50,8 +50,6 @@ function FlipCard(props) {
         <div
           onMouseEnter={handleClick}
           style={{
-            width: '100%',
-            height: '250px',
             color: "#fff",
             display: "flex",
             justifyContent: "center",
@@ -59,15 +57,13 @@ function FlipCard(props) {
             minWidth: '250px',
           }}
         >
-          <div className='h-full'>
+          <div className='p-1  flex items-center '>
             <Image height={heightImage ? heightImage : 400} width={widthImage ? widthImage : 1200} src={imageOne} /></div>
         </div>
 
         <div
           className='relative'
           style={{
-            width: '100%',
-            height: '250px',
             color: "#fff",
             display: "flex",
             justifyContent: "center",
@@ -75,7 +71,7 @@ function FlipCard(props) {
             minWidth: '250px',
           }}
         >
-          <div className='component-back-flip-cards h-full'>
+          <div className='component-back-flip-cards '>
             <Image layout='fixed' height={heightImage ? heightImage : 400} width={widthImage ? widthImage : 1200} src={imageOne} />
           </div>
           <div className="cardFlipBack p-2 flex items-center flex-col">
