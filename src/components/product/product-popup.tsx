@@ -111,7 +111,7 @@ export default function ProductPopup() {
 							"/assets/placeholder/products/product-thumbnail.svg"
 						}
 						alt={productName}
-						className="lg:w-full h-full scale-50"
+						className="md:w-full lg:w-full h-full scale-50"
 					/>
 				</div>
 
