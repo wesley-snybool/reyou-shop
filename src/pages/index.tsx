@@ -107,7 +107,7 @@ export default function Home() {
 				<div className="container-main-flip-card">
 					{dataFlips.map((item: any, index: number) => {
 						return (
-							<FlipCard widthImage={item.image.desktop.width} heightImage={item.image.desktop.height} titleFlip={item.title} options={item.options} key={`${index}--flips--cards`} imageOne={item.image.desktop.url} />
+							<FlipCard widthImage={item.image.desktop.width} heightImage={310} titleFlip={item.title} options={item.options} key={`${index}--flips--cards`} imageOne={item.image.desktop.url} />
 						)
 					})}
 				</div>
