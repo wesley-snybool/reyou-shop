@@ -39,6 +39,8 @@ const dataBanners = useAppSelector((state) => state.getBanner.data)
 						key={`banner--key-${banner?.id}`}
 					>
 						<BannerCard
+							width={1419}
+							height={616}
 							banner={banner}
 						/>
 					</SwiperSlide>

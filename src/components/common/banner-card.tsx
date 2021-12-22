@@ -11,6 +11,8 @@ interface BannerProps {
 	effectActive?: boolean;
 	className?: string;
 	classNameInner?: string;
+	width: number;
+	height: number;
 }
 
 function getImage(deviceWidth: number, imgObj: any) {
@@ -23,8 +25,10 @@ const BannerCard: FC<BannerProps> = ({
 	variant = "rounded",
 	effectActive = false,
 	classNameInner,
+	width,
+	height,
 }) => {
-	const { width } = useWindowSize();
+
 	const { title, image } = banner;
 	return (
 		<div className={cn("mx-auto", className)}>
@@ -37,8 +41,8 @@ const BannerCard: FC<BannerProps> = ({
 			>
 				<Image
 					src={image?.desktop?.url || '/'}
-					width={1419}
-					height={616}
+					width={width}
+					height={height}
 					alt={title}
 					quality={100}
 					className={cn("bg-gray-300 md:mx-8 object-cover w-full", {
