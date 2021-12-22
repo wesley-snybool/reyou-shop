@@ -32,7 +32,6 @@ const BannerCarouselBlock: React.FC<BannerProps> = ({
 					<SwiperSlide key={`promotion-banner-key-${banner?.id}`}>
 						<BannerCard
 							banner={banner}
-							href={`${ROUTES.COLLECTIONS}/${banner.slug}`}
 							effectActive={true}
 						/>
 					</SwiperSlide>

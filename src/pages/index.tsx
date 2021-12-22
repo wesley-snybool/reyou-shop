@@ -41,6 +41,7 @@ import { getShowCaseProducts } from 'src/redux/modules/show-case/showCase';
 import { getFlipCard } from 'src/redux/modules/flip-cards/getFlipCardSlice';
 import { getBrands } from 'src/redux/modules/brands/brands';
 import { getBanner } from 'src/redux/modules/banners/getBannerSlice';
+import { getPublicity } from 'src/redux/modules/publicity/publicitySlice';
 
 type BlogsType = {
 	image: string;
@@ -90,6 +91,7 @@ export default function Home() {
 		dispatch(getBlogs())
 		dispatch(getFlipCard())
 		dispatch(getBanner())
+		dispatch(getPublicity())
 	}, [])
 
 
@@ -102,7 +104,7 @@ export default function Home() {
 					<strong className="mb-8"> Que tal associar valores às suas compras?</strong>
 					<h2 className="mb-8 text-black">Comece selecionando quais causas que te movem</h2>
 				</div>
-				<div className="container-main-flip-card ">
+				<div className="container-main-flip-card">
 					{dataFlips.map((item: any, index: number) => {
 						return (
 							<div><FlipCard widthImage={item.image.desktop.width} heightImage={item.image.desktop.height} titleFlip={item.title} options={item.options} key={`${index}--flips--cards`} imageOne={item.image.desktop.url} /></div>

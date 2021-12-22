@@ -36,7 +36,7 @@ const BannerCard: FC<BannerProps> = ({
 				)}
 			>
 				<Image
-					src={image.desktop.url}
+					src={image?.desktop?.url || '/'}
 					width={1419}
 					height={616}
 					alt={title}
