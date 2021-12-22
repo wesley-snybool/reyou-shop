@@ -54,11 +54,11 @@ function FlipCard(props) {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            minWidth: '250px',
           }}
         >
-          <div className='p-1  flex items-center '>
-            <Image height={heightImage ? heightImage : 400} width={widthImage ? widthImage : 1200} src={imageOne} /></div>
+          <div className=' flex items-center justify-center'>
+            <Image className='shrink' layout='intrinsic' height={heightImage} width={widthImage} src={imageOne} />
+          </div>
         </div>
 
         <div
@@ -68,11 +68,10 @@ function FlipCard(props) {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            minWidth: '250px',
           }}
         >
-          <div className='component-back-flip-cards '>
-            <Image layout='fixed' height={heightImage ? heightImage : 400} width={widthImage ? widthImage : 1200} src={imageOne} />
+          <div className='component-back-flip-cards'>
+            <Image height={heightImage} width={widthImage} src={imageOne} />
           </div>
           <div className="cardFlipBack p-2 flex items-center flex-col">
             <h3>{titleFlip}</h3>
