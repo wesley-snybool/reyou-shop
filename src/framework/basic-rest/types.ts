@@ -156,3 +156,22 @@ export type Order = {
   shipping_fee: number;
   payment_gateway: string;
 };
+
+
+export type TypeBannerHome = {
+  id: number,
+  title: string,
+  slug: string,
+  image: {
+      mobile: {
+          url: string,
+          width: number,
+          height: number,
+      },
+      desktop: {
+          url: string,
+          width: number,
+          height: number,
+      },
+  },
+}

@@ -40,6 +40,7 @@ import { getBlogs } from 'src/redux/modules/blogs/blogs';
 import { getShowCaseProducts } from 'src/redux/modules/show-case/showCase';
 import { getFlipCard } from 'src/redux/modules/flip-cards/getFlipCardSlice';
 import { getBrands } from 'src/redux/modules/brands/brands';
+import { getBanner } from 'src/redux/modules/banners/getBannerSlice';
 
 type BlogsType = {
 	image: string;
@@ -88,6 +89,7 @@ export default function Home() {
 		dispatch(getNews())
 		dispatch(getBlogs())
 		dispatch(getFlipCard())
+		dispatch(getBanner())
 	}, [])
 
 

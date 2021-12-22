@@ -4,6 +4,8 @@ import { homeOneHeroBanner as banners } from "@framework/static/banner";
 import { useWindowSize } from "@utils/use-window-size";
 import { ROUTES } from "@utils/routes";
 import { SwiperSlide } from "swiper/react";
+import { useAppSelector } from "src/redux/hooks/selectors";
+import { TypeBannerHome } from '../../src/framework/basic-rest/types'
 
 const breakpoints = {
 	"1500": {
@@ -15,6 +17,9 @@ const breakpoints = {
 };
 
 const HeroBlock: React.FC = () => {
+
+const dataBanners = useAppSelector((state) => state.getBanner.data)
+
 	const { width } = useWindowSize();
 	return (
 		<div className="heroBannerOne relative max-w-[1920px] mb-5 md:mb-12 lg:mb-14 2xl:mb-16 mx-auto overflow-hidden px-2">
@@ -28,14 +33,13 @@ const HeroBlock: React.FC = () => {
 					clickable: true,
 				}}
 			>
-				{banners?.map((banner: any) => (
+				{dataBanners?.map((banner: TypeBannerHome) => (
 					<SwiperSlide
 						className="carouselItem px-0 2xl:px-3.5"
 						key={`banner--key-${banner?.id}`}
 					>
 						<BannerCard
 							banner={banner}
-							href={`${ROUTES.COLLECTIONS}/${banner.slug}`}
 						/>
 					</SwiperSlide>
 				))}

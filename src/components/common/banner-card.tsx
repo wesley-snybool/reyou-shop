@@ -3,15 +3,14 @@ import Image from "next/image";
 import type { FC } from "react";
 import { useWindowSize } from "@utils/use-window-size";
 import cn from "classnames";
-import { LinkProps } from "next/link";
+import { TypeBannerHome } from '../../framework/basic-rest/types'
 
 interface BannerProps {
-	banner: any;
+	banner: TypeBannerHome;
 	variant?: "rounded" | "default";
 	effectActive?: boolean;
 	className?: string;
 	classNameInner?: string;
-	href: LinkProps["href"];
 }
 
 function getImage(deviceWidth: number, imgObj: any) {
@@ -24,24 +23,22 @@ const BannerCard: FC<BannerProps> = ({
 	variant = "rounded",
 	effectActive = false,
 	classNameInner,
-	href,
 }) => {
 	const { width } = useWindowSize();
 	const { title, image } = banner;
-	const selectedImage = getImage(width, image);
 	return (
 		<div className={cn("mx-auto", className)}>
 			<Link
-				href={href}
+				href={'/'}
 				className={cn(
 					"h-full group flex justify-center relative overflow-hidden",
 					classNameInner
 				)}
 			>
 				<Image
-					src={selectedImage.url}
-					width={selectedImage.width}
-					height={selectedImage.height}
+					src={image.desktop.url}
+					width={1419}
+					height={616}
 					alt={title}
 					quality={100}
 					className={cn("bg-gray-300 md:mx-8 object-cover w-full", {
