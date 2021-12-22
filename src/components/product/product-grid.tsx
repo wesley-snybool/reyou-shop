@@ -7,7 +7,6 @@ import { useRouter } from "next/router";
 import ProductFeedLoader from "@components/ui/loaders/product-feed-loader";
 import { useTranslation } from "next-i18next";
 import { useAppSelector } from "src/redux/hooks/selectors";
-import { Product } from 'src/framework/basic-rest/types';
 import { useDispatch } from "react-redux";
 import { getShowCaseProducts } from "src/redux/modules/show-case/showCase";
 import { useAppDispatch } from "src/redux/store/store";
@@ -15,6 +14,7 @@ import { addCategoryFilter } from 'src/redux/modules/filters/load-more/loadMore'
 import { getStateProducts } from "src/redux/modules/state-products/state_products";
 import { getCategoryProducts } from "src/redux/modules/category/category_products";
 import { getTypesItems } from "src/redux/modules/types-items/typesItems";
+import { Product } from "@framework/types";
 
 interface ProductGridProps {
 	className?: string;
@@ -72,11 +72,11 @@ export const ProductGrid: FC<ProductGridProps> = ({ className = "" }) => {
 				{errorCards.error_status && !isLoadCards && !dataCards.length ? (
 					<ProductFeedLoader limit={20} uniqueKey="search-product" />
 				) : (
-					dataCards.map((product, index) => {
+					dataCards.map((product: any) => {
 						return (
 							<CardVitrine
 								key={`product--key${product.id}`}
-								product={dataCards[index] as Product}
+								product={product}
 								variant="grid"
 							/>
 						);

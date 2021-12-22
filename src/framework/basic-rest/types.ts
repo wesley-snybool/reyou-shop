@@ -110,7 +110,9 @@ export type Tag = {
 };
 export type Product = {
   id?: number | string;
-  thumbnail?: string;
+  imageThumb: {
+    url: string;
+  }
   name?: string;
   tags: string;
   productName?: string;

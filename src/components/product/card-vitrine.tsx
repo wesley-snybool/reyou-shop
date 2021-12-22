@@ -69,7 +69,7 @@ const CardVitrine: FC<ProductProps> = ({
 				)}
 			>
 				<Image
-					src={product.thumbnail ?? placeholderImage}
+					src={product.imageThumb.url ?? placeholderImage}
 					width={imgWidth}
 					height={imgHeight}
 					loading={imgLoading}
