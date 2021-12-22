@@ -46,7 +46,7 @@ export default function ProductPopup() {
 		image,
 		productName,
 		shortDescription,
-		thumbnail,
+		imageMedium,
 		brand,
 		state,
 		stateProduct,
@@ -107,7 +107,7 @@ export default function ProductPopup() {
 				<div className=" flex-1 flex-shrink-0 flex items-start justify-center w-full lg:w-430px max-h-430px lg:max-h-full overflow-hidden bg-transparent">
 					<img
 						src={
-							thumbnail ??
+							imageMedium?.url ??
 							"/assets/placeholder/products/product-thumbnail.svg"
 						}
 						alt={productName}
