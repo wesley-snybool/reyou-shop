@@ -34,7 +34,7 @@ export const ProductGrid: FC<ProductGridProps> = ({ className = "" }) => {
 	const ftr_state_products = useAppSelector((state) => state.filters.ftr_state)
 	
 	useEffect(() => {
-		dispatch(getShowCaseProducts({pps: loader, pc: 1 , ftr_universe, ftr_state_products, ftr_category, ftr_typeItem }));
+		dispatch(getShowCaseProducts({pps: 20, pc: 1 , ftr_universe, ftr_state_products, ftr_category, ftr_typeItem }));
 		dispatch(getStateProducts());
 		dispatch(getCategoryProducts());
 		dispatch(getTypesItems());
@@ -43,7 +43,7 @@ export const ProductGrid: FC<ProductGridProps> = ({ className = "" }) => {
 
 
 	const loadMore = () => {
-		dispatch(addCategoryFilter(5));
+		dispatch(addCategoryFilter(10));
 	}
 
 

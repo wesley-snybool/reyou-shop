@@ -20,7 +20,7 @@ export default function ProductPopup() {
 	const { isLoading, error } = useAppSelector((state) => state.getShowCaseProducts)
 
 	useEffect(() => {
-		dispatch(getShowCaseProducts({ pps: 5 }))
+		dispatch(getShowCaseProducts({ pps: 50 }))
 	}, [])
 
 	const {
@@ -161,10 +161,10 @@ export default function ProductPopup() {
 						})}
 					</div>
 					<div className=' text-black flex wrap justify-start gap-4 items-center my-6'>Cores
-						{colors.map((item: string, index: number) => {
+						{colors.map((item: any, index: number) => {
 							return (
 								<div key={`${index}--item--colors--code`} className='p-1 border border-gray-300 rounded' >
-									<div className={`bg-${item}${item === 'black' ? '' : '-500'} font-body text-xs p-3 rounded-sm  h-2 w-2 flex items-center justify-center text-black`} key={`${item}--${index}--colors--product`}></div>
+									<div className={`bg-${item.code}${item.code === 'black' ? '' : '-500'} font-body text-xs p-3 rounded-sm  h-2 w-2 flex items-center justify-center text-black`} key={`${item}--${index}--colors--product`}></div>
 								</div>
 							)
 						})}
