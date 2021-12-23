@@ -121,7 +121,7 @@ const CardVitrine: FC<ProductProps> = ({
 					}`}
 				>
 					<span className="inline-block">{`R$ ${product.price},00`}</span>
-					{!product.discount && (
+					{!!product.discount && (
 						<del className="sm:text-base font-normal text-gray-800">
 							{product.discount}
 						</del>

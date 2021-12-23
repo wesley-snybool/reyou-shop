@@ -120,7 +120,7 @@ const CardQueridinhos: FC<ProductProps> = ({
 					}`}
 				>
 					<span className="inline-block">{product.price}</span>
-					{!product.discount && (
+					{!!product.discount && (
 						<del className="sm:text-base font-normal text-gray-800">
 							{product.discount}
 						</del>
