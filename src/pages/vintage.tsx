@@ -37,7 +37,6 @@ export default function Home() {
 				/>
 				<BannerCard
 					banner={banner[0]}
-					href={`${ROUTES.COLLECTIONS}/${banner[0].slug}`}
 					className="mb-11 md:mb-12 lg:mb-14 2xl:mb-16"
 				/>
 				<ProductsFeatured
@@ -46,7 +45,6 @@ export default function Home() {
 				/>
 				<BannerCard
 					banner={banner[1]}
-					href={`${ROUTES.COLLECTIONS}/${banner[1].slug}`}
 					className="mb-11 md:mb-12 lg:mb-14 2xl:mb-16"
 				/>
 				<ProductsFlashSaleBlock date={"2023-03-01T01:02:03"} />
@@ -55,7 +53,6 @@ export default function Home() {
 				<NewArrivalsProductFeed />
 				<BannerCard
 					banner={banner[2]}
-					href={`${ROUTES.COLLECTIONS}/${banner[2].slug}`}
 					className="mb-12 lg:mb-14 xl:mb-16 pb-0.5 lg:pb-1 xl:pb-0"
 				/>
 				<CategoryGridBlock sectionHeading="text-featured-categories" />

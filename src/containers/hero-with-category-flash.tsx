@@ -44,7 +44,6 @@ const HeroWithCategoryFlash: React.FC<Props> = ({
 					<BannerCard
 						key={`banner--key${banner.id}`}
 						banner={banner}
-						href={`${ROUTES.COLLECTIONS}/${banner.slug}`}
 						className={banner.type === "large" ? "col-span-2" : "col-span-1"}
 					/>
 				))}

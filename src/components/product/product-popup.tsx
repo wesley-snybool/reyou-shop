@@ -57,8 +57,6 @@ export default function ProductPopup() {
 		similar,
 	} = data;
 
-	console.log('Achei o similar', similar)
-
 	const isSelected = !isEmpty(variations)
 		? !isEmpty(attributes) &&
 		Object.keys(variations).every((variation) =>

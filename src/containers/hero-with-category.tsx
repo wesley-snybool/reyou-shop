@@ -93,7 +93,6 @@ const HeroWithCategory: React.FC<Props> = ({
 						<SwiperSlide key={`banner--key${banner.id}`}>
 							<BannerCard
 								banner={banner}
-								href={`${ROUTES.COLLECTIONS}/${banner.slug}`}
 								className="xl:h-full"
 							/>
 						</SwiperSlide>

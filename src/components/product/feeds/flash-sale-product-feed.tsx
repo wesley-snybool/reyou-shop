@@ -56,7 +56,6 @@ const FlashSaleBlock: React.FC<Props> = ({
 			<BannerCard
 				key={`banner--key${banner.id}`}
 				banner={banner}
-				href={`${ROUTES.COLLECTIONS}/${banner.slug}`}
 				className="xl:h-full xl:col-span-2"
 				effectActive={true}
 			/>

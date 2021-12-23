@@ -53,7 +53,6 @@ export default function Home() {
 				<BrandGridBlock sectionHeading="text-top-brands" />
 				<BannerCard
 					banner={banner}
-					href={`${ROUTES.COLLECTIONS}/${banner.slug}`}
 					className="mb-11 md:mb-12 lg:mb-14 2xl:mb-16"
 					effectActive={true}
 				/>

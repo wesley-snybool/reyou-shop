@@ -37,7 +37,6 @@ const BannerSliderBlock: React.FC<BannerProps> = ({
 							<BannerCard
 								banner={banner}
 								effectActive={true}
-								href={`${ROUTES.COLLECTIONS}/${banner.slug}`}
 							/>
 						</SwiperSlide>
 					))}

@@ -11,8 +11,8 @@ interface BannerProps {
 	effectActive?: boolean;
 	className?: string;
 	classNameInner?: string;
-	width: number;
-	height: number;
+	width?: number;
+	height?: number;
 }
 
 function getImage(deviceWidth: number, imgObj: any) {
@@ -40,7 +40,7 @@ const BannerCard: FC<BannerProps> = ({
 				)}
 			>
 				<Image
-					src={image?.desktop?.url || '/'}
+					src={image?.desktop?.url || '/' as any}
 					width={width}
 					height={height}
 					alt={title}

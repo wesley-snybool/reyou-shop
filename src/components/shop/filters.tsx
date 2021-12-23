@@ -72,8 +72,8 @@ export const ShopFilters: React.FC<TypeBrandsProps> = ({ showSearchBrand }) => {
 						return (
 							<FilteredItem
 								itemKey={`${item}--valueSearchkey`}
-								itemValue={`${item }`}
-								key={`${item}--valueSearchkey`}
+								itemValue={`${item}`}
+								key={`${index}--valueSearchkey`}
 							/>
 						)
 					})}

@@ -37,7 +37,6 @@ const BannerGridBlock: React.FC<BannerProps> = ({
 							<SwiperSlide key={`banner--key${banner.id}`}>
 								<BannerCard
 									banner={banner}
-									href={`${ROUTES.COLLECTIONS}/${banner.slug}`}
 									className="h-full"
 								/>
 							</SwiperSlide>
@@ -50,7 +49,6 @@ const BannerGridBlock: React.FC<BannerProps> = ({
 						<BannerCard
 							key={`banner--key${banner.id}`}
 							banner={banner}
-							href={`${ROUTES.COLLECTIONS}/${banner.slug}`}
 							className={banner.type === "large" ? "col-span-2" : "col-span-1"}
 						/>
 					))}

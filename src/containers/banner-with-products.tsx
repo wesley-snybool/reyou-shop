@@ -37,14 +37,12 @@ const BannerWithProducts: React.FC<ProductsProps> = ({
 					{variant === "reverse" ? (
 						<BannerCard
 							banner={banner[1]}
-							href={`${ROUTES.COLLECTIONS}/${banner[1].slug}`}
 							className="hidden 3xl:block"
 							effectActive={true}
 						/>
 					) : (
 						<BannerCard
 							banner={banner[0]}
-							href={`${ROUTES.COLLECTIONS}/${banner[0].slug}`}
 							className="hidden 3xl:block"
 							effectActive={true}
 						/>
