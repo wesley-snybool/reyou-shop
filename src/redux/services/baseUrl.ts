@@ -19,7 +19,7 @@ export const BLOG_URL = '/portal/home/blogs'
 
 export const PRESS_URL = '/portal/home/imprensa'
 
-export const CONFIG_URL = '/portal/configuracoes'
+export const CONFIG_URL = '/portal/geral/company'
 
 export const SHOW_CASE = '/portal/vitrine'
 

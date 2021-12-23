@@ -114,7 +114,6 @@ export default function ProductPopup() {
 						className="md:w-full lg:w-full h-full scale-50"
 					/>
 				</div>
-
 				<div className=" flex-col justify-center items-center flex-1">
 					<div className="pb-5">
 						<div

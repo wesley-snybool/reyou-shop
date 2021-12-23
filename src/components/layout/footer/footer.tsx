@@ -10,16 +10,17 @@ import { useRouter } from "next/router";
 const Footer: React.FC = () => {
 
   const history = useRouter();
-  const { data } = useAppSelector((state) => state.getConfig)
+  const dataCompany: any = useAppSelector((state) => state.getConfig.data)
+  console.log(dataCompany, 'ocnifg aqui')
   
   return (
     <footer className='bg-black flex w-full p-8'>
       <div className='text-gray-400 flex flex-col w-3/6 items-center justify-center'>
         <button onClick={() => history.push('/sobre-nos')} className='btn mb-10'>SOBRE A Re.YOU</button>
         <div>
-          <h1 className='text-gray-400' >Re.YOU EMPRESA DE TECNOLOGIA</h1>
-          <h2 className='text-gray-400'>Cnpj: 123456789101112</h2>
-          <h3 className='text-gray-400'>contanto@reyoushop.com.br</h3>
+          <h1 className='text-gray-400' >{dataCompany?.companyName}</h1>
+          <h2 className='text-gray-400'>{dataCompany?.cnpj}</h2>
+          <h3 className='text-gray-400'>{dataCompany?.contactEmail}</h3>
         </div>
       </div>
       <div className='gap-6 text-gray-400 flex flex-col w-3/6 items-center justify-center'>

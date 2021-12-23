@@ -92,6 +92,7 @@ export default function Home() {
 		dispatch(getFlipCard())
 		dispatch(getBanner())
 		dispatch(getPublicity())
+		dispatch(getConfig())
 	}, [])
 
 
