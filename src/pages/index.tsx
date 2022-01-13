@@ -12,10 +12,7 @@ import { GetStaticProps } from "next";
 import { QueryClient } from "react-query";
 import { dehydrate } from "react-query/hydration";
 import { API_ENDPOINTS } from "@framework/utils/api-endpoints";
-import { fetchFlashSaleProducts } from "@framework/product/get-all-flash-sale-products";
 import { fetchCategories } from "@framework/category/get-all-categories";
-import { fetchBestSellerProducts } from "@framework/product/get-all-best-seller-products";
-import { fetchNewArrivalProducts } from "@framework/product/get-all-new-arrival-products";
 import { fetchBrands } from "@framework/brand/get-all-brands";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useEffect, useState } from "react";
@@ -211,22 +208,6 @@ Home.Layout = Layout;
 export const getStaticProps: GetStaticProps = async ({ locale }) => {
 	const queryClient = new QueryClient();
 
-	await queryClient.prefetchQuery(
-		[API_ENDPOINTS.FLASH_SALE_PRODUCTS, { limit: 10 }],
-		fetchFlashSaleProducts
-	);
-	await queryClient.prefetchQuery(
-		[API_ENDPOINTS.CATEGORIES, { limit: 10 }],
-		fetchCategories
-	);
-	await queryClient.prefetchQuery(
-		[API_ENDPOINTS.BEST_SELLER_PRODUCTS, { limit: 10 }],
-		fetchBestSellerProducts
-	);
-	await queryClient.prefetchQuery(
-		[API_ENDPOINTS.NEW_ARRIVAL_PRODUCTS, { limit: 10 }],
-		fetchNewArrivalProducts
-	);
 	await queryClient.prefetchQuery(
 		[API_ENDPOINTS.BRANDS, { limit: 6 }],
 		fetchBrands

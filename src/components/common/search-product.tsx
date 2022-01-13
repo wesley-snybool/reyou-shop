@@ -1,6 +1,5 @@
 import Link from "@components/ui/link";
 import Image from "next/image";
-import usePrice from "@framework/product/use-price";
 import { ROUTES } from "@utils/routes";
 
 type SearchProductProps = {
@@ -8,11 +7,7 @@ type SearchProductProps = {
 };
 
 const SearchProduct: React.FC<SearchProductProps> = ({ item }) => {
-	const { price, basePrice } = usePrice({
-		amount: item.sale_price ? item.sale_price : item.price,
-		baseAmount: item.price,
-		currencyCode: "BRL",
-	});
+
 	return (
 		<Link
 			href={`${ROUTES.PRODUCT}/${item?.slug}`}
@@ -33,8 +28,8 @@ const SearchProduct: React.FC<SearchProductProps> = ({ item }) => {
 			<div className="flex flex-col w-full overflow-hidden">
 				<h3 className="truncate text-sm text-heading mb-2">{item.name}</h3>
 				<div className="text-heading font-semibold text-sm">
-					{price}
-					<del className="ps-2 text-gray-400 font-normal">{basePrice}</del>
+					{'price'}
+					<del className="ps-2 text-gray-400 font-normal">{'basePrice'}</del>
 				</div>
 			</div>
 		</Link>

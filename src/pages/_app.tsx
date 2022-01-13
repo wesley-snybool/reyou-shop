@@ -3,12 +3,10 @@ import { useRouter } from "next/router";
 import { AnimatePresence } from "framer-motion";
 import { ManagedUIContext } from "@contexts/ui.context";
 import ManagedModal from "@components/common/modal/managed-modal";
-import ManagedDrawer from "@components/common/drawer/managed-drawer";
 import { useEffect, useRef } from "react";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { Hydrate } from "react-query/hydration";
 import { ToastContainer } from "react-toastify";
-// import { ReactQueryDevtools } from "react-query/devtools";
 import { appWithTranslation } from "next-i18next";
 import { DefaultSeo } from "@components/common/default-seo";
 
@@ -69,7 +67,6 @@ const CustomApp = ({ Component, pageProps }: AppProps) => {
 								<ToastContainer />
 							</Layout>
 							<ManagedModal />
-							<ManagedDrawer />
 						</ManagedUIContext>
 					</Hydrate>
 					{/* <ReactQueryDevtools /> */}

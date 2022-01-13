@@ -16,7 +16,6 @@ export const siteSettings = {
 		address: "",
 	},
 	logo: {
-		url: "/assets/images/Assinatura_Reyou.png",
 		alt: "Re.you Shop",
 		href: "/",
 		width: 120,

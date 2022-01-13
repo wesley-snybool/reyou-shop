@@ -1,20 +1,14 @@
-import ProductCard from "@components/product/product-card";
 import CardVitrine from '@components/product/card-vitrine'
 import Button from "@components/ui/button";
 import { FC, useEffect, useState } from "react";
-import { useProductsQuery } from "@framework/product/get-all-products";
-import { useRouter } from "next/router";
 import ProductFeedLoader from "@components/ui/loaders/product-feed-loader";
-import { useTranslation } from "next-i18next";
 import { useAppSelector } from "src/redux/hooks/selectors";
-import { useDispatch } from "react-redux";
 import { getShowCaseProducts } from "src/redux/modules/show-case/showCase";
 import { useAppDispatch } from "src/redux/store/store";
 import { addCategoryFilter } from 'src/redux/modules/filters/load-more/loadMore'
 import { getStateProducts } from "src/redux/modules/state-products/state_products";
 import { getCategoryProducts } from "src/redux/modules/category/category_products";
 import { getTypesItems } from "src/redux/modules/types-items/typesItems";
-import { Product } from "@framework/types";
 
 interface ProductGridProps {
 	className?: string;
@@ -46,20 +40,6 @@ export const ProductGrid: FC<ProductGridProps> = ({ className = "" }) => {
 		dispatch(addCategoryFilter(10));
 	}
 
-
-	const { query } = useRouter();
-	const {
-		isFetching: isLoading,
-		isFetchingNextPage: loadingMore,
-		fetchNextPage,
-		hasNextPage,
-		data,
-		error,
-	} = useProductsQuery({ limit: 10, ...query });
-	if (error) return <p>{error.message}</p>;
-
-	const { t } = useTranslation("common");
-
 	const { isLoading: isLoadCards, error: errorCards } = useAppSelector((state) => state.getShowCaseProducts)
 	
 	const dataCards = useAppSelector((state) => state?.getShowCaseProducts.data)
@@ -84,10 +64,10 @@ export const ProductGrid: FC<ProductGridProps> = ({ className = "" }) => {
 				)}
 			</div>
 			<div className="text-center pt-8 xl:pt-14">
-				{hasNextPage && (
+				{isLoadCards && (
 					<Button
-						loading={loadingMore}
-						disabled={loadingMore}
+						loading={isLoadCards}
+						disabled={isLoadCards}
 						onClick={loadMore}
 						variant="slim"
 						className="rounded-full"

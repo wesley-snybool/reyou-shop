@@ -3,7 +3,6 @@ import cn from "classnames";
 import SearchResultLoader from "@components/ui/loaders/search-result-loader";
 import { useUI } from "@contexts/ui.context";
 import SearchBox from "@components/common/search-box";
-import { useSearchQuery } from "@framework/product/use-search";
 import {
 	disableBodyScroll,
 	enableBodyScroll,
@@ -15,9 +14,6 @@ import SearchProduct from "@components/common/search-product";
 export default function Search() {
 	const { displaySearch, closeSearch } = useUI();
 	const [searchText, setSearchText] = React.useState("");
-	const { data, isLoading } = useSearchQuery({
-		text: searchText,
-	});
 
 	function handleSearch(e: React.SyntheticEvent) {
 		e.preventDefault();
@@ -76,7 +72,7 @@ export default function Search() {
 							<div className="bg-white flex flex-col rounded-md overflow-hidden h-full max-h-64vh lg:max-h-[550px]">
 								<Scrollbar className="os-host-flexbox">
 									<div className="h-full">
-										{isLoading ? (
+{/* 										{isLoading ? (
 											<div className="p-5 border-b border-gray-300 border-opacity-30 last:border-b-0">
 												{Array.from({ length: 5 }).map((_, idx) => (
 													<SearchResultLoader
@@ -94,7 +90,7 @@ export default function Search() {
 													<SearchProduct item={item} key={index} />
 												</div>
 											))
-										)}
+										)} */}
 									</div>
 								</Scrollbar>
 							</div>

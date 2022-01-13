@@ -8,7 +8,6 @@ import { ROUTES } from "@utils/routes";
 import { useUI } from "@contexts/ui.context";
 import { useCart } from "@contexts/cart/cart.context";
 import { generateCartItem } from "@utils/generate-cart-item";
-import usePrice from "@framework/product/use-price";
 import { getVariations } from "@framework/utils/get-variations";
 import CardQueridinhos from "./card-queridinhos";
 import { Product } from "../../framework/basic-rest/types"
@@ -34,11 +33,7 @@ export default function ProductPopup() {
 	const [attributes, setAttributes] = useState<{ [key: string]: string }>({});
 	const [viewCartBtn, setViewCartBtn] = useState<boolean>(false);
 	const [addToCartLoader, setAddToCartLoader] = useState<boolean>(false);
-	const { price, basePrice, discount } = usePrice({
-		amount: data.sale_price ? data.sale_price : data.price,
-		baseAmount: data.price,
-		currencyCode: "BRL",
-	});
+
 	const variations = getVariations(data.variations);
 
 	const {
@@ -130,14 +125,14 @@ export default function ProductPopup() {
 
 						<div className="flex items-center mt-8 ">
 							<div className="text-heading font-semibold text-base md:text-xl lg:text-2xl">
-								{price}
+								{'price'}
 							</div>
 							<div className='text-brand-popup-product text-black'>Vendido por <strong>{brand.title}</strong></div>
-							{discount && (
+							{/* {discount && (
 								<del className="font-segoe text-gray-400 text-base lg:text-xl ps-2.5 -mt-0.5 md:mt-0">
-									{basePrice}
+									{'basePrice'}
 								</del>
-							)}
+							)} */}
 						</div>
 					</div>
 					<div className='flex-wrap flex gap-2 py-4'>
