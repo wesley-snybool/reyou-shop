@@ -19,6 +19,7 @@ import getStateProductsSlice from '../modules/state-products/state_products'
 import getCategoryProductsSlice from '../modules/category/category_products'
 import getBrandsSlice from '../modules/brands/brands'
 import getMaterialsSlice from '../modules/materials/materials'
+import getMyUniverse from '../modules/my-universe/myUniverse'
 
 const store =  configureStore({
   reducer: {
@@ -41,6 +42,7 @@ const store =  configureStore({
     categoryProducts: getCategoryProductsSlice,
     brands: getBrandsSlice,
     materials: getMaterialsSlice,
+    universe: getMyUniverse,
   },
 })
 

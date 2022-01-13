@@ -28,6 +28,9 @@ export const filterSlice = createSlice({
         addFilterTypeItem: (state: FilterTypes, { payload }: PayloadAction<string[]>) => {
             return {...state, ftr_typeItem: payload}
         },
+        removeItemFilterMyUniverse: (state: FilterTypes, { payload }: PayloadAction<string[]>) => {
+            return {...state, ftr_universe: payload}
+        },
         addFilterBrand: (state: FilterTypes, { payload }: PayloadAction<string[]>) => {
             return {...state, ftr_brand: payload}
         },
@@ -50,6 +53,7 @@ export const {
     addFilterCategoryProduct,
     addFilterTypeItem,
     addFilterBrand,
+    removeItemFilterMyUniverse,
 } = filterSlice.actions;
 
 export const selectUser = (state: RootState) => state.userTest;

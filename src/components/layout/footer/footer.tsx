@@ -11,7 +11,6 @@ const Footer: React.FC = () => {
 
   const history = useRouter();
   const dataCompany: any = useAppSelector((state) => state.getConfig.data)
-  console.log(dataCompany, 'ocnifg aqui')
   
   return (
     <footer className='bg-black flex w-full p-8'>

@@ -1,6 +1,8 @@
 import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
 import { IoClose } from "react-icons/io5";
-import isEmpty from "lodash/isEmpty";
+import { useAppDispatch, useAppSelector } from "src/redux/hooks/selectors";
+import { addFilterUniverse, removeItemFilterMyUniverse } from "src/redux/modules/filters/filter/filter";
 
 interface Props {
 	itemKey: string;
@@ -8,21 +10,24 @@ interface Props {
 }
 
 export const FilteredItem = ({ itemKey, itemValue }: Props) => {
-	const router = useRouter();
-	const { pathname, query } = router;
+	const dispatch = useAppDispatch();
+
+	const [stateQuery, setStateQuery] = useState<string[]>([]);
+
+/* 	useEffect(() => {
+		dispatch(addFilterUniverse(stateQuery))
+	}, [stateQuery]) */
 
 	function handleClose() {
-		const currentItem = (query[itemKey]! as string)
-			.split(",")
-			.filter((i) => i !== itemValue);
-		delete query[itemKey];
-		router.push({
-			pathname,
-			query: {
-				...query,
-				...(!isEmpty(currentItem) ? { [itemKey]: currentItem.join(",") } : {}),
-			},
-		});
+/* 		const value = itemValue;
+		let newState = [...stateQuery]
+
+		if (newState.includes(value)) {
+			newState = newState.filter(e => e !== value)
+		} else {
+			newState.push(value)
+		}
+		setStateQuery(newState); */
 	}
 	return (
 		<div
@@ -34,3 +39,7 @@ export const FilteredItem = ({ itemKey, itemValue }: Props) => {
 		</div>
 	);
 };
+function dispatch(arg0: any) {
+	throw new Error("Function not implemented.");
+}
+

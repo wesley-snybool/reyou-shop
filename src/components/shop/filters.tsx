@@ -37,7 +37,6 @@ export const ShopFilters: React.FC<TypeBrandsProps> = ({ showSearchBrand }) => {
 	
 	const valueSearch = useAppSelector((state) => state.filters.ftr_universe)
 	const valueSearchSplit = valueSearch?.map((item) => item.split('-'));
-	console.log(valueSearchSplit, 'Removendo o hífen');
 	
 	useEffect(() => {
 	
@@ -68,7 +67,6 @@ export const ShopFilters: React.FC<TypeBrandsProps> = ({ showSearchBrand }) => {
 				</div>
 				<div className="flex flex-wrap -m-1.5 pt-2">
 					{valueSearchSplit?.map((item: any, index: number) => {
-
 						return (
 							<FilteredItem
 								itemKey={`${item}--valueSearchkey`}
