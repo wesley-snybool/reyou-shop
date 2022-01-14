@@ -13,11 +13,11 @@ import { DefaultSeo } from "@components/common/default-seo";
 import { Provider } from "react-redux";
 import store from '../redux/store/store'
 
-// Load Open Sans and satisfy typeface font
+// Load Open Sans and comfortaa typeface font
 import "@fontsource/open-sans";
 import "@fontsource/open-sans/600.css";
 import "@fontsource/open-sans/700.css";
-import "@fontsource/satisfy";
+import "@fontsource/comfortaa"
 // external
 import "react-toastify/dist/ReactToastify.css";
 // base css file

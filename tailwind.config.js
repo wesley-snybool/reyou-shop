@@ -107,9 +107,7 @@ module.exports = {
 			searchs: "3px 3px 3px 3px rgba(0, 0, 0, 0.04)",
 		},
 		fontFamily: {
-			body: ["'Open Sans', sans-serif"],
-			satisfy: ["'Satisfy', cursive"],
-			segoe: ["'Segoe UI', sans-serif"],
+			body: ["'Comfortaa'"],
 		},
 		fontWeight: {
 			hairline: 100,
