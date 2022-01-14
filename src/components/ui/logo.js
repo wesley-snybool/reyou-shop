@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "@components/ui/link";
 import cn from "classnames";
 import { siteSettings } from "@settings/site-settings";
-import logo from '../../../public/assets/images/logo-hey-you.svg'
+import logo from '../../../public/assets/images/logogrande.png'
 
 const Logo = ({...props}) => {
 
