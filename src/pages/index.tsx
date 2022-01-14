@@ -12,21 +12,14 @@ import { GetStaticProps } from "next";
 import { QueryClient } from "react-query";
 import { dehydrate } from "react-query/hydration";
 import { API_ENDPOINTS } from "@framework/utils/api-endpoints";
-import { fetchCategories } from "@framework/category/get-all-categories";
 import { fetchBrands } from "@framework/brand/get-all-brands";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import { useEffect, useState } from "react";
-import CategoryBlock from "@containers/category-block";
-import CategoryGridBlock from "@containers/category-grid-block";
+import { useEffect } from "react";
 import BrandGridBlock from "@containers/brand-grid-block";
-import BannerWithProducts from "@containers/banner-with-products";
-import Instagram from "@components/common/instagram";
 import Conceitos from "@containers/conceitos-block";
-import { homeThreeMasonryBanner as img_flipscards } from "@framework/static/banner";
 
 import FlipCard from "../components/common/flip-card/FlipCard";
 import { useAppSelector } from "src/redux/hooks/selectors";
-import { useAppDispatch } from "src/redux/store/store";
 import { useDispatch } from "react-redux";
 import { changeUser } from "src/redux/store/userSlice";
 import { getDarlingMoments } from "src/redux/modules/darlings-moment/darlingsMoments";
@@ -34,9 +27,7 @@ import { getReyouFavorites } from "src/redux/modules/reyou-favorites/reYouFavori
 import { getNews } from 'src/redux/modules/news/news';
 import { getConfig } from 'src/redux/modules/config-portal/config-portal';
 import { getBlogs } from 'src/redux/modules/blogs/blogs';
-import { getShowCaseProducts } from 'src/redux/modules/show-case/showCase';
 import { getFlipCard } from 'src/redux/modules/flip-cards/getFlipCardSlice';
-import { getBrands } from 'src/redux/modules/brands/brands';
 import { getBanner } from 'src/redux/modules/banners/getBannerSlice';
 import { getPublicity } from 'src/redux/modules/publicity/publicitySlice';
 
@@ -47,9 +38,7 @@ type BlogsType = {
 }
 
 export default function Home() {
-	const location = useRouter();
 	const dispatch = useDispatch();
-	const [filter, setFilter] = useState({ pc: 1, pps: 2 })
 
 
 	//Recuperando os dados da Sessão queridinhos do momentos no redux
@@ -59,10 +48,6 @@ export default function Home() {
 	//Recuperando os dados da Sessão queridinhos do momentos no redux
 	const { isLoading: isLoadDFavorites, error: errorFavorites } = useAppSelector((state) => state.getReyouFavorites)
 	const dataFavorites = useAppSelector((state) => state.getReyouFavorites.data)
-
-	//Recuperando os dados da Sessão Novidades na Re.You no redux
-	const { isLoading: isLoadDNews, error: errorNews } = useAppSelector((state) => state.getNews)
-	const dataNews = useAppSelector((state) => state.getNews.data)
 
 	//Bsucando os dados dos FlipsCards e guardando no reduxjs
 	const dataFlips = useAppSelector((state) => state.getFlipCardsData.data);
