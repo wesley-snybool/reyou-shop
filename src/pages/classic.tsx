@@ -13,7 +13,6 @@ import Instagram from "@components/common/instagram";
 import ProductsFeatured from "@containers/products-featured";
 import BannerSliderBlock from "@containers/banner-slider-block";
 import ExclusiveBlock from "@containers/exclusive-block";
-import ProductsFlashSaleBlock from "@containers/product-flash-sale-block";
 import Subscription from "@components/common/subscription";
 import { ROUTES } from "@utils/routes";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
@@ -46,7 +45,6 @@ export default function Home() {
 			</Container>
 			<BannerSliderBlock />
 			<Container>
-				<ProductsFlashSaleBlock date={"2023-03-01T01:02:03"} />
 			</Container>
 			<BannerBlock data={bannerDataTwo} />
 			<Container>

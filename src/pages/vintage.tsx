@@ -10,7 +10,6 @@ import Divider from "@components/ui/divider";
 import DownloadApps from "@components/common/download-apps";
 import Support from "@components/common/support";
 import Instagram from "@components/common/instagram";
-import ProductsFlashSaleBlock from "@containers/product-flash-sale-block";
 import ProductsFeatured from "@containers/products-featured";
 import BannerSliderBlock from "@containers/banner-slider-block";
 import ExclusiveBlock from "@containers/exclusive-block";
@@ -47,7 +46,6 @@ export default function Home() {
 					banner={banner[1]}
 					className="mb-11 md:mb-12 lg:mb-14 2xl:mb-16"
 				/>
-				<ProductsFlashSaleBlock date={"2023-03-01T01:02:03"} />
 				<BrandBlock sectionHeading="text-top-brands" />
 				<ExclusiveBlock />
 				<NewArrivalsProductFeed />

@@ -1,4 +1,3 @@
-import usePrice from "@framework/product/use-price";
 import { useCart } from "@contexts/cart/cart.context";
 import { CheckoutItem } from "@components/checkout/checkout-card-item";
 import { CheckoutCardFooterItem } from "./checkout-card-footer-item";
@@ -6,16 +5,12 @@ import { useTranslation } from "next-i18next";
 
 const CheckoutCard: React.FC = () => {
 	const { items, total, isEmpty } = useCart();
-	const { price: subtotal } = usePrice({
-		amount: total,
-		currencyCode: "BRL",
-	});
 	const { t } = useTranslation("common");
 	const checkoutFooter = [
 		{
 			id: 1,
 			name: t("text-sub-total"),
-			price: subtotal,
+			price: 74,
 		},
 		{
 			id: 2,
@@ -25,7 +20,7 @@ const CheckoutCard: React.FC = () => {
 		{
 			id: 3,
 			name: t("text-total"),
-			price: subtotal,
+			price: 52,
 		},
 	];
 	return (

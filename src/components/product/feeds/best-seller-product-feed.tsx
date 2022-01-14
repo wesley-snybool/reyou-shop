@@ -1,5 +1,4 @@
 import ProductsBlock from "@containers/products-block";
-import { useBestSellerProductsQuery } from "@framework/product/get-all-best-seller-products";
 import { useEffect } from "react";
 import { useAppSelector } from "src/redux/hooks/selectors";
 import { getDarlingMoments } from "src/redux/modules/darlings-moment/darlingsMoments";

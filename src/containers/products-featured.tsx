@@ -1,7 +1,7 @@
 import SectionHeader from "@components/common/section-header";
 import ProductOverlayCard from "@components/product/product-overlay-card";
-import { useFeaturedProductsQuery } from "@framework/product/get-all-featured-products";
 import Alert from "@components/ui/alert";
+import { useAppSelector } from "src/redux/hooks/selectors";
 
 interface ProductsProps {
 	sectionHeading: string;
@@ -16,9 +16,7 @@ const ProductsFeatured: React.FC<ProductsProps> = ({
 	className = "mb-12 md:mb-14 xl:mb-16",
 	variant = "left",
 }) => {
-	const { data, error } = useFeaturedProductsQuery({
-		limit: 10,
-	});
+	const { data, error } = useAppSelector((state) => state.getShowCaseProducts);
 
 	return (
 		<div className={className}>
@@ -27,11 +25,11 @@ const ProductsFeatured: React.FC<ProductsProps> = ({
 				categorySlug={categorySlug}
 			/>
 			{error ? (
-				<Alert message={error?.message} />
+				<Alert message={error?.error_message} />
 			) : (
 				<div className="">
 					<div className="grid grid-cols-4 grid-rows-2 gap-3 md:gap-5 xl:gap-7">
-						{data?.slice(0, 5).map((product, idx: number) => (
+						{data?.slice(0, 5).map((product: any, idx: number) => (
 							<ProductOverlayCard
 								key={`product--key${product.id}`}
 								product={product}

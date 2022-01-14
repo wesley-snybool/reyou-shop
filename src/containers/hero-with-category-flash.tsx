@@ -4,12 +4,12 @@ import SellWithProgress from "@components/common/sale-with-progress";
 import Carousel from "@components/ui/carousel/carousel";
 import { SwiperSlide } from "swiper/react";
 import { useCategoriesQuery } from "@framework/category/get-all-categories";
-import { useFlashSaleProductsQuery } from "@framework/product/get-all-flash-sale-products";
 import { useWindowSize } from "@utils/use-window-size";
 import { homeFourGridBanners as banners } from "@framework/static/banner";
 import CategoryListCardLoader from "@components/ui/loaders/category-list-card-loader";
 import { ROUTES } from "@utils/routes";
 import Alert from "@components/ui/alert";
+import { useAppSelector } from "src/redux/hooks/selectors";
 
 interface Props {
 	className?: string;
@@ -111,27 +111,25 @@ export function CategoryListCardSection() {
 // ProgressCard section
 export function SellWithProgressCardSection() {
 	const { width } = useWindowSize();
-	const { data, isLoading, error } = useFlashSaleProductsQuery({
-		limit: 10,
-	});
+	const { data, isLoading, error } = useAppSelector((state) => state.getShowCaseProducts)
 
 	return (
 		<>
 			{width < 1441 ? (
 				<SellWithProgress
-					products={data?.productFlashSellGridOne}
+					products={data}
 					className="col-span-full"
 					loading={isLoading}
-					error={error?.message}
+					error={error?.error_message}
 				/>
 			) : (
 				<SellWithProgress
-					products={data?.productFlashSellGridOne}
+					products={data}
 					productVariant="gridSlim"
 					loading={isLoading}
 					imgWidth={330}
 					imgHeight={425}
-					error={error?.message}
+					error={error.error_message}
 					className="col-span-full 2xl:col-span-2 2xl:row-auto xl:hidden 2xl:flex"
 				/>
 			)}

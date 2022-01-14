@@ -2,10 +2,10 @@ import BannerCard from "@components/common/banner-card";
 import SectionHeader from "@components/common/section-header";
 import ProductCard from "@components/product/product-card";
 import ProductCardListSmallLoader from "@components/ui/loaders/product-card-small-list-loader";
-import { useOnSellingProductsQuery } from "@framework/product/get-all-on-selling-products";
 import { homeThreeProductsBanner as banner } from "@framework/static/banner";
 import Alert from "@components/ui/alert";
 import { ROUTES } from "@utils/routes";
+import { useAppSelector } from "src/redux/hooks/selectors";
 
 interface ProductsProps {
 	sectionHeading: string;
@@ -20,9 +20,7 @@ const BannerWithProducts: React.FC<ProductsProps> = ({
 	variant = "default",
 	className = "mb-12 md:mb-14 xl:mb-16",
 }) => {
-	const { data, isLoading, error } = useOnSellingProductsQuery({
-		limit: 10,
-	});
+	const { data, isLoading, error } = useAppSelector((state) => state.getShowCaseProducts);
 
 	return (
 		<div className={className}>
@@ -31,7 +29,7 @@ const BannerWithProducts: React.FC<ProductsProps> = ({
 				categorySlug={categorySlug}
 			/>
 			{error ? (
-				<Alert message={error?.message} />
+				<Alert message={error?.error_message} />
 			) : (
 				<div className="grid grid-cols-4 gap-3 lg:gap-5 xl:gap-7">
 					{variant === "reverse" ? (
@@ -59,7 +57,7 @@ const BannerWithProducts: React.FC<ProductsProps> = ({
 										uniqueKey={`on-selling-${idx}`}
 									/>
 							  ))
-							: data?.map((product) => (
+							: data?.map((product: any) => (
 									<ProductCard
 										key={`product--key${product.id}`}
 										product={product}

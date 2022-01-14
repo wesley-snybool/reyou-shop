@@ -1,17 +1,15 @@
 import ProductsBlock from "@containers/products-block";
-import { useNewArrivalProductsQuery } from "@framework/product/get-all-new-arrival-products";
+import { useAppSelector } from "src/redux/hooks/selectors";
 
 export default function NewArrivalsProductFeed() {
-	const { data, isLoading, error } = useNewArrivalProductsQuery({
-		limit: 10,
-	});
+	const { data, isLoading, error } = useAppSelector((state) => state.getShowCaseProducts);
 
 	return (
 		<ProductsBlock
 			sectionHeading="text-new-arrivals"
-			products={data}
+			products={data as any}
 			loading={isLoading}
-			error={error?.message}
+			error={error.error_message}
 			uniqueKey="new-arrivals"
 			error_status={isLoading}
 		/>

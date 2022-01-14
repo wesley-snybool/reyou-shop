@@ -2,7 +2,6 @@ import cn from "classnames";
 import Image from "next/image";
 import type { FC } from "react";
 import { useUI } from "@contexts/ui.context";
-import usePrice from "@framework/product/use-price";
 import { Product } from "@framework/types";
 
 interface ProductProps {
@@ -28,11 +27,7 @@ const ProductCard: FC<ProductProps> = ({
 }) => {
 	const { openModal, setModalView, setModalData } = useUI();
 	const placeholderImage = `/assets/placeholder/products/product-${variant}.svg`;
-	const { price, basePrice, discount } = usePrice({
-		amount: product.sale_price ? product.sale_price : product.price,
-		baseAmount: product.price,
-		currencyCode: "BRL",
-	});
+
 	function handlePopupView() {
 		setModalData({ data: product });
 		setModalView("PRODUCT_VIEW");
@@ -121,12 +116,12 @@ const ProductCard: FC<ProductProps> = ({
 							: "sm:text-xl md:text-base lg:text-xl md:mt-2.5 2xl:mt-3"
 					}`}
 				>
-					<span className="inline-block">{price}</span>
-					{discount && (
+					<span className="inline-block">{'price'}</span>
+{/* 					{discount && (
 						<del className="sm:text-base font-normal text-gray-800">
-							{basePrice}
+							{'basePrice'}
 						</del>
-					)}
+					)} */}
 				</div>
 			</div>
 		</div>

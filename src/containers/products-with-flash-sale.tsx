@@ -2,10 +2,9 @@ import SellWithProgress from "@components/common/sale-with-progress";
 import SectionHeader from "@components/common/section-header";
 import ProductCard from "@components/product/product-card";
 import { useWindowSize } from "@utils/use-window-size";
-import { useFlashSaleProductsQuery } from "@framework/product/get-all-flash-sale-products";
-import { useTopSellerProductsQuery } from "@framework/product/get-all-top-seller-products";
 import ProductListFeedLoader from "@components/ui/loaders/product-list-feed-loader";
 import Alert from "@components/ui/alert";
+import { useAppSelector } from "src/redux/hooks/selectors";
 
 interface Props {
 	className?: string;
@@ -17,16 +16,7 @@ const ProductsWithFlashSale: React.FC<Props> = ({
 	carouselBreakpoint,
 }) => {
 	const { width } = useWindowSize();
-	const { data, isLoading, error } = useTopSellerProductsQuery({
-		limit: 10,
-	});
-
-	const {
-		data: flashSellProduct,
-		isLoading: flashSellProductLoading,
-	} = useFlashSaleProductsQuery({
-		limit: 10,
-	});
+	const { data, isLoading, error } = useAppSelector((state) => state.getShowCaseProducts);
 
 	return (
 		<div
@@ -39,11 +29,11 @@ const ProductsWithFlashSale: React.FC<Props> = ({
 				/>
 				<div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-5 xl:gap-7 xl:-mt-1.5 2xl:mt-0">
 					{error ? (
-						<Alert message={error?.message} />
+						<Alert message={error?.error_message} />
 					) : isLoading && !data?.length ? (
 						<ProductListFeedLoader limit={4} />
 					) : (
-						data?.map((product) => (
+						data?.map((product: any) => (
 							<ProductCard
 								key={`product--key${product.id}`}
 								product={product}
@@ -59,15 +49,15 @@ const ProductsWithFlashSale: React.FC<Props> = ({
 			{width < 1280 ? (
 				<SellWithProgress
 					carouselBreakpoint={carouselBreakpoint}
-					products={flashSellProduct?.productFlashSellGrid}
-					loading={flashSellProductLoading}
+					products={data as any}
+					loading={isLoading}
 					className="col-span-full xl:col-span-2 row-span-full xl:row-auto lg:mb-1 xl:mb-0"
 				/>
 			) : (
 				<SellWithProgress
 					carouselBreakpoint={carouselBreakpoint}
-					products={flashSellProduct?.productFlashSellGrid}
-					loading={flashSellProductLoading}
+					products={data}
+					loading={isLoading}
 					productVariant="gridSlim"
 					imgWidth={330}
 					imgHeight={330}

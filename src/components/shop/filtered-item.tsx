@@ -9,7 +9,7 @@ interface Props {
 	itemValue: string;
 }
 
-export const FilteredItem = ({ itemKey, itemValue }: Props) => {
+export const FilteredItem = ({ itemValue }: Props) => {
 	const dispatch = useAppDispatch();
 
 	const [stateQuery, setStateQuery] = useState<string[]>([]);
@@ -39,7 +39,4 @@ export const FilteredItem = ({ itemKey, itemValue }: Props) => {
 		</div>
 	);
 };
-function dispatch(arg0: any) {
-	throw new Error("Function not implemented.");
-}
 

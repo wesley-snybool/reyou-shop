@@ -2,7 +2,6 @@ import { IoCheckmarkCircle } from "react-icons/io5";
 import OrderDetails from "@components/order/order-details";
 import { useOrderQuery } from "@framework/order/get-order";
 import { useRouter } from "next/router";
-import usePrice from "@framework/product/use-price";
 import { useTranslation } from "next-i18next";
 
 export default function OrderInformation() {
@@ -11,12 +10,7 @@ export default function OrderInformation() {
 	} = useRouter();
 	const { t } = useTranslation("common");
 	const { data, isLoading } = useOrderQuery(id?.toString()!);
-	const { price: total } = usePrice(
-		data && {
-			amount: data.shipping_fee ? data.total + data.shipping_fee : data.total,
-			currencyCode: "BRL",
-		}
-	);
+
 	if (isLoading) return <p>Loading...</p>;
 	return (
 		<div className="xl:px-32 2xl:px-44 3xl:px-56 py-16 lg:py-20">
@@ -50,7 +44,7 @@ export default function OrderInformation() {
 					<span className="uppercase text-[11px] block text-body font-normal leading-5">
 						{t("text-total")}:
 					</span>
-					{total}
+					{'total'}
 				</li>
 				<li className="text-heading font-semibold text-base lg:text-lg border-b md:border-b-0 md:border-r border-dashed border-gray-300 px-4 lg:px-6 xl:px-8 py-4 md:py-5 lg:py-6 last:border-0">
 					<span className="uppercase text-[11px] block text-body font-normal leading-5">

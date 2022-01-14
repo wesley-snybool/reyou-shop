@@ -1,13 +1,9 @@
 import { useOrderQuery } from "@framework/order/get-order";
-import usePrice from "@framework/product/use-price";
 import { OrderItem } from "@framework/types";
 import { useRouter } from "next/router";
 import { useTranslation } from "next-i18next";
 const OrderItemCard = ({ product }: { product: OrderItem }) => {
-	const { price: itemTotal } = usePrice({
-		amount: product.price * product.quantity,
-		currencyCode: "BRL",
-	});
+
 	return (
 		<tr
 			className="border-b font-normal border-gray-300 last:border-b-0"
@@ -16,7 +12,7 @@ const OrderItemCard = ({ product }: { product: OrderItem }) => {
 			<td className="p-4">
 				{product.name} * {product.quantity}
 			</td>
-			<td className="p-4">{itemTotal}</td>
+			<td className="p-4">{'itemTotal'}</td>
 		</tr>
 	);
 };
@@ -28,26 +24,7 @@ const OrderDetails: React.FC<{ className?: string }> = ({
 	} = useRouter();
 	const { t } = useTranslation("common");
 	const { data: order, isLoading } = useOrderQuery(id?.toString()!);
-	const { price: subtotal } = usePrice(
-		order && {
-			amount: order.total,
-			currencyCode: "BRL",
-		}
-	);
-	const { price: total } = usePrice(
-		order && {
-			amount: order.shipping_fee
-				? order.total + order.shipping_fee
-				: order.total,
-			currencyCode: "BRL",
-		}
-	);
-	const { price: shipping } = usePrice(
-		order && {
-			amount: order.shipping_fee,
-			currencyCode: "BRL",
-		}
-	);
+	
 	if (isLoading) return <p>Loading...</p>;
 	return (
 		<div className={className}>
@@ -73,12 +50,12 @@ const OrderDetails: React.FC<{ className?: string }> = ({
 				<tfoot>
 					<tr className="odd:bg-gray-150">
 						<td className="p-4 italic">{t("text-sub-total")}:</td>
-						<td className="p-4">{subtotal}</td>
+						<td className="p-4">{'subtotal'}</td>
 					</tr>
 					<tr className="odd:bg-gray-150">
 						<td className="p-4 italic">{t("text-shipping")}:</td>
 						<td className="p-4">
-							{shipping}
+							{'shipping'}
 							<span className="text-[13px] font-normal ps-1.5 inline-block">
 								via Flat rate
 							</span>
@@ -90,7 +67,7 @@ const OrderDetails: React.FC<{ className?: string }> = ({
 					</tr>
 					<tr className="odd:bg-gray-150">
 						<td className="p-4 italic">{t("text-total")}:</td>
-						<td className="p-4">{total}</td>
+						<td className="p-4">{'total'}</td>
 					</tr>
 					<tr className="odd:bg-gray-150">
 						<td className="p-4 italic">{t("text-note")}:</td>
