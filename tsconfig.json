@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
     "baseUrl": ".",
-    "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "target": "ES2017",
+    "lib": ["es6", "dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -28,6 +28,21 @@
       "@utils/*": ["src/utils/*"]
     }
   },
-  "include": ["next-env.d.ts", "src/**/*.ts", "src/**/*.tsx", "src/pages/home.js", "src/components/common/flip-card/FlipCard.jsx", "src/redux/store/store.ts", "src/redux/store/userSlice.ts", "src/redux/modules/hot-concepts/getGotConceptsSlice.ts", "src/redux/modules/advertising/advertisingSlice.js", "src/containers/conceitos-block.jsx", "src/components/ui/logo.js", "src/redux/modules/config-portal/config-portal.js", "src/components/ui/range-slider.jsx", "src/redux/modules/show-case/showCase.ts"],
+  "include": [
+    "next-env.d.ts",
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/pages/home.js",
+    "src/components/common/flip-card/FlipCard.jsx",
+    "src/redux/store/store.ts",
+    "src/redux/store/userSlice.ts",
+    "src/redux/modules/hot-concepts/getGotConceptsSlice.ts",
+    "src/redux/modules/advertising/advertisingSlice.js",
+    "src/containers/conceitos-block.jsx",
+    "src/components/ui/logo.js",
+    "src/redux/modules/config-portal/config-portal.js",
+    "src/components/ui/range-slider.jsx",
+    "src/redux/modules/show-case/showCase.ts"
+  ],
   "exclude": ["node_modules"]
 }

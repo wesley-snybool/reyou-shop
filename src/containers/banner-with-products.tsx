@@ -4,14 +4,13 @@ import ProductCard from "@components/product/product-card";
 import ProductCardListSmallLoader from "@components/ui/loaders/product-card-small-list-loader";
 import { homeThreeProductsBanner as banner } from "@framework/static/banner";
 import Alert from "@components/ui/alert";
-import { ROUTES } from "@utils/routes";
 import { useAppSelector } from "src/redux/hooks/selectors";
 
 interface ProductsProps {
 	sectionHeading: string;
 	categorySlug?: string;
 	className?: string;
-	variant?: "default" | "reverse";
+	variant?: "default" | "reverse"
 }
 
 const BannerWithProducts: React.FC<ProductsProps> = ({
@@ -20,7 +19,7 @@ const BannerWithProducts: React.FC<ProductsProps> = ({
 	variant = "default",
 	className = "mb-12 md:mb-14 xl:mb-16",
 }) => {
-	const { data, isLoading, error } = useAppSelector((state) => state.getShowCaseProducts);
+	const { data, isLoading, error } = useAppSelector((state: any) => state.getShowCaseProducts);
 
 	return (
 		<div className={className}>

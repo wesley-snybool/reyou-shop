@@ -1,3 +1,7 @@
 {
-  "cSpell.words": ["Reyou", "swiper", "Swiper"]
+  "cSpell.words": ["Reyou", "swiper", "Swiper"],
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "editor.formatOnSave": true
 }
