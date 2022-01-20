@@ -69,9 +69,8 @@ const ProductsBlock: React.FC<ProductsProps> = ({
 							<ProductFeedLoader limit={5} uniqueKey={uniqueKey} />
 						) : (
 							products?.map((product: Product) => {
-								console.log(product)
 								return (
-									<SwiperSlide>
+									<SwiperSlide key={`${product.uid}-productsBlock-${product.uid}`}>
 										<CardQueridinhos
 											key={`product--key${product.uid}`}
 											product={product}
