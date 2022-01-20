@@ -1,29 +1,14 @@
 import Card from "@components/common/card";
-import SectionHeader from "@components/common/section-header";
 import Carousel from "@components/ui/carousel/carousel";
 import CardLoader from "@components/ui/loaders/card-loader";
 import CardRoundedLoader from "@components/ui/loaders/card-rounded-loader";
 import { useCategoriesQuery } from "@framework/conceitosemalta/get-all-conceitos";
-import { ROUTES } from "@utils/routes";
 import Alert from "@components/ui/alert";
 import { SwiperSlide } from "swiper/react";
 import { useEffect } from "react";
 import { useAppDispatch } from "src/redux/store/store";
 import { getHotConcepts } from "src/redux/modules/hot-concepts/getHotConceptsSlice";
 import { useAppSelector } from "src/redux/hooks/selectors";
-/* 
-interface CategoriesProps {
-	sectionHeading: string;
-	className?: string;
-	type?: "rounded" | "circle";
-} */
-
-/* type ConceptTypes = {
-	id: string, 
-	order: number,
-	thumbnail: string,
-	title: string,
-} */
 
 const breakpoints = {
   1720: {
@@ -82,11 +67,12 @@ const breakpointsCircle = {
 const Conceitos = ({ type = "circle" }) => {
   const dispatch = useAppDispatch();
 
+  const dataConcepts = useAppSelector((state) => state.getConceptsData.data);
+  const [dataConceptState, setDataConceptState] = useState([]);
+
   useEffect(() => {
     dispatch(getHotConcepts());
   }, []);
-
-  const dataConcepts = useAppSelector((state) => state.getConceptsData.data);
 
   //dataConcepts.map(item => console.log(item));
 

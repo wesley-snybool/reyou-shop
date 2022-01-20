@@ -82,12 +82,10 @@ export default function Home() {
 		if (!isLoading && !error.error_status && darlingState.length > 0) {
 			setDarlingState(dataDarlingMomentsRedux);
 		}
-		if (isLoadingFlipCard === 'SUCCESS') {
+		if (isLoadingFlipCard === 'SUCCESS' && dataFlips.length > 0) {
 			setFlipCardState(dataFlips);
 		}
 	}, [isLoading, error.error_status, isLoadingFlipCard]);
-
-	console.log(flipCardState.length);
 
 	return (
 		<>

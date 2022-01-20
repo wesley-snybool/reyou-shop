@@ -555,7 +555,7 @@ export const bannerDataTwo = [
 
 export const homeThreeProductsBanner = [
   {
-    id: 1,
+    uid: 1,
     title: "Oferta",
     slug: "sale-offer",
     image: {
@@ -572,7 +572,7 @@ export const homeThreeProductsBanner = [
     },
   },
   {
-    id: 2,
+    uid: 2,
     title: "Esportivas",
     slug: "new-sports",
     image: {
