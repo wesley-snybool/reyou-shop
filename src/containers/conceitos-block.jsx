@@ -26,117 +26,120 @@ interface CategoriesProps {
 } */
 
 const breakpoints = {
-	"1720": {
-		slidesPerView: 5,
-		spaceBetween: 28,
-	},
-	"1400": {
-		slidesPerView: 5,
-		spaceBetween: 28,
-	},
-	"1025": {
-		slidesPerView: 5,
-		spaceBetween: 28,
-	},
-	"768": {
-		slidesPerView: 5,
-		spaceBetween: 20,
-	},
-	"500 ": {
-		slidesPerView: 4,
-		spaceBetween: 20,
-	},
-	"0": {
-		slidesPerView: 3,
-		spaceBetween: 12,
-	},
+  1720: {
+    slidesPerView: 5,
+    spaceBetween: 28,
+  },
+  1400: {
+    slidesPerView: 5,
+    spaceBetween: 28,
+  },
+  1025: {
+    slidesPerView: 5,
+    spaceBetween: 28,
+  },
+  768: {
+    slidesPerView: 5,
+    spaceBetween: 20,
+  },
+  "500 ": {
+    slidesPerView: 4,
+    spaceBetween: 20,
+  },
+  0: {
+    slidesPerView: 3,
+    spaceBetween: 12,
+  },
 };
 
 const breakpointsCircle = {
-	"1720": {
-		slidesPerView: 5,
-		spaceBetween: 48,
-	},
-	"1400": {
-		slidesPerView: 5,
-		spaceBetween: 32,
-	},
-	"1025": {
-		slidesPerView: 5,
-		spaceBetween: 28,
-	},
-	"768": {
-		slidesPerView: 5,
-		spaceBetween: 20,
-	},
-	"500 ": {
-		slidesPerView: 4,
-		spaceBetween: 20,
-	},
-	"0": {
-		slidesPerView: 3,
-		spaceBetween: 12,
-	},
+  1720: {
+    slidesPerView: 5,
+    spaceBetween: 48,
+  },
+  1400: {
+    slidesPerView: 5,
+    spaceBetween: 32,
+  },
+  1025: {
+    slidesPerView: 5,
+    spaceBetween: 28,
+  },
+  768: {
+    slidesPerView: 5,
+    spaceBetween: 20,
+  },
+  "500 ": {
+    slidesPerView: 4,
+    spaceBetween: 20,
+  },
+  0: {
+    slidesPerView: 3,
+    spaceBetween: 12,
+  },
 };
 
-const Conceitos = ({type = "circle"}) => {
+const Conceitos = ({ type = "circle" }) => {
+  const dispatch = useAppDispatch();
 
-	const dispatch = useAppDispatch();
+  useEffect(() => {
+    dispatch(getHotConcepts());
+  }, []);
 
-	useEffect(() => {
-		dispatch(getHotConcepts());
-	},[])
+  const dataConcepts = useAppSelector((state) => state.getConceptsData.data);
 
-	const dataConcepts = useAppSelector(state => state.getConceptsData.data);
+  //dataConcepts.map(item => console.log(item));
 
-	//dataConcepts.map(item => console.log(item));
+  const { data, isLoading, error } = useCategoriesQuery({
+    limit: 10,
+  });
 
-
-	const { data, isLoading, error } = useCategoriesQuery({
-		limit: 10,
-	});
-
-	return (
-           <div className="bg-gray-300 w-full h-full flex flex-col px-8 pb-6 mb-16">
-			<strong className="text-black my-4 text-lg mx-auto p-4">Conceitos em alta</strong>
-			{!dataConcepts ? (
-				<Alert message={`${error.message}Erro ao carregar as imagens`} />
-			) : (
-				<Carousel
-					breakpoints={type === "rounded" ? breakpoints : breakpointsCircle}
-					buttonClassName="-mt-8 md:-mt-10"
-				>
-					{!dataConcepts
-						? Array.from({ length: 10 }).map((_, idx) => {
-								if (type === "rounded") {
-									return (
-										<SwiperSlide key={`card-rounded-${idx}`}>
-											<CardRoundedLoader uniqueKey={`card-rounded-${idx}`} />
-										</SwiperSlide>
-									);
-								}
-								return (
-									<SwiperSlide key={`card-circle-${idx}`}>
-										<CardLoader uniqueKey={`card-circle-${idx}`} />
-									</SwiperSlide>
-								);
-						  })
-						: dataConcepts?.map((conceitos, index) => (
-								<SwiperSlide key={`category--key-${dataConcepts.id}`}>
-									<Card
-										item={conceitos}
-										href={conceitos.thumbnail}
-										variant={type}
-										effectActive={true}
-										size={type === "rounded" ? "medium" : "small"}
-									/>
-									<div className='bg-red-500 w-40'></div>
-								</SwiperSlide>
-						  ))}
-				</Carousel>
-			)}
-		</div>
-	);
+  return (
+    <div className="bg-gray-300 w-full h-full flex flex-col px-8 pb-6 mb-16">
+      <strong className="text-black my-4 text-lg mx-auto p-4">
+        Conceitos em alta
+      </strong>
+      {!dataConcepts ? (
+        <Alert message={`${error.message}Erro ao carregar as imagens`} />
+      ) : (
+        <Carousel
+          breakpoints={type === "rounded" ? breakpoints : breakpointsCircle}
+          buttonClassName="-mt-8 md:-mt-10"
+        >
+          {!dataConcepts
+            ? Array.from({ length: 10 }).map((_, idx) => {
+                if (type === "rounded") {
+                  return (
+                    <SwiperSlide key={`card-rounded-${idx}`}>
+                      <CardRoundedLoader
+                        key={`card-rounded-ArrayFrom-${idx}`}
+                      />
+                    </SwiperSlide>
+                  );
+                }
+                return (
+                  <SwiperSlide key={`card-circle-${idx}`}>
+                    <CardLoader uniqueKey={`card-circle-${idx}`} />
+                  </SwiperSlide>
+                );
+              })
+            : dataConcepts?.map((conceitos, index) => (
+                <SwiperSlide key={`category--key-${dataConcepts.id}`}>
+                  <Card
+                    key={`category--keyCardSwiper-${dataConcepts.id}`}
+                    item={conceitos}
+                    href={conceitos.thumbnail}
+                    variant={type}
+                    effectActive={true}
+                    size={type === "rounded" ? "medium" : "small"}
+                  />
+                  <div className="bg-red-500 w-40"></div>
+                </SwiperSlide>
+              ))}
+        </Carousel>
+      )}
+    </div>
+  );
 };
 
 export default Conceitos;

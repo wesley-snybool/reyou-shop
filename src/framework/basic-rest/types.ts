@@ -6,10 +6,10 @@ export type CollectionsQueryOptionsType = {
   status?: string;
   limit?: number;
 };
-export type ConceitosQueryOptionsType={
+export type ConceitosQueryOptionsType = {
   name?: string;
-   thumbnail?: string;
-   limit?: number;
+  thumbnail?: string;
+  limit?: number;
 }
 export type CategoriesQueryOptionsType = {
   text?: string;
@@ -40,12 +40,12 @@ export type Attachment = {
   thumbnail: string;
   original: string;
 };
-export type Conceitos={
+export type Conceitos = {
   id: string | number;
   name: string,
   thumbnail: string;
 
-  
+
 }
 export type Category = {
   id: number | string;
@@ -100,7 +100,7 @@ export type BrandReyou = {
     title: string;
     url: string;
     internal: boolean;
-};
+  };
 
 };
 export type Tag = {
@@ -137,6 +137,12 @@ export type Product = {
   brand?: Brand;
   manufacturer?: string;
   discount?: string;
+  size: {
+    uid: string,
+    order: number,
+    code: string,
+    name: string,
+  }
 };
 export type OrderItem = {
   id: number | string;
@@ -161,19 +167,19 @@ export type Order = {
 
 
 export type TypeBannerHome = {
-  id: number,
+  uid: number,
   title: string,
   slug: string,
   image: {
-      mobile: {
-          url: string,
-          width: number,
-          height: number,
-      },
-      desktop: {
-          url: string,
-          width: number,
-          height: number,
-      },
+    mobile: {
+      url: string,
+      width: number,
+      height: number,
+    },
+    desktop: {
+      url: string,
+      width: number,
+      height: number,
+    },
   },
 }

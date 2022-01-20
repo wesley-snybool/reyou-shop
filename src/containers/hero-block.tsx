@@ -18,7 +18,7 @@ const breakpoints = {
 
 const HeroBlock: React.FC = () => {
 
-const dataBanners = useAppSelector((state) => state.getBanner.data)
+	const dataBanners = useAppSelector((state) => state.getBanner.data)
 
 	const { width } = useWindowSize();
 	return (
@@ -36,9 +36,10 @@ const dataBanners = useAppSelector((state) => state.getBanner.data)
 				{dataBanners?.map((banner: TypeBannerHome) => (
 					<SwiperSlide
 						className="carouselItem px-0 2xl:px-3.5"
-						key={`banner--key-${banner?.id}`}
+						key={`banner--key-${banner?.uid}`}
 					>
 						<BannerCard
+							key={`${banner?.uid}--banner--key-${banner?.uid}`}
 							width={1419}
 							height={616}
 							banner={banner}

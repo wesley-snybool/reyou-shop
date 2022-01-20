@@ -1,6 +1,3 @@
-import { useEffect } from "react";
-import { useDispatch } from "react-redux"
-import { useAppSelector, useAppDispatch } from "src/redux/hooks/selectors";
 import Card from "@components/common/card";
 import SectionHeader from "@components/common/section-header";
 import Carousel from "@components/ui/carousel/carousel";
@@ -10,9 +7,6 @@ import { useCategoriesQuery } from "@framework/category/get-all-categories";
 import { ROUTES } from "@utils/routes";
 import Alert from "@components/ui/alert";
 import { SwiperSlide } from "swiper/react";
-import { getHotConcepts } from "src/redux/modules/hot-concepts/getHotConceptsSlice";
-import useConcept from "src/redux/modules/hot-concepts/getHotConceptsSlice"
-//const dataConcepts = useAppSelector(state => state.data)
 
 interface CategoriesProps {
 	sectionHeading: string;
@@ -75,14 +69,14 @@ const breakpointsCircle = {
 };
 
 const CategoryBlock: React.FC<CategoriesProps> = ({ type = "circle" }) => {
-	
+
 	const { data, isLoading, error } = useCategoriesQuery({
 		limit: 10,
 	});
 
 	return (
 		<div className="slds">
-			<strong>Conceitos em baixa</strong>
+			<strong>Conceitos em Alta</strong>
 			{error ? (
 				<Alert message={error?.message} />
 			) : (
@@ -105,17 +99,20 @@ const CategoryBlock: React.FC<CategoriesProps> = ({ type = "circle" }) => {
 								</SwiperSlide>
 							);
 						})
-						: data?.categories?.data?.map((category) => (
-							<SwiperSlide key={`category--key-${category.id}`}>
-								<Card
-									item={category}
-									href={`${ROUTES.CATEGORY}/${category.slug}`}
-									variant={type}
-									effectActive={true}
-									size={type === "rounded" ? "medium" : "small"}
-								/>
-							</SwiperSlide>
-						))}
+						: data?.categories?.data?.map((category) => {
+							return (
+								<SwiperSlide key={`category--key-${category.id}`}>
+									<Card
+										key={`${category.id}--category--keyCard-${category.id}`}
+										item={category}
+										href={`${ROUTES.CATEGORY}/${category.slug}`}
+										variant={type}
+										effectActive={true}
+										size={type === "rounded" ? "medium" : "small"}
+									/>
+								</SwiperSlide>
+							)
+						})}
 				</Carousel>
 			)}
 		</div>

@@ -112,14 +112,13 @@ const CardQueridinhos: FC<ProductProps> = ({
 					</p>
 				)}
 				<div
-					className={`text-heading font-semibold text-sm sm:text-base mt-1.5 space-s-2 ${
-						variant === "grid"
-							? "lg:text-lg lg:mt-2.5"
-							: "sm:text-xl md:text-base lg:text-xl md:mt-2.5 2xl:mt-3"
-					}`}
+					className={`text-heading font-semibold text-sm sm:text-base mt-1.5 space-s-2 ${variant === "grid"
+						? "lg:text-lg lg:mt-2.5"
+						: "sm:text-xl md:text-base lg:text-xl md:mt-2.5 2xl:mt-3"
+						}`}
 				>
-					<span className="inline-block">{product.price}</span>
-					{!!product.discount && (
+					<span className="inline-block">R$ {product.price}</span>
+					{product.discount && (
 						<del className="sm:text-base font-normal text-gray-800">
 							{product.discount}
 						</del>

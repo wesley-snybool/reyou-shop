@@ -4,7 +4,6 @@ import Link from 'next/link'
 import Container from "@components/ui/container";
 import BannerCarouselBlock from "@containers/banner-carousel-block";
 import DownloadApps from "@components/common/download-apps";
-import Subscription from "@components/common/subscription";
 import HeroBlock from "@containers/hero-block";
 import Layout from "@components/layout/layout";
 import BestSellerProductFeed from "@components/product/feeds/best-seller-product-feed";

@@ -33,16 +33,19 @@ const BannerCarouselBlock: React.FC<BannerProps> = ({
 	return (
 		<div className='bannercarousel'>
 			<Carousel breakpoints={breakpoints} autoplay={{ delay: 5000 }}>
-				{dataPublicity?.map((banner: TypeBannerHome) => (
-					<SwiperSlide key={`promotion-banner-key-${banner?.id}`}>
-						<BannerCard
-							width={438}
-							height={268}
-							banner={banner}
-							effectActive={true}
-						/>
-					</SwiperSlide>
-				))}
+				{dataPublicity?.map((banner: TypeBannerHome) => {
+					return (
+						<SwiperSlide key={`promotion-banner-slide-key-${banner?.uid}`}>
+							<BannerCard
+								key={`promotion-bannerCard--key-${banner?.uid}`}
+								width={438}
+								height={268}
+								banner={banner}
+								effectActive={true}
+							/>
+						</SwiperSlide>
+					)
+				})}
 			</Carousel>
 		</div>
 	);

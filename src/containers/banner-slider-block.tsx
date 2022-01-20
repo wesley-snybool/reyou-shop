@@ -2,7 +2,6 @@ import BannerCard from "@components/common/banner-card";
 import Carousel from "@components/ui/carousel/carousel";
 import { SwiperSlide } from "swiper/react";
 import { promotionBanner } from "@framework/static/banner";
-import { ROUTES } from "@utils/routes";
 
 interface BannerProps {
 	className?: string;
@@ -35,6 +34,7 @@ const BannerSliderBlock: React.FC<BannerProps> = ({
 							className="px-1.5 md:px-2.5 xl:px-3.5"
 						>
 							<BannerCard
+								key={`bannerCard--key${banner.id}`}
 								banner={banner}
 								effectActive={true}
 							/>
