@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
-import {BASE_URL, FLIP_CARDS_URL} from '../../services/baseUrl'
+import { BASE_URL, FLIP_CARDS_URL } from '../../services/baseUrl'
 
 export const getFlipCard = createAsyncThunk(
     'flip-cards/getFlipCard',

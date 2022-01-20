@@ -13,7 +13,7 @@ import { dehydrate } from "react-query/hydration";
 import { API_ENDPOINTS } from "@framework/utils/api-endpoints";
 import { fetchBrands } from "@framework/brand/get-all-brands";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import BrandGridBlock from "@containers/brand-grid-block";
 import Conceitos from "@containers/conceitos-block";
 
@@ -39,17 +39,19 @@ type BlogsType = {
 export default function Home() {
 	const dispatch = useDispatch();
 
+	const [darlingState, setDarlingState] = useState([]);
+	const [flipCardState, setFlipCardState] = useState([]);
 
 	//Recuperando os dados da Sessão queridinhos do momentos no redux
 	const { isLoading, error } = useAppSelector((state) => state.getDarlingMoments)
-	const data = useAppSelector((state) => state.getDarlingMoments.data)
+	const dataDarlingMomentsRedux = useAppSelector((state) => state.getDarlingMoments.data)
 
 	//Recuperando os dados da Sessão queridinhos do momentos no redux
 	const { isLoading: isLoadDFavorites, error: errorFavorites } = useAppSelector((state) => state.getReyouFavorites)
 	const dataFavorites = useAppSelector((state) => state.getReyouFavorites.data)
 
 	//Bsucando os dados dos FlipsCards e guardando no reduxjs
-	const dataFlips = useAppSelector((state) => state.getFlipCardsData.data);
+	const { data: dataFlips, isLoading: isLoadingFlipCard }: any = useAppSelector((state) => state.getFlipCardsData);
 
 	const dataBlogs = useAppSelector((state) => state.getBlogs.data)
 
@@ -76,6 +78,16 @@ export default function Home() {
 		dispatch(getConfig())
 	}, [])
 
+	useEffect(() => {
+		if (!isLoading && !error.error_status && darlingState.length > 0) {
+			setDarlingState(dataDarlingMomentsRedux);
+		}
+		if (isLoadingFlipCard === 'SUCCESS') {
+			setFlipCardState(dataFlips);
+		}
+	}, [isLoading, error.error_status, isLoadingFlipCard]);
+
+	console.log(flipCardState.length);
 
 	return (
 		<>
@@ -87,7 +99,7 @@ export default function Home() {
 					<h2 className="mb-8 text-black">Comece selecionando quais causas que te movem</h2>
 				</div>
 				<div className="container-main-flip-card">
-					{dataFlips.map((item: any, index: number) => {
+					{flipCardState?.map((item: any, index: number) => {
 						return (
 							<FlipCard widthImage={item.image.desktop.width} heightImage={310} titleFlip={item.title} options={item.options} key={`${index}--flips--cards`} imageOne={item.image.desktop.url} />
 						)
@@ -98,14 +110,12 @@ export default function Home() {
 				<button onClick={handleChangeUser} className="button-start font-bold text-black">Começar</button>
 			</div>
 			<Container>
-				<React.StrictMode>
-					<Conceitos />
-				</React.StrictMode>
+				<Conceitos />
 			</Container>
 			<Container>
 				<BannerCarouselBlock />
 				<p className="text-center text-black p-12 m-0 text-2xl  font-bold">QUERIDINHOS DO MOMENTO</p>
-				<BestSellerProductFeed data={data} isLoading={isLoading} error={error} />
+				<BestSellerProductFeed data={darlingState} isLoading={isLoading} error={error} />
 
 				<Container className="mb-14">
 					<p className='text-center w-full p-4 text-center text-black font-bold text-2xl'>FAVORITOS Re.You</p>

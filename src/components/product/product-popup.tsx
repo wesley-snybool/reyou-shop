@@ -190,7 +190,7 @@ export default function ProductPopup() {
 							return (
 								<div className='flex justify-center'>
 									<CardQueridinhos
-										key={item.id}
+										key={item.uid}
 										product={item}
 										imgWidth={250}
 										imgHeight={240}
