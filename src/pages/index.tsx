@@ -85,7 +85,7 @@ export default function Home() {
 		if (isLoadingFlipCard === 'SUCCESS' && dataFlips.length > 0) {
 			setFlipCardState(dataFlips);
 		}
-	}, [isLoading, error.error_status, isLoadingFlipCard]);
+	}, [isLoading, error.error_status, isLoadingFlipCard, flipCardState]);
 
 	return (
 		<>

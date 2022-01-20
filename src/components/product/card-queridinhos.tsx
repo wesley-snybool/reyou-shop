@@ -1,6 +1,6 @@
 import cn from "classnames";
 import Image from "next/image";
-import type { FC } from "react";
+import { FC, useEffect } from "react";
 import { useUI } from "@contexts/ui.context";
 import { Product } from "@framework/types";
 
@@ -35,6 +35,11 @@ const CardQueridinhos: FC<ProductProps> = ({
 		setModalView("PRODUCT_VIEW");
 		return openModal();
 	}
+
+	useEffect(() => {
+
+	}, [product]);
+
 	return (
 		<div
 			className={cn(

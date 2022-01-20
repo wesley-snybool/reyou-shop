@@ -61,7 +61,7 @@ const ProductsBlock: React.FC<ProductsProps> = ({
 	return (
 		<div className={className}>
 			<Carousel breakpoints={breakpoints} >
-				{error_status ? (
+				{false ? (
 					<Alert message={errorMessage} />
 				) : (
 					<div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 gap-x-3 md:gap-x-5 xl:gap-x-7 gap-y-3 xl:gap-y-5 2xl:gap-y-8">
@@ -69,6 +69,7 @@ const ProductsBlock: React.FC<ProductsProps> = ({
 							<ProductFeedLoader limit={5} uniqueKey={uniqueKey} />
 						) : (
 							products?.map((product: Product) => {
+								console.log('product queridinhos', product, error_status);
 								return (
 									<SwiperSlide key={`${product.uid}-productsBlock-${product.uid}`}>
 										<CardQueridinhos
