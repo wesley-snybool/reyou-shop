@@ -109,7 +109,7 @@ export type Tag = {
   slug: string;
 };
 export type Product = {
-  id?: number | string;
+  uid?: number | string;
   imageThumb: {
     url: string;
   }

@@ -1,7 +1,6 @@
 import BannerCard from "@components/common/banner-card";
 import Container from "@components/ui/container";
 import BrandGridBlock from "@containers/brand-grid-block";
-import CategoryBlock from "@containers/category-block";
 import Layout from "@components/layout/layout";
 import BannerWithProducts from "@containers/banner-with-products";
 import NewArrivalsProductFeed from "@components/product/feeds/new-arrivals-product-feed";
@@ -30,7 +29,6 @@ export default function Home() {
 		<>
 			<ExclusiveBlock className="mb-12 md:mb-14 xl:mb-16 px-2.5 mx-auto max-w-[1920px]" />
 			<Container>
-				<CategoryBlock sectionHeading="text-shop-by-category" />
 				<ProductsFeatured
 					sectionHeading="text-featured-products"
 					variant="center"

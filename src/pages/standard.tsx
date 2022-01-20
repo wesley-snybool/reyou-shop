@@ -8,7 +8,6 @@ import Support from "@components/common/support";
 import Subscription from "@components/common/subscription";
 import HeroBlock from "@containers/hero-block";
 import BrandBlock from "@containers/brand-block";
-import CategoryBlock from "@containers/category-block";
 import FeatureBlock from "@containers/feature-block";
 import Layout from "@components/layout/layout";
 import BestSellerProductFeed from "@components/product/feeds/best-seller-product-feed";
@@ -38,11 +37,10 @@ export default function Home() {
 			<HeroBlock />
 			<Container>
 				<BannerCarouselBlock />
-				<CategoryBlock sectionHeading="text-shop-by-category" />
 				<Divider />
 				<BestSellerProductFeed />
 				<BannerCard
-					key={`banner--key${banner.id}`}
+					key={`banner--key--standart-${banner.uid}`}
 					banner={banner}
 					className="mb-12 lg:mb-14 xl:mb-16 pb-0.5 lg:pb-1 xl:pb-0"
 					classNameInner="h-28 sm:h-auto"

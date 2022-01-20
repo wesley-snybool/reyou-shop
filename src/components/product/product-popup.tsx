@@ -160,13 +160,13 @@ export default function ProductPopup() {
 						})}
 					</div>
 					<div className=' text-black flex wrap justify-start gap-4 items-center my-6'>Cores
-						{colors?.map((item: any, index: number) => {
+						{/* {colors?.map((item: any, index: number) => {
 							return (
 								<div key={`${index}--item--colors--code`} className='p-1 border border-gray-300 rounded' >
 									<div className={`bg-${item.code}${item.code === 'black' ? '' : '-500'} font-body text-xs p-3 rounded-sm  h-2 w-2 flex items-center justify-center text-black`} key={`${item}--${index}--colors--product`}></div>
 								</div>
 							)
-						})}
+						})} */}
 					</div>
 					<button className='my-2 py-3 bg-black font-bold text-xl text-white w-3/4 rounded-md'>Visitar Site</button>
 					<button className='flex items-center justify-center gap-10 text-lg my-4 bg-white text-black border border-black w-3/4 py-3 rounded-md'>

@@ -51,17 +51,17 @@ const HeroWithCategory: React.FC<Props> = ({
 					<Carousel breakpoints={categoryResponsive} buttonSize="small">
 						{isLoading && !data?.categories?.data?.length
 							? Array.from({ length: 8 }).map((_, idx) => (
-									<SwiperSlide key={`category-list-${idx}`}>
-										<CategoryListCardLoader
-											uniqueKey={`category-list-${idx}`}
-										/>
-									</SwiperSlide>
-							  ))
+								<SwiperSlide key={`category-list-${idx}`}>
+									<CategoryListCardLoader
+										uniqueKey={`category-list-${idx}`}
+									/>
+								</SwiperSlide>
+							))
 							: data?.categories?.data?.map((category) => (
-									<SwiperSlide key={`category--key${category.id}`}>
-										<CategoryListCard category={category} />
-									</SwiperSlide>
-							  ))}
+								<SwiperSlide key={`category--key${category.id}`}>
+									<CategoryListCard category={category} />
+								</SwiperSlide>
+							))}
 					</Carousel>
 				</div>
 			) : (

@@ -44,7 +44,7 @@ export default function Home() {
 			<Divider />
 			<BestSellerProductFeed />
 			<BannerCard
-				key={`banner--key${banner.id}`}
+				key={`banner--key--Banner--card${banner.uid}`}
 				banner={banner}
 				className="mb-12 lg:mb-14 xl:mb-16 pb-0.5 lg:pb-1 xl:pb-0"
 			/>

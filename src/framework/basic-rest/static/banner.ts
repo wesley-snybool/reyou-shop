@@ -1,5 +1,5 @@
 export const homeOneBanner = {
-  id: 1,
+  uid: 1,
   title: "Promocões do Feriado",
   slug: "holiday-offers",
   image: {

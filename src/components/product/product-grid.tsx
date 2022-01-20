@@ -26,14 +26,14 @@ export const ProductGrid: FC<ProductGridProps> = ({ className = "" }) => {
 
 
 	const ftr_state_products = useAppSelector((state) => state.filters.ftr_state)
-	
+
 	useEffect(() => {
-		dispatch(getShowCaseProducts({pps: 20, pc: 1 , ftr_universe, ftr_state_products, ftr_category, ftr_typeItem }));
+		dispatch(getShowCaseProducts({ pps: 20, pc: 1, ftr_universe, ftr_state_products, ftr_category, ftr_typeItem }));
 		dispatch(getStateProducts());
 		dispatch(getCategoryProducts());
 		dispatch(getTypesItems());
 
-	},[dispatch, loader, ftr_universe, ftr_state_products, ftr_category, ftr_typeItem]);
+	}, [dispatch, loader, ftr_universe, ftr_state_products, ftr_category, ftr_typeItem]);
 
 
 	const loadMore = () => {
@@ -41,7 +41,7 @@ export const ProductGrid: FC<ProductGridProps> = ({ className = "" }) => {
 	}
 
 	const { isLoading: isLoadCards, error: errorCards } = useAppSelector((state) => state.getShowCaseProducts)
-	
+
 	const dataCards = useAppSelector((state) => state?.getShowCaseProducts.data)
 
 	return (
@@ -55,7 +55,7 @@ export const ProductGrid: FC<ProductGridProps> = ({ className = "" }) => {
 					dataCards.map((product: any) => {
 						return (
 							<CardVitrine
-								key={`product--key${product.id}`}
+								key={`product--key${product.uid}`}
 								product={product}
 								variant="grid"
 							/>

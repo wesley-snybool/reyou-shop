@@ -11,7 +11,7 @@ type StateProducts = {
 	code: string;
 	id: number,
 	name: string,
-	
+
 }
 
 export const PartConditions = () => {
@@ -41,7 +41,7 @@ export const PartConditions = () => {
 		setStateQuery(newState);
 
 	}
-	
+
 	return (
 		<div className="block border-b border-gray-300 pb-7 mb-7">
 			<h3 className="text-heading text-sm md:text-base font-semibold mb-7">
@@ -52,13 +52,13 @@ export const PartConditions = () => {
 					//console.log(item)
 					return (
 						<CheckBox
-						key={item.id}
-						label={item.name}
-						name={item.name.toLowerCase()}
-						checked={stateQuery.includes(item.code)}
-						value={item.code}
-						onChange={handleItemClick}
-					/>
+							key={item.id}
+							label={item.name}
+							name={item.name.toLowerCase()}
+							checked={stateQuery.includes(item.code)}
+							value={item.code}
+							onChange={handleItemClick}
+						/>
 					)
 				})}
 			</div>

@@ -22,7 +22,7 @@ export default function PageBrand() {
                 {mockImgs.map((item, key) => {
                     return (
                         <>
-                            <div key={key} className='flex items-center justify-between w-full gap-20'>
+                            <div key={`${key}--carroussel${key}`} className='flex items-center justify-between w-full gap-20'>
                                 <img className="rounded-full" src={item.urlImageBrqand} alt="Logo Marca" />
                                 <h3 className="text-2xl font-bold text-black" >{item.title}</h3>
                                 <h3 className="text-left text-black">{item.brandDescription}</h3>
@@ -34,7 +34,7 @@ export default function PageBrand() {
                                 </div>
                                 <div className='flex gap-14'>
                                     {item.tags.map((item, key) => (
-                                        <div key={key} className="text-black border border-black rounded-full py-3 px-12">{item}</div>
+                                        <div key={`${key}--carroussel-last-div${key}`} className="text-black border border-black rounded-full py-3 px-12">{item}</div>
                                     ))}
                                 </div>
                             </div>

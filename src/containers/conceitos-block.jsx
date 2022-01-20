@@ -110,32 +110,36 @@ const Conceitos = ({ type = "circle" }) => {
             ? Array.from({ length: 10 }).map((_, idx) => {
                 if (type === "rounded") {
                   return (
-                    <SwiperSlide key={`card-rounded-${idx}`}>
+                    <SwiperSlide>
                       <CardRoundedLoader
-                        key={`card-rounded-ArrayFrom-${idx}`}
+                        key={`card-rounded-ArrayFrom-${idx}--'asd-asda'`}
                       />
                     </SwiperSlide>
                   );
                 }
                 return (
-                  <SwiperSlide key={`card-circle-${idx}`}>
+                  <SwiperSlide>
                     <CardLoader uniqueKey={`card-circle-${idx}`} />
                   </SwiperSlide>
                 );
               })
-            : dataConcepts?.map((conceitos, index) => (
-                <SwiperSlide key={`category--key-${dataConcepts.id}`}>
-                  <Card
-                    key={`category--keyCardSwiper-${dataConcepts.id}`}
-                    item={conceitos}
-                    href={conceitos.thumbnail}
-                    variant={type}
-                    effectActive={true}
-                    size={type === "rounded" ? "medium" : "small"}
-                  />
-                  <div className="bg-red-500 w-40"></div>
-                </SwiperSlide>
-              ))}
+            : dataConcepts?.map((conceitos, index) => {
+                return (
+                  <SwiperSlide
+                    key={`component-swiper-${conceitos.uid}-${conceitos.uid}`}
+                  >
+                    <Card
+                      key={`category--dataConcepts-${dataConcepts.uid}`}
+                      item={conceitos}
+                      href={conceitos.thumbnail}
+                      variant={type}
+                      effectActive={true}
+                      size={type === "rounded" ? "medium" : "small"}
+                    />
+                    <div className="bg-red-500 w-40"></div>
+                  </SwiperSlide>
+                );
+              })}
         </Carousel>
       )}
     </div>

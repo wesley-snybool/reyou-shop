@@ -13,7 +13,7 @@ import { dehydrate } from "react-query/hydration";
 import { API_ENDPOINTS } from "@framework/utils/api-endpoints";
 import { fetchBrands } from "@framework/brand/get-all-brands";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import BrandGridBlock from "@containers/brand-grid-block";
 import Conceitos from "@containers/conceitos-block";
 
@@ -50,7 +50,7 @@ export default function Home() {
 
 	//Bsucando os dados dos FlipsCards e guardando no reduxjs
 	const dataFlips = useAppSelector((state) => state.getFlipCardsData.data);
-	
+
 	const dataBlogs = useAppSelector((state) => state.getBlogs.data)
 
 	const dataBrands = useAppSelector((state) => state.getNews?.data)
@@ -98,7 +98,9 @@ export default function Home() {
 				<button onClick={handleChangeUser} className="button-start font-bold text-black">Começar</button>
 			</div>
 			<Container>
-				<Conceitos />
+				<React.StrictMode>
+					<Conceitos />
+				</React.StrictMode>
 			</Container>
 			<Container>
 				<BannerCarouselBlock />
@@ -111,7 +113,7 @@ export default function Home() {
 				<BestSellerProductFeed data={dataFavorites} isLoading={isLoadDFavorites} error={errorFavorites} />
 
 				<BrandGridBlock dataBrands={dataBrands} sectionHeading="NOVIDADES NA Re.You" />
-	
+
 				<div className='flex items-center flex-col justify-center container-video-inst my-12 w-full mx-auto py-4 px-20 bg-gray-300 text-center'>
 					<p className='text-xl font-bold text-black p-8' >QUER CONHECER A NOSSA HISTÓRIA?</p>
 					<div className='my-4 w-full h-full bg-gray-200'>
