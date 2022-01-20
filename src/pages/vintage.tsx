@@ -1,7 +1,6 @@
 import BannerCard from "@components/common/banner-card";
 import Container from "@components/ui/container";
 import BrandBlock from "@containers/brand-block";
-import CategoryBlock from "@containers/category-block";
 import CategoryGridBlock from "@containers/category-grid-block";
 import Layout from "@components/layout/layout";
 import BannerWithProducts from "@containers/banner-with-products";
@@ -28,7 +27,6 @@ export default function Home() {
 			</Container>
 			<BannerSliderBlock />
 			<Container>
-				<CategoryBlock sectionHeading="text-shop-by-category" />
 				<BannerWithProducts
 					sectionHeading="text-on-selling-products"
 					categorySlug="/search"

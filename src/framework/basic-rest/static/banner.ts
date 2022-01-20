@@ -592,7 +592,7 @@ export const homeThreeProductsBanner = [
 
 export const homeFourBanner = [
   {
-    id: 1,
+    uid: 1,
     title: "Novas Mochilas",
     slug: "new-backpack",
     image: {
@@ -609,7 +609,7 @@ export const homeFourBanner = [
     },
   },
   {
-    id: 2,
+    uid: 2,
     title: "Coleção Masculina",
     slug: "men's-collection",
     image: {
@@ -626,7 +626,7 @@ export const homeFourBanner = [
     },
   },
   {
-    id: 3,
+    uid: 3,
     title: "Ofertas Especiais",
     slug: "offer-everything",
     image: {

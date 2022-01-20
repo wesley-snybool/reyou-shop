@@ -10,13 +10,13 @@ import { useCart } from "@contexts/cart/cart.context";
 import { generateCartItem } from "@utils/generate-cart-item";
 import { getVariations } from "@framework/utils/get-variations";
 import CardQueridinhos from "./card-queridinhos";
-import { Product } from "../../framework/basic-rest/types"
+import { Product } from "../../framework/basic-rest/types";
 
 export default function ProductPopup() {
 	const dispatch = useAppDispatch();
 
-	const showCaseProducts = useAppSelector((state) => state.getShowCaseProducts.data)
-	const { isLoading, error } = useAppSelector((state) => state.getShowCaseProducts)
+	const showCaseProducts = useAppSelector((state) => state.getShowCaseProducts.data);
+	const { isLoading, error } = useAppSelector((state) => state.getShowCaseProducts);
 
 	useEffect(() => {
 		dispatch(getShowCaseProducts({ pps: 50 }))
@@ -27,7 +27,6 @@ export default function ProductPopup() {
 		closeModal,
 		openCart,
 	} = useUI();
-	debugger
 
 	const router = useRouter();
 	const { addItemToCart } = useCart();
@@ -53,8 +52,6 @@ export default function ProductPopup() {
 		productDescription,
 		similar,
 	} = data;
-
-	debugger
 
 	const isSelected = !isEmpty(variations)
 		? !isEmpty(attributes) &&
