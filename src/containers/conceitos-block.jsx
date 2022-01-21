@@ -82,9 +82,6 @@ const Conceitos = ({ type = "circle" }) => {
       setDataConceptState(dataConceptsRedux);
     }
   }, [dataConceptsRedux]);
-  if (!isLoading && dataConceptsRedux.length > 0) {
-    console.log(dataConceptState);
-  }
 
   return (
     <div className="bg-gray-300 w-full h-full flex flex-col px-8 pb-6 mb-16">
