@@ -6,6 +6,7 @@ import { ROUTES } from "@utils/routes";
 import { SwiperSlide } from "swiper/react";
 import { useAppSelector } from "src/redux/hooks/selectors";
 import { TypeBannerHome } from '../../src/framework/basic-rest/types'
+import { useEffect, useState } from "react";
 
 const breakpoints = {
 	"1500": {
@@ -17,8 +18,14 @@ const breakpoints = {
 };
 
 const HeroBlock: React.FC = () => {
+	const [dataBannerState, setDataBannerState] = useState([]);
+	const { data: dataBannersRedux, isLoading } = useAppSelector((state) => state.getBanner)
 
-	const dataBanners = useAppSelector((state) => state.getBanner.data)
+	useEffect(() => {
+		if (!isLoading && dataBannersRedux.length > 0) {
+			setDataBannerState(dataBannersRedux);
+		}
+	}, [dataBannersRedux]);
 
 	const { width } = useWindowSize();
 	return (
@@ -33,7 +40,7 @@ const HeroBlock: React.FC = () => {
 					clickable: true,
 				}}
 			>
-				{dataBanners?.map((banner: TypeBannerHome) => (
+				{dataBannerState?.map((banner: TypeBannerHome) => (
 					<SwiperSlide
 						className="carouselItem px-0 2xl:px-3.5"
 						key={`banner--key-${banner?.uid}`}
