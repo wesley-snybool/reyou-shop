@@ -68,32 +68,37 @@ const breakpointsCircle = {
 const Conceitos = ({ type = "circle" }) => {
   const dispatch = useAppDispatch();
 
-  const dataConcepts = useAppSelector((state) => state.getConceptsData.data);
   const [dataConceptState, setDataConceptState] = useState([]);
+  const { data: dataConceptsRedux, isLoading } = useAppSelector(
+    (state) => state.getConceptsData
+  );
 
   useEffect(() => {
     dispatch(getHotConcepts());
   }, []);
 
-  //dataConcepts.map(item => console.log(item));
-
-  const { data, isLoading, error } = useCategoriesQuery({
-    limit: 10,
-  });
+  useEffect(() => {
+    if (!isLoading && dataConceptsRedux.length > 0) {
+      setDataConceptState(dataConceptsRedux);
+    }
+  }, [dataConceptsRedux]);
+  if (!isLoading && dataConceptsRedux.length > 0) {
+    console.log(dataConceptState);
+  }
 
   return (
     <div className="bg-gray-300 w-full h-full flex flex-col px-8 pb-6 mb-16">
       <strong className="text-black my-4 text-lg mx-auto p-4">
         Conceitos em alta
       </strong>
-      {!dataConcepts ? (
+      {!dataConceptState ? (
         <Alert message={`${error.message}Erro ao carregar as imagens`} />
       ) : (
         <Carousel
           breakpoints={type === "rounded" ? breakpoints : breakpointsCircle}
           buttonClassName="-mt-8 md:-mt-10"
         >
-          {!dataConcepts
+          {!dataConceptState
             ? Array.from({ length: 10 }).map((_, idx) => {
                 if (type === "rounded") {
                   return (
@@ -110,13 +115,13 @@ const Conceitos = ({ type = "circle" }) => {
                   </SwiperSlide>
                 );
               })
-            : dataConcepts?.map((conceitos, index) => {
+            : dataConceptState?.map((conceitos, index) => {
                 return (
                   <SwiperSlide
                     key={`component-swiper-${conceitos.uid}-${conceitos.uid}`}
                   >
                     <Card
-                      key={`category--dataConcepts-${dataConcepts.uid}`}
+                      key={`category--dataConcepts-${conceitos.uid}`}
                       item={conceitos}
                       href={conceitos.thumbnail}
                       variant={type}

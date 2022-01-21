@@ -1,10 +1,4 @@
 import ProductsBlock from "@containers/products-block";
-import { useEffect } from "react";
-import { useAppSelector } from "src/redux/hooks/selectors";
-import { getDarlingMoments } from "src/redux/modules/darlings-moment/darlingsMoments";
-import { useAppDispatch } from "src/redux/store/store";
-import { useSelectDarling } from "src/redux/modules/darlings-moment/darlingsMoments"
-
 
 type ErrorTypes = {
 	error_status: boolean,
