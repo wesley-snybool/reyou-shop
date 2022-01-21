@@ -79,13 +79,13 @@ export default function Home() {
 	}, [])
 
 	useEffect(() => {
-		if (!isLoading && !error.error_status && darlingState.length > 0) {
+		if (!isLoading && !error.error_status && dataDarlingMomentsRedux.length > 0) {
 			setDarlingState(dataDarlingMomentsRedux);
 		}
 		if (isLoadingFlipCard === 'SUCCESS' && dataFlips.length > 0) {
 			setFlipCardState(dataFlips);
 		}
-	}, [isLoading, error.error_status, isLoadingFlipCard, flipCardState]);
+	}, [isLoading, error.error_status, isLoadingFlipCard, flipCardState, dataDarlingMomentsRedux]);
 
 	return (
 		<>

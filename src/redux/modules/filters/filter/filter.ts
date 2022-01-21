@@ -17,39 +17,39 @@ export const filterSlice = createSlice({
     initialState: defaultFilters,
     reducers: {
         addFilterUniverse: (state: FilterTypes, { payload }: PayloadAction<string[]>) => {
-            return {...state, ftr_universe: payload}
+            return { ...state, ftr_universe: payload }
         },
         addFilterStateProduct: (state: FilterTypes, { payload }: PayloadAction<string[]>) => {
-            return {...state, ftr_state: payload}
+            return { ...state, ftr_state: payload }
         },
         addFilterCategoryProduct: (state: FilterTypes, { payload }: PayloadAction<string[]>) => {
-            return {...state, ftr_category: payload}
+            return { ...state, ftr_category: payload }
         },
         addFilterTypeItem: (state: FilterTypes, { payload }: PayloadAction<string[]>) => {
-            return {...state, ftr_typeItem: payload}
+            return { ...state, ftr_typeItem: payload }
         },
         removeItemFilterMyUniverse: (state: FilterTypes, { payload }: PayloadAction<string[]>) => {
-            return {...state, ftr_universe: payload}
+            return { ...state, ftr_universe: payload }
         },
         addFilterBrand: (state: FilterTypes, { payload }: PayloadAction<string[]>) => {
-            return {...state, ftr_brand: payload}
+            return { ...state, ftr_brand: payload }
         },
-        removeFilter(state){
-            return {...state, state: defaultFilters}
+        removeFilter(state) {
+            return { ...state, state: defaultFilters }
         },
-        removeAllfilters (state){
+        removeAllfilters(state) {
             return state
         },
-        returnAllFilters (state){
+        returnAllFilters(state) {
             return state;
         }
     }
 })
 
-export const { 
-    addFilterStateProduct, 
-    addFilterUniverse, 
-    removeFilter, 
+export const {
+    addFilterStateProduct,
+    addFilterUniverse,
+    removeFilter,
     addFilterCategoryProduct,
     addFilterTypeItem,
     addFilterBrand,
