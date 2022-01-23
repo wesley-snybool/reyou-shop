@@ -1,17 +1,18 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
-import {BASE_URL, PRESS_URL} from '../../services/baseUrl'
+import { BASE_URL, PRESS_URL } from '../../services/baseUrl'
 
 export const getPress = createAsyncThunk(
-    'press-thunk',
+    'press/thunk',
     async () => {
         const response = await fetch(`${BASE_URL}${PRESS_URL}`);
+        console.log(response);
         const formatResponse = await response.json();
         return formatResponse;
     }
 );
 
 export const pressSlice = createSlice({
-    name: 'press-slice',
+    name: 'press',
     initialState: {
         data: [],
         isLoading: false,

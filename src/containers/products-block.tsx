@@ -26,7 +26,6 @@ const ProductsBlock: React.FC<ProductsProps> = ({
 	className = "mb-9 md:mb-9 lg:mb-10 xl:mb-12",
 	products,
 	loading,
-	error_status,
 	errorMessage,
 	uniqueKey,
 }) => {

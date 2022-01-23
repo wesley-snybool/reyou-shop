@@ -1,6 +1,6 @@
 import Image from 'next/image'
-import { useRouter } from 'next/router';
 import Link from 'next/link'
+import { useAppDispatch } from 'src/redux/store/store';
 import Container from "@components/ui/container";
 import BannerCarouselBlock from "@containers/banner-carousel-block";
 import DownloadApps from "@components/common/download-apps";
@@ -29,6 +29,7 @@ import { getBlogs } from 'src/redux/modules/blogs/blogs';
 import { getFlipCard } from 'src/redux/modules/flip-cards/getFlipCardSlice';
 import { getBanner } from 'src/redux/modules/banners/getBannerSlice';
 import { getPublicity } from 'src/redux/modules/publicity/publicitySlice';
+import { getPress } from 'src/redux/modules/press/press';
 
 type BlogsType = {
 	image: string;
@@ -38,24 +39,27 @@ type BlogsType = {
 
 export default function Home() {
 	const dispatch = useDispatch();
+	const dispatchApp = useAppDispatch();
 
 	const [darlingState, setDarlingState] = useState([]);
 	const [flipCardState, setFlipCardState] = useState([]);
 
 	//Recuperando os dados da Sessão queridinhos do momentos no redux
-	const { isLoading, error } = useAppSelector((state) => state.getDarlingMoments)
-	const dataDarlingMomentsRedux = useAppSelector((state) => state.getDarlingMoments.data)
+	const { isLoading, error } = useAppSelector((state) => state.getDarlingMoments);
+	const dataDarlingMomentsRedux = useAppSelector((state) => state.getDarlingMoments.data);
 
 	//Recuperando os dados da Sessão queridinhos do momentos no redux
-	const { isLoading: isLoadDFavorites, error: errorFavorites } = useAppSelector((state) => state.getReyouFavorites)
-	const dataFavorites = useAppSelector((state) => state.getReyouFavorites.data)
+	const { isLoading: isLoadDFavorites, error: errorFavorites } = useAppSelector((state) => state.getReyouFavorites);
+	const dataFavorites = useAppSelector((state) => state.getReyouFavorites.data);
 
 	//Bsucando os dados dos FlipsCards e guardando no reduxjs
 	const { data: dataFlips, isLoading: isLoadingFlipCard }: any = useAppSelector((state) => state.getFlipCardsData);
 
-	const dataBlogs = useAppSelector((state) => state.getBlogs.data)
+	const { data: dataPress, isLoading: isLoadingPress } = useAppSelector((state) => state.getPress);
 
-	const dataBrands = useAppSelector((state) => state.getNews?.data)
+	const dataBlogs = useAppSelector((state) => state.getBlogs.data);
+
+	const dataBrands = useAppSelector((state) => state.getNews?.data);
 
 	//Exemplo de dispatch
 	const handleChangeUser = () => {
@@ -64,19 +68,19 @@ export default function Home() {
 			logado: true
 		}
 		dispatch(changeUser(data.nome))
-	}
+	};
 
 	useEffect(() => {
 		//Fecth dos dados da Home
 		dispatch(getDarlingMoments());
 		dispatch(getReyouFavorites());
-		dispatch(getNews())
-		dispatch(getBlogs())
-		dispatch(getFlipCard())
-		dispatch(getBanner())
-		dispatch(getPublicity())
-		dispatch(getConfig())
-	}, [])
+		dispatch(getNews());
+		dispatch(getBlogs());
+		dispatch(getFlipCard());
+		dispatch(getBanner());
+		dispatch(getPublicity());
+		dispatch(getConfig());
+	}, []);
 
 	useEffect(() => {
 		if (!isLoading && !error.error_status && dataDarlingMomentsRedux.length > 0) {
@@ -86,6 +90,13 @@ export default function Home() {
 			setFlipCardState(dataFlips);
 		}
 	}, [isLoading, error.error_status, isLoadingFlipCard, flipCardState, dataDarlingMomentsRedux]);
+
+	useEffect(() => {
+		dispatchApp(getPress());
+		if (!isLoadingPress && dataPress.length > 0) {
+			setDarlingState(dataPress);
+		}
+	}, []);
 
 	return (
 		<>
@@ -99,7 +110,7 @@ export default function Home() {
 				<div className="container-main-flip-card">
 					{flipCardState?.map((item: any, index: number) => {
 						return (
-							<FlipCard widthImage={item.image.desktop.width} heightImage={310} titleFlip={item.title} options={item.options} key={`${index}--flips--cards`} imageOne={item.image.desktop.url} />
+							<FlipCard widthImage={item.image.desktop.width} heightImage={310} titleFlip={item.title} options={item.options} key={`${index}--flips--cards`} imageOne={item.image.desktop?.url} />
 						)
 					})}
 				</div>

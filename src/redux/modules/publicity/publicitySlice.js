@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
-import {BASE_URL, PUBLICITY_URL} from '../../services/baseUrl'
+import { BASE_URL, PUBLICITY_URL } from '../../services/baseUrl'
 
 export const getPublicity = createAsyncThunk(
     'publicity/getPublicity',

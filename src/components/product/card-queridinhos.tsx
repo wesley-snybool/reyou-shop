@@ -72,7 +72,7 @@ const CardQueridinhos: FC<ProductProps> = ({
 				)}
 			>
 				<Image
-					src={product.imageThumb.url ?? placeholderImage}
+					src={product?.imageThumb?.url ?? placeholderImage}
 					width={imgWidth}
 					height={imgHeight}
 					loading={imgLoading}

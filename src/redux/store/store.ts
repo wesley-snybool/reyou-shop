@@ -21,7 +21,7 @@ import getBrandsSlice from '../modules/brands/brands'
 import getMaterialsSlice from '../modules/materials/materials'
 import getMyUniverse from '../modules/my-universe/myUniverse'
 
-const store =  configureStore({
+const store = configureStore({
   reducer: {
     userTest: userReducer,
     getConceptsData: getConceptSlice,
