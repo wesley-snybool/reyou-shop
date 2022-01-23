@@ -113,6 +113,9 @@ export type Product = {
   imageThumb: {
     url: string;
   }
+  imageMedium: {
+    url: string;
+  }
   name?: string;
   tags: string;
   productName?: string;

@@ -68,7 +68,7 @@ const CardVitrine: FC<ProductProps> = ({
 				)}
 			>
 				<Image
-					src={product.imageThumb.url ?? placeholderImage}
+					src={product.imageMedium?.url ?? placeholderImage}
 					width={imgWidth}
 					height={imgHeight}
 					loading={imgLoading}
@@ -113,11 +113,10 @@ const CardVitrine: FC<ProductProps> = ({
 					</p>
 				)}
 				<div
-					className={`text-heading font-semibold text-sm sm:text-base mt-1.5 space-s-2 ${
-						variant === "grid"
-							? "lg:text-lg lg:mt-2.5"
-							: "sm:text-xl md:text-base lg:text-xl md:mt-2.5 2xl:mt-3"
-					}`}
+					className={`text-heading font-semibold text-sm sm:text-base mt-1.5 space-s-2 ${variant === "grid"
+						? "lg:text-lg lg:mt-2.5"
+						: "sm:text-xl md:text-base lg:text-xl md:mt-2.5 2xl:mt-3"
+						}`}
 				>
 					<span className="inline-block">{`R$ ${product.price},00`}</span>
 					{!!product.discount && (

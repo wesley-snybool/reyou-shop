@@ -33,4 +33,4 @@ export const BRANDS = '/portal/brands'
 
 export const MATERIALS = '/portal/geral/materials'
 
-export const MY_UNIVERSE = '/portal/geral/types-items'
+export const MY_UNIVERSE = '/portal/geral/sustainable-values'

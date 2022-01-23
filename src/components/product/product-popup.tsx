@@ -55,6 +55,7 @@ export default function ProductPopup() {
 		colors,
 		productDescription,
 		similar,
+		price,
 	} = data;
 
 	const isSelected = !isEmpty(variations)
@@ -133,7 +134,7 @@ export default function ProductPopup() {
 
 						<div className="flex items-center mt-8 ">
 							<div className="text-heading font-semibold text-base md:text-xl lg:text-2xl">
-								{"price"}
+								{`R$ ${price}`}
 							</div>
 							<div className="text-brand-popup-product text-black">
 								Vendido por <strong>{brand?.title}</strong>
@@ -184,7 +185,7 @@ export default function ProductPopup() {
 									<div className={`bg-${item.code}${item.code === 'black' ? '' : '-500'} font-body text-xs p-3 rounded-sm  h-2 w-2 flex items-center justify-center text-black`} key={`${item}--${index}--colors--product`}></div>
 								</div>
 							)
-						})};
+						})}
 					</div>
 					<button className="my-2 py-3 bg-black font-bold text-xl text-white w-3/4 rounded-md">
 						Visitar Site

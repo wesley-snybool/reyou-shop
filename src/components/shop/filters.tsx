@@ -23,24 +23,24 @@ type TypeBrandsProps = {
 
 
 export const ShopFilters: React.FC<TypeBrandsProps> = ({ showSearchBrand }) => {
-	
+
 	const dispatch = useAppDispatch();
 
 	useEffect(() => {
 		dispatch(getBrands());
 		dispatch(getMaterials());
-	},[])
-	
+	}, []);
+
 	const data = useAppSelector((state) => state.brands.data)
 
 	const dataMaterials = useAppSelector((state) => state.materials.data)
-	
+
 	const valueSearch = useAppSelector((state) => state.filters.ftr_universe)
 	const valueSearchSplit = valueSearch?.map((item) => item.split('-'));
-	
+
 	useEffect(() => {
-	
-	},[valueSearch])
+
+	}, [valueSearch])
 
 	const router = useRouter();
 
@@ -84,7 +84,7 @@ export const ShopFilters: React.FC<TypeBrandsProps> = ({ showSearchBrand }) => {
 			<Category />
 			<TypeItems />
 			<SearchBrands showSearchBrand={showSearchBrand} brands={data} />
-			<SearchMaterials showSearchBrand={showSearchBrand} brands={dataMaterials}/>
+			<SearchMaterials showSearchBrand={showSearchBrand} brands={dataMaterials} />
 		</div>
 	);
 };

@@ -21,7 +21,7 @@ type DivElementRef = React.MutableRefObject<HTMLDivElement>;
 const { site_header } = siteSettings;
 const Header: React.FC = () => {
 
-const data = useAppSelector((state) => state.getConfig.data)
+	const data = useAppSelector((state) => state.getConfig.data)
 
 	const {
 		openSidebar,
@@ -49,7 +49,7 @@ const data = useAppSelector((state) => state.getConfig.data)
 			ref={siteHeaderRef}
 			className="bg-white w-full shadow-header h-16 sm:h-20 lg:h-24 z-20 flex align-center justify-center overflow-hidden"
 		>
-			<div className="any-qualq"></div>
+			<div className=""></div>
 			<div className="bg-white  w-full mx-sm px-10 text-gray-700 body-font fixed  h-16 sm:h-20 lg:h-24 z-20 transition duration-200 ease-in-out">
 				<div className="flex items-center justify-center  h-full w-full">
 					<button
@@ -72,15 +72,15 @@ const data = useAppSelector((state) => state.getConfig.data)
 						className=""
 					/>
 
-				<div className="max-w-2xl p-4 m-20 w-full flex align-center justify-center">
-					<div className="relative flex items-center w-full">
-						<input className="w-full border border-black rounded-full p-3 px-6 text-gray-700 focus:outline-none" id="search" type="text" placeholder="Buscar"/>
-						
-						<div className="absolute right-4 mx-2">
-						<button className="text-white rounded-full hover:bg-blue-400 focus:outline-none w-12 h-12 flex items-center justify-center">
-							<SearchIcon color='black'/>
-						</button>
-						</div>
+					<div className="max-w-2xl p-4 m-20 w-full flex align-center justify-center">
+						<div className="relative flex items-center w-full">
+							<input className="w-full border border-black rounded-full p-3 px-6 text-gray-700 focus:outline-none" id="search" type="text" placeholder="Buscar" />
+
+							<div className="absolute right-4 mx-2">
+								<button className="text-white rounded-full hover:bg-blue-400 focus:outline-none w-12 h-12 flex items-center justify-center">
+									<SearchIcon color='black' />
+								</button>
+							</div>
 						</div>
 					</div>
 
@@ -106,7 +106,7 @@ const data = useAppSelector((state) => state.getConfig.data)
 								{t("text-account")}
 							</AuthMenu>
 						</div>
-						
+
 					</div>
 				</div>
 			</div>
