@@ -30,6 +30,7 @@ import { getFlipCard } from 'src/redux/modules/flip-cards/getFlipCardSlice';
 import { getBanner } from 'src/redux/modules/banners/getBannerSlice';
 import { getPublicity } from 'src/redux/modules/publicity/publicitySlice';
 import { getPress } from 'src/redux/modules/press/press';
+import { useConfigCompany } from 'src/redux/hooks/companyHooks';
 
 type BlogsType = {
 	image: string;
@@ -37,9 +38,19 @@ type BlogsType = {
 	text: string;
 }
 
+type ConfigPortal = {
+	data: {
+		app: {
+			showAppDownload: boolean;
+		}
+	}
+}
+
 export default function Home() {
 	const dispatch = useDispatch();
 	const dispatchApp = useAppDispatch();
+	const { data: dataConfigPortal }: ConfigPortal = useConfigCompany();
+	console.log(dataConfigPortal);
 
 	const [darlingState, setDarlingState] = useState([]);
 	const [flipCardState, setFlipCardState] = useState([]);
@@ -195,8 +206,7 @@ export default function Home() {
 						</div>
 					</div>
 				</Container>
-
-				<DownloadApps className="mb-10" />
+				{dataConfigPortal?.app?.showAppDownload && <DownloadApps className="mb-10" />}
 			</Container>
 			<Container>
 				{/* <Subscription className="bg-opacity-0 px-5 sm:px-16 xl:px-0 py-12 md:py-14 xl:py-16" /> */}

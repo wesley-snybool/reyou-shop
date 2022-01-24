@@ -5,7 +5,6 @@ export const getPress = createAsyncThunk(
     'press/thunk',
     async () => {
         const response = await fetch(`${BASE_URL}${PRESS_URL}`);
-        console.log(response);
         const formatResponse = await response.json();
         return formatResponse;
     }
