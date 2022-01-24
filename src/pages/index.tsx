@@ -31,26 +31,19 @@ import { getBanner } from 'src/redux/modules/banners/getBannerSlice';
 import { getPublicity } from 'src/redux/modules/publicity/publicitySlice';
 import { getPress } from 'src/redux/modules/press/press';
 import { useConfigCompany } from 'src/redux/hooks/companyHooks';
+import { isEmpty } from 'lodash';
+import { ConfigPortal } from 'src/types/types';
 
 type BlogsType = {
 	image: string;
 	title: string;
 	text: string;
-}
-
-type ConfigPortal = {
-	data: {
-		app: {
-			showAppDownload: boolean;
-		}
-	}
-}
+};
 
 export default function Home() {
 	const dispatch = useDispatch();
 	const dispatchApp = useAppDispatch();
 	const { data: dataConfigPortal }: ConfigPortal = useConfigCompany();
-	console.log(dataConfigPortal);
 
 	const [darlingState, setDarlingState] = useState([]);
 	const [flipCardState, setFlipCardState] = useState([]);
@@ -63,7 +56,7 @@ export default function Home() {
 	const { isLoading: isLoadDFavorites, error: errorFavorites } = useAppSelector((state) => state.getReyouFavorites);
 	const dataFavorites = useAppSelector((state) => state.getReyouFavorites.data);
 
-	//Bsucando os dados dos FlipsCards e guardando no reduxjs
+	//Buscando os dados dos FlipsCards e guardando no reduxjs
 	const { data: dataFlips, isLoading: isLoadingFlipCard }: any = useAppSelector((state) => state.getFlipCardsData);
 
 	const { data: dataPress, isLoading: isLoadingPress } = useAppSelector((state) => state.getPress);
@@ -144,24 +137,26 @@ export default function Home() {
 
 				<BrandGridBlock dataBrands={dataBrands} sectionHeading="NOVIDADES NA Re.You" />
 
-				<div className='flex items-center flex-col justify-center container-video-inst my-12 w-full mx-auto py-4 px-20 bg-gray-300 text-center'>
-					<p className='text-xl font-bold text-black p-8' >QUER CONHECER A NOSSA HISTÓRIA?</p>
-					<div className='my-4 w-full h-full bg-gray-200'>
-						<iframe src='https://www.youtube.com/embed/E7wJTI-1dvQ'
-							frameBorder='0'
-							allow='autoplay; encrypted-media'
-							allowFullScreen
-							width='100%'
-							height='100%'
-							title='video'
-						/>
+				{!isEmpty(dataConfigPortal.urlVideoInst) && (
+					<div className='flex items-center flex-col justify-center container-video-inst my-12 w-full mx-auto py-4 px-20 bg-gray-300 text-center'>
+						<p className='text-xl font-bold text-black p-8' >QUER CONHECER A NOSSA HISTÓRIA?</p>
+						<div className='my-4 w-full h-full bg-gray-200'>
+							<iframe src='https://www.youtube.com/embed/E7wJTI-1dvQ'
+								frameBorder='0'
+								allow='autoplay; encrypted-media'
+								allowFullScreen
+								width='100%'
+								height='100%'
+								title='video'
+							/>
+						</div>
+						<Link href='/sobre-nos'>
+							<button className='text-black font-bold my-4 w-40 p-4 bg-gray-300  shadow-cardMoreContent rounded-full focus:outline-none hover:bg-gray-400 hover:text-white transition-all '>
+								Saiba Mais
+							</button>
+						</Link>
 					</div>
-					<Link href='/sobre-nos'>
-						<button className='text-black font-bold my-4 w-40 p-4 bg-gray-300  shadow-cardMoreContent rounded-full focus:outline-none hover:bg-gray-400 hover:text-white transition-all '>
-							Saiba Mais
-						</button>
-					</Link>
-				</div>
+				)}
 				<Container className='bg-more_content pb-16 shadow-cardMoreContent'>
 					<div>
 						<p className='font-bold text-black text-xl py-12 text-center'>MAIS CONTEÚDO PRA VOCÊ</p>
@@ -212,9 +207,6 @@ export default function Home() {
 				{/* <Subscription className="bg-opacity-0 px-5 sm:px-16 xl:px-0 py-12 md:py-14 xl:py-16" /> */}
 				{/* <Instagram /> */}
 			</Container>
-
-
-
 		</>
 	);
 }

@@ -12,4 +12,13 @@ export type FilterTypes = {
     frt_pricemax?: number;
     ftr_brand?: string[];
 
-}
+};
+
+export type ConfigPortal = {
+    data: {
+        urlVideoInst: string;
+        app: {
+            showAppDownload: boolean;
+        }
+    }
+};
