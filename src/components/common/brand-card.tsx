@@ -3,14 +3,23 @@ import Image from "next/image";
 import { BrandReyou } from "@framework/types";
 import { ROUTES } from "@utils/routes";
 import { useTranslation } from "next-i18next";
+import { useRouter } from "next/router";
 
 const BrandCard: React.FC<{ brand: BrandReyou }> = ({ brand }) => {
 	const { action, title, image } = brand;
+	const router = useRouter();
+
+	const handleClickBrand = () => {
+		router.push({
+			pathname: "/marcas/pagina-marca",
+			query: { uid: brand.uid },
+	});
+	}
 
 	const { t } = useTranslation("common");
 	
 	return (
-			<div className="bg-red-500 group flex justify-center text-center relative overflow-hidden rounded-md">
+			<div onClick={handleClickBrand}className="bg-red-500 group flex justify-center text-center relative overflow-hidden rounded-md">
 				<Image
 					src={image?.desktop?.url || '/'}
 					alt={title || t("text-brand-thumbnail")}

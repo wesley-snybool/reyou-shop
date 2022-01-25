@@ -1,8 +1,8 @@
 import { GetStaticProps } from "next";
 import Layout from "@components/layout/layout";
 import Container from "@components/ui/container";
-import CarrousselGallery from "../pagina-marca/carroussel-gallery";
-import Search from "../../../pages/search";
+import CarrousselGallery from "./carroussel-gallery";
+import Search from "../../search";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useEffect, useState } from "react";
 import { useBrandData } from "src/redux/hooks/brandsHooks";
@@ -17,11 +17,7 @@ export default function PageBrand() {
 
   useEffect(() => {
     if (!isLoading && dataBrandsRedux) {
-      dataBrandsRedux.map((item: any) => {
-        if (item.uid === uidBrand) {
-          setBrandState(item);
-        }
-      });
+      setBrandState(dataBrandsRedux.filter((item: BrandsTypes) => item.uid === uidBrand)[0]);
     }
   }, [dataBrandsRedux, brandState]);
 

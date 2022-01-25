@@ -5,6 +5,8 @@ import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import { useTranslation } from "next-i18next";
 import { addFilterStateProduct } from "src/redux/modules/filters/filter/filter";
+import { useBrandData } from "src/redux/hooks/brandsHooks";
+import { BrandsTypes } from "src/types/types";
 
 
 type StateProducts = {
