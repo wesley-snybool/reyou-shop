@@ -19,7 +19,7 @@ export const PartConditions = () => {
 
 	const [stateQuery, setStateQuery] = useState<string[]>([])
 
-	const part_condition = useAppSelector((state) => state.stateProducts.data)
+	const part_condition: StateProducts[] = useAppSelector((state) => state.stateProducts.data)
 
 	const { t } = useTranslation("common");
 
@@ -48,7 +48,7 @@ export const PartConditions = () => {
 				{t("text-category")}
 			</h3>
 			<div className="mt-2 flex flex-col space-y-4">
-				{part_condition?.map((item: StateProducts) => {
+				{part_condition.map((item) => {
 					console.log(item);
 					return (
 						<CheckBox
