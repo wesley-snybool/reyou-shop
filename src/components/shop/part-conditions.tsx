@@ -49,10 +49,10 @@ export const PartConditions = () => {
 			</h3>
 			<div className="mt-2 flex flex-col space-y-4">
 				{part_condition?.map((item: StateProducts) => {
-					//console.log(item)
+					console.log(item);
 					return (
 						<CheckBox
-							key={item.id}
+							key={item.code}
 							label={item.name}
 							name={item.name.toLowerCase()}
 							checked={stateQuery.includes(item.code)}
