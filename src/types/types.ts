@@ -22,3 +22,30 @@ export type ConfigPortal = {
         }
     }
 };
+
+export type BrandsTypes = {
+    isLoading: boolean;
+    uid: string;
+    tags: [];
+    code: string;
+    order: number;
+    title: string;
+    brandDescription: string
+    image: {
+        mobile: {
+            url: string;
+            width: number;
+            height: number;
+        },
+        desktop: {
+            url: string;
+            width: number;
+            height: number;
+        }
+    },
+    action: {
+        internal: boolean;
+        title: string;
+        url: string;
+    }
+};

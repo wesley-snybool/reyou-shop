@@ -250,7 +250,7 @@ export default function Home() {
 							Re.You na IMPRENSA
 						</p>
 					</div>
-					<div className="flex flex-wrap gap-8">
+					<div className="flex flex-wrap gap-5">
 						{dataPress.map((item: any) => {
 							return (
 								<>

@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
-import {BASE_URL, BRANDS} from '../../services/baseUrl'
+import { BASE_URL, BRANDS } from '../../services/baseUrl'
 
 export const getBrands = createAsyncThunk(
     'getBrands-req/getBrands',

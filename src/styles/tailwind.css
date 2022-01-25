@@ -401,13 +401,17 @@
   }
 
   .cards-press {
-    width: 410px;
+    width: 419px;
     height: 422px;
   }
 
   .form-final {
     background-color: #faf9f9;
     padding: 20px;
+  }
+
+  .card-brands {
+    width: 500px;
   }
 
   .form-final form {

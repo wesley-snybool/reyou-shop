@@ -1,97 +1,83 @@
+import { useEffect, useState } from "react";
+import { useRouter } from "next/router";
+import Image from "next/image";
 import Container from "@components/ui/container";
 import Layout from "@components/layout/layout";
+import { useAppDispatch } from "src/redux/store/store";
+import { getBrands } from "src/redux/modules/brands/brands";
+import { useBrandData } from "src/redux/hooks/brandsHooks";
 
+export default function Brands() {
+    const dispatch = useAppDispatch();
+    const router = useRouter();
 
-const dataBrands = [
-    {
-        logoUrl: '/assets/images/brands/hunter-shoes.png', 
-        title: 'Hunter Shoes', 
-        followers: '1500'
-    },
-    {
-        logoUrl: '/assets/images/brands/fusion.png', 
-        title: 'Adidas', 
-        followers: '1500'
-    },
-    {
-        logoUrl: '/assets/images/brands/shovia.png', 
-        title: 'Fania', 
-        followers: '1500'
-    },
-    {
-        logoUrl: '/assets/images/brands/hunter-shoes.png', 
-        title: 'Veja', 
-        followers: '1500'
-    },
-    {
-        logoUrl: '/assets/images/brands/fusion.png', 
-        title: 'Veja', 
-        followers: '1500'
-    },
-    {
-        logoUrl: '/assets/images/brands/shovia.png', 
-        title: 'Veja', 
-        followers: '1500'
-    },
-    {
-        logoUrl: '/assets/images/brands/hunter-shoes.png', 
-        title: 'Veja', 
-        followers: '1500'
-    },
-    {
-        logoUrl: '/assets/images/brands/fusion.png', 
-        title: 'Veja', 
-        followers: '1500'
-    },
-    {
-        logoUrl: '/assets/images/brands/shovia.png', 
-        title: 'Veja', 
-        followers: '1500'
-    },
-    {
-        logoUrl: '/assets/images/brands/hunter-shoes.png', 
-        title: 'Veja', 
-        followers: '1500'
-    },
-    {
-        logoUrl: '/assets/images/brands/fusion.png', 
-        title: 'Veja', 
-        followers: '1500'
-    },
-    {
-        logoUrl: '/assets/images/brands/shovia.png', 
-        title: 'Veja', 
-        followers: '1500'
-    },
-]
+    const { data: dataBrandsRedux, isLoading } = useBrandData();
 
+    const [dataBrandsState, setDataBrandsState] = useState([]);
 
-export default function Brands () {
+    useEffect(() => {
+        dispatch(getBrands());
+    }, []);
+
+    useEffect(() => {
+        if (!dataBrandsRedux.isLoading && dataBrandsRedux) {
+            setDataBrandsState(dataBrandsRedux);
+        }
+    }, [dataBrandsRedux]);
 
     return (
         <>
-            <Container className='text-black p-4'>
-                <div className=' mx-auto p-4 mb-20 px-20'>
-                    <h1 className='text-black font-bold text-xl mb-8' >Descubra a Responsabilidade das Marcas</h1>
-                    <p className=''>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae quasi distinctio eos. Quae nulla error, facilis saepe, voluptas, optio voluptates a tenetur maiores eum voluptatum amet ex ut ipsam eius!  Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut deleniti, porro voluptatem perferendis dicta excepturi earum. Provident mollitia molestiae itaque quisquam quod nam officiis ex libero eum assumenda. Voluptatum, nisi!</p>
+            <Container className="text-black p-4">
+                <div className=" mx-auto p-4 mb-20 px-20">
+                    <h1 className="text-black font-bold text-xl mb-8">
+                        Descubra a Responsabilidade das Marcas
+                    </h1>
+                    <p className="">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae
+                        quasi distinctio eos. Quae nulla error, facilis saepe, voluptas,
+                        optio voluptates a tenetur maiores eum voluptatum amet ex ut ipsam
+                        eius! Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut
+                        deleniti, porro voluptatem perferendis dicta excepturi earum.
+                        Provident mollitia molestiae itaque quisquam quod nam officiis ex
+                        libero eum assumenda. Voluptatum, nisi!
+                    </p>
                 </div>
-                <div className=" justify-between mb-16 mx-auto flex-wrap w-4/5 gap-2 flex px-12">
-                    {dataBrands.map((item, key) => {
-                        return(
-                            <div key={key} className=' flex gap-4 items-center justify-between p-2'>
-                                <img className=' rounded-full w-20' src={item.logoUrl} alt="" />
-                                <div className='text-black text-center'>
-                                    <h3 className='font-bold'>{item.title}</h3>
-                                    <h2>{item.followers} Seguidores</h2>
+                <div className=" justify-between mb-16 mx-auto flex-wrap w-4/5 gap-2 flex px-4">
+                    {dataBrandsState?.map((item: any) => {
+                        return (
+                            <div
+                                key={`${item.uid}--container`}
+                                className="flex card-brands gap-4 items-center justify-between p-2"
+                            >
+                                <Image
+                                    className="rounded-full"
+                                    width={80}
+                                    height={80}
+                                    src={item.image.desktop.url}
+                                    alt="Logo da Marcas"
+                                />
+                                <div className="text-black text-center">
+                                    <h3 className="font-bold">{item?.title}</h3>
+                                    <h2>{item?.follower ?? "1250"} Seguidores</h2>
                                 </div>
-                                <a href='/marcas/pagina-marca' className='bg-black text-white py-4 px-8 rounded-md' >Ver Produtos</a>
+                                <a
+                                    onClick={() => {
+                                        router.push({
+                                            pathname: "/marcas/pagina-marca",
+                                            query: { uid: item.uid },
+                                        });
+                                    }}
+                                    className="bg-black text-white cursor-pointer py-4 px-8 rounded-md"
+                                >
+                                    Ver Produtos
+                                </a>
                             </div>
-                        )
+                        );
                     })}
                 </div>
             </Container>
         </>
-    )
+    );
 }
 
 Brands.Layout = Layout;
