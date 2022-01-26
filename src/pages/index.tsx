@@ -250,7 +250,7 @@ export default function Home() {
 							Re.You na IMPRENSA
 						</p>
 					</div>
-					<div className="flex flex-wrap gap-5">
+					<div className="flex flex-wrap gap-5 justify-between">
 						{dataPress.map((item: any) => {
 							return (
 								<>

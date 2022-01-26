@@ -405,10 +405,17 @@
     height: 422px;
   }
 
+  @media screen and (min-width: 1280px) {
+    .cards-press {
+      width: 350px;
+      height: 480px;
+    }
+  }
+
   @media screen and (min-width: 1300px) {
     .cards-press {
-      background-color: lightcoral;
-      border: 10px solid red;
+      width: 360px;
+      height: 400px;
     }
   }
 
