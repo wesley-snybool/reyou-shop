@@ -11,9 +11,8 @@ const BrandCard: React.FC<{ brand: BrandReyou }> = ({ brand }) => {
 
 	const handleClickBrand = () => {
 		router.push({
-			pathname: "/marcas/pagina-marca",
-			query: { uid: brand.uid },
-	});
+			pathname: `/marcas/pagina-marca/${[brand.uid]}`,
+		});
 	}
 
 	const { t } = useTranslation("common");
