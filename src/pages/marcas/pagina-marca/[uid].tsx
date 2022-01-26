@@ -14,6 +14,7 @@ export default function PageBrand() {
   const { data: dataBrandsRedux, isLoading } = useBrandData();
   const [brandState, setBrandState] = useState<BrandsTypes>();
   const uidBrand = query.uid;
+  console.log(uidBrand);
 
   useEffect(() => {
     if (!isLoading && dataBrandsRedux) {
@@ -87,3 +88,12 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => {
     },
   };
 };
+
+export async function getStaticPaths() {
+  return {
+    paths: [
+      { params: { uid: '' } },
+    ],
+    fallback: true,
+  }
+}

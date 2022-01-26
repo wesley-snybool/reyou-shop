@@ -63,8 +63,7 @@ export default function Brands() {
                                 <a
                                     onClick={() => {
                                         router.push({
-                                            pathname: "/marcas/pagina-marca",
-                                            query: { uid: item.uid },
+                                            pathname: `/marcas/pagina-marca/${[item.uid]}`,
                                         });
                                     }}
                                     className="bg-black text-white cursor-pointer py-4 px-8 rounded-md"
