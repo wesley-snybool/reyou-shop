@@ -94,6 +94,6 @@ export async function getStaticPaths() {
     paths: [
       { params: { uid: '' } },
     ],
-    fallback: true,
+    fallback: false,
   }
 }
