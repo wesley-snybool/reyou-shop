@@ -19,7 +19,7 @@ const BrandCard: React.FC<{ brand: BrandReyou }> = ({ brand }) => {
 	const { t } = useTranslation("common");
 	
 	return (
-			<div onClick={handleClickBrand}className="bg-red-500 group flex justify-center text-center relative overflow-hidden rounded-md">
+			<div onClick={handleClickBrand}className="bg-red-500 group cursor-pointer flex justify-center text-center relative overflow-hidden rounded-md">
 				<Image
 					src={image?.desktop?.url || '/'}
 					alt={title || t("text-brand-thumbnail")}
