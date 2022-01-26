@@ -405,6 +405,13 @@
     height: 422px;
   }
 
+  @media screen and (min-width: 1300px) {
+    .cards-press {
+      background-color: lightcoral;
+      border: 10px solid red;
+    }
+  }
+
   .form-final {
     background-color: #faf9f9;
     padding: 20px;
