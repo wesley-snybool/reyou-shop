@@ -77,7 +77,7 @@ const Modal: FC<ModalProps> = ({
 						exit="from"
 						variants={fadeInOut(0.25)}
 						className={cn(
-							"modal-root fixed bg-black bg-opacity-70 inset-0 z-50 ",
+							"modal-root fixed bg-black bg-opacity-70 overflow-y-scroll inset-0 z-50 ",
 							useBlurBackdrop && "backdrop-filter backdrop-blur-sm",
 							rootClasses[variant],
 							rootClassName
@@ -88,7 +88,7 @@ const Modal: FC<ModalProps> = ({
 							animate="to"
 							exit="from"
 							variants={zoomOutIn()}
-							className="relative bg-black h-full mx-auto w-full"
+							className="relative bg-white h-full mx-auto w-full"
 						>
 							<div className='flex justify-end py-4 px-8'>
 								<button
@@ -111,7 +111,7 @@ const Modal: FC<ModalProps> = ({
 							>
 								<div
 									ref={modalInnerRef}
-									className="overflow-y-auto h-full rounded-lg"
+									className="h-full rounded-lg"
 									style={{ maxHeight: "calc(100vh - 140px)" }}
 								>
 									{children}
