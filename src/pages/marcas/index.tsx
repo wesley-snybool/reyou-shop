@@ -42,7 +42,7 @@ export default function Brands() {
                         libero eum assumenda. Voluptatum, nisi!
                     </p>
                 </div>
-                <div className=" justify-between mb-16 mx-auto flex-wrap w-4/5 gap-2 flex px-4">
+                <div className="justify-between bg mb-16 mx-auto flex-wrap gap-2 flex sm:justify-center px-[100px]">
                     {dataBrandsState?.map((item: any) => {
                         return (
                             <div
