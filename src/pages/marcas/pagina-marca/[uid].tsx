@@ -76,30 +76,7 @@ const  PageBrand = () => {
 
 PageBrand.Layout = Layout;
 
-/* export const getStaticProps: GetStaticProps = async ({ locale }) => {
-  return {
-    props: {
-      ...(await serverSideTranslations(locale!, [
-        "common",
-        "forms",
-        "menu",
-        "footer",
-      ])),
-    },
-  };
-}; */
-
-/* export async function getStaticPaths() {
-  return {
-    paths: [
-      { params: { uid: '' } },
-    ],
-    fallback: false,
-  }
-} */
-
 export async function getServerSideProps({ }) {
-
   return {
     props: {
       ...(await serverSideTranslations('en', [
