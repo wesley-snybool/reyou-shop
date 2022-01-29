@@ -9,7 +9,7 @@ import { useBrandData } from "src/redux/hooks/brandsHooks";
 import { useRouter } from "next/router";
 import { BrandsTypes } from "src/types/types";
 
-export default function PageBrand() {
+const  PageBrand = () => {
   const { query } = useRouter();
   const { data: dataBrandsRedux, isLoading } = useBrandData();
   const [brandState, setBrandState] = useState<BrandsTypes>();
@@ -76,7 +76,7 @@ export default function PageBrand() {
 
 PageBrand.Layout = Layout;
 
-export const getStaticProps: GetStaticProps = async ({ locale }) => {
+/* export const getStaticProps: GetStaticProps = async ({ locale }) => {
   return {
     props: {
       ...(await serverSideTranslations(locale!, [
@@ -87,13 +87,29 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => {
       ])),
     },
   };
-};
+}; */
 
-export async function getStaticPaths() {
+/* export async function getStaticPaths() {
   return {
     paths: [
       { params: { uid: '' } },
     ],
     fallback: false,
   }
+} */
+
+export async function getServerSideProps({ }) {
+
+  return {
+    props: {
+      ...(await serverSideTranslations('en', [
+        "common",
+        "forms",
+        "menu",
+        "footer",
+      ])),
+    },
+  }
 }
+
+export default PageBrand;

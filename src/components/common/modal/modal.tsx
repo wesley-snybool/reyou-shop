@@ -88,7 +88,7 @@ const Modal: FC<ModalProps> = ({
 							animate="to"
 							exit="from"
 							variants={zoomOutIn()}
-							className="relative bg-white h-full mx-auto w-full"
+							className="relative bg-black h-full mx-auto w-full"
 						>
 							<div className='flex justify-end py-4 px-8'>
 								<button
