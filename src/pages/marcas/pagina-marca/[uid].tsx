@@ -48,7 +48,7 @@ const  PageBrand = () => {
             </div>
             <div className="bg-gray-200 flex items-center">
                 <h3 className="text-center text-black ">
-                {brandState?.brandDescription ?? "Descrição da marca está ausente"}
+                {brandState?.brandDescription ?? ""}
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, laboriosam cumque. Voluptas ad aperiam nostrum distinctio alias recusandae ea porro accusamus modi repellat, magnam aut quae nesciunt incidunt, deserunt atque.
                 </h3>
             </div>
