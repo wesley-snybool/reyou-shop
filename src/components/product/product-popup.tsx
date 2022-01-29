@@ -104,7 +104,7 @@ export default function ProductPopup() {
 				{brand?.title}
 			</div>
 			<div className="p-8 flex gap-20 flex-col lg:flex-row w-full md:w-[650px] sm:w-[450px] lg:w-[1200px] mx-auto ">
-				<div className="flex-1 flex-shrink-0 flex items-start justify-center w-full lg:w-430px max-h-430px lg:max-h-full overflow-hidden bg-transparent">
+				<div className="flex-1 flex-shrink-0 flex items-start justify-center w-full lg:w-430px max-h-430px lg:max-h-full bg-transparent">
 					<img
 						src={
 							imageMedium?.url ??
