@@ -20,29 +20,36 @@ type TypesBrand = {
 }
 
 export const SearchBrands: FC<TypesBrand> = ({ brands, showSearchBrand }) => {
-	const [filterBrand, setFilterBrand] = useState<string[]>([]);
+	const [filterBrand, setFilterBrand] = useState<string>('');
+	
+	const [textInputBrand, setTextInputBrand] = useState<string>('')
 
-	useEffect(() => {
-		dispatch(addFilterBrand(filterBrand))
-	},[filterBrand])
-
-	const handleAddFilterBrand = (uid: string) => {
-		let newState = [...filterBrand];
-		newState.push(uid);
-		setFilterBrand(newState);
-	}
-
-	const [valueText, setValuetext] = useState<string>('')
 	const ref = useRef<HTMLInputElement>(null);
 
+	useEffect(() => {
+		dispatch(getShowCaseProducts({ ftr_brand: filterBrand }));
+		console.log(filterBrand)
+	},[filterBrand])
 
-	let arrayBrands = [];
-	arrayBrands = brands;
+	useEffect(() => {},[textInputBrand])
 
-	const filterBrands = arrayBrands.map((item: any) => item.title);
+	const handleAddFilterBrand = (uid: string, item: string) => {
+		setFilterBrand(uid);
+		setTextInputBrand(item);
+		console.log(uid, item);
+	}
 
 	const handleChange = (value: any) => {
-		setValuetext(value.target.value)
+		setTextInputBrand(value.target.value)
+	}
+
+	const handleSubmitBrand = () => {
+		dispatch(addFilterBrand(filterBrand))
+	}
+
+	const handleOnClear = () => {
+		setTextInputBrand('');
+		setFilterBrand('');
 	}
 
 	const dispatch = useAppDispatch();
@@ -54,38 +61,22 @@ export const SearchBrands: FC<TypesBrand> = ({ brands, showSearchBrand }) => {
 
 
 	const { t } = useTranslation("common");
+
 	const router = useRouter();
+
 	const { pathname, query } = router;
+
 	const selectedPrices = query?.price ? (query.price as string).split(",") : [];
+
 	const [formState, setFormState] = React.useState<string[]>(selectedPrices);
+
 	React.useEffect(() => {
 		setFormState(selectedPrices);
 	}, [query?.price]);
+
 	function handleItemClick(e: React.FormEvent<HTMLInputElement>): void {
 		const { value } = e.currentTarget;
-		
-		let currentFormState = formState.includes(value)
-			? formState.filter((i) => i !== value)
-			: [...formState, value];
-		// setFormState(currentFormState);
-		const { price, ...restQuery } = query;
-		router.push(
-			{
-				pathname,
-				query: {
-					...restQuery,
-					...(!!currentFormState.length
-						? { price: currentFormState.join(",") }
-						: {}),
-				},
-			},
-			undefined,
-			{ scroll: false }
-		);
 	}
-
-
-	const data = useAppSelector((state) => state.getTypeItems.data)
 
 	return (
 		<>
@@ -98,12 +89,12 @@ export const SearchBrands: FC<TypesBrand> = ({ brands, showSearchBrand }) => {
 					</div>
 					<div className=" flex flex-col items-center w-full">
 						<div className='mb-8 p-1'>
-							<SearchBrandBox place={'Pesquisar Marcas'} onSubmit={() => { }} name={valueText} value={valueText} onClear={() => setValuetext('')} onChange={handleChange} />
+							<SearchBrandBox place={'Pesquisar Marcas'} onSubmit={handleSubmitBrand} name={textInputBrand} value={textInputBrand} onClear={handleOnClear} onChange={handleChange} />
 						</div>
 						<div className="brands-box flex flex-col w-full overflow-scroll p-4">
 							{brands?.map((item: TypeBrandsProps, uid: string) => {
 								return (
-									<span onClick={() => handleAddFilterBrand(item.uid)} className="w-full hover:bg-gray-300  p-2 rounded-md text-black" key={uid}>{item.title}</span>
+									<span onClick={() => handleAddFilterBrand(item.uid, item.title)} className="w-full hover:bg-gray-300  p-2 rounded-md text-black" key={uid}>{item.title}</span>
 								)
 							})}
 						</div>

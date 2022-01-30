@@ -84,6 +84,7 @@ export const getShowCaseProducts = createAsyncThunk(
                 ftr_state: filter.ftr_state_products,
                 ftr_category: filter.ftr_category,
                 ftr_typeItem: filter.ftr_typeItem,
+                ftr_brand: filter.ftr_brand,
 /*              ssf: apiParams.ssf,
                 sso: apiParams.sso,
                 ftr_state: apiParams.ftr_state,

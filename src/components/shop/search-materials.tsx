@@ -21,7 +21,7 @@ type TypesBrand = {
 }
 
 export const SearchMaterials: FC<TypesBrand> = ({ brands, showSearchBrand }) => {
-	const [filterBrand, setFilterBrand] = useState<string[]>([]);
+	const [filterBrand, setFilterBrand] = useState<string>('');
 
 	useEffect(() => {
 		dispatch(addFilterBrand(filterBrand))
@@ -29,10 +29,7 @@ export const SearchMaterials: FC<TypesBrand> = ({ brands, showSearchBrand }) => 
 	},[filterBrand])
 
 	const handleAddFilterBrand = (uid: string) => {
-		let newState = [...filterBrand];
-		newState.push(uid);
-
-		setFilterBrand(newState);
+		setFilterBrand(uid);
 	}
 
 	const [valueText, setValuetext] = useState<string>('')

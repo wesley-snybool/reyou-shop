@@ -10,7 +10,7 @@ export type FilterTypes = {
     ftr_category?: string[];
     frt_priceMin?: number;
     frt_pricemax?: number;
-    ftr_brand?: string[];
+    ftr_brand?: string;
 
 };
 

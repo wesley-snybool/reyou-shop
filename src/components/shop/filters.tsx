@@ -37,7 +37,6 @@ export const ShopFilters: React.FC<TypeBrandsProps> = ({ showSearchBrand }) => {
 
 	const valueSearch = useAppSelector((state) => state.filters.ftr_universe)
 	const valueSearchSplit = valueSearch?.map((item) => item.replace('-', ' '));
-	console.log(valueSearchSplit, 'aqui');
 
 	useEffect(() => {
 
