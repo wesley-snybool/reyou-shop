@@ -36,7 +36,6 @@ export const SearchBrands: FC<TypesBrand> = ({ brands, showSearchBrand }) => {
 	const handleAddFilterBrand = (uid: string, item: string) => {
 		setFilterBrand(uid);
 		setTextInputBrand(item);
-		console.log(uid, item);
 	}
 
 	const handleChange = (value: any) => {
