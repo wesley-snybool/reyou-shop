@@ -31,7 +31,6 @@ export const PartConditions = () => {
 
 	function handleItemClick(e: React.FormEvent<HTMLInputElement>): void {
 		const { value } = e.currentTarget;
-		console.log(value, "Valor de value");
 
 		let newState = [...stateQuery]
 

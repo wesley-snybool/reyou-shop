@@ -14,20 +14,12 @@ export const FilteredItem = ({ itemValue }: Props) => {
 
 	const [stateQuery, setStateQuery] = useState<string[]>([]);
 
-/* 	useEffect(() => {
-		dispatch(addFilterUniverse(stateQuery))
-	}, [stateQuery]) */
+	useEffect(() => {
+
+	}, [stateQuery])
 
 	function handleClose() {
-/* 		const value = itemValue;
-		let newState = [...stateQuery]
-
-		if (newState.includes(value)) {
-			newState = newState.filter(e => e !== value)
-		} else {
-			newState.push(value)
-		}
-		setStateQuery(newState); */
+		
 	}
 	return (
 		<div

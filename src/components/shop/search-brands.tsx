@@ -65,7 +65,7 @@ export const SearchBrands: FC<TypesBrand> = ({ brands, showSearchBrand }) => {
 	}, [query?.price]);
 	function handleItemClick(e: React.FormEvent<HTMLInputElement>): void {
 		const { value } = e.currentTarget;
-		console.log(value, 'Consolou Aqui')
+		
 		let currentFormState = formState.includes(value)
 			? formState.filter((i) => i !== value)
 			: [...formState, value];
@@ -98,8 +98,8 @@ export const SearchBrands: FC<TypesBrand> = ({ brands, showSearchBrand }) => {
 							Marcas
 						</h3>
 					</div>
-					<div className="mt-2 flex flex-col items-center w-full">
-						<div className=' p-4'>
+					<div className=" flex flex-col items-center w-full">
+						<div className='mb-8'>
 							<SearchBrandBox place={'Pesquisar Marcas'} onSubmit={() => { }} name={valueText} value={valueText} onClear={() => setValuetext('')} onChange={handleChange} />
 						</div>
 						<div className="brands-box flex flex-col w-full overflow-scroll p-4">
