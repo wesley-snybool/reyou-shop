@@ -11,7 +11,7 @@ export type FilterTypes = {
     frt_priceMin?: number;
     frt_pricemax?: number;
     ftr_brand?: string;
-
+    ftr_material: string;
 };
 
 export type ConfigPortal = {

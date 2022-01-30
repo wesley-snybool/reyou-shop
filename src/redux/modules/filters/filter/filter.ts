@@ -10,6 +10,7 @@ const defaultFilters: FilterTypes = {
     ftr_category: [],
     ftr_typeItem: [],
     ftr_brand: '',
+    ftr_material: ''
 }
 
 export const filterSlice = createSlice({
@@ -34,6 +35,9 @@ export const filterSlice = createSlice({
         addFilterBrand: (state: FilterTypes, { payload }: PayloadAction<string>) => {
             return { ...state, ftr_brand: payload }
         },
+        addFilterMaterial: (state: FilterTypes, { payload }: PayloadAction<string>) => {
+            return { ...state, ftr_material: payload }
+        },
         removeFilter(state) {
             return { ...state, state: defaultFilters }
         },
@@ -54,6 +58,7 @@ export const {
     addFilterTypeItem,
     addFilterBrand,
     removeItemFilterMyUniverse,
+    addFilterMaterial,
 } = filterSlice.actions;
 
 export const selectUser = (state: RootState) => state.userTest;

@@ -84,7 +84,7 @@ export const ShopFilters: React.FC<TypeBrandsProps> = ({ showSearchBrand }) => {
 			<Category />
 			<TypeItems />
 			<SearchBrands showSearchBrand={showSearchBrand} brands={data} />
-			<SearchMaterials showSearchBrand={showSearchBrand} brands={dataMaterials} />
+			<SearchMaterials showSearchBrand={showSearchBrand} materials={dataMaterials} />
 		</div>
 	);
 };

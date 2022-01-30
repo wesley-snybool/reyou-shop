@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 import React, { FC, useEffect, useRef, useState } from "react";
 import { useTranslation } from "next-i18next";
-import { addFilterBrand } from '../../redux/modules/filters/filter/filter'
+import { addFilterMaterial } from '../../redux/modules/filters/filter/filter'
 import { getTypesItems } from "src/redux/modules/types-items/typesItems";
 import { useAppSelector } from "src/redux/hooks/selectors";
 import SearchBrandBox from '@components/common/search-brand-box'
@@ -12,47 +12,45 @@ type TypeBrandsProps = {
 	uid: string;
 	manufacturer: string;
 	title: string;
-	name?: string;
+	name: string;
+	code: string;
 }
 
-type TypesBrand = {
-	brands?: any;
+type TypesMaterials = {
+	materials?: any;
 	showSearchBrand?: boolean;
 }
 
-export const SearchMaterials: FC<TypesBrand> = ({ brands, showSearchBrand }) => {
-	const [filterBrand, setFilterBrand] = useState<string>('');
+export const SearchMaterials: FC<TypesMaterials> = ({ materials, showSearchBrand }) => {
+
+	const dispatch = useAppDispatch();
+	const [filterMaterial, setFilterMaterial] = useState<string>('');
+	const [textInputMaterial, setTextInputMaterial] = useState<string>('')
 
 	useEffect(() => {
-		dispatch(addFilterBrand(filterBrand))
-		
-	},[filterBrand])
+		dispatch(addFilterMaterial(filterMaterial))
+	},[filterMaterial]);
 
-	const handleAddFilterBrand = (uid: string) => {
-		setFilterBrand(uid);
+	const handleOnClear = () => {
+		setTextInputMaterial('');
+		setFilterMaterial('');
 	}
 
-	const [valueText, setValuetext] = useState<string>('')
+	const handleAddFilterMaterial = (uid: string, title: string) => {
+		setFilterMaterial(uid);
+		setTextInputMaterial(title);
+	};
 
 	const ref = useRef<HTMLInputElement>(null);
 
-
-	let arrayBrands = [];
-	arrayBrands = brands;
-
-	const filterBrands = arrayBrands.map((item: any) => item.title);
-
 	const handleChange = (value: any) => {
-		setValuetext(value.target.value)
-	}
-
-	const dispatch = useAppDispatch();
+		setTextInputMaterial(value.target.value)
+	};
 
 	useEffect(() => {
 
 		dispatch(getTypesItems())
-	}, [])
-
+	}, []);
 
 	const { t } = useTranslation("common");
 	const router = useRouter();
@@ -62,31 +60,6 @@ export const SearchMaterials: FC<TypesBrand> = ({ brands, showSearchBrand }) => 
 	React.useEffect(() => {
 		setFormState(selectedPrices);
 	}, [query?.price]);
-	function handleItemClick(e: React.FormEvent<HTMLInputElement>): void {
-		const { value } = e.currentTarget;
-
-		let currentFormState = formState.includes(value)
-			? formState.filter((i) => i !== value)
-			: [...formState, value];
-		// setFormState(currentFormState);
-		const { price, ...restQuery } = query;
-		router.push(
-			{
-				pathname,
-				query: {
-					...restQuery,
-					...(!!currentFormState.length
-						? { price: currentFormState.join(",") }
-						: {}),
-				},
-			},
-			undefined,
-			{ scroll: false }
-		);
-	}
-
-
-	const data = useAppSelector((state) => state.getTypeItems.data)
 
 	return (
 		<>
@@ -99,12 +72,12 @@ export const SearchMaterials: FC<TypesBrand> = ({ brands, showSearchBrand }) => 
 					</div>
 					<div className="mt-2 flex flex-col items-center w-full">
 						<div className='p-1 mb-8'>
-							<SearchBrandBox place='Pesquisar Materiais' onSubmit={() => { }} name={valueText} value={valueText} onClear={() => setValuetext('')} onChange={handleChange} />
+							<SearchBrandBox place='Pesquisar Materiais' onSubmit={() => { }} name={textInputMaterial} value={textInputMaterial} onClear={handleOnClear} onChange={handleChange} />
 						</div>
 						<div className="brands-box flex flex-col w-full overflow-scroll p-4">
-							{brands?.map((item: TypeBrandsProps, uid: string) => {
+							{materials?.map((item: TypeBrandsProps) => {
 								return (
-									<span onClick={() => handleAddFilterBrand(item.uid)} className="w-full hover:bg-gray-300 cursor-pointer  p-2 rounded-md text-black" key={uid}>{item.name}</span>
+									<span onClick={() => handleAddFilterMaterial(item.code, item.name)} className="w-full hover:bg-gray-300 cursor-pointer  p-2 rounded-md text-black" key={item.code}>{item.name}</span>
 								)
 							})}
 						</div>
