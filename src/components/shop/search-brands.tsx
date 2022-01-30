@@ -28,7 +28,6 @@ export const SearchBrands: FC<TypesBrand> = ({ brands, showSearchBrand }) => {
 
 	useEffect(() => {
 		dispatch(getShowCaseProducts({ ftr_brand: filterBrand }));
-		console.log(filterBrand)
 	},[filterBrand])
 
 	useEffect(() => {},[textInputBrand])
@@ -42,8 +41,10 @@ export const SearchBrands: FC<TypesBrand> = ({ brands, showSearchBrand }) => {
 		setTextInputBrand(value.target.value)
 	}
 
-	const handleSubmitBrand = () => {
-		dispatch(addFilterBrand(filterBrand))
+	const handleSubmitBrand = (event: any) => {
+		event.preventDefault();
+		dispatch(addFilterBrand(textInputBrand))
+		console.log(textInputBrand);
 	}
 
 	const handleOnClear = () => {

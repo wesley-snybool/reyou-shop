@@ -41,7 +41,11 @@ export const SearchMaterials: FC<TypesMaterials> = ({ materials, showSearchBrand
 		setTextInputMaterial(title);
 	};
 
-	const ref = useRef<HTMLInputElement>(null);
+	const handleSubmitMaterial = (event: any) => {
+		event.preventDefault();
+		dispatch(addFilterMaterial(textInputMaterial));
+		console.log(textInputMaterial);
+	}
 
 	const handleChange = (value: any) => {
 		setTextInputMaterial(value.target.value)
@@ -51,15 +55,6 @@ export const SearchMaterials: FC<TypesMaterials> = ({ materials, showSearchBrand
 
 		dispatch(getTypesItems())
 	}, []);
-
-	const { t } = useTranslation("common");
-	const router = useRouter();
-	const { pathname, query } = router;
-	const selectedPrices = query?.price ? (query.price as string).split(",") : [];
-	const [formState, setFormState] = React.useState<string[]>(selectedPrices);
-	React.useEffect(() => {
-		setFormState(selectedPrices);
-	}, [query?.price]);
 
 	return (
 		<>
@@ -72,7 +67,7 @@ export const SearchMaterials: FC<TypesMaterials> = ({ materials, showSearchBrand
 					</div>
 					<div className="mt-2 flex flex-col items-center w-full">
 						<div className='p-1 mb-8'>
-							<SearchBrandBox place='Pesquisar Materiais' onSubmit={() => { }} name={textInputMaterial} value={textInputMaterial} onClear={handleOnClear} onChange={handleChange} />
+							<SearchBrandBox place='Pesquisar Materiais' onSubmit={handleSubmitMaterial} name={textInputMaterial} value={textInputMaterial} onClear={handleOnClear} onChange={handleChange} />
 						</div>
 						<div className="brands-box flex flex-col w-full overflow-scroll p-4">
 							{materials?.map((item: TypeBrandsProps) => {
