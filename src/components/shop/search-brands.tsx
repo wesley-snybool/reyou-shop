@@ -24,13 +24,11 @@ export const SearchBrands: FC<TypesBrand> = ({ brands, showSearchBrand }) => {
 
 	useEffect(() => {
 		dispatch(addFilterBrand(filterBrand))
-
 	},[filterBrand])
 
 	const handleAddFilterBrand = (uid: string) => {
 		let newState = [...filterBrand];
 		newState.push(uid);
-
 		setFilterBrand(newState);
 	}
 
@@ -99,7 +97,7 @@ export const SearchBrands: FC<TypesBrand> = ({ brands, showSearchBrand }) => {
 						</h3>
 					</div>
 					<div className=" flex flex-col items-center w-full">
-						<div className='mb-8'>
+						<div className='mb-8 p-1'>
 							<SearchBrandBox place={'Pesquisar Marcas'} onSubmit={() => { }} name={valueText} value={valueText} onClear={() => setValuetext('')} onChange={handleChange} />
 						</div>
 						<div className="brands-box flex flex-col w-full overflow-scroll p-4">

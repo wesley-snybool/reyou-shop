@@ -23,17 +23,18 @@ export const ProductGrid: FC<ProductGridProps> = ({ className = "" }) => {
 	const ftr_universe = useAppSelector((state) => state.filters.ftr_universe)
 	const ftr_category = useAppSelector((state) => state.filters.ftr_category)
 	const ftr_typeItem = useAppSelector((state) => state.filters.ftr_typeItem)
+	const ftr_brand = useAppSelector((state) => state.filters.ftr_brand)
 
 
 	const ftr_state_products = useAppSelector((state) => state.filters.ftr_state)
 
 	useEffect(() => {
-		dispatch(getShowCaseProducts({ pps: 20, pc: 1, ftr_universe, ftr_state_products, ftr_category, ftr_typeItem }));
+		dispatch(getShowCaseProducts({ pps: 20, pc: 1, ftr_universe, ftr_state_products, ftr_category, ftr_typeItem, ftr_brand }));
 		dispatch(getStateProducts());
 		dispatch(getCategoryProducts());
 		dispatch(getTypesItems());
 
-	}, [dispatch, loader, ftr_universe, ftr_state_products, ftr_category, ftr_typeItem]);
+	}, [dispatch, loader, ftr_universe, ftr_state_products, ftr_category, ftr_typeItem, ftr_brand]);
 
 
 	const loadMore = () => {

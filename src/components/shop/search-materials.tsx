@@ -101,13 +101,13 @@ export const SearchMaterials: FC<TypesBrand> = ({ brands, showSearchBrand }) => 
 						</h3>
 					</div>
 					<div className="mt-2 flex flex-col items-center w-full">
-						<div className='mb-8'>
+						<div className='p-1 mb-8'>
 							<SearchBrandBox place='Pesquisar Materiais' onSubmit={() => { }} name={valueText} value={valueText} onClear={() => setValuetext('')} onChange={handleChange} />
 						</div>
 						<div className="brands-box flex flex-col w-full overflow-scroll p-4">
 							{brands?.map((item: TypeBrandsProps, uid: string) => {
 								return (
-									<span onClick={() => handleAddFilterBrand(item.uid)} className="w-full hover:bg-gray-300  p-2 rounded-md text-black" key={uid}>{item.name}</span>
+									<span onClick={() => handleAddFilterBrand(item.uid)} className="w-full hover:bg-gray-300 cursor-pointer  p-2 rounded-md text-black" key={uid}>{item.name}</span>
 								)
 							})}
 						</div>
