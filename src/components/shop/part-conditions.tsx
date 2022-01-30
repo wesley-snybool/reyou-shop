@@ -51,7 +51,6 @@ export const PartConditions = () => {
 			</h3>
 			<div className="mt-2 flex flex-col space-y-4">
 				{part_condition.map((item) => {
-					console.log(item);
 					return (
 						<CheckBox
 							key={item.code}

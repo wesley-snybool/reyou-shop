@@ -51,8 +51,8 @@ export const PrinciplesFilter = () => {
 						key={`${index}--check-my_universe`}
 						label={item?.title}
 						name={item.title}
-						checked={stateQuery.includes(item.title)}
-						value={item.title}
+						checked={stateQuery.includes(item.code)}
+						value={item.code}
 						onChange={handleItemClick}
 					/>
 				))}
