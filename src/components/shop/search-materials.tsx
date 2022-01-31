@@ -31,6 +31,8 @@ export const SearchMaterials: FC<TypesMaterials> = ({ materials, showSearchBrand
 		dispatch(addFilterMaterial(filterMaterial))
 	},[filterMaterial]);
 
+	useEffect(() => {},[textInputMaterial])
+
 	const handleOnClear = () => {
 		setTextInputMaterial('');
 		setFilterMaterial('');

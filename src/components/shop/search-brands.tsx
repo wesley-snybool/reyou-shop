@@ -7,6 +7,7 @@ import { useAppSelector } from "src/redux/hooks/selectors";
 import SearchBrandBox from '@components/common/search-brand-box'
 import { getShowCaseProducts } from "src/redux/modules/show-case/showCase";
 import { useAppDispatch } from "src/redux/store/store";
+import { useBrandData } from "src/redux/hooks/brandsHooks";
 
 type TypeBrandsProps = {
 	uid: string;
@@ -20,11 +21,13 @@ type TypesBrand = {
 }
 
 export const SearchBrands: FC<TypesBrand> = ({ brands, showSearchBrand }) => {
+
 	const [filterBrand, setFilterBrand] = useState<string>('');
-	
 	const [textInputBrand, setTextInputBrand] = useState<string>('')
 
-	const ref = useRef<HTMLInputElement>(null);
+	const { data: brand }: any = useBrandData();
+
+	//const brandsFindMatch = brand.filter((item: any) => item.title.toLowerCase().match(`/${textInputBrand}.*/`));
 
 	useEffect(() => {
 		dispatch(getShowCaseProducts({ ftr_brand: filterBrand }));
@@ -38,13 +41,21 @@ export const SearchBrands: FC<TypesBrand> = ({ brands, showSearchBrand }) => {
 	}
 
 	const handleChange = (value: any) => {
-		setTextInputBrand(value.target.value)
+		if(value.target.value.length >= 3) {
+			const brandsFind = brand.filter((item: any) => item.title.toLowerCase().includes(textInputBrand));
+
+			//const brandsFind = brand.filter((item: any) => item.title.match(/adidas.*/));
+
+
+			setFilterBrand(brandsFind[0]?.uid);
+			console.log(filterBrand);
+		}
+		setTextInputBrand(value.target.value)		
 	}
 
 	const handleSubmitBrand = (event: any) => {
 		event.preventDefault();
-		dispatch(addFilterBrand(textInputBrand))
-		console.log(textInputBrand);
+		dispatch(addFilterBrand(filterBrand));
 	}
 
 	const handleOnClear = () => {
