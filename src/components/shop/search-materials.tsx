@@ -7,6 +7,7 @@ import { useAppSelector } from "src/redux/hooks/selectors";
 import SearchBrandBox from '@components/common/search-brand-box'
 import { getShowCaseProducts } from "src/redux/modules/show-case/showCase";
 import { useAppDispatch } from "src/redux/store/store";
+import { useMaterials } from "src/redux/hooks/materialHooks";
 
 type TypeBrandsProps = {
 	uid: string;
@@ -26,6 +27,8 @@ export const SearchMaterials: FC<TypesMaterials> = ({ materials, showSearchBrand
 	const dispatch = useAppDispatch();
 	const [filterMaterial, setFilterMaterial] = useState<string>('');
 	const [textInputMaterial, setTextInputMaterial] = useState<string>('')
+
+	const { data: material }: any = useMaterials();
 
 	useEffect(() => {
 		dispatch(addFilterMaterial(filterMaterial))
@@ -50,6 +53,16 @@ export const SearchMaterials: FC<TypesMaterials> = ({ materials, showSearchBrand
 	}
 
 	const handleChange = (value: any) => {
+
+		if(value.target.value.length >= 2) {
+			const materialsFind = material.filter((item: any) => item.code.includes(textInputMaterial));
+
+			//const brandsFind = brand.filter((item: any) => item.title.match(/adidas.*/));
+
+			setFilterMaterial(materialsFind[0]?.code);
+
+			console.log(filterMaterial);
+		}
 		setTextInputMaterial(value.target.value)
 	};
 
