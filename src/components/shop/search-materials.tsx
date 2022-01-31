@@ -54,9 +54,8 @@ export const SearchMaterials: FC<TypesMaterials> = ({
         item.code.includes(textInputMaterial)
     );
       setFilterMaterialFind(materialsFind);
-      console.log(materialsFind);
     }
-		
+
     setTextInputMaterial(value.target.value);
 
 		if (value.target.value.length <= 2) {
@@ -91,7 +90,6 @@ export const SearchMaterials: FC<TypesMaterials> = ({
             <div className="brands-box flex flex-col w-full overflow-scroll p-4">
               {filterMaterialFind === undefined
                 ? materials?.map((item: TypeBrandsProps) => {
-                    console.log(item, filterMaterialFind);
                     return (
                       <span
                         onClick={() =>
@@ -105,7 +103,6 @@ export const SearchMaterials: FC<TypesMaterials> = ({
                     );
                   })
                 : filterMaterialFind?.map((item: TypeBrandsProps) => {
-                    console.log(item, filterMaterialFind);
                     return (
                       <span
                         onClick={() =>
