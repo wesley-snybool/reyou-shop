@@ -25,16 +25,41 @@ export const ProductGrid: FC<ProductGridProps> = ({ className = "" }) => {
 	const ftr_typeItem = useAppSelector((state) => state.filters.ftr_typeItem)
 	const ftr_brand = useAppSelector((state) => state.filters.ftr_brand)
 	const ftr_material = useAppSelector((state) => state.filters.ftr_material)
+	const ftr_priceMax = useAppSelector((state) => state.filters.ftr_priceMax)
+	const ftr_priceMin = useAppSelector((state) => state.filters.ftr_priceMin)
 
 	const ftr_state_products = useAppSelector((state) => state.filters.ftr_state)
 
 	useEffect(() => {
-		dispatch(getShowCaseProducts({ pps: 20, pc: 1, ftr_universe, ftr_state_products, ftr_category, ftr_typeItem, ftr_brand, ftr_material }));
+		dispatch(getShowCaseProducts({ 
+			pps: 20, 
+			pc: 1, 
+			ftr_universe, 
+			ftr_state_products, 
+			ftr_category, 
+			ftr_typeItem, 
+			ftr_brand, 
+			ftr_material,
+			ftr_priceMin,
+			ftr_priceMax,
+		}));
+
 		dispatch(getStateProducts());
 		dispatch(getCategoryProducts());
 		dispatch(getTypesItems());
 
-	}, [dispatch, loader, ftr_universe, ftr_state_products, ftr_category, ftr_typeItem, ftr_brand, ftr_material]);
+	}, [
+		dispatch,
+		loader,
+		ftr_universe,
+		ftr_state_products,
+		ftr_category,
+		ftr_typeItem,
+		ftr_brand,
+		ftr_material,
+		ftr_priceMin,
+		ftr_priceMax,
+	]);
 
 
 	const loadMore = () => {

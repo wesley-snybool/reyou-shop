@@ -26,7 +26,7 @@ export default function SlickSlider () {
                 thumbClassName="example-thumb"
                 trackClassName="example-track"
                 defaultValue={[0, 2000]}
-                ariaLabel={['Lower thumb', 'Upper thumb']}
+                ariaLabel={[value[0], value[1]]}
                 ariaValuetext={state => `Thumb value ${state.valueNow}`}
                 max={2000}
                 pearling

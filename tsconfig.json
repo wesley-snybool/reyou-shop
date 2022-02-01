@@ -41,7 +41,7 @@
     "src/containers/conceitos-block.jsx",
     "src/components/ui/logo.js",
     "src/redux/modules/config-portal/config-portal.js",
-    "src/components/ui/range-slider.jsx",
+    "src/components/ui/range-slider.tsx",
     "src/redux/modules/show-case/showCase.ts"
   ],
   "exclude": ["node_modules"]
