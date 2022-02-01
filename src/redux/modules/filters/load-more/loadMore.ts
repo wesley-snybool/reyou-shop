@@ -4,7 +4,7 @@ import { RootState } from '../../../store/store'
 
 export const loadMoreSlice = createSlice({
     name: 'add_load_more',
-    initialState: 5,
+    initialState: 20,
     reducers: {
         addCategoryFilter: (state, action: PayloadAction<number>) => state + action.payload,
 

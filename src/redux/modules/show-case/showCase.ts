@@ -2,67 +2,7 @@ import axios from 'axios'
 import qs from 'qs'
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 import { BASE_URL, SHOW_CASE } from '../../services/baseUrl'
-import { data } from 'jquery';
-import { Attachment, Brand, Category } from '@framework/types';
-
-export type TypeProducts = {
-    productname: string,
-    id?: number | string;
-    thumbnail?: string;
-    name?: string;
-    tags: string;
-    productName?: string;
-    slug?: string;
-    price: number;
-    quantity?: number;
-    sale_price?: number;
-    image: {
-      thumbnail: string;
-      [key: string]: unknown;
-    };
-    sku?: string;
-    gallery?: Attachment[];
-    category?: Category;
-    meta?: any[];
-    description?: string;
-    variations?: object;
-    shortDescription?: string;
-    stateProduct?: string;
-    state: string;
-    brand?: Brand;
-    manufacturer?: string;
-    discount?: string;
-    similar: {
-        colors: [];
-        discount?: number;
-        favorite?: boolean;
-        lastUpdate?: string;
-        netPrice?: number;
-        onlineSince?: string;
-        percDiscount?: number;
-        price?: number;
-        productDescription?: string;
-        productName?: string;
-        purchaseInfo?: string;
-        relatedTags?: [];
-        shortDescription?: string;
-        similar?: []
-        size?: []
-        sustainableValues?: []
-        thumbnail?: string;
-        uid?: string;
-        urlSource?: string;
-    }
-}
-
-type TypeFecth = {
-    data: TypeProducts[];
-    isLoading: boolean;
-    error: {
-        error_status: boolean,
-        error_message: string,
-    },
-}
+import { TypeFecth } from 'src/types/types'
 
 const initialState = {
     data: [],
