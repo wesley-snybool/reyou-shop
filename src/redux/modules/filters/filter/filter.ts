@@ -2,6 +2,11 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 import { RootState } from '../../../store/store'
 import { FilterTypes } from 'src/types/types'
 
+type PriceTypes = {
+    ftr_priceMin?: number;
+    ftr_priceMax?: number;
+}
+
 const defaultFilters: FilterTypes = {
     pc: 1,
     pps: 10,
@@ -10,7 +15,9 @@ const defaultFilters: FilterTypes = {
     ftr_category: [],
     ftr_typeItem: [],
     ftr_brand: '',
-    ftr_material: ''
+    ftr_material: '',
+    ftr_priceMin: 0,
+    ftr_priceMax: 0,
 }
 
 export const filterSlice = createSlice({
@@ -38,6 +45,9 @@ export const filterSlice = createSlice({
         addFilterMaterial: (state: FilterTypes, { payload }: PayloadAction<string>) => {
             return { ...state, ftr_material: payload }
         },
+        addFilterPrice: (state: FilterTypes, { payload }: PayloadAction<PriceTypes>) => {
+            return { ...state, ftr_priceMax: payload.ftr_priceMax, ftr_priceMin: payload.ftr_priceMin }
+        },
         removeFilter(state) {
             return { ...state, state: defaultFilters }
         },
@@ -59,6 +69,7 @@ export const {
     addFilterBrand,
     removeItemFilterMyUniverse,
     addFilterMaterial,
+    addFilterPrice,
 } = filterSlice.actions;
 
 export const selectUser = (state: RootState) => state.userTest;

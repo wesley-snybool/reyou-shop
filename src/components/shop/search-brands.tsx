@@ -109,7 +109,6 @@ export const SearchBrands: FC<TypesBrand> = ({ brands, showSearchBrand }) => {
             <div className="brands-box flex flex-col w-full overflow-scroll p-4">
               {filterBrandFind === undefined
                 ? brands?.map((item: TypeBrandsProps) => {
-                    console.log(brands);
                     return (
                       <span
                         onClick={() =>
@@ -123,7 +122,6 @@ export const SearchBrands: FC<TypesBrand> = ({ brands, showSearchBrand }) => {
                     );
                   })
                 : filterBrandFind?.map((item: TypeBrandsProps) => {
-                    console.log(item, filterBrandFind);
                     return (
                       <span
                         onClick={() =>

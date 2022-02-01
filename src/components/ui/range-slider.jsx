@@ -1,8 +1,16 @@
 import ReactSlider from 'react-slider'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { useAppDispatch } from 'src/redux/hooks/selectors'
+import { addFilterPrice } from 'src/redux/modules/filters/filter/filter';
 
 export default function SlickSlider () {
+    const dispatch = useAppDispatch();
     const [value, setValue] = useState([0, 2000])
+
+	useEffect(() => {
+		dispatch(addFilterPrice({ ftr_priceMin: value[0], ftr_priceMax: value[1] }))
+        console.log(value)
+	},[value]);
 
     const handleSlickChange = (state) => {
         setValue(state)
@@ -23,8 +31,9 @@ export default function SlickSlider () {
                 max={2000}
                 pearling
                 minDistance={10}
-                onChange={(value, index) => handleSlickChange(value)}
+                onChange={() => {}}
                 withTracks
+                onAfterChange={(value, index) => handleSlickChange(value)}
             />
         </>
     )
