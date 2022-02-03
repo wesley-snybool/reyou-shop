@@ -17,7 +17,7 @@ const defaultFilters: FilterTypes = {
     ftr_brand: '',
     ftr_material: '',
     ftr_priceMin: 0,
-    ftr_priceMax: 0,
+    ftr_priceMax: 2000,
 }
 
 export const filterSlice = createSlice({
@@ -48,28 +48,22 @@ export const filterSlice = createSlice({
         addFilterPrice: (state: FilterTypes, { payload }: PayloadAction<PriceTypes>) => {
             return { ...state, ftr_priceMax: payload.ftr_priceMax, ftr_priceMin: payload.ftr_priceMin }
         },
-        removeFilter(state) {
-            return { ...state, state: defaultFilters }
-        },
         removeAllfilters(state) {
-            return state
+            return defaultFilters;
         },
-        returnAllFilters(state) {
-            return state;
-        }
     }
 })
 
 export const {
     addFilterStateProduct,
     addFilterUniverse,
-    removeFilter,
     addFilterCategoryProduct,
     addFilterTypeItem,
     addFilterBrand,
     removeItemFilterMyUniverse,
     addFilterMaterial,
     addFilterPrice,
+    removeAllfilters,
 } = filterSlice.actions;
 
 export const selectUser = (state: RootState) => state.userTest;

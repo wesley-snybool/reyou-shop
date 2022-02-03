@@ -8,19 +8,23 @@ import { useEffect, useState } from "react";
 import { useBrandData } from "src/redux/hooks/brandsHooks";
 import { useRouter } from "next/router";
 import { BrandsTypes } from "src/types/types";
+import { useAppDispatch } from "src/redux/store/store";
+import { addFilterBrand } from "src/redux/modules/filters/filter/filter";
+import { removeAllfilters } from "src/redux/modules/filters/filter/filter";
 
 const  PageBrand = () => {
   const { query } = useRouter();
   const { data: dataBrandsRedux, isLoading } = useBrandData();
   const [brandState, setBrandState] = useState<BrandsTypes>();
   const uidBrand = query.uid;
-  console.log(uidBrand);
+  const dispatch = useAppDispatch();
 
   useEffect(() => {
+    dispatch(addFilterBrand(uidBrand as string));
     if (!isLoading && dataBrandsRedux) {
       setBrandState(dataBrandsRedux.filter((item: BrandsTypes) => item.uid === uidBrand)[0]);
     }
-  }, [dataBrandsRedux, brandState]);
+  }, [uidBrand]);
 
   return (
     <Container>

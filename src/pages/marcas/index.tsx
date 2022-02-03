@@ -6,6 +6,7 @@ import Layout from "@components/layout/layout";
 import { useAppDispatch } from "src/redux/store/store";
 import { getBrands } from "src/redux/modules/brands/brands";
 import { useBrandData } from "src/redux/hooks/brandsHooks";
+import { addFilterBrand, removeAllfilters } from 'src/redux/modules/filters/filter/filter'
 
 export default function Brands() {
     const dispatch = useAppDispatch();
@@ -17,7 +18,15 @@ export default function Brands() {
 
     useEffect(() => {
         dispatch(getBrands());
+        dispatch(removeAllfilters());
     }, []);
+
+    const handleClickBrand = (uidBrand: string) => {
+        dispatch(addFilterBrand(uidBrand as string));
+        router.push({
+            pathname: `/marcas/pagina-marca/${[uidBrand]}`,
+        });
+    }
 
     useEffect(() => {
         if (!dataBrandsRedux.isLoading && dataBrandsRedux) {
@@ -61,11 +70,7 @@ export default function Brands() {
                                     <h2>{item?.follower ?? "1250"} Seguidores</h2>
                                 </div>
                                 <a
-                                    onClick={() => {
-                                        router.push({
-                                            pathname: `/marcas/pagina-marca/${[item.uid]}`,
-                                        });
-                                    }}
+                                    onClick={() => handleClickBrand(item.uid)}
                                     className="bg-black text-white cursor-pointer py-4 px-8 rounded-md"
                                 >
                                     Ver Produtos

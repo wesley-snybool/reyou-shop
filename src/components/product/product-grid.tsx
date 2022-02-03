@@ -10,6 +10,7 @@ import { getStateProducts } from "src/redux/modules/state-products/state_product
 import { getCategoryProducts } from "src/redux/modules/category/category_products";
 import { getTypesItems } from "src/redux/modules/types-items/typesItems";
 import { TypeProducts } from "src/types/types";
+import { orderBy } from "lodash";
 
 interface ProductGridProps {
   className?: string;
@@ -19,17 +20,24 @@ interface ProductGridProps {
 
 export const ProductGrid: FC<ProductGridProps> = ({ className = "" }) => {
   const dispatch = useAppDispatch();
-  const loader = useAppSelector((state) => state.loadMore);
+
   const [dataCardState, setDataCardState] = useState<TypeProducts[]>();
+
+  const loader = useAppSelector((state) => state.loadMore);
+  const ftr_priceMin = useAppSelector((state) => state.filters.ftr_priceMin);
   const ftr_universe = useAppSelector((state) => state.filters.ftr_universe);
   const ftr_category = useAppSelector((state) => state.filters.ftr_category);
   const ftr_typeItem = useAppSelector((state) => state.filters.ftr_typeItem);
   const ftr_brand = useAppSelector((state) => state.filters.ftr_brand);
   const ftr_material = useAppSelector((state) => state.filters.ftr_material);
   const ftr_priceMax = useAppSelector((state) => state.filters.ftr_priceMax);
-  const ftr_priceMin = useAppSelector((state) => state.filters.ftr_priceMin);
-
   const ftr_state_products = useAppSelector((state) => state.filters.ftr_state);
+
+  const dataBrandsStateOrderMinorMajor = orderBy(dataCardState, ['price'], ['asc', 'desc']);
+  const dataBrandsStateOrderMajorMinor = orderBy(dataCardState, ['price'], ['desc', 'asc']);
+
+  console.log(dataBrandsStateOrderMinorMajor?.map(item => item.price), 'Maior > Menor');
+  console.log(dataBrandsStateOrderMajorMinor?.map(item => item.price), 'Menor > Maior');
 
   useEffect(() => {
     dispatch(
@@ -50,8 +58,9 @@ export const ProductGrid: FC<ProductGridProps> = ({ className = "" }) => {
     dispatch(getStateProducts());
     dispatch(getCategoryProducts());
     dispatch(getTypesItems());
+    
+    return setDataCardState([]);
   }, [
-    dispatch,
     loader,
     ftr_universe,
     ftr_state_products,
@@ -79,14 +88,12 @@ export const ProductGrid: FC<ProductGridProps> = ({ className = "" }) => {
     }
   }, [dataCards]);
 
-  console.log(isLoadCards, dataCardState);
-
   return (
     <>
       <div
         className={`w-full grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-3 gap-x-3 lg:gap-x-5 xl:gap-x-7 gap-y-3 xl:gap-y-5 2xl:gap-y-8 ${className}`}
       >
-        {errorCards.error_status && !isLoadCards && !dataCards.length ? (
+        {isLoadCards ? (
           <ProductFeedLoader limit={20} uniqueKey="search-product" />
         ) : (
           dataCardState?.map((product: any) => {
