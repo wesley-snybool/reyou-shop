@@ -1,7 +1,7 @@
 import { CheckBox } from "@components/ui/checkbox";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
-import { addFilterStateProduct, addFilterUniverse, removeFilter } from "src/redux/modules/filters/filter/filter";
+import { addFilterStateProduct, addFilterUniverse } from "src/redux/modules/filters/filter/filter";
 import { useAppDispatch } from "src/redux/store/store";
 import { useAppSelector } from "src/redux/hooks/selectors";
 import { getMyUniverse } from "src/redux/modules/my-universe/myUniverse";

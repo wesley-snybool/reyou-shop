@@ -48,7 +48,7 @@ export const filterSlice = createSlice({
         addFilterPrice: (state: FilterTypes, { payload }: PayloadAction<PriceTypes>) => {
             return { ...state, ftr_priceMax: payload.ftr_priceMax, ftr_priceMin: payload.ftr_priceMin }
         },
-        removeAllfilters(state) {
+        removeAllfilters() {
             return defaultFilters;
         },
     }
