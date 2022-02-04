@@ -91,14 +91,14 @@ export default function Valores () {
                         {dataOptionsMenu.map((item) => (
                             <AccordionItem key={item.uuid}>
                                 <AccordionItemHeading>
-                                    <AccordionItemButton className="flex gap-4 text-xl font-bold text-black p-4 ">
+                                    <AccordionItemButton className="flex gap-4 text-xl font-black text-black p-4 ">
                                         {item.heading}
                                         <img src="/assets/images/valores/arrow-donw.svg" alt="" />
                                     </AccordionItemButton>
                                 </AccordionItemHeading>
                                     {item.content.map((i, index) => (
-                                        <AccordionItemPanel key={index} className='p-4 my-4 text-left text-white'>
-                                               <span className="bg-black rounded-xl p-4 px-6 text-md font-bold" >{i.name}</span>
+                                        <AccordionItemPanel key={index} className='p-4 my-4 text-left'>
+                                               <span className="bg-black text-white rounded-xl p-4 px-6 text-md font-bold" >{i.name}</span>
                                         </AccordionItemPanel>
                                     ))}
                                 </AccordionItem>
