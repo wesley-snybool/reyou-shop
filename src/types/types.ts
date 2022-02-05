@@ -102,6 +102,7 @@ export type BrandsTypes = {
     tags: [];
     code: string;
     order: number;
+    descriptiveText?: string;
     title: string;
     brandDescription: string
     image: {

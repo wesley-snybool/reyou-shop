@@ -38,8 +38,6 @@ const dataOptionsMenu = [
             {name: 'APOIO ÁS COMUNIDADES'},
             {name: 'EMPODERAMENTO FEMININO'},
             {name: 'EMPRESAS COM PROPRIETÁRIOS NEGROS'},
-
-
         ]
     },
     {

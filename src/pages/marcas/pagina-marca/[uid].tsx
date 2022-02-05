@@ -28,12 +28,12 @@ const  PageBrand = () => {
 
   return (
     <Container>
-      <div className=" bg-center h-80 bg-hero bg-gray-300 p-8" />
-      <div className=" flex  flex-col justify-center items-center p-8">
+      <div className="bg-center h-80 bg-hero bg-gray-300 p-8" />
+      <div className=" flex flex-col justify-center items-center p-8">
         <>
-          <div className="grid grid-cols-2 mx-auto w-full">
-            <div className="flex gap-5">
-                <div className=' flex flex-col gap-5 items-center'>
+          <div className="flex mx-auto w-full">
+            <div className=" flex gap-5 ">
+                <div className='flex flex-col gap-5 items-center'>
                     <img
                         className="rounded-full w-40"
                         src={brandState?.image.desktop.url}
@@ -44,16 +44,15 @@ const  PageBrand = () => {
                     </button>
                     <span className="">1777 Seguidores</span>
                 </div>
-                <div className="px-16 py-16">
+                <div className="px-8 py-16">
                     <h3 className="text-[40px] text-center font-extrabold  text-black">
                         {brandState?.title}
                     </h3>
                 </div>
             </div>
-            <div className="bg-gray-200 flex items-center">
+            <div className="bg-gray-200 col-span-3 flex items-center">
                 <h3 className="text-center text-black ">
-                {brandState?.brandDescription ?? ""}
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, laboriosam cumque. Voluptas ad aperiam nostrum distinctio alias recusandae ea porro accusamus modi repellat, magnam aut quae nesciunt incidunt, deserunt atque.
+                  {brandState?.descriptiveText ?? ""}
                 </h3>
             </div>
           </div>
