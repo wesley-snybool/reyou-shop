@@ -176,7 +176,6 @@ export default function ProductPopup() {
 					<div className="bg-estampado text-black flex wrap justify-start gap-4 items-center my-6">
 						Cores
 						{colors?.map((item: any, index: number) => {
-							console.log(item.value, item.code);
 							return (
 								<div key={`${index}--item--colors--code`} className='p-1 border border-gray-300 rounded' >
 									<div style={{ backgroundColor: `${item.value}` }}  className={`font-body text-xs p-3 rounded-sm  h-2 w-2 flex items-center justify-center text-black`} key={`${item}--${index}--colors--product`}></div>
