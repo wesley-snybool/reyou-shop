@@ -36,8 +36,8 @@ export const ProductGrid: FC<ProductGridProps> = ({ className = "" }) => {
   const dataBrandsStateOrderMinorMajor = orderBy(dataCardState, ['price'], ['asc', 'desc']);
   const dataBrandsStateOrderMajorMinor = orderBy(dataCardState, ['price'], ['desc', 'asc']);
 
-  console.log(dataBrandsStateOrderMinorMajor?.map(item => item.price), 'Maior > Menor');
-  console.log(dataBrandsStateOrderMajorMinor?.map(item => item.price), 'Menor > Maior');
+  //console.log(dataBrandsStateOrderMinorMajor?.map(item => item.price), 'Maior > Menor');
+  //console.log(dataBrandsStateOrderMajorMinor?.map(item => item.price), 'Menor > Maior');
 
   useEffect(() => {
     dispatch(

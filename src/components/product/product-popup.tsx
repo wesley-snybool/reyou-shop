@@ -22,10 +22,6 @@ export default function ProductPopup() {
 		(state) => state.getShowCaseProducts
 	);
 
-	useEffect(() => {
-		dispatch(getShowCaseProducts({ pps: 50 }));
-	}, []);
-
 	const {
 		modalData: { data },
 		closeModal,
@@ -99,11 +95,11 @@ export default function ProductPopup() {
 	}
 
 	return (
-		<div className="rounded-lg bg-white w-full px-8">
+		<div className="rounded-lg bg-white w-full ">
 			<div className="text-black text-3xl font-black flex items-center justify-center">
 				{brand?.title}
 			</div>
-			<div className="p-8 flex gap-20 flex-col lg:flex-row w-full md:w-[650px] sm:w-[450px] lg:w-[1200px] mx-auto ">
+			<div className="p-8 flex gap-20 flex-col lg:flex-row w-full mx-auto">
 				<div className="flex-1 flex-shrink-0 flex items-start justify-center w-full lg:w-430px max-h-430px lg:max-h-full bg-transparent">
 					<img
 						src={
@@ -177,12 +173,13 @@ export default function ProductPopup() {
 							);
 						})}
 					</div>
-					<div className=" text-black flex wrap justify-start gap-4 items-center my-6">
+					<div className="bg-estampado text-black flex wrap justify-start gap-4 items-center my-6">
 						Cores
 						{colors?.map((item: any, index: number) => {
+							console.log(item.value, item.code);
 							return (
 								<div key={`${index}--item--colors--code`} className='p-1 border border-gray-300 rounded' >
-									<div className={`bg-${item.code}${item.code === 'black' ? '' : '-500'} font-body text-xs p-3 rounded-sm  h-2 w-2 flex items-center justify-center text-black`} key={`${item}--${index}--colors--product`}></div>
+									<div style={{ backgroundColor: `${item.value}` }}  className={`font-body text-xs p-3 rounded-sm  h-2 w-2 flex items-center justify-center text-black`} key={`${item}--${index}--colors--product`}></div>
 								</div>
 							)
 						})}

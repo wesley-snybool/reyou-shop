@@ -31,6 +31,11 @@ module.exports = {
 				facebookHover: "#395fad",
 				google: "#4285F4",
 				googleHover: "#307bf9",
+				'estampado': '#ffffff',
+				'pink': '#ffa5b4',
+				'violet': '#8224e3',
+				'blue': '#0000ff',
+				'persian_red': '#dd3333',
 				gray: {
 					50: "#FBFBFB",
 					100: "#F1F1F1",
@@ -45,7 +50,7 @@ module.exports = {
 					800: "#707070",
 					900: "rgba(235, 237, 239, 0.52)",
 				},
-				blue: {
+				bru: {
 					100: '#6883ba',
 					200: '#c1dff0',
 					500: '#0000ff'
