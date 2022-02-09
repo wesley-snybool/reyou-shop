@@ -31,7 +31,6 @@ const  PageBrand = () => {
       <div className="h-80 bg-gray-300 p-8 mx-auto relative" >
         <Image quality={100} src={brandState?.image?.photoCover?.url ?? '/'} layout="fill" />
       </div>
-      {console.log(brandState?.image.photoCover.url, brandState)}
       <div className=" flex flex-col justify-center items-center p-8">
         <>
           <div className="flex mx-auto w-full">
