@@ -1,5 +1,5 @@
-import { GetStaticProps } from "next";
 import Layout from "@components/layout/layout";
+import Image from "next/image";
 import Container from "@components/ui/container";
 import CarrousselGallery from "./carroussel-gallery";
 import Search from "../../search";
@@ -10,14 +10,14 @@ import { useRouter } from "next/router";
 import { BrandsTypes } from "src/types/types";
 import { useAppDispatch } from "src/redux/store/store";
 import { addFilterBrand } from "src/redux/modules/filters/filter/filter";
-import { removeAllfilters } from "src/redux/modules/filters/filter/filter";
+import { getShowCaseProducts } from "src/redux/modules/show-case/showCase";
 
 const  PageBrand = () => {
   const { query } = useRouter();
+  const dispatch = useAppDispatch();
   const { data: dataBrandsRedux, isLoading } = useBrandData();
   const [brandState, setBrandState] = useState<BrandsTypes>();
   const uidBrand = query.uid;
-  const dispatch = useAppDispatch();
 
   useEffect(() => {
     dispatch(addFilterBrand(uidBrand as string));
@@ -28,7 +28,10 @@ const  PageBrand = () => {
 
   return (
     <Container>
-      <div className="bg-center h-80 bg-hero bg-gray-300 p-8" />
+      <div className="h-80 bg-gray-300 p-8 mx-auto relative" >
+        <Image quality={100} src={brandState?.image?.photoCover?.url ?? '/'} layout="fill" />
+      </div>
+      {console.log(brandState?.image.photoCover.url, brandState)}
       <div className=" flex flex-col justify-center items-center p-8">
         <>
           <div className="flex mx-auto w-full">

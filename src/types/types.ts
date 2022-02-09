@@ -116,6 +116,9 @@ export type BrandsTypes = {
             width: number;
             height: number;
         }
+        photoCover: {
+          url: string;
+        };
     },
     action: {
         internal: boolean;

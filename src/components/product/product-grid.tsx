@@ -33,8 +33,16 @@ export const ProductGrid: FC<ProductGridProps> = ({ className = "" }) => {
   const ftr_priceMax = useAppSelector((state) => state.filters.ftr_priceMax);
   const ftr_state_products = useAppSelector((state) => state.filters.ftr_state);
 
-  const dataBrandsStateOrderMinorMajor = orderBy(dataCardState, ['price'], ['asc', 'desc']);
-  const dataBrandsStateOrderMajorMinor = orderBy(dataCardState, ['price'], ['desc', 'asc']);
+  const dataBrandsStateOrderMinorMajor = orderBy(
+    dataCardState,
+    ["price"],
+    ["asc", "desc"]
+  );
+  const dataBrandsStateOrderMajorMinor = orderBy(
+    dataCardState,
+    ["price"],
+    ["desc", "asc"]
+  );
 
   //console.log(dataBrandsStateOrderMinorMajor?.map(item => item.price), 'Maior > Menor');
   //console.log(dataBrandsStateOrderMajorMinor?.map(item => item.price), 'Menor > Maior');
@@ -58,7 +66,7 @@ export const ProductGrid: FC<ProductGridProps> = ({ className = "" }) => {
     dispatch(getStateProducts());
     dispatch(getCategoryProducts());
     dispatch(getTypesItems());
-    
+
     return setDataCardState([]);
   }, [
     loader,
