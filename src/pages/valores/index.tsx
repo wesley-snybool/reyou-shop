@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Container from "@components/ui/container";
 import Layout from "@components/layout/layout";
 import Search from './products-search';
@@ -8,6 +9,9 @@ import {
     AccordionItemHeading,
     AccordionItemPanel,
 } from 'react-accessible-accordion';
+
+import { getMyUniverse } from "src/redux/modules/my-universe/myUniverse";
+import { useAppDispatch, useAppSelector } from "src/redux/hooks/selectors";
 
 const dataOptionsMenu = [
     {
@@ -75,7 +79,16 @@ const dataOptionsMenu = [
     },
 ]
 
+
 export default function Valores () {
+    const dispatch = useAppDispatch();
+    const { data: dataSustaineble } = useAppSelector((state) => state.universe);
+    console.log(dataSustaineble)
+
+    useEffect(() => {
+        dispatch(getMyUniverse());
+    },[]);
+    
     return (
         <>
             <Container className='my-8 w-full md:px-0 md:py-0 md:mt-0'>
@@ -86,17 +99,17 @@ export default function Valores () {
             <Container className='flex'>
                     <div className='w-full flex flex items-start justify-between '>
                         <Accordion className=' w-full' allowZeroExpanded>
-                        {dataOptionsMenu.map((item) => (
-                            <AccordionItem key={item.uuid}>
+                        {dataSustaineble.map((item: any) => (
+                            <AccordionItem key={item?.uid}>
                                 <AccordionItemHeading>
                                     <AccordionItemButton className="flex gap-4 text-xl font-black text-black p-4 ">
-                                        {item.heading}
+                                        {item.title}
                                         <img src="/assets/images/valores/arrow-donw.svg" alt="" />
                                     </AccordionItemButton>
                                 </AccordionItemHeading>
-                                    {item.content.map((i, index) => (
-                                        <AccordionItemPanel key={index} className='p-4 my-4 text-left'>
-                                               <span className="bg-black text-white rounded-xl p-4 px-6 text-md font-bold" >{i.name}</span>
+                                    {item.subValues.map((subValues: any) => (
+                                        <AccordionItemPanel onClick={() => {}} key={subValues.uid} className='p-4 my-4 text-left'>
+                                               <span className="bg-black text-white rounded-xl p-4 px-6 text-md font-bold" >{subValues.title}</span>
                                         </AccordionItemPanel>
                                     ))}
                                 </AccordionItem>

@@ -80,8 +80,6 @@ export const ProductGrid: FC<ProductGridProps> = ({ className = "" }) => {
     ftr_priceMax,
   ]);
 
-  console.log(dataCardState, 'Aqui')
-
   const loadMore = () => {
     dispatch(addCategoryFilter(10));
   };

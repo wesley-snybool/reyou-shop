@@ -29,7 +29,7 @@ const  PageBrand = () => {
   return (
     <Container>
       <div className="h-80 bg-gray-300 p-8 mx-auto relative" >
-        <Image quality={100} src={brandState?.image?.photoCover?.url ?? '/'} layout="fill" />
+        <Image quality={75} src={brandState?.image?.photoCover?.url ?? '/'} layout="fill" />
       </div>
       <div className=" flex flex-col justify-center items-center p-8">
         <>
