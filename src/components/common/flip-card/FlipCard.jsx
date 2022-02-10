@@ -14,10 +14,25 @@ function FlipCard(props) {
   } = props;
 
   const [isFlipped, setIsFlipped] = useState(false);
+  const [stateCheckOptions, setStateCheckOptions] = useState([]);
 
   const handleClick = () => {
     setIsFlipped(!isFlipped);
   };
+
+  const handleItemClick = (titleCheck) => {
+    let newState = [];
+    newState = [...stateCheckOptions];
+    
+    if(newState.includes(titleCheck)) {
+      newState = newState.filter(item => item !== titleCheck);
+    }else {
+      newState.push(titleCheck);
+    }
+    setStateCheckOptions(newState);
+  };
+
+  console.log(stateCheckOptions);
 
   return (
     <div onMouseEnter={handleClick} className="">
@@ -57,7 +72,7 @@ function FlipCard(props) {
                     key={`${index}--cheks-flips`}
                     className="my-1 flex items-center"
                   >
-                    <input type="checkbox" className=" form-checkbox h-5 w-5" />
+                    <input onClick={() => handleItemClick(item.title)} type="checkbox" className=" form-checkbox h-5 w-5" />
                     <span className="ml-2 uppercase text-black">
                       {item.title}
                     </span>
