@@ -1,6 +1,10 @@
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import ReactCardFlip from "react-card-flip";
+import { useDispatch } from "react-redux";
+import { addFlipCardCheck } from 'src/redux/modules/add-flip-card/addFlipCard';
+import { useFlipCardCheck } from 'src/redux/hooks/flipcardCheck'
+import { isEmpty } from 'lodash';
 
 function FlipCard(props) {
   const {
@@ -11,10 +15,14 @@ function FlipCard(props) {
     imageOne,
     options,
     titleFlip,
+    isAllFlip,
   } = props;
 
-  const [isFlipped, setIsFlipped] = useState(false);
+  const { checkListValue: dataFlipCheck } = useFlipCardCheck();
+  const [isFlipped, setIsFlipped] = useState(isAllFlip);
   const [stateCheckOptions, setStateCheckOptions] = useState([]);
+
+  const dispatch = useDispatch();
 
   const handleClick = () => {
     setIsFlipped(!isFlipped);
@@ -32,11 +40,16 @@ function FlipCard(props) {
     setStateCheckOptions(newState);
   };
 
-  console.log(stateCheckOptions);
+  
+  useEffect(() =>{
+    dispatch(addFlipCardCheck(stateCheckOptions));
+  },[stateCheckOptions])
+
+  useEffect(() => {},[isAllFlip])
 
   return (
-    <div onMouseEnter={handleClick} className="">
-      <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
+    <div onMouseEnter={() => handleClick()} className="">
+      <ReactCardFlip isFlipped={isAllFlip | isFlipped} flipDirection="horizontal">
         <div
           style={{
             color: "#fff",

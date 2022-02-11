@@ -20,6 +20,7 @@ import getCategoryProductsSlice from '../modules/category/category_products'
 import getBrandsSlice from '../modules/brands/brands'
 import getMaterialsSlice from '../modules/materials/materials'
 import getMyUniverse from '../modules/my-universe/myUniverse'
+import flipCardCheckSlice from '../modules/add-flip-card/addFlipCard'
 
 const store = configureStore({
   reducer: {
@@ -43,6 +44,7 @@ const store = configureStore({
     brands: getBrandsSlice,
     materials: getMaterialsSlice,
     universe: getMyUniverse,
+    flip_card_check: flipCardCheckSlice,
   },
 })
 

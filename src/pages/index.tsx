@@ -33,6 +33,7 @@ import { getPress } from "src/redux/modules/press/press";
 import { useConfigCompany } from "src/redux/hooks/companyHooks";
 import { isEmpty } from "lodash";
 import { ConfigPortal } from "src/types/types";
+import { useFlipCardCheck } from "src/redux/hooks/flipcardCheck";
 
 type BlogsType = {
 	image: string;
@@ -44,9 +45,11 @@ export default function Home() {
 	const dispatch = useDispatch();
 	const dispatchApp = useAppDispatch();
 	const { data: dataConfigPortal }: ConfigPortal = useConfigCompany();
+  const { checkListValue: dataFlipCheck } = useFlipCardCheck();
 
 	const [darlingState, setDarlingState] = useState([]);
 	const [flipCardState, setFlipCardState] = useState([]);
+	const [isAllFlip, setIsAllFlip] = useState<boolean>(false);
 
 	//Recuperando os dados da Sessão queridinhos do momentos no redux
 	const { isLoading, error } = useAppSelector(
@@ -76,12 +79,12 @@ export default function Home() {
 	const dataBrands = useAppSelector((state) => state.getNews?.data);
 
 	//Exemplo de dispatch
-	const handleChangeUser = () => {
-		const data = {
-			nome: "Wesley",
-			logado: true,
-		};
-		dispatch(changeUser(data.nome));
+	const handleCheckFlip = () => {
+		if(isEmpty(dataFlipCheck) && isAllFlip === false){
+			setIsAllFlip(true);
+		}else {
+			setIsAllFlip(false);
+		}
 	};
 
 	useEffect(() => {
@@ -146,6 +149,7 @@ export default function Home() {
 								options={item.options}
 								key={`${index}--flips--cards`}
 								imageOne={item.image.desktop?.url}
+								isAllFlip={isAllFlip}
 							/>
 						);
 					})}
@@ -153,7 +157,7 @@ export default function Home() {
 			</Container>
 			<div className="w-full flex justify-center p-4 mb-5">
 				<button
-					onClick={handleChangeUser}
+					onClick={() => handleCheckFlip()}
 					className="button-start font-bold text-black"
 				>
 					Começar
