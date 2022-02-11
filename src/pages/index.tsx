@@ -159,20 +159,24 @@ export default function Home() {
         <div className="w-full flex justify-center p-4 my-8 mb-5">
           <button
             onClick={() => handleCheckFlip()}
-            className="button-start bg-facebook font-bold text-black"
+            className="button-start bg-card_read_more font-bold text-black"
           >
             Começar
           </button>
         </div>
       ) : (
-        <div className="w-full bg-blue flex justify-center p-4 my-8 mb-5">
-          <button
-            onClick={() => handleCheckFlip()}
-            className="button-start font-bold text-black"
-          >
-            Terminar
-          </button>
-        </div>
+        <Container className="transition-transform ease-out duration-300 my-14">
+          <div className=" items-center justify-center gap-5 md:w-[950px] mx-auto md:h-[230px] bg-card_read_more flex flex-col p-4 my-8 mb-5">
+            <p className="font-black text-xl ">Personalize a sua experiência adicionando valores à sua busca </p>
+            <span className="text-black">(Clique nas caixas de seleção acima e deixe seu mundo personalizado)</span>
+            <button
+              onClick={() => handleCheckFlip()}
+              className="button-start font-bold bg-black text-white shadow-cardMoreContent"
+            >
+              Concluir
+            </button>
+          </div>
+        </Container>
       )}
       <Container>
         <Conceitos />
