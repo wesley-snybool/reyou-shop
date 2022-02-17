@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useWindowSize } from "@utils/use-window-size";
 import { useAppDispatch } from "src/redux/store/store";
 import Container from "@components/ui/container";
 import BannerCarouselBlock from "@containers/banner-carousel-block";
@@ -42,6 +43,10 @@ type BlogsType = {
 };
 
 export default function Home() {
+
+  const width  = useWindowSize().width;
+  console.log(width);
+
   const dispatch = useDispatch();
   const dispatchApp = useAppDispatch();
   const { data: dataConfigPortal }: ConfigPortal = useConfigCompany();
@@ -143,7 +148,7 @@ export default function Home() {
           {flipCardState?.map((item: any, index: number) => {
             return (
               <FlipCard
-                widthImage={item.image.desktop.width >= 700 ? item.image.desktop.width - 79 : item.image.desktop.width}
+                widthImage={width <= 1366 && item.image.desktop.width > 700 ? item.image.desktop.width - 80 : item.image.desktop.width}
                 heightImage={310}
                 titleFlip={item.title}
                 options={item.options}
