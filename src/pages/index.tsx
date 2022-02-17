@@ -143,7 +143,7 @@ export default function Home() {
           {flipCardState?.map((item: any, index: number) => {
             return (
               <FlipCard
-                widthImage={item.image.desktop.width}
+                widthImage={item.image.desktop.width >= 700 ? item.image.desktop.width - 79 : item.image.desktop.width}
                 heightImage={310}
                 titleFlip={item.title}
                 options={item.options}

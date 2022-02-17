@@ -120,7 +120,6 @@
     display: flex;
     flex-wrap: wrap;
     gap: 5px;
-    min-width: 1440px;
   }
 
   .card_morecontent {

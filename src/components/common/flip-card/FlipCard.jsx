@@ -66,7 +66,7 @@ function FlipCard(props) {
           />
         </div>
 
-        <div className="h-[310px] relative flex justify-center items-center">
+        <div className="h-[310px] relative flex justify-center items-center bg-facebook">
           <div className="h-[310px]">
             <Image height={heightImage} width={widthImage} src={imageOne} />
           </div>
