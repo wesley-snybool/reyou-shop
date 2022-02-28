@@ -7,11 +7,13 @@ import { useUI } from "@contexts/ui.context";
 import Logo from "@components/ui/logo";
 import { ImGoogle2, ImFacebook2 } from "react-icons/im";
 import { useTranslation } from "next-i18next";
+import { useSession, signIn, signOut } from "next-auth/react";
 
 const LoginForm: React.FC = () => {
 	const { t } = useTranslation();
 	const { setModalView, openModal, closeModal } = useUI();
 	const { mutate: login, isLoading } = useLoginMutation();
+  const { data: session } = useSession();
 
 	const {
 		register,
@@ -27,13 +29,18 @@ const LoginForm: React.FC = () => {
 		});
 		console.log(email, password, remember_me, "data");
 	}
-	function handelSocialLogin() {
-		login({
-			email: "demo@demo.com",
-			password: "demo",
-			remember_me: true,
-		});
+	function handelSocialLoginFacebook() {
+		if(!session) {
+			signIn("facebook");
+		}
 	}
+
+	const handelSocialLoginGoogle = () => {
+		if(!session) {
+			signIn("google");
+		}
+	}
+
 	function handleSignUp() {
 		setModalView("SIGN_UP_VIEW");
 		return openModal();
@@ -132,7 +139,7 @@ const LoginForm: React.FC = () => {
 				loading={isLoading}
 				disabled={isLoading}
 				className="h-11 md:h-12 w-full mt-2.5 bg-facebook hover:bg-facebookHover"
-				onClick={handelSocialLogin}
+				onClick={handelSocialLoginFacebook}
 			>
 				<ImFacebook2 className="text-sm sm:text-base me-1.5" />
 				{t("common:text-login-with-facebook")}
@@ -141,7 +148,7 @@ const LoginForm: React.FC = () => {
 				loading={isLoading}
 				disabled={isLoading}
 				className="h-11 md:h-12 w-full mt-2.5 bg-google hover:bg-googleHover"
-				onClick={handelSocialLogin}
+				onClick={handelSocialLoginGoogle}
 			>
 				<ImGoogle2 className="text-sm sm:text-base me-1.5" />
 				{t("common:text-login-with-google")}
@@ -153,7 +160,7 @@ const LoginForm: React.FC = () => {
 					className="text-sm sm:text-base text-heading underline font-bold hover:no-underline focus:outline-none"
 					onClick={handleSignUp}
 				>
-					{t("common:text-register")}
+					{'Registre-se'}
 				</button>
 			</div>
 		</div>

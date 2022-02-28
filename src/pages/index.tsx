@@ -1,6 +1,7 @@
 import Image from "next/image";
+import Router from "next/router";
 import Link from "next/link";
-import { useUser } from '@auth0/nextjs-auth0';
+import { useSession, signIn, signOut } from "next-auth/react";
 import { useWindowSize } from "@utils/use-window-size";
 import { useAppDispatch } from "src/redux/store/store";
 import Container from "@components/ui/container";
@@ -18,6 +19,7 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import React, { useEffect, useState } from "react";
 import BrandGridBlock from "@containers/brand-grid-block";
 import Conceitos from "@containers/conceitos-block";
+import { useUI } from "@contexts/ui.context";
 
 import FlipCard from "../components/common/flip-card/FlipCard";
 import { useAppSelector } from "src/redux/hooks/selectors";
@@ -45,10 +47,13 @@ type BlogsType = {
 
 export default function Home() {
 
-  const { user, error: errorUser, isLoading: isLoadingUser } = useUser();
+  const {
+		openModal,
+		setModalView,
+	} = useUI();
 
-  const width  = useWindowSize().width;
-  console.log(width);
+  const { data: session } = useSession();
+  const width = useWindowSize().width;
 
   const dispatch = useDispatch();
   const dispatchApp = useAppDispatch();
@@ -88,12 +93,17 @@ export default function Home() {
 
   //Exemplo de dispatch
   const handleCheckFlip = () => {
-    if (isEmpty(dataFlipCheck) && isAllFlip === false) {
+    if (!session && isEmpty(dataFlipCheck) && isAllFlip === false) {
       setIsAllFlip(true);
     } else {
       setIsAllFlip(false);
     }
   };
+
+  function handleLogin() {
+		setModalView("LOGIN_VIEW");
+		return openModal();
+	}
 
   useEffect(() => {
     //Fecth dos dados da Home
@@ -151,7 +161,11 @@ export default function Home() {
           {flipCardState?.map((item: any, index: number) => {
             return (
               <FlipCard
-                widthImage={width <= 1366 && item.image.desktop.width > 700 ? item.image.desktop.width - 80 : item.image.desktop.width}
+                widthImage={
+                  width <= 1366 && item.image.desktop.width > 700
+                    ? item.image.desktop.width - 80
+                    : item.image.desktop.width
+                }
                 heightImage={310}
                 titleFlip={item.title}
                 options={item.options}
@@ -164,27 +178,26 @@ export default function Home() {
         </div>
       </Container>
       {!isAllFlip ? (
-        <div className="w-full flex justify-center p-4 my-8 mb-5">
+        <div className="w-full gap-5 flex justify-center p-4 my-8 mb-5">
           <button
             onClick={() => handleCheckFlip()}
             className="button-start bg-card_read_more font-bold text-black"
           >
             Começar
           </button>
-          <a
-            href={'/api/auth/login'}
-            className="button-start bg-card_read_more font-bold text-black"
-          >
-            loguin
-          </a>
         </div>
       ) : (
         <Container className="transition-transform ease-out duration-300 my-14">
           <div className=" items-center justify-center gap-5 md:w-[950px] mx-auto md:h-[230px] bg-card_read_more flex flex-col p-4 my-8 mb-5">
-            <p className="font-black text-xl ">Personalize a sua experiência adicionando valores à sua busca </p>
-            <span className="text-black">(Clique nas caixas de seleção acima e deixe seu mundo personalizado)</span>
+            <p className="font-black text-xl ">
+              Personalize a sua experiência adicionando valores à sua busca{" "}
+            </p>
+            <span className="text-black">
+              (Clique nas caixas de seleção acima e deixe seu mundo
+              personalizado)
+            </span>
             <button
-              onClick={() => handleCheckFlip()}
+              onClick={() => handleLogin()}
               className="button-start font-bold bg-black text-white shadow-cardMoreContent"
             >
               Concluir

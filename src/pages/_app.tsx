@@ -1,5 +1,5 @@
 import type { AppProps } from "next/app";
-import { UserProvider } from "@auth0/nextjs-auth0";
+import { SessionProvider } from "next-auth/react"
 import { useRouter } from "next/router";
 import { AnimatePresence } from "framer-motion";
 import { ManagedUIContext } from "@contexts/ui.context";
@@ -59,26 +59,26 @@ const CustomApp = ({
 
   return (
     //<ConfigProvider locale={ptBR}>
-    <Provider store={store}>
-      <AnimatePresence exitBeforeEnter onExitComplete={handleExitComplete}>
-        <QueryClientProvider client={queryClientRef.current}>
-          <Hydrate state={pageProps.dehydratedState}>
-            <ManagedUIContext>
-              <Layout pageProps={pageProps}>
-                <DefaultSeo />
-                <UserProvider>
+    <SessionProvider session={session}>
+      <Provider store={store}>
+        <AnimatePresence exitBeforeEnter onExitComplete={handleExitComplete}>
+          <QueryClientProvider client={queryClientRef.current}>
+            <Hydrate state={pageProps.dehydratedState}>
+              <ManagedUIContext>
+                <Layout pageProps={pageProps}>
+                  <DefaultSeo />
                   <Component {...pageProps} key={router.route} />
-                </UserProvider>
-                <ToastContainer />
-              </Layout>
-              <ManagedModal />
-            </ManagedUIContext>
-          </Hydrate>
-          {/* <ReactQueryDevtools /> */}
-        </QueryClientProvider>
-      </AnimatePresence>
-      {/* //</ConfigProvider> */}
-    </Provider>
+                  <ToastContainer />
+                </Layout>
+                <ManagedModal />
+              </ManagedUIContext>
+            </Hydrate>
+            {/* <ReactQueryDevtools /> */}
+          </QueryClientProvider>
+        </AnimatePresence>
+        {/* //</ConfigProvider> */}
+      </Provider>
+    </SessionProvider>
   );
 };
 
