@@ -1,4 +1,5 @@
 import type { AppProps } from "next/app";
+import { UserProvider } from "@auth0/nextjs-auth0";
 import { useRouter } from "next/router";
 import { AnimatePresence } from "framer-motion";
 import { ManagedUIContext } from "@contexts/ui.context";
@@ -11,13 +12,13 @@ import { appWithTranslation } from "next-i18next";
 import { DefaultSeo } from "@components/common/default-seo";
 
 import { Provider } from "react-redux";
-import store from '../redux/store/store'
+import store from "../redux/store/store";
 
 // Load Open Sans and comfortaa typeface font
 import "@fontsource/open-sans";
 import "@fontsource/open-sans/600.css";
 import "@fontsource/open-sans/700.css";
-import "@fontsource/comfortaa"
+import "@fontsource/comfortaa";
 // external
 import "react-toastify/dist/ReactToastify.css";
 // base css file
@@ -34,47 +35,51 @@ import ptBR from "antd/lib/locale/pt_BR";
 // import "antd/dist/antd.css";
 
 function handleExitComplete() {
-	if (typeof window !== "undefined") {
-		window.scrollTo({ top: 0 });
-	}
+  if (typeof window !== "undefined") {
+    window.scrollTo({ top: 0 });
+  }
 }
-
 
 const Noop: React.FC = ({ children }) => <>{children}</>;
 
-const CustomApp = ({ Component, pageProps }: AppProps) => {
-	const queryClientRef = useRef<any>();
-	if (!queryClientRef.current) {
-		queryClientRef.current = new QueryClient();
-	}
-	const router = useRouter();
-	const dir = getDirection(router.locale);
-	useEffect(() => {
-		document.documentElement.dir = dir;
-	}, [dir]);
-	const Layout = (Component as any).Layout || Noop;
+const CustomApp = ({
+  Component,
+  pageProps: { session, ...pageProps },
+}: AppProps) => {
+  const queryClientRef = useRef<any>();
+  if (!queryClientRef.current) {
+    queryClientRef.current = new QueryClient();
+  }
+  const router = useRouter();
+  const dir = getDirection(router.locale);
+  useEffect(() => {
+    document.documentElement.dir = dir;
+  }, [dir]);
+  const Layout = (Component as any).Layout || Noop;
 
-	return (
-		//<ConfigProvider locale={ptBR}>
-		<Provider store={store}>
-			<AnimatePresence exitBeforeEnter onExitComplete={handleExitComplete}>
-				<QueryClientProvider client={queryClientRef.current}>
-					<Hydrate state={pageProps.dehydratedState}>
-						<ManagedUIContext>
-							<Layout pageProps={pageProps}>
-								<DefaultSeo />
-								<Component {...pageProps} key={router.route} />
-								<ToastContainer />
-							</Layout>
-							<ManagedModal />
-						</ManagedUIContext>
-					</Hydrate>
-					{/* <ReactQueryDevtools /> */}
-				</QueryClientProvider>
-			</AnimatePresence>
-			{/* //</ConfigProvider> */}
-		</Provider>
-	);
+  return (
+    //<ConfigProvider locale={ptBR}>
+    <Provider store={store}>
+      <AnimatePresence exitBeforeEnter onExitComplete={handleExitComplete}>
+        <QueryClientProvider client={queryClientRef.current}>
+          <Hydrate state={pageProps.dehydratedState}>
+            <ManagedUIContext>
+              <Layout pageProps={pageProps}>
+                <DefaultSeo />
+                <UserProvider>
+                  <Component {...pageProps} key={router.route} />
+                </UserProvider>
+                <ToastContainer />
+              </Layout>
+              <ManagedModal />
+            </ManagedUIContext>
+          </Hydrate>
+          {/* <ReactQueryDevtools /> */}
+        </QueryClientProvider>
+      </AnimatePresence>
+      {/* //</ConfigProvider> */}
+    </Provider>
+  );
 };
 
 export default appWithTranslation(CustomApp);

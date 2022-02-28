@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useUser } from '@auth0/nextjs-auth0';
 import { useWindowSize } from "@utils/use-window-size";
 import { useAppDispatch } from "src/redux/store/store";
 import Container from "@components/ui/container";
@@ -43,6 +44,8 @@ type BlogsType = {
 };
 
 export default function Home() {
+
+  const { user, error: errorUser, isLoading: isLoadingUser } = useUser();
 
   const width  = useWindowSize().width;
   console.log(width);
@@ -168,6 +171,12 @@ export default function Home() {
           >
             Começar
           </button>
+          <a
+            href={'/api/auth/login'}
+            className="button-start bg-card_read_more font-bold text-black"
+          >
+            loguin
+          </a>
         </div>
       ) : (
         <Container className="transition-transform ease-out duration-300 my-14">
