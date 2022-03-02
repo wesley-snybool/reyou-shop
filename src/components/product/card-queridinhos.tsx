@@ -122,7 +122,7 @@ const CardQueridinhos: FC<ProductProps> = ({
 						: "sm:text-xl md:text-base lg:text-xl md:mt-2.5 2xl:mt-3"
 						}`}
 				>
-					<span className="inline-block">R$ {product.price}</span>
+					<span className="inline-block">R$ {`${product.price},0`}</span>
 					{product.discount && (
 						<del className="sm:text-base font-normal text-gray-800">
 							{product.discount}
