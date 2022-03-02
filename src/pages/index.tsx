@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Router from "next/router";
 import Link from "next/link";
+import React, { useEffect, useState } from "react";
 import { useSession, signIn, signOut } from "next-auth/react";
 import { useWindowSize } from "@utils/use-window-size";
 import { useAppDispatch } from "src/redux/store/store";
@@ -16,7 +17,6 @@ import { dehydrate } from "react-query/hydration";
 import { API_ENDPOINTS } from "@framework/utils/api-endpoints";
 import { fetchBrands } from "@framework/brand/get-all-brands";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import React, { useEffect, useState } from "react";
 import BrandGridBlock from "@containers/brand-grid-block";
 import Conceitos from "@containers/conceitos-block";
 import { useUI } from "@contexts/ui.context";
@@ -54,6 +54,8 @@ export default function Home() {
 
   const { data: session } = useSession();
   const width = useWindowSize().width;
+
+  console.log('Sessão usuário', session)
 
   const dispatch = useDispatch();
   const dispatchApp = useAppDispatch();

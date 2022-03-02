@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Input from "@components/ui/input";
 import PasswordInput from "@components/ui/password-input";
 import Button from "@components/ui/button";
@@ -13,6 +14,7 @@ const LoginForm: React.FC = () => {
 	const { t } = useTranslation();
 	const { setModalView, openModal, closeModal } = useUI();
 	const { mutate: login, isLoading } = useLoginMutation();
+
   const { data: session } = useSession();
 
 	const {
@@ -31,13 +33,13 @@ const LoginForm: React.FC = () => {
 	}
 	function handelSocialLoginFacebook() {
 		if(!session) {
-			signIn("facebook");
+			signIn("facebook", { callbackUrl: 'http://localhost:3000/search' });
 		}
 	}
 
 	const handelSocialLoginGoogle = () => {
 		if(!session) {
-			signIn("google");
+			signIn("google", { callbackUrl: 'http://localhost:3000/search' });
 		}
 	}
 

@@ -122,7 +122,8 @@ export const ProductGrid: FC<ProductGridProps> = ({ className = "" }) => {
           onClick={loadMore}
           variant="slim"
           className="rounded-full"
-        ></Button>
+        >
+        </Button>
       </div>
     </>
   );

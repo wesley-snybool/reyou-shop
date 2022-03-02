@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import SearchIcon from "@components/icons/search-icon";
 import { siteSettings } from "@settings/site-settings";
 import HeaderMenu from "@components/layout/header/header-menu";
@@ -10,16 +10,27 @@ import dynamic from "next/dynamic";
 import { useTranslation } from "next-i18next";
 import LanguageSwitcher from "@components/ui/language-switcher";
 import { useAppSelector } from "src/redux/hooks/selectors";
+import { useSession, signIn, signOut } from "next-auth/react";
 
 const AuthMenu = dynamic(() => import("./auth-menu"), { ssr: false });
 const CartButton = dynamic(() => import("@components/cart/cart-button"), {
 	ssr: false,
 });
 
-
 type DivElementRef = React.MutableRefObject<HTMLDivElement>;
 const { site_header } = siteSettings;
+
 const Header: React.FC = () => {
+	const { data: session } = useSession();
+	const [ isLogged, setIslogged ] = useState<boolean>(false);
+
+useEffect(() => {
+	if(session) {
+		setIslogged(true);
+	}else {
+		setIslogged(false);
+	}
+},[session])
 
 	const data = useAppSelector((state) => state.getConfig.data)
 
@@ -31,6 +42,7 @@ const Header: React.FC = () => {
 		setModalView,
 		isAuthorized,
 	} = useUI();
+
 	const { t } = useTranslation("common");
 	const siteHeaderRef = useRef() as DivElementRef;
 	addActiveScroll(siteHeaderRef);
@@ -93,7 +105,7 @@ const Header: React.FC = () => {
 						</button>
 						<div className="">
 							<AuthMenu
-								isAuthorized={isAuthorized}
+								isAuthorized={isLogged}
 								href={ROUTES.ACCOUNT}
 								className="text-sm xl:text-base text-heading font-semibold"
 								btnProps={{

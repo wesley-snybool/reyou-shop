@@ -28,7 +28,7 @@ function FlipCard(props) {
     setIsFlipped(!isFlipped);
   };
 
-  const handleItemClick = (titleCheck) => {
+  const handleItemClick = (titleCheck, titleFlip) => {
     let newState = [];
     newState = [...stateCheckOptions];
     
@@ -80,12 +80,13 @@ function FlipCard(props) {
               }
             >
               {options.map((item, index) => {
+                console.log(titleFlip, 'cheks flips')
                 return (
                   <label
                     key={`${index}--cheks-flips`}
                     className="my-1 flex items-center"
                   >
-                    <input onClick={() => handleItemClick(item.title)} type="checkbox" className=" form-checkbox h-5 w-5" />
+                    <input onClick={() => handleItemClick(item.title, titleFlip)} type="checkbox" className=" form-checkbox h-5 w-5" />
                     <span className="ml-2 uppercase text-black">
                       {item.title}
                     </span>

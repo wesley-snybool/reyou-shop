@@ -6,14 +6,14 @@ const Loguin = () => {
     return (
       <>
         Logado como {session?.user?.email} <br />
-        <button onClick={() => signOut()}>Sign out</button>
+        <button className="button-start bg-card_read_more font-bold text-black" onClick={() => signOut()}>Sign out</button>
       </>
     );
   }
   return (
     <>
       Você Não está logado <br />
-      <button onClick={() => signIn('auth0')}>Fazer Login</button>
+      <button className="button-start bg-card_read_more font-bold text-black" onClick={() => signIn('auth0')}>Fazer Login</button>
     </>
   );
 };
