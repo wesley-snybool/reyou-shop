@@ -4,13 +4,20 @@ import { footer } from "./data";
 import { FaFacebookF } from "react-icons/fa";
 import { IoLogoInstagram } from "react-icons/io5";
 import { AiFillTwitterCircle } from "react-icons/ai";
-import { useAppSelector } from "src/redux/hooks/selectors";
+import { useAppDispatch, useAppSelector } from "src/redux/hooks/selectors";
 import { useRouter } from "next/router";
+import { useEffect } from "react";
+import { getConfig } from "src/redux/modules/config-portal/config-portal";
 
 const Footer: React.FC = () => {
 
   const history = useRouter();
   const dataCompany: any = useAppSelector((state) => state.getConfig.data)
+  const dispatch = useAppDispatch();
+
+  useEffect(() => {
+    dispatch(getConfig());
+  },[])
   
   return (
     <footer className='bg-black flex w-full p-8'>
