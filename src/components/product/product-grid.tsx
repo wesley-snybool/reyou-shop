@@ -123,6 +123,7 @@ export const ProductGrid: FC<ProductGridProps> = ({ className = "" }) => {
           variant="slim"
           className="rounded-full"
         >
+          Carregar Mais
         </Button>
       </div>
     </>
