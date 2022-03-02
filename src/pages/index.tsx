@@ -156,7 +156,7 @@ export default function Home() {
             Que tal associar valores às suas compras?
           </strong>
           <h2 className="mb-8 text-black">
-            Comece selecionando quais causas que te movem
+            Comece selecionando quais causas te movem
           </h2>
         </div>
         <div className="container-main-flip-card">
