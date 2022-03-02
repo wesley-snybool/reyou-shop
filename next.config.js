@@ -12,7 +12,7 @@ const runtimeCaching = require("next-pwa/cache");
   },
   i18n,
   images: {
-    domains: ['reyoushop.nyc3.digitaloceanspaces.com'],
+    domains: ['reyoushop.nyc3.digitaloceanspaces.com', 'lh3.googleusercontent.com/'],
   },
 });
 

@@ -6,7 +6,6 @@ import Subscription from "@components/common/subscription";
 const AccountLayout: React.FunctionComponent<{}> = ({ children }) => {
 	return (
 		<>
-			<PageHeader pageHeader="text-page-my-account" />
 			<Container>
 				<div className="py-16 lg:py-20 px-0 xl:max-w-screen-xl mx-auto flex  md:flex-row w-full">
 					<div className="flex flex-col md:flex-row w-full">
