@@ -80,7 +80,6 @@ function FlipCard(props) {
               }
             >
               {options.map((item, index) => {
-                console.log(titleFlip, 'cheks flips')
                 return (
                   <label
                     key={`${index}--cheks-flips`}

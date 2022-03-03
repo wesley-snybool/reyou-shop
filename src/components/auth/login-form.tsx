@@ -8,7 +8,7 @@ import { useUI } from "@contexts/ui.context";
 import Logo from "@components/ui/logo";
 import { ImGoogle2, ImFacebook2 } from "react-icons/im";
 import { useTranslation } from "next-i18next";
-import { useSession, signIn, signOut } from "next-auth/react";
+import { useSession, signIn, signOut, getSession } from "next-auth/react";
 
 const LoginForm: React.FC = () => {
 	const { t } = useTranslation();
@@ -16,6 +16,11 @@ const LoginForm: React.FC = () => {
 	const { mutate: login, isLoading } = useLoginMutation();
 
   const { data: session } = useSession();
+
+	const getsession = getSession();
+	const ant_token = "EAAJfnIeTZCNoBANyR8zSxpPuswucUxC7i0DEbZAFMZCxOsHqIcnczOWgBm9YpudzxNZAJkoxM9f8yyRThww6RgElYAWUfCEk4lJ7dLa6qlhLtNSswQXTmUSi640XZA83KcqRdo1SW5FFtZCCWUpyby5uJDCoB0zFZBhZBLIaoZANAikxzcwVAchnIqgnKEm88qXUwkAZAEDnlWOGLYYAksy78dvZBCJbk8BLlPF9fko4XeELQZDZD"
+	console.log(getsession, 'dados da sessão');
+	console.log('TESTANDO ELE', session?.token === ant_token)
 
 	const {
 		register,
@@ -33,7 +38,7 @@ const LoginForm: React.FC = () => {
 	}
 	function handelSocialLoginFacebook() {
 		if(!session) {
-			signIn("facebook", { callbackUrl: 'http://localhost:3000/search' });
+			signIn("facebook", { callbackUrl: 'http://localhost:3000/search' })
 		}
 	}
 

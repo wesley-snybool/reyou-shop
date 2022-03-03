@@ -55,7 +55,11 @@ export default function Home() {
   const { data: session } = useSession();
   const width = useWindowSize().width;
 
+  const uid_fucking_face = "4875715989213444"
+  const uid_fucking_goog = "111500315586803824840"
+
   console.log('Sessão usuário', session)
+  console.log('testando ele', uid_fucking_face === session?.user_uid || uid_fucking_goog === session?.user_uid);
 
   const dispatch = useDispatch();
   const dispatchApp = useAppDispatch();
