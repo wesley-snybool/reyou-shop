@@ -76,6 +76,7 @@ module.exports = {
 				"430px": "430px",
 				"450px": "450px",
 				"500px": "500px",
+				"550px": "550px",
 				"64vh": "64vh",
 				vd: "450px"
 			},

@@ -88,9 +88,9 @@ const ModalLogin: FC<ModalProps> = ({
 							animate="to"
 							exit="from"
 							variants={zoomOutIn()}
-							className="relative bg-white h-full mx-auto"
+							className="relative bg-transparent h-full mx-auto md:w-550px"
 						>
-							<div className='flex justify-end py-4 px-8'>
+							<div className='flex absolute z-10 right-8 top-14 justify-end py-4 px-8'>
 								<button
 									onClick={onClose}
 									aria-label="Close panel"
