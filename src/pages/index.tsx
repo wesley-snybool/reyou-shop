@@ -39,6 +39,8 @@ import { isEmpty } from "lodash";
 import { ConfigPortal } from "src/types/types";
 import { useFlipCardCheck } from "src/redux/hooks/flipcardCheck";
 
+import axios from 'axios';
+
 type BlogsType = {
   image: string;
   title: string;
@@ -51,6 +53,16 @@ export default function Home() {
 		openModal,
 		setModalView,
 	} = useUI();
+
+  axios.get('https://test-frontend-uolpp.web.app/customers.json', {
+    headers: {
+      'Access-Control-Allow-Origin' : '*',
+      'content-type': 'application/x-www-form-urlencoded; charset=UTF-8',
+      withCredentials: false,
+    },
+   }).then((data) => {
+    console.log('dados aqui', data.data)
+  });
 
   const { data: session } = useSession();
   const width = useWindowSize().width;
