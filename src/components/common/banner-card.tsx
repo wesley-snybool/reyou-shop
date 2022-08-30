@@ -29,7 +29,7 @@ const BannerCard: FC<BannerProps> = ({
 	height,
 }) => {
 
-	const { title, image } = banner;
+	const { urls, id, title } = banner;
 	return (
 		<div className={cn("mx-auto", className)}>
 			<Link
@@ -40,11 +40,11 @@ const BannerCard: FC<BannerProps> = ({
 				)}
 			>
 				<Image
-					src={image?.desktop?.url || '/' as any}
+					src={urls.raw || '/' as any}
 					width={width}
 					height={height}
 					alt={title}
-					quality={100}
+					quality={75}
 					className={cn("bg-gray-300 md:mx-8 object-cover w-full", {
 						"rounded-md": variant === "rounded",
 					})}

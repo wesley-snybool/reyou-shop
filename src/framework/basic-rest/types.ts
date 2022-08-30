@@ -170,19 +170,14 @@ export type Order = {
 
 
 export type TypeBannerHome = {
-  uid: number,
-  title: string,
-  slug: string,
-  image: {
-    mobile: {
-      url: string,
-      width: number,
-      height: number,
-    },
-    desktop: {
-      url: string,
-      width: number,
-      height: number,
-    },
-  },
+  title: string;
+  urls: {
+    full: string;
+    raw: string;
+    regular: string;
+    small: string;
+    small_s3: string;
+  };
+  id: string;
+  description: string;
 }

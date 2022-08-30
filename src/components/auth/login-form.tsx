@@ -19,8 +19,7 @@ const LoginForm: React.FC = () => {
 
 	const getsession = getSession();
 	const ant_token = "EAAJfnIeTZCNoBANyR8zSxpPuswucUxC7i0DEbZAFMZCxOsHqIcnczOWgBm9YpudzxNZAJkoxM9f8yyRThww6RgElYAWUfCEk4lJ7dLa6qlhLtNSswQXTmUSi640XZA83KcqRdo1SW5FFtZCCWUpyby5uJDCoB0zFZBhZBLIaoZANAikxzcwVAchnIqgnKEm88qXUwkAZAEDnlWOGLYYAksy78dvZBCJbk8BLlPF9fko4XeELQZDZD"
-	console.log(getsession, 'dados da sessão');
-	console.log('TESTANDO ELE', session?.token === ant_token)
+
 
 	const {
 		register,

@@ -40,6 +40,7 @@ import { ConfigPortal } from "src/types/types";
 import { useFlipCardCheck } from "src/redux/hooks/flipcardCheck";
 
 import axios from 'axios';
+import { getProducts } from "./api/products";
 
 type BlogsType = {
   image: string;
@@ -54,24 +55,11 @@ export default function Home() {
 		setModalView,
 	} = useUI();
 
-  axios.get('https://test-frontend-uolpp.web.app/customers.json', {
-    headers: {
-      'Access-Control-Allow-Origin' : '*',
-      'content-type': 'application/x-www-form-urlencoded; charset=UTF-8',
-      withCredentials: false,
-    },
-   }).then((data) => {
-    console.log('dados aqui', data.data)
-  });
-
   const { data: session } = useSession();
   const width = useWindowSize().width;
 
   const uid_fucking_face = "4875715989213444"
   const uid_fucking_goog = "111500315586803824840"
-
-  console.log('Sessão usuário', session)
-  console.log('testando ele', uid_fucking_face === session?.user_uid || uid_fucking_goog === session?.user_uid);
 
   const dispatch = useDispatch();
   const dispatchApp = useAppDispatch();
@@ -362,6 +350,12 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => {
     [API_ENDPOINTS.BRANDS, { limit: 6 }],
     fetchBrands
   );
+
+  const data = getProducts({per_page: 10, query: 'cars'}).then((res) => {
+		console.log(res);
+	});
+
+	console.log(data, 'dados server side');
 
   return {
     props: {
